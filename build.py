@@ -59,7 +59,7 @@ js+='\nboot();'
 css=re.sub(r'/\*.*?\*/','',css,flags=re.S);css=re.sub(r'\n\s*\n','\n',css)
 hc=hashlib.md5(css.encode()).hexdigest()[:8];hj=hashlib.md5(js.encode()).hexdigest()[:8]
 wr(f'{D}/assets/site.{hc}.css',css);wr(f'{D}/assets/site.{hj}.js',js)
-for f in ('hanken-latin.woff2','hanken-latin-ext.woff2'):shutil.copy('src/'+f,f'{D}/assets/{f}')
+for f in glob.glob('src/*.woff2'):shutil.copy(f,f'{D}/assets/{os.path.basename(f)}')
 
 # 4 pages
 def path(route,lang):
