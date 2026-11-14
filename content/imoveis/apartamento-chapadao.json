@@ -1,0 +1,40 @@
+{
+ "slug": "apartamento-chapadao",
+ "deal": "venda",
+ "type": "apartamento",
+ "name": "Apartamento Chapadão",
+ "loc": "Chapadão",
+ "price": 890000,
+ "beds": 2,
+ "baths": 2,
+ "area": 96,
+ "lot": 0,
+ "year": 2022,
+ "beach": 600,
+ "status": "disponivel",
+ "imgs": [
+  "16",
+  "47",
+  "43",
+  "21"
+ ],
+ "feats": [
+  "pool",
+  "ac",
+  "furnished",
+  "garage",
+  "gated",
+  "fiber"
+ ],
+ "dist": {
+  "beach": "8 min",
+  "center": "6 min",
+  "airport": "1 h 25"
+ },
+ "desc": {
+  "pt": "Dois quartos em condomínio pequeno com piscina, perto do mirante do Chapadão. Vendido mobiliado, pronto para alugar por temporada.",
+  "en": "Two bedrooms in a small complex with a pool, near the Chapadão lookout. Sold furnished, ready for holiday lets.",
+  "de": "Zwei Schlafzimmer in einer kleinen Wohnanlage mit Pool, nahe dem Aussichtspunkt Chapadão. Verkauf möbliert, bereit für die Ferienvermietung."
+ },
+ "ordem": 5
+}

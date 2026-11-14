@@ -1,0 +1,47 @@
+{
+ "slug": "villa-guarairas",
+ "deal": "venda",
+ "type": "casa",
+ "name": "Villa Guaraíras",
+ "loc": "Tibau do Sul",
+ "price": 6200000,
+ "beds": 5,
+ "baths": 6,
+ "area": 580,
+ "lot": 1800,
+ "year": 2023,
+ "beach": 120,
+ "status": "novo",
+ "imgs": [
+  "04",
+  "16",
+  "43",
+  "48",
+  "03",
+  "72"
+ ],
+ "feats": [
+  "pool",
+  "seaview",
+  "ac",
+  "furnished",
+  "garage",
+  "garden",
+  "solar",
+  "well",
+  "gated",
+  "staff",
+  "deck"
+ ],
+ "dist": {
+  "beach": "2 min",
+  "center": "14 min",
+  "airport": "1 h 15"
+ },
+ "desc": {
+  "pt": "De frente para a lagoa de Guaraíras, com pôr do sol da sala e do deck. Cinco suítes, energia solar e poço próprio.",
+  "en": "Facing the Guaraíras lagoon, with sunsets from the living room and the deck. Five en-suites, solar power and its own well.",
+  "de": "Direkt an der Lagune von Guaraíras, mit Sonnenuntergang vom Wohnzimmer und vom Deck aus. Fünf Schlafzimmer mit eigenem Bad, Solaranlage und eigener Brunnen."
+ },
+ "ordem": 3
+}

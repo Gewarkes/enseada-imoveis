@@ -1,0 +1,42 @@
+{
+ "slug": "casa-branca-do-amor",
+ "deal": "venda",
+ "type": "casa",
+ "name": "Casa Branca do Amor",
+ "loc": "Praia do Amor",
+ "price": 3650000,
+ "beds": 4,
+ "baths": 4,
+ "area": 330,
+ "lot": 780,
+ "year": 2019,
+ "beach": 180,
+ "status": "reservado",
+ "imgs": [
+  "24",
+  "15",
+  "44",
+  "49",
+  "75"
+ ],
+ "feats": [
+  "pool",
+  "seaview",
+  "ac",
+  "garage",
+  "garden",
+  "bbq",
+  "fiber"
+ ],
+ "dist": {
+  "beach": "3 min",
+  "center": "7 min",
+  "airport": "1 h 25"
+ },
+ "desc": {
+  "pt": "Arquitetura branca e baixa, a três minutos da escada da Praia do Amor. Quatro suítes e cozinha integrada ao terraço.",
+  "en": "Low white architecture, three minutes from the steps to Praia do Amor. Four en-suites and a kitchen that opens onto the terrace.",
+  "de": "Weiße, flache Architektur, drei Minuten von der Treppe zur Praia do Amor. Vier Schlafzimmer mit eigenem Bad, die Küche öffnet sich zur Terrasse."
+ },
+ "ordem": 4
+}

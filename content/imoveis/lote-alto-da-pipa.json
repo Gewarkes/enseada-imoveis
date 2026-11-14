@@ -1,0 +1,38 @@
+{
+ "slug": "lote-alto-da-pipa",
+ "deal": "venda",
+ "type": "terreno",
+ "name": "Lote Alto da Pipa",
+ "loc": "Chapadão",
+ "price": 420000,
+ "beds": 0,
+ "baths": 0,
+ "area": 0,
+ "lot": 600,
+ "year": 0,
+ "beach": 700,
+ "status": "disponivel",
+ "imgs": [
+  "79",
+  "81",
+  "10"
+ ],
+ "feats": [
+  "deed",
+  "paved",
+  "power",
+  "water",
+  "gated"
+ ],
+ "dist": {
+  "beach": "9 min",
+  "center": "6 min",
+  "airport": "1 h 25"
+ },
+ "desc": {
+  "pt": "Lote de 600 m² em loteamento fechado, pronto para construir. Projeto aprovado para casa de até dois pavimentos.",
+  "en": "600 m² plot in a gated development, ready to build. Approved plans for a house of up to two floors.",
+  "de": "Grundstück mit 600 m² in einer geschlossenen Wohnanlage, baureif. Genehmigte Planung für ein Haus mit bis zu zwei Geschossen."
+ },
+ "ordem": 10
+}

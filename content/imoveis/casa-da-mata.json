@@ -1,0 +1,41 @@
+{
+ "slug": "casa-da-mata",
+ "deal": "aluguel",
+ "type": "casa",
+ "name": "Casa da Mata",
+ "loc": "Praia do Madeiro",
+ "price": 16500,
+ "beds": 3,
+ "baths": 3,
+ "area": 260,
+ "lot": 900,
+ "year": 2020,
+ "beach": 300,
+ "status": "disponivel",
+ "imgs": [
+  "06",
+  "14",
+  "44",
+  "48",
+  "56"
+ ],
+ "feats": [
+  "pool",
+  "ac",
+  "furnished",
+  "garden",
+  "deck",
+  "fiber"
+ ],
+ "dist": {
+  "beach": "5 min",
+  "center": "10 min",
+  "airport": "1 h 25"
+ },
+ "desc": {
+  "pt": "Aluguel anual. Casa cercada de mata, com piscina natural e deck. Mobiliada, internet por fibra, aceita animais.",
+  "en": "Yearly rental. A house surrounded by forest, with a natural pool and deck. Furnished, fibre internet, pets welcome.",
+  "de": "Jahresmiete. Haus mitten im Wald, mit Naturpool und Deck. Möbliert, Glasfaser-Internet, Haustiere erlaubt."
+ },
+ "ordem": 6
+}

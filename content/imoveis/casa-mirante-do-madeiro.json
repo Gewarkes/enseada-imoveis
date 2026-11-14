@@ -1,0 +1,47 @@
+{
+ "slug": "casa-mirante-do-madeiro",
+ "deal": "venda",
+ "type": "casa",
+ "name": "Casa Mirante do Madeiro",
+ "loc": "Praia do Madeiro",
+ "price": 4850000,
+ "beds": 4,
+ "baths": 5,
+ "area": 420,
+ "lot": 1100,
+ "year": 2021,
+ "beach": 250,
+ "status": "novo",
+ "feat": true,
+ "imgs": [
+  "02",
+  "17",
+  "43",
+  "49",
+  "14",
+  "71"
+ ],
+ "feats": [
+  "pool",
+  "seaview",
+  "ac",
+  "furnished",
+  "garage",
+  "garden",
+  "bbq",
+  "solar",
+  "fiber",
+  "staff"
+ ],
+ "dist": {
+  "beach": "4 min",
+  "center": "9 min",
+  "airport": "1 h 25"
+ },
+ "desc": {
+  "pt": "Quatro suítes abertas para o mar, no alto da falésia do Madeiro. Piscina de borda infinita, casa de caseiro separada e acesso por rua calçada.",
+  "en": "Four en-suite bedrooms open to the sea, on top of the Madeiro cliffs. Infinity pool, separate caretaker house and paved road access.",
+  "de": "Vier Schlafzimmer mit eigenem Bad und Blick aufs Meer, oben auf der Steilküste von Madeiro. Infinity-Pool, separates Haus für den Hausverwalter und Zufahrt über eine gepflasterte Straße."
+ },
+ "ordem": 1
+}

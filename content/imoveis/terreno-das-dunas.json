@@ -1,0 +1,37 @@
+{
+ "slug": "terreno-das-dunas",
+ "deal": "venda",
+ "type": "terreno",
+ "name": "Terreno das Dunas",
+ "loc": "Sibaúma",
+ "price": 780000,
+ "beds": 0,
+ "baths": 0,
+ "area": 0,
+ "lot": 2400,
+ "year": 0,
+ "beach": 350,
+ "status": "disponivel",
+ "imgs": [
+  "76",
+  "51",
+  "13"
+ ],
+ "feats": [
+  "deed",
+  "paved",
+  "power",
+  "water"
+ ],
+ "dist": {
+  "beach": "5 min",
+  "center": "18 min",
+  "airport": "1 h 35"
+ },
+ "desc": {
+  "pt": "Lote plano de 2.400 m² atrás das dunas, com escritura e matrícula individual. Rua com energia e água.",
+  "en": "Flat 2,400 m² plot behind the dunes, with deed and its own land registry entry. Road with power and water.",
+  "de": "Ebenes Grundstück mit 2.400 m² hinter den Dünen, mit notarieller Urkunde und eigenem Grundbucheintrag. Strom und Wasser liegen an der Straße."
+ },
+ "ordem": 8
+}

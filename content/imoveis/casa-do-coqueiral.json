@@ -1,0 +1,43 @@
+{
+ "slug": "casa-do-coqueiral",
+ "deal": "venda",
+ "type": "casa",
+ "name": "Casa do Coqueiral",
+ "loc": "Centro de Pipa",
+ "price": 2380000,
+ "beds": 3,
+ "baths": 3,
+ "area": 240,
+ "lot": 520,
+ "year": 2018,
+ "beach": 400,
+ "status": "disponivel",
+ "imgs": [
+  "05",
+  "15",
+  "44",
+  "47",
+  "18",
+  "74"
+ ],
+ "feats": [
+  "pool",
+  "ac",
+  "garage",
+  "garden",
+  "bbq",
+  "fiber",
+  "alarm"
+ ],
+ "dist": {
+  "beach": "6 min",
+  "center": "3 min",
+  "airport": "1 h 20"
+ },
+ "desc": {
+  "pt": "Casa térrea entre coqueiros, a cinco minutos a pé da rua principal. Três suítes, piscina de raia e jardim que não se vê da rua.",
+  "en": "Single-storey house among coconut palms, five minutes on foot from the main street. Three en-suites, lap pool and a garden hidden from the road.",
+  "de": "Ebenerdiges Haus zwischen Kokospalmen, fünf Gehminuten von der Hauptstraße. Drei Schlafzimmer mit eigenem Bad, Bahnenpool und ein Garten, der von der Straße nicht einsehbar ist."
+ },
+ "ordem": 2
+}

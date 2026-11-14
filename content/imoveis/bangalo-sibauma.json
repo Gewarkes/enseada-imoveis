@@ -1,0 +1,39 @@
+{
+ "slug": "bangalo-sibauma",
+ "deal": "aluguel",
+ "type": "casa",
+ "name": "Bangalô Sibaúma",
+ "loc": "Sibaúma",
+ "price": 7800,
+ "beds": 2,
+ "baths": 1,
+ "area": 110,
+ "lot": 400,
+ "year": 2017,
+ "beach": 200,
+ "status": "disponivel",
+ "imgs": [
+  "56",
+  "19",
+  "43",
+  "13"
+ ],
+ "feats": [
+  "ac",
+  "furnished",
+  "garden",
+  "bbq",
+  "deck"
+ ],
+ "dist": {
+  "beach": "3 min",
+  "center": "18 min",
+  "airport": "1 h 35"
+ },
+ "desc": {
+  "pt": "Bangalô de madeira a 200 m da praia de Sibaúma. Dois quartos, varanda coberta e quintal com coqueiros.",
+  "en": "Wooden bungalow 200 m from Sibaúma beach. Two bedrooms, covered veranda and a yard with coconut palms.",
+  "de": "Holzbungalow, 200 m vom Strand von Sibaúma. Zwei Schlafzimmer, überdachte Veranda und Garten mit Kokospalmen."
+ },
+ "ordem": 7
+}
