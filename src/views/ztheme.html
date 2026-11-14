@@ -8,7 +8,7 @@
   --line:rgba(255,255,255,.13);--line-d:rgba(255,255,255,.13);
   --gold:#c9a976;--serif:'Cormorant Garamond',Georgia,'Times New Roman',serif}
 body{background:var(--paper);color:var(--text)}
-.h1,.h2,.h2s,h1,h2{font-family:var(--serif)!important;font-weight:500!important;letter-spacing:-.01em!important}
+.h1,.h2,.h2s,h1:not(.hx-t),h2:not(.hx-t){font-family:var(--serif)!important;font-weight:500!important;letter-spacing:-.01em!important}
 .btn{background:var(--fg);color:#0d1211;border-color:var(--fg)}
 .btn:hover{background:var(--gold);border-color:var(--gold);color:#0d1211}
 .btn--line{background:transparent;color:var(--fg);border-color:rgba(255,255,255,.4)}
@@ -16,4 +16,15 @@ body{background:var(--paper);color:var(--text)}
 .btn--light{background:var(--fg);color:#0d1211;border-color:var(--fg)}
 .btn--wa{background:var(--wa);border-color:var(--wa);color:#fff}
 input,select,textarea{color:var(--fg)}
+/* Listen im selben Raster wie die Startseite */
+.pb__name{font-family:var(--serif);font-weight:500;font-size:26px;line-height:1.12;letter-spacing:0}
+.pb__loc{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:600}
+.pb__ph{border-radius:var(--r);overflow:hidden}
+.pb__ph img{transition:transform 1s cubic-bezier(.2,.7,.2,1)}
+.pb:hover .pb__ph img{transform:scale(1.05)}
+.v-imoveis .grid>.pb:last-child:nth-child(odd){grid-column:auto!important}
+.v-imoveis .grid>.pb .pb__ph,.v-imoveis .grid>.pb:last-child:nth-child(odd) .pb__ph{aspect-ratio:4/3!important}
+@media (min-width:981px){.v-imoveis .grid{grid-template-columns:repeat(3,1fr)!important;gap:48px 28px!important}.v-blog .grid__g{grid-template-columns:repeat(3,1fr)!important;gap:44px 28px!important}}
+.v-imoveis .fb label,.v-imoveis .fb .fl span{font-size:13px}
+.v-imoveis .fb select{font-size:16px}
 </style>
