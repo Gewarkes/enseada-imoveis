@@ -15,7 +15,7 @@
   }
  },
  "phone": "+55 84 99999-0000",
- "wa": "5500000000000",
+ "wa": "5584999990000",
  "email": "contato@enseadaimoveis.com.br",
  "address": "Av. Baía dos Golfinhos, 000 · Pipa, Tibau do Sul/RN",
  "hours": {
@@ -48,5 +48,12 @@
  },
  "newsletterUrl": "",
  "contactUrl": "",
- "gaId": ""
+ "gaId": "",
+ "demoNote": true,
+ "brokerLink": true,
+ "openingHours": "Mo-Sa 09:00-18:00",
+ "geo": {
+  "lat": -6.2286,
+  "lng": -35.0486
+ }
 }
