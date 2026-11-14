@@ -15,6 +15,8 @@ const SITE={
   listings:DATA.listings,
   posts:DATA.posts
 };
+/* content/site.json (edited through the form) overrides the defaults above */
+for(const k in (DATA.site||{})){const v=DATA.site[k];if(v!==''&&v!=null)SITE[k]=(v&&typeof v==='object'&&!Array.isArray(v)&&SITE[k]&&typeof SITE[k]==='object')?Object.assign({},SITE[k],v):v}
 
 /* ===== Engine (shared by every template) ===== */
 const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
@@ -104,7 +106,7 @@ function rerender(keepScroll){const r=APP.route,v=VIEWS[r.view]||VIEWS.home,y=sc
   $('#nav').innerHTML=VIEWS.chrome.nav(r);$('#main').innerHTML=v.render(r.arg);$('#foot').innerHTML=VIEWS.chrome.footer(r);
   document.title=(v.title?v.title(r.arg)+' · ':'')+SITE.brandFull;document.documentElement.lang=APP.lang==='pt'?'pt-BR':APP.lang;
   $('#demo').textContent=tr('demoFoot');
-  seo();
+  seo();if(ST&&ST.snap)return;
   if(VIEWS.chrome.mount)VIEWS.chrome.mount(r);if(v.mount)v.mount($('#main'),r.arg);calcInit();counters();if(ST)fixLinks();
   if(keepScroll)scrollTo(0,y)}
 const isR=h=>h==='home'||(h!=='chrome'&&!!VIEWS[h])||/^(imoveis|imovel|artigo)-/.test(h);
