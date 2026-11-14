@@ -45,5 +45,8 @@
   "countries": 23,
   "rating": 4.9,
   "reviews": 128
- }
+ },
+ "newsletterUrl": "",
+ "contactUrl": "",
+ "gaId": ""
 }
