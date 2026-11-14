@@ -85,7 +85,7 @@ def page(route,lang,r):
     head=f'<title>{e(r["title"])}</title>\n<meta name="description" id="md" content="{e(r["desc"])}">\n'
     if route:
         head+=f'<link rel="canonical" href="{url}">\n'+''.join(f'<link rel="alternate" hreflang="{HL[x]}" href="{ORIGIN+BASE+path(route,x)}">\n' for x in LANGS)+f'<link rel="alternate" hreflang="x-default" href="{ORIGIN+BASE+path(route,"pt")}">\n'
-        head+=f'<meta property="og:type" content="website">\n<meta property="og:title" content="{e(r["title"])}">\n<meta property="og:description" content="{e(r["desc"])}">\n<meta property="og:url" content="{url}">\n<meta property="og:image" content="{ogimg(route)}">\n<meta property="og:locale" content="{HL[lang].replace("-","_")}">\n<meta name="twitter:card" content="summary_large_image">\n'
+        head+=f'<meta property="og:type" content="website">\n<meta property="og:title" content="{e(r["title"])}">\n<meta property="og:description" content="{e(r["desc"])}">\n<meta property="og:url" content="{url}">\n<meta property="og:image" content="{ogimg(route)}">\n<meta property="og:locale" content="{HL[lang].replace("-","_")}">\n<meta name="twitter:card" content="summary_large_image">\n<meta name="twitter:title" content="{e(r["title"])}">\n<meta name="twitter:description" content="{e(r["desc"])}">\n<meta name="twitter:image" content="{ogimg(route)}">\n'
     if route in NOINDEX or not route:head+='<meta name="robots" content="noindex">\n'
     if route=='home':head+=f'<link rel="preload" as="image" href="{BASE}img/{ik(HERO)}.webp" imagesrcset="{BASE}img/{ik(HERO)}-s.webp 760w, {BASE}img/{ik(HERO)}.webp 1400w" imagesizes="100vw" fetchpriority="high">\n'
     st={'base':BASE,'origin':ORIGIN,'lang':lang,'route':route or None}
@@ -152,7 +152,8 @@ for st,r in zip(jobs,res):
 today=datetime.date.today().isoformat();U=lambda r,l:ORIGIN+BASE+path(r,l)
 sm='<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n'
 for r,l in urls:
-    sm+=f' <url><loc>{U(r,l)}</loc><lastmod>{today}</lastmod>'+''.join(f'<xhtml:link rel="alternate" hreflang="{HL[x]}" href="{U(r,x)}"/>' for x in LANGS)+'</url>\n'
+    lm=next((p.get('updated') or p.get('date') for p in posts if r=='artigo-'+p['slug']),today)
+    sm+=f' <url><loc>{U(r,l)}</loc><lastmod>{lm}</lastmod>'+''.join(f'<xhtml:link rel="alternate" hreflang="{HL[x]}" href="{U(r,x)}"/>' for x in LANGS)+'</url>\n'
 wr(f'{D}/sitemap.xml',sm+'</urlset>\n')
 bots=['GPTBot','OAI-SearchBot','ChatGPT-User','ClaudeBot','Claude-SearchBot','Claude-User','PerplexityBot','Perplexity-User','Google-Extended','Bingbot','Applebot-Extended','CCBot']
 wr(f'{D}/robots.txt','User-agent: *\nAllow: /\n\n'+''.join(f'User-agent: {x}\nAllow: /\n\n' for x in bots)+f'Sitemap: {ORIGIN}{BASE}sitemap.xml\n')
@@ -165,8 +166,12 @@ for l in listings:
     if l['beds']:f.append(f"{l['beds']} bedrooms")
     if l['area']:f.append(f"{l['area']} m² built")
     if l['lot']:f.append(f"{l['lot']} m² plot")
-    t+=f"- [{l['name']}]({U('imovel-'+l['slug'],'en')}): {', '.join(x for x in f if x)}. {l['desc']['en']}\n"
+    t+=f"- [{l['name']}]({U('imovel-'+l['slug'],'en')}): {', '.join(x for x in f if x)}. {l['desc']['en']} ([Português]({U('imovel-'+l['slug'],'pt')}), [Deutsch]({U('imovel-'+l['slug'],'de')}))\n"
 t+="\n## Guides\n\n"+''.join(f"- [{p['title']['en']}]({U('artigo-'+p['slug'],'en')}): {p['excerpt']['en']}\n" for p in posts)
+fq=re.search(r"\ben:\{fq_h:'[^']*',(.*?)\}\s*[,\n]",rd('src/views/zfix.html'),re.S)
+if fq:
+    qa=dict(re.findall(r"(fq\d a?|fq\da?):'((?:[^'\\]|\\.)*)'",fq.group(1)))
+    t+='\n## Frequently asked questions\n\n'+''.join(f"- **{qa['fq'+str(i)]}** {qa.get('fq'+str(i)+'a','')}\n" for i in range(1,5) if 'fq'+str(i) in qa)
 t+=f"\n## Pages\n\n- [All properties]({U('imoveis','en')})\n- [Land]({U('imoveis-terrenos','en')})\n- [Rentals]({U('imoveis-aluguel','en')})\n- [About the agency]({U('sobre','en')})\n- [Contact]({U('contato','en')})\n- [Sitemap]({ORIGIN}{BASE}sitemap.xml)\n"
 wr(f'{D}/llms.txt',t)
 wr(f'{D}/{INDEXNOW_KEY}.txt',INDEXNOW_KEY)
