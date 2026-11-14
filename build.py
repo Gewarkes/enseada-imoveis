@@ -2,9 +2,8 @@
 """Baut die statische Website nach dist/: jede Seite als eigene HTML-Datei (pt, en, de),
 Bilder als WebP in drei Größen, dazu sitemap.xml, robots.txt, llms.txt und IndexNow-Schlüssel.
 Aufruf: python3 build.py   (SITE_ORIGIN und SITE_BASE kommen aus der Umgebung)"""
-import os,re,json,glob,shutil,hashlib,html,threading,datetime,http.server,functools
+import os,re,json,glob,shutil,hashlib,html,datetime,subprocess,tempfile
 from PIL import Image
-from playwright.sync_api import sync_playwright
 ORIGIN=os.environ.get('SITE_ORIGIN','https://gewarkes.github.io').rstrip('/').lower()
 BASE=os.environ.get('SITE_BASE','/enseada-imoveis/')
 INDEXNOW_KEY='7c1e5a9d3b2f4e6a8c0d1f2b3a4c5d6e'
@@ -15,7 +14,8 @@ def wr(f,s):
     os.makedirs(os.path.dirname(f) or '.',exist_ok=True);open(f,'w',encoding='utf-8').write(s)
 
 # 1 content
-HERO0=(re.search(r"heroPoster:'([^']+)'",open('src/core.js',encoding='utf-8').read()) or [0,''])[1]
+site=json.loads(rd('content/site.json')) if os.path.exists('content/site.json') else {}
+HERO0=(site.get('media') or {}).get('heroPoster') or (re.search(r"heroPoster:'([^']+)'",open('src/core.js',encoding='utf-8').read()) or [0,''])[1]
 slug=lambda s:re.sub(r'[^a-z0-9]+','-',str(s).lower()).strip('-')
 par=lambda v:[x.strip() for x in re.split(r'\n\s*\n',v) if x.strip()] if isinstance(v,str) else (v or [])
 listings=sorted([json.loads(rd(f)) for f in glob.glob('content/imoveis/*.json')],key=lambda x:(x.get('ordem') or 999,x.get('slug','')))
@@ -48,7 +48,7 @@ print('photos',n)
 
 # 3 css + js
 css="@font-face{font-family:'Hanken Grotesk';font-style:normal;font-weight:100 900;font-display:swap;src:url(hanken-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}\n@font-face{font-family:'Hanken Grotesk';font-style:normal;font-weight:100 900;font-display:swap;src:url(hanken-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}\n"+rd('src/base.css')
-js='window.__DATA='+json.dumps({'listings':listings,'posts':posts},ensure_ascii=False,separators=(',',':'))+';\n'+rd('src/core.js')
+js='window.__DATA='+json.dumps({'site':site,'listings':listings,'posts':posts},ensure_ascii=False,separators=(',',':'))+';\n'+rd('src/core.js')
 order=['chrome','home','imoveis','imovel','sobre','blog','artigo','contato','publicar']
 key=lambda f:(order.index(os.path.basename(f)[:-5]) if os.path.basename(f)[:-5] in order else 99)
 for f in sorted(glob.glob('src/views/*.html'),key=key):
@@ -70,7 +70,7 @@ def path(route,lang):
     return pre+route+'/'
 routes=['home','imoveis','imoveis-venda','imoveis-aluguel','imoveis-terrenos','sobre','blog','contato','publicar']+['imovel-'+l['slug'] for l in listings]+['artigo-'+p['slug'] for p in posts]
 NOINDEX={'publicar'}
-m=re.search(r"heroPoster:'([^']+)'",rd('src/core.js'));HERO=m.group(1) if m else ''
+HERO=HERO0
 ik=lambda k:re.sub(r'^(\d+)h$',r'\1',slug(os.path.splitext(os.path.basename(str(k)))[0]))
 def ogimg(route):
     k=HERO
@@ -115,35 +115,37 @@ REDIR='<script>try{if(!localStorage.getItem("lang")){var n=(navigator.language||
 empty={'title':'Enseada Imóveis','desc':'','ld':'{}','nav':'','main':'','foot':'','demo':''}
 wr(f'{D}/404.html',page('', 'pt',empty))   # also the fallback for addresses that have no file
 
-class H(http.server.SimpleHTTPRequestHandler):
-    def translate_path(self,p):
-        p=p.split('?')[0]
-        if p.startswith(BASE):p='/'+p[len(BASE):]
-        return super().translate_path(p)
-    def log_message(self,*a):pass
-srv=http.server.ThreadingHTTPServer(('127.0.0.1',0),functools.partial(H,directory=D));port=srv.server_address[1]
-srv.handle_error=lambda *a:None
-threading.Thread(target=srv.serve_forever,daemon=True).start()
-urls=[];errs=[]
-with sync_playwright() as pw:
-    b=pw.chromium.launch();ctx=b.new_context(viewport={'width':1280,'height':900})
-    ctx.route(lambda u:not u.startswith('http://127.0.0.1'),lambda r:r.abort())
-    pg=ctx.new_page();pg.on('pageerror',lambda x:errs.append(str(x)))
-    for lang in LANGS:
-        for route in routes:
-            st={'base':BASE,'origin':ORIGIN,'lang':lang,'route':route,'snap':1}
-            pg.close();pg=ctx.new_page();pg.on('pageerror',lambda x:errs.append(str(x)))
-            pg.add_init_script('window.__ST='+json.dumps(st))
-            pg.goto(f'http://127.0.0.1:{port}{BASE}404.html',wait_until='load')
-            try:pg.wait_for_function('document.getElementById("main").children.length>0',timeout=8000)
-            except Exception:print('FAIL',lang,route,errs[:3]);raise SystemExit(1)
-            r=pg.evaluate('()=>({title:document.title,desc:document.getElementById("md").content,ld:document.getElementById("ld").textContent,nav:document.getElementById("nav").innerHTML,main:document.getElementById("main").innerHTML,foot:document.getElementById("foot").innerHTML,demo:document.getElementById("demo").textContent})')
-            r['ld']=r['ld'].replace('</','<\\/')
-            wr(f'{D}/{path(route,lang)}index.html',page(route,lang,r))
-            if route not in NOINDEX:urls.append((route,lang))
-    b.close()
-srv.shutdown()
-if errs:print('PAGE ERRORS',errs[:5]);raise SystemExit(1)
+# every page is rendered by Node from the same code the browser runs (no browser needed for the build)
+SNAP=r"""
+const fs=require('fs'),vm=require('vm');const code=fs.readFileSync(process.argv[2],'utf8'),jobs=JSON.parse(fs.readFileSync(process.argv[3],'utf8')),out=[];
+for(const st of jobs){
+  const el=()=>({innerHTML:'',textContent:'',content:'',dataset:{},style:{},children:[],classList:{add(){},remove(){},toggle(){},contains(){return false}},setAttribute(k,v){this[k]=v},getAttribute(){return null},addEventListener(){},querySelector(){return null},querySelectorAll(){return []},appendChild(){},closest(){return null}});
+  const els={},doc={documentElement:el(),body:el(),title:'',addEventListener(){},querySelector(s){return els[s]||(els[s]=el())},querySelectorAll(){return []},getElementById(i){return this.querySelector('#'+i)},createElement:el};
+  const w={__ST:st,document:doc,navigator:{language:'pt',userAgent:'node'},location:{pathname:'/',hash:'',origin:st.origin,href:''},localStorage:{getItem(){return null},setItem(){}},addEventListener(){},matchMedia(){return{matches:false,addEventListener(){}}},scrollTo(){},scrollY:0,innerWidth:1280,innerHeight:900,fetch(){return new Promise(()=>{})},requestAnimationFrame(){},setTimeout,clearTimeout,console,performance:{now(){return 0}},IntersectionObserver:function(){return{observe(){},unobserve(){},disconnect(){}}}};
+  w.window=w;w.self=w;vm.createContext(w);vm.runInContext(code,w,{filename:'site.js'});
+  out.push(vm.runInContext(`(()=>{const fix=h=>h.replace(/href="#([^"]*)"/g,(m,x)=>isR(x)?'href="'+urlFor(x)+'"':m);return{title:document.title,desc:$('#md').content,ld:$('#ld').textContent,nav:fix($('#nav').innerHTML),main:fix($('#main').innerHTML),foot:fix($('#foot').innerHTML),demo:$('#demo').textContent}})()`,w))}
+fs.writeFileSync(process.argv[4],JSON.stringify(out));
+"""
+dims={}
+for f in glob.glob(f'{D}/img/*.webp'):
+    with Image.open(f) as im:dims[os.path.basename(f)]=im.size
+def sized(h):   # width/height on every picture, so nothing jumps while loading
+    def f(m):
+        if ' width=' in m.group(0):return m.group(0)
+        d=dims.get(m.group(2));return m.group(0) if not d else f'{m.group(1)} width="{d[0]}" height="{d[1]}"'
+    return re.sub(r'(<img\b[^>]*?\bsrc="[^"]*?/img/([^"/]+\.webp)")',f,h)
+jobs=[{'base':BASE,'origin':ORIGIN,'lang':lang,'route':route,'snap':1} for lang in LANGS for route in routes]
+with tempfile.TemporaryDirectory() as td:
+    wr(td+'/snap.js',SNAP);wr(td+'/jobs.json',json.dumps(jobs))
+    subprocess.run(['node',td+'/snap.js',f'{D}/assets/site.{hj}.js',td+'/jobs.json',td+'/out.json'],check=True)
+    res=json.loads(rd(td+'/out.json'))
+urls=[]
+for st,r in zip(jobs,res):
+    if not r['main'].strip():raise SystemExit('empty page '+st['route'])
+    r['ld']=r['ld'].replace('</','<\\/')
+    for k in ('nav','main','foot'):r[k]=sized(r[k])
+    wr(f"{D}/{path(st['route'],st['lang'])}index.html",page(st['route'],st['lang'],r))
+    if st['route'] not in NOINDEX:urls.append((st['route'],st['lang']))
 
 # 5 sitemap, robots, llms.txt, IndexNow
 today=datetime.date.today().isoformat();U=lambda r,l:ORIGIN+BASE+path(r,l)
@@ -153,7 +155,7 @@ for r,l in urls:
 wr(f'{D}/sitemap.xml',sm+'</urlset>\n')
 bots=['GPTBot','OAI-SearchBot','ChatGPT-User','ClaudeBot','Claude-SearchBot','Claude-User','PerplexityBot','Perplexity-User','Google-Extended','Bingbot','Applebot-Extended','CCBot']
 wr(f'{D}/robots.txt','User-agent: *\nAllow: /\n\n'+''.join(f'User-agent: {x}\nAllow: /\n\n' for x in bots)+f'Sitemap: {ORIGIN}{BASE}sitemap.xml\n')
-core=rd('src/core.js');g=lambda k:(re.search(k+r":'([^']*)'",core) or [0,''])[1]
+core=rd('src/core.js');g=lambda k:site.get(k) or (site.get('agent') or {}).get(k) or (re.search(k+r":'([^']*)'",core) or [0,''])[1]
 deal={'venda':'for sale','aluguel':'for rent'}
 t=f"# {g('brandFull') or 'Enseada Imóveis'}\n\n> Real estate agency in Pipa and Tibau do Sul (Rio Grande do Norte, Brazil): houses, apartments and land to buy or rent. Service in Portuguese, English and German. Prices in Brazilian reais (BRL).\n\n"
 t+=f"- Phone / WhatsApp: {g('phone')}\n- Email: {g('email')}\n- Licence: {g('creci')}\n- Languages: [Português]({U('home','pt')}), [English]({U('home','en')}), [Deutsch]({U('home','de')})\n\n## Properties\n\n"

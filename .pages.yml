@@ -3,6 +3,68 @@ media:
   input: content/fotos
   output: /content/fotos
 content:
+  - name: site
+    label: Dados da imobiliária
+    type: file
+    path: content/site.json
+    format: json
+    fields:
+      - { name: brand, label: Nome curto (logo), type: string, required: true }
+      - { name: brandFull, label: Nome completo, type: string, required: true }
+      - { name: city, label: Cidade, type: string }
+      - { name: state, label: Estado (sigla), type: string }
+      - name: agent
+        label: Corretor(a)
+        type: object
+        fields:
+          - { name: name, label: Nome, type: string }
+          - { name: initials, label: Iniciais, type: string }
+          - { name: creci, label: CRECI, type: string }
+          - { name: langs, label: Idiomas (ex. PT · EN · DE), type: string }
+          - name: role
+            label: Cargo
+            type: object
+            fields:
+              - { name: pt, label: Português, type: string }
+              - { name: en, label: English, type: string }
+              - { name: de, label: Deutsch, type: string }
+      - { name: phone, label: Telefone (como aparece), type: string }
+      - { name: wa, label: 'WhatsApp (só números, com 55)', type: string }
+      - { name: email, label: E-mail, type: string }
+      - { name: address, label: Endereço, type: string }
+      - name: hours
+        label: Horário
+        type: object
+        fields:
+          - { name: pt, label: Português, type: string }
+          - { name: en, label: English, type: string }
+          - { name: de, label: Deutsch, type: string }
+      - { name: rate, label: 'Juros de exemplo da calculadora (% ao ano)', type: number }
+      - { name: buyCosts, label: 'Custos de compra (0.045 = 4,5%)', type: number }
+      - name: media
+        label: Fotos do site
+        type: object
+        fields:
+          - { name: heroPoster, label: Foto de abertura, type: image }
+          - { name: about, label: Foto da seção Sobre (início), type: image }
+          - { name: proof, label: Foto ao lado dos números, type: image }
+          - { name: portrait, label: Retrato do corretor, type: image }
+          - { name: story1, label: Sobre – foto 1, type: image }
+          - { name: story2, label: Sobre – foto 2, type: image }
+          - { name: team, label: Sobre – foto 3, type: image }
+          - { name: values, label: Sobre – foto 4, type: image }
+          - { name: cta, label: Contato – foto, type: image }
+          - { name: office, label: Contato – mapa ou escritório, type: image }
+          - { name: publish, label: Área do corretor – foto, type: image }
+      - name: stats
+        label: Números
+        type: object
+        fields:
+          - { name: sold, label: Imóveis vendidos, type: number }
+          - { name: years, label: Anos de mercado, type: number }
+          - { name: countries, label: Países dos clientes, type: number }
+          - { name: rating, label: Nota média, type: number }
+          - { name: reviews, label: Avaliações, type: number }
   - name: imoveis
     label: Imóveis
     type: collection
