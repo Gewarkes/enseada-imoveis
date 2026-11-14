@@ -1,0 +1,281 @@
+<style>
+/* ---------- Start-2 hero: photo box, staircase, heading on the steps, overlapping data card ---------- */
+.v-home{--H:clamp(480px,55.6vw,800px)}
+.v-home .hero{padding:5px 0 0;position:relative}
+.v-home .hero__media{position:relative;margin:0 5px;height:var(--H);overflow:hidden;background:var(--ink-2)}
+.v-home .hero__media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.v-home .hero__step{position:absolute;bottom:-1px;background:var(--paper)}
+.v-home .hero__step--a{left:0;width:52.6%;height:calc(var(--H)*.394 + 1px)}
+.v-home .hero__step--b{left:52.6%;width:35%;height:calc(var(--H)*.306 + 1px)}
+.v-home .hero__step--c{left:87.6%;width:12.4%;height:calc(var(--H)*.219 + 1px)}
+.v-home .hero__play{position:absolute;right:15px;bottom:calc(var(--H)*.219 + 16px);width:44px;height:44px;display:grid;place-items:center;border:0;border-radius:12px;background:rgba(16,21,20,.5);color:#fff;transition:background .2s}
+.v-home .hero__play:hover{background:var(--ink)}
+.v-home .hero__play .ico{width:16px;height:16px}
+.v-home .hero__in{position:relative;display:flex;justify-content:space-between;align-items:flex-start;gap:30px}
+.v-home .hero__txt{margin-top:calc(var(--H)*-.3);padding-bottom:8px;min-width:0}
+.v-home .hero__h1{font-size:clamp(44px,6vw,86px);line-height:.9;color:var(--ink)}
+.v-home .hero__h1 span{display:block;white-space:nowrap}
+.v-home .hero__sub{max-width:430px;margin-top:clamp(18px,2.4vw,34px);color:var(--text)}
+.v-home .hero__card{flex:none;width:335px;margin-top:calc(var(--H)*-.4525);background:var(--white);color:var(--ink);padding:44px 40px 40px;border-radius:var(--r);display:block}
+.v-home .hero__wk{font-size:14px;line-height:20px;color:var(--mute)}
+.v-home .hero__nm{font-size:24px;line-height:30px;font-weight:600;letter-spacing:-.02em;margin:4px 0 30px}
+.v-home .hero__dl{display:grid;grid-template-columns:1.25fr 1fr;gap:28px 16px;margin-bottom:44px}
+.v-home .hero__dl dt{font-size:14px;line-height:18px;color:var(--mute)}
+.v-home .hero__dl dd{font-size:16px;line-height:22px;font-weight:500;margin-top:4px}
+.v-home .hero__go{display:inline-flex;align-items:center;gap:12px;font-size:18px;line-height:26px;font-weight:600;letter-spacing:-.01em}
+.v-home .hero__go .ico{transition:transform .25s}
+.v-home .hero__card:hover .hero__go .ico{transform:translateX(5px)}
+
+/* ---------- Start-3 statement + wide picture ---------- */
+.v-home .about{padding:96px 0}
+.v-home .about__grid{display:grid;grid-template-columns:281fr 935fr;gap:84px;align-items:start}
+.v-home .about__side{font-size:16px;line-height:22px;color:var(--mute);padding-top:10px;display:grid;gap:22px;justify-items:start}
+.v-home .about__side .link{color:var(--text);font-size:15px}
+.v-home .about__say{font-size:clamp(26px,2.78vw,40px);line-height:1.1;font-weight:400;letter-spacing:-.025em;color:var(--ink);text-wrap:pretty}
+.v-home .about__pic{margin-top:80px;aspect-ratio:1300/670;border-radius:var(--r);overflow:hidden;background:var(--stone)}
+.v-home .about__pic img{width:100%;height:100%;object-fit:cover}
+
+/* ---------- Start-4 featured listings ---------- */
+.v-home .feat{padding:24px 0 120px}
+.v-home .feat__head{display:flex;justify-content:space-between;align-items:center;gap:40px;margin-bottom:56px}
+.v-home .h2 em{font-style:normal;color:var(--mute);display:block}
+.v-home .feat__two{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:20px}
+
+/* ---------- Start-5 numbered rows on ink ---------- */
+.v-home .rows{padding:96px 0 48px}
+.v-home .rows__head{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;padding-bottom:72px}
+.v-home .rows__h{font-size:clamp(32px,3.5vw,50px);line-height:1.15;font-weight:500;letter-spacing:-.035em;text-wrap:balance}
+.v-home .rows__h em{font-style:normal;display:block;color:var(--mute-d)}
+.v-home .rows__n{text-align:right;flex:none}
+.v-home .rows__n span{display:block;font-size:14px;line-height:20px;color:var(--mute-d)}
+.v-home .rows__n b{display:block;font-size:50px;line-height:1;font-weight:400;letter-spacing:-.04em;margin-top:8px}
+.v-home .row{display:grid;grid-template-columns:82px 340px 1fr 240px 68px;align-items:start;gap:0;padding:32px 0;min-height:214px;border-top:1px solid var(--line-d);transition:background .3s}
+.v-home .rows__list li:last-child .row{border-bottom:1px solid var(--line-d)}
+.v-home .row__no,.v-home .row__t{font-size:24px;line-height:30px;font-weight:500;letter-spacing:-.03em}
+.v-home .row__no{color:var(--mute-d);transition:color .3s}
+.v-home .row:hover .row__no{color:#fff}
+.v-home .row__pts{display:grid;gap:8px}
+.v-home .row__pts li{display:flex;align-items:center;gap:12px;font-size:18px;line-height:27px;color:#c3c9c6}
+.v-home .row__pts .ico{width:10px;height:10px;stroke-width:2;color:var(--mute-d)}
+.v-home .row__ph{width:240px;height:150px;border-radius:var(--r);overflow:hidden;opacity:0;transition:opacity .6s}
+.v-home .row__ph img{width:100%;height:100%;object-fit:cover}
+.v-home .row:hover .row__ph,.v-home .row:focus-visible .row__ph{opacity:1}
+.v-home .row__go{justify-self:end;width:58px;height:150px;border-radius:var(--r);background:var(--ink-2);display:grid;place-items:center;transition:background .3s,color .3s}
+.v-home .row:hover .row__go{background:#fff;color:var(--ink)}
+.v-home .row__go .ico{width:16px;height:16px}
+
+/* ---------- Start-6 figures + example testimonial ---------- */
+.v-home .proof{padding:120px 0}
+.v-home .proof .h2{max-width:560px;margin-bottom:60px}
+.v-home .proof__grid{display:grid;grid-template-columns:786fr 524fr;gap:10px}
+.v-home .proof__l{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:250px minmax(300px,auto);gap:10px}
+.v-home .tile{border-radius:var(--r);padding:30px;display:flex;flex-direction:column;justify-content:space-between;gap:20px}
+.v-home .tile--rate{background:var(--white)}
+.v-home .tile--num{background:var(--stone)}
+.v-home .tile__s{font-size:16px;line-height:22px;color:var(--mute)}
+.v-home .tile--num .tile__s{color:#4f5653}
+.v-home .tile__rate{font-size:36px;line-height:1;font-weight:600;letter-spacing:-.03em;color:var(--ink);margin-bottom:10px}
+.v-home .tile__rate span{color:var(--mute);font-weight:400}
+.v-home .tile__big{display:block;font-size:clamp(70px,6.7vw,96px);line-height:.9;font-weight:500;letter-spacing:-.04em;color:var(--ink)}
+.v-home .tile--quote{grid-column:1/-1;background:var(--ink);color:#eef0ee;position:relative}
+.v-home .tile__flag{align-self:flex-start;font-size:13px;line-height:18px;font-weight:500;color:#d7dcd9;border:1px solid var(--line-d);border-radius:12px;padding:4px 10px}
+.v-home .tile__q{font-size:20px;line-height:28px;max-width:520px;color:#c3c9c6;margin-top:-4px}
+.v-home .tile__who b{display:block;font-size:20px;line-height:1.2;font-weight:600}
+.v-home .tile__who span{display:block;font-size:14px;line-height:20px;color:var(--mute-d);margin-top:6px}
+.v-home .proof__pic{border-radius:var(--r);overflow:hidden;background:var(--stone);min-height:560px;position:relative}
+.v-home .proof__pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+
+/* ---------- Start-7 journal teaser ---------- */
+.v-home .blog{padding:48px 0 100px}
+.v-home .blog__grid{display:grid;grid-template-columns:859fr 416fr;gap:25px;align-items:start}
+.v-home .blog__main{display:block}
+.v-home .blog__ph{aspect-ratio:859/658;overflow:hidden;border-radius:var(--r);background:var(--stone)}
+.v-home .blog__ph img{width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.v-home .blog__main:hover .blog__ph img{transform:scale(1.03)}
+.v-home .blog__cut{position:relative;width:51.5%;margin-top:-62px;background:var(--paper);padding:36px 30px 0 0;border-top-right-radius:var(--r)}
+.v-home .blog__meta{font-size:14px;line-height:20px;color:var(--mute);margin-bottom:10px}
+.v-home .blog__t{font-size:clamp(26px,2.5vw,36px);line-height:1.1;font-weight:600;letter-spacing:-.025em;color:var(--ink);text-wrap:balance}
+.v-home .blog__x{font-size:18px;line-height:26px;font-weight:300;color:var(--mute);margin-top:24px}
+.v-home .blog__side{display:grid;gap:25px}
+.v-home .bc{display:block;background:var(--stone);border-radius:var(--r);padding:38px 40px 36px}
+.v-home .bc__t{font-size:24px;line-height:30px;font-weight:600;letter-spacing:-.02em;color:var(--ink)}
+.v-home .bc__x{font-size:18px;line-height:26px;font-weight:300;color:#4f5653;margin:14px 0 24px}
+.v-home .bc__go{display:inline-flex;align-items:center;gap:10px;font-size:17px;line-height:26px;font-weight:600}
+.v-home .bc__go .ico{width:15px;height:15px;transition:transform .25s}
+.v-home .bc:hover .bc__go .ico{transform:translate(3px,-3px)}
+.v-home .blog__all{margin-top:6px;justify-self:start}
+
+@media (max-width:1180px){
+  .v-home .row{grid-template-columns:60px 260px 1fr 68px}
+  .v-home .row__ph{display:none}
+  .v-home .hero__card{width:300px;padding:32px 28px 30px}
+}
+@media (max-width:860px){
+  .v-home .hero__media{height:auto;aspect-ratio:380/400}
+  .v-home .hero__step{display:none}
+  .v-home .hero__play{bottom:12px;right:12px}
+  .v-home .hero__in{flex-direction:column;gap:32px;padding-top:44px}
+  .v-home .hero__txt,.v-home .hero__card{margin-top:0}
+  .v-home .hero__h1{font-size:clamp(40px,11.8vw,60px);line-height:.92}
+  .v-home .hero__h1 span{white-space:normal}
+  .v-home .hero__sub{max-width:none;margin-top:24px}
+  .v-home .hero__card{width:100%;padding:36px 22px 34px}
+  .v-home .hero__dl{grid-template-columns:1.6fr 1fr;margin-bottom:36px}
+  .v-home .about{padding:76px 0}
+  .v-home .about__grid{grid-template-columns:1fr;gap:20px}
+  .v-home .about__side{padding-top:0;order:2;margin-top:8px}
+  .v-home .about__side .link{min-height:44px}
+  .v-home .about__say{font-size:28px;line-height:1.12}
+  .v-home .about__pic{margin-top:40px;aspect-ratio:358/242}
+  .v-home .feat{padding:0 0 76px}
+  .v-home .feat__head{flex-direction:column;align-items:flex-start;gap:24px;margin-bottom:36px}
+  .v-home .feat__two{grid-template-columns:1fr;gap:12px;margin-top:12px}
+  .v-home .rows{padding:76px 0 40px}
+  .v-home .rows__head{flex-direction:column;align-items:flex-start;gap:28px;padding-bottom:52px}
+  .v-home .rows__n{text-align:left}
+  .v-home .rows__n b{font-size:40px}
+  .v-home .row{grid-template-columns:1fr 52px;gap:8px 16px;min-height:0;padding:26px 0 28px}
+  .v-home .row__no{grid-column:1;grid-row:1}
+  .v-home .row__go{grid-column:2;grid-row:1/3;width:52px;height:52px}
+  .v-home .row__t{grid-column:1;grid-row:2;font-size:28px;line-height:1.15}
+  .v-home .row__pts{grid-column:1/-1;padding-left:0;margin-top:8px;gap:4px}
+  .v-home .row__pts li{font-size:17px}
+  .v-home .proof{padding:76px 0}
+  .v-home .proof .h2{margin-bottom:36px}
+  .v-home .proof__grid,.v-home .proof__l{grid-template-columns:1fr}
+  .v-home .proof__l{grid-template-rows:none}
+  .v-home .tile{padding:26px 22px;min-height:210px}
+  .v-home .tile--quote{min-height:300px}
+  .v-home .tile__big{font-size:70px}
+  .v-home .proof__pic{min-height:0;aspect-ratio:350/300}
+  .v-home .blog{padding:0 0 76px}
+  .v-home .blog__grid{grid-template-columns:1fr;gap:44px}
+  .v-home .blog__cut{width:100%;margin-top:0;padding:22px 0 0}
+  .v-home .blog__t{font-size:28px}
+  .v-home .blog__x{margin-top:14px}
+  .v-home .blog__side{gap:12px}
+  .v-home .bc{padding:28px 22px}
+  .v-home .bc__t{font-size:22px;line-height:28px}
+  .v-home .blog__all{min-height:44px;margin-top:12px}
+}
+</style>
+<script>
+addDict({
+pt:{hm_title:'Imóveis em Pipa e Tibau do Sul',hm_h1a:'Imóveis em Pipa',hm_h1b:'e Tibau do Sul',hm_sub:'Casas, apartamentos e terrenos para comprar ou alugar, com documentação conferida antes do anúncio.',
+ hm_week:'Imóvel da semana',hm_price:'Preço',hm_loc:'Localização',hm_area:'Área construída',hm_status:'Situação',hm_see:'Ver este imóvel',hm_pause:'Pausar vídeo',hm_play:'Reproduzir vídeo',hm_vid:'Vista aérea da costa de Pipa',
+ hm_aboutLab:'Sobre a Enseada',hm_aboutSay:'Há {y} anos a Enseada vende, aluga e administra casas e terrenos em Pipa e Tibau do Sul, com atendimento em português, inglês e alemão.',hm_aboutGo:'Conhecer a imobiliária',hm_aboutAlt:'Casa branca em estilo colonial com jardim',
+ hm_featA:'Casas à venda',hm_featB:'entre o Madeiro e a lagoa',hm_featAll:'Ver todos os imóveis',hm_featBtn:'Ver imóvel',
+ hm_rowsA:'Quatro formas de trabalhar',hm_rowsB:'com a Enseada',hm_rowsN:'Imóveis no catálogo',
+ hm_r1:'Comprar',hm_r1a:'Casas e apartamentos à venda',hm_r1b:'Matrícula e certidões conferidas',hm_r1c:'Visitas presenciais ou por vídeo',hm_r1d:'Apoio a compradores estrangeiros',
+ hm_r2:'Alugar',hm_r2a:'Aluguel anual e por temporada',hm_r2b:'Casas mobiliadas',hm_r2c:'Contrato em português e inglês',hm_r2d:'Vistoria de entrada e de saída',
+ hm_r3:'Terrenos',hm_r3a:'Lotes com escritura e matrícula',hm_r3b:'Consulta ao plano diretor',hm_r3c:'Área de marinha verificada',hm_r3d:'Acesso e topografia vistos no local',
+ hm_r4:'Administração de imóveis',hm_r4a:'Limpeza e manutenção',hm_r4b:'Piscina e jardim',hm_r4c:'Recepção de hóspedes',hm_r4d:'Relatório mensal ao proprietário',
+ hm_proofA:'212 imóveis vendidos',hm_proofB:'em 14 anos de Pipa',hm_rateTop:'Avaliação no Google',hm_rateBot:'{n} avaliações',hm_soldTop:'Em {y} anos de atuação em Pipa',hm_sold:'imóveis vendidos',
+ hm_flag:'Depoimento de exemplo',hm_quote:'Recebemos a matrícula e as contas da casa antes da primeira visita. Fechamos a compra de Lisboa, por procuração, sem surpresa no cartório.',hm_who:'Marta S.',hm_whoRole:'Comprou uma casa na Praia do Madeiro',hm_proofAlt:'Casa de praia entre coqueiros',
+ hm_read:'Ler artigo',hm_blogAll:'Ver todos os artigos'},
+en:{hm_title:'Property in Pipa and Tibau do Sul',hm_h1a:'Property in Pipa',hm_h1b:'and Tibau do Sul',hm_sub:'Houses, apartments and land to buy or rent, with the paperwork checked before we list.',
+ hm_week:'Property of the week',hm_price:'Price',hm_loc:'Location',hm_area:'Built area',hm_status:'Status',hm_see:'View this property',hm_pause:'Pause video',hm_play:'Play video',hm_vid:'Aerial view of the Pipa coast',
+ hm_aboutLab:'About Enseada',hm_aboutSay:'For {y} years Enseada has sold, let and managed houses and land in Pipa and Tibau do Sul, with service in Portuguese, English and German.',hm_aboutGo:'Meet the agency',hm_aboutAlt:'White colonial-style house with garden',
+ hm_featA:'Houses for sale',hm_featB:'between Madeiro and the lagoon',hm_featAll:'View all properties',hm_featBtn:'View property',
+ hm_rowsA:'Four ways to work',hm_rowsB:'with Enseada',hm_rowsN:'Properties in the catalogue',
+ hm_r1:'Buy',hm_r1a:'Houses and apartments for sale',hm_r1b:'Title and certificates checked',hm_r1c:'Viewings in person or by video',hm_r1d:'Support for foreign buyers',
+ hm_r2:'Rent',hm_r2a:'Yearly and holiday rentals',hm_r2b:'Furnished houses',hm_r2c:'Contract in Portuguese and English',hm_r2d:'Check-in and check-out inspection',
+ hm_r3:'Land',hm_r3a:'Plots with deed and registry entry',hm_r3b:'Zoning plan consulted',hm_r3c:'Federal coastal land verified',
+ hm_r3d:'Access and terrain seen on site',
+ hm_r4:'Property management',hm_r4a:'Cleaning and maintenance',hm_r4b:'Pool and garden',hm_r4c:'Guest check-in',hm_r4d:'Monthly statement to the owner',
+ hm_proofA:'212 properties sold',hm_proofB:'in 14 years in Pipa',hm_rateTop:'Google rating',hm_rateBot:'{n} reviews',hm_soldTop:'In {y} years working in Pipa',hm_sold:'properties sold',
+ hm_flag:'Example testimonial',hm_quote:'We received the title and the running costs of the house before the first viewing. We closed the purchase from Lisbon, by power of attorney, with no surprises at the notary.',hm_who:'Marta S.',hm_whoRole:'Bought a house at Praia do Madeiro',hm_proofAlt:'Beach house among coconut palms',
+ hm_read:'Read article',hm_blogAll:'View all articles'},
+de:{hm_title:'Immobilien in Pipa und Tibau do Sul',hm_h1a:'Immobilien in Pipa',hm_h1b:'und Tibau do Sul',hm_sub:'Häuser, Wohnungen und Grundstücke zum Kauf oder zur Miete. Die Unterlagen prüfen wir, bevor ein Objekt online geht.',hm_week:'Objekt der Woche',hm_price:'Preis',hm_loc:'Lage',hm_area:'Wohnfläche',hm_status:'Status',hm_see:'Objekt ansehen',hm_pause:'Video anhalten',hm_play:'Video abspielen',hm_vid:'Luftaufnahme der Küste von Pipa',hm_aboutLab:'Über Enseada',hm_aboutSay:'Seit {y} Jahren verkauft, vermietet und verwaltet Enseada Häuser und Grundstücke in Pipa und Tibau do Sul. Wir betreuen Sie auf Portugiesisch, Englisch und Deutsch.',hm_aboutGo:'Maklerbüro kennenlernen',hm_aboutAlt:'Weißes Haus im Kolonialstil mit Garten',hm_featA:'Häuser zum Kauf',hm_featB:'zwischen Madeiro und der Lagune',hm_featAll:'Alle Immobilien ansehen',hm_featBtn:'Objekt ansehen',hm_rowsA:'Vier Wege der Zusammenarbeit',hm_rowsB:'mit Enseada',hm_rowsN:'Objekte im Angebot',hm_r1:'Kaufen',hm_r1a:'Häuser und Wohnungen zum Kauf',hm_r1b:'Grundbuch und Bescheinigungen geprüft',hm_r1c:'Besichtigung vor Ort oder per Video',hm_r1d:'Begleitung für Käufer aus dem Ausland',hm_r2:'Mieten',hm_r2a:'Jahresmiete und Ferienvermietung',hm_r2b:'Möblierte Häuser',hm_r2c:'Vertrag auf Portugiesisch und Englisch',hm_r2d:'Übergabeprotokoll bei Ein- und Auszug',hm_r3:'Grundstücke',hm_r3a:'Grundstücke mit Urkunde und Grundbucheintrag',hm_r3b:'Bebauungsplan eingesehen',hm_r3c:'Küstenstreifen in Bundesbesitz geprüft',hm_r3d:'Zufahrt und Gelände vor Ort geprüft',hm_r4:'Verwaltung',hm_r4a:'Reinigung und Instandhaltung',hm_r4b:'Pool und Garten',hm_r4c:'Empfang der Gäste',hm_r4d:'Monatsbericht an den Eigentümer',hm_proofA:'212 Objekte verkauft',hm_proofB:'in 14 Jahren in Pipa',hm_rateTop:'Bewertung bei Google',hm_rateBot:'{n} Bewertungen',hm_soldTop:'In {y} Jahren in Pipa',hm_sold:'verkaufte Objekte',hm_flag:'Beispiel-Kundenstimme',hm_quote:'Den Grundbucheintrag und die Abrechnungen des Hauses hatten wir schon vor der ersten Besichtigung. Den Kauf haben wir von Lissabon aus per Vollmacht abgeschlossen, ohne Überraschungen beim Notar.',hm_who:'Marta S.',hm_whoRole:'Hat ein Haus an der Praia do Madeiro gekauft',hm_proofAlt:'Strandhaus zwischen Kokospalmen',hm_read:'Artikel lesen',hm_blogAll:'Alle Artikel ansehen'}});
+
+(function(){
+  const st=APP.state.home=APP.state.home||{paused:matchMedia('(prefers-reduced-motion:reduce)').matches};
+  const PLAY='<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>',PAUSE='<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5v14M15 5v14"/></svg>';
+  const ROWS=[['hm_r1','imoveis-venda','01'],['hm_r2','imoveis-aluguel','56'],['hm_r3','imoveis-terrenos','52'],['hm_r4','contato','06']];
+
+  function hero(){
+    const f=SITE.listings.find(l=>l.feat)||SITE.listings[0],land=f.type==='terreno';
+    return `<section class="hero">
+<div class="hero__media">
+  ${SITE.media.heroVideo?`<video ${st.paused?'':'autoplay '}muted loop playsinline preload="metadata" poster="${img(SITE.media.heroPoster)}" aria-label="${tr('hm_vid')}"><source src="${SITE.media.heroVideo}" type="video/mp4"></video>`:`<img class="hero__still" src="${img(SITE.media.heroPoster)}" srcset="${imgS(SITE.media.heroPoster)} 760w, ${img(SITE.media.heroPoster)} 1400w" sizes="100vw" fetchpriority="high" alt="">`}
+  <span class="hero__step hero__step--a"></span><span class="hero__step hero__step--b"></span><span class="hero__step hero__step--c"></span>
+  ${SITE.media.heroVideo?`<button type="button" class="hero__play" data-hm="video" aria-label="${tr(st.paused?'hm_play':'hm_pause')}">${st.paused?PLAY:PAUSE}</button>`:''}
+</div>
+<div class="wide hero__in">
+  <div class="hero__txt">
+    <h1 class="h1 hero__h1"><span>${tr('hm_h1a')}</span> <span>${tr('hm_h1b')}</span></h1>
+    <p class="lead hero__sub">${tr('hm_sub')}</p>
+  </div>
+  <a class="hero__card" href="#imovel-${f.slug}">
+    <div class="hero__wk">${tr('hm_week')}</div>
+    <div class="hero__nm">${esc(f.name)}</div>
+    <dl class="hero__dl">
+      <div><dt>${tr('hm_price')}</dt><dd class="num">${price(f)}</dd></div>
+      <div><dt>${tr('hm_loc')}</dt><dd>${esc(f.loc)}</dd></div>
+      <div><dt>${land?tr('t_terreno'):tr('hm_area')}</dt><dd class="num">${nf(land?f.lot:f.area)} m²</dd></div>
+      <div><dt>${tr('hm_status')}</dt><dd>${tagText(f)}</dd></div>
+    </dl>
+    <span class="hero__go">${tr('hm_see')}${icon('arrow')}</span>
+  </a>
+</div>
+</section>`}
+
+  function about(){return `<section class="about"><div class="wide">
+<div class="about__grid">
+  <div class="about__side"><span>${tr('hm_aboutLab')}</span><a class="link" href="#sobre">${tr('hm_aboutGo')}${icon('arrow')}</a></div>
+  <p class="about__say">${tr('hm_aboutSay').replace('{y}',SITE.stats.years)}</p>
+</div>
+<div class="about__pic"><img ${srcW(SITE.media.about)} alt="${tr('hm_aboutAlt')}" loading="lazy"></div>
+</div></section>`}
+
+  function feat(){
+    const s=SITE.listings.filter(l=>l.deal==='venda'&&l.type!=='terreno'),p=s.filter(l=>!l.feat).concat(s.filter(l=>l.feat)).slice(0,3);
+    return `<section class="feat"><div class="wrap">
+<div class="feat__head"><h2 class="h2">${tr('hm_featA')} <em>${tr('hm_featB')}</em></h2><a class="btn" href="#imoveis">${tr('hm_featAll')}</a></div>
+${p[0]?cardBig(p[0],tr('hm_featBtn')):''}
+<div class="feat__two">${p.slice(1).map(cardPhoto).join('')}</div>
+</div></section>`}
+
+  function rows(){return `<section class="rows dark"><div class="wide">
+<div class="rows__head"><h2 class="rows__h">${tr('hm_rowsA')} <em>${tr('hm_rowsB')}</em></h2>
+  <p class="rows__n"><span>${tr('hm_rowsN')}</span><b class="num">${SITE.listings.length}</b></p></div>
+<ol class="rows__list">${ROWS.map((r,i)=>`<li><a class="row" href="#${r[1]}">
+  <span class="row__no num">0${i+1}</span><h3 class="row__t">${tr(r[0])}</h3>
+  <ul class="row__pts">${['a','b','c','d'].map(k=>`<li>${icon('plus')}<span>${tr(r[0]+k)}</span></li>`).join('')}</ul>
+  <span class="row__ph"><img ${srcW(r[2])} alt="" loading="lazy"></span>
+  <span class="row__go">${icon('arrow')}</span></a></li>`).join('')}</ol>
+</div></section>`}
+
+  function proof(){const s=SITE.stats;return `<section class="proof"><div class="wide">
+<h2 class="h2">${tr('hm_proofA')} <em>${tr('hm_proofB')}</em></h2>
+<div class="proof__grid">
+  <div class="proof__l">
+    <div class="tile tile--rate"><p class="tile__s">${tr('hm_rateTop')}</p><div><p class="tile__rate num">${nf(s.rating,1)} <span>/ ${nf(5,1)}</span></p><p class="tile__s">${tr('hm_rateBot').replace('{n}',nf(s.reviews))}</p></div></div>
+    <div class="tile tile--num"><p class="tile__s">${tr('hm_soldTop').replace('{y}',s.years)}</p><p><b class="tile__big num" data-count="${s.sold}">${nf(s.sold)}</b><span class="tile__s">${tr('hm_sold')}</span></p></div>
+    <figure class="tile tile--quote"><span class="tile__flag">${tr('hm_flag')}</span><blockquote class="tile__q">${tr('hm_quote')}</blockquote><figcaption class="tile__who"><b>${tr('hm_who')}</b><span>${tr('hm_whoRole')}</span></figcaption></figure>
+  </div>
+  <div class="proof__pic"><img ${srcW(SITE.media.proof)} alt="${tr('hm_proofAlt')}" loading="lazy"></div>
+</div>
+</div></section>`}
+
+  function blog(){const [a,...r]=SITE.posts;if(!a)return '';
+    return `<section class="blog"><div class="wide"><div class="blog__grid">
+<a class="blog__main" href="#artigo-${a.slug}">
+  <div class="blog__ph"><img ${srcW(a.img)} alt="" loading="lazy"></div>
+  <div class="blog__cut"><p class="blog__meta">${esc(L(a.cat))} · ${fdate(a.date)}</p><h2 class="blog__t">${esc(L(a.title))}</h2><p class="blog__x">${esc(L(a.excerpt))}</p></div>
+</a>
+<div class="blog__side">${r.slice(0,3).map(p=>`<a class="bc" href="#artigo-${p.slug}"><h3 class="bc__t">${esc(L(p.title))}</h3><p class="bc__x">${esc(L(p.excerpt))}</p><span class="bc__go">${tr('hm_read')}${icon('up')}</span></a>`).join('')}
+  <a class="link blog__all" href="#blog">${tr('hm_blogAll')}${icon('arrow')}</a></div>
+</div></div></section>`}
+
+  VIEWS.home={
+    title(){return tr('hm_title')},
+    render(){return `<div class="v-home">${hero()}${about()}${feat()}${rows()}${proof()}${blog()}</div>`},
+    mount(root){
+      const v=$('.v-home video',root),b=$('[data-hm="video"]',root);if(!v||!b)return;
+      if(!st.paused){const p=v.play();if(p&&p.catch)p.catch(()=>{})}
+      b.onclick=()=>{st.paused=!st.paused;if(st.paused)v.pause();else{const p=v.play();if(p&&p.catch)p.catch(()=>{})}
+        b.innerHTML=st.paused?PLAY:PAUSE;b.setAttribute('aria-label',tr(st.paused?'hm_play':'hm_pause'))}}
+  };
+})();
+</script>
