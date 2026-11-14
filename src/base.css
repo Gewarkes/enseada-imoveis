@@ -34,14 +34,14 @@ ul,ol{list-style:none;padding:0}
 .num{font-variant-numeric:tabular-nums}
 
 /* buttons: one main action per section */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:44px;padding:0 22px;border-radius:999px;border:1px solid var(--ink);background:var(--ink);color:#fff;font-size:14px;font-weight:600;white-space:nowrap;transition:background .25s,color .25s,border-color .25s}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:44px;padding:0 22px;border-radius:999px;border:1px solid var(--fg);background:var(--ink);color:#fff;font-size:14px;font-weight:600;white-space:nowrap;transition:background .25s,color .25s,border-color .25s}
 .btn:hover{background:var(--sea);border-color:var(--sea)}
 .btn:not(.btn--line):not(.btn--wa)::after{content:"";width:6px;height:6px;border-radius:50%;background:var(--dot);flex:none}
-.btn--light{background:#fff;color:var(--ink);border-color:#fff}
-.btn--light:hover{background:var(--stone);border-color:var(--stone);color:var(--ink)}
+.btn--light{background:var(--white);color:var(--fg);border-color:#fff}
+.btn--light:hover{background:var(--stone);border-color:var(--stone);color:var(--fg)}
 .btn--line{background:transparent;color:inherit;border-color:currentColor}
-.btn--line:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
-.dark .btn--line:hover{background:#fff;color:var(--ink);border-color:#fff}
+.btn--line:hover{background:var(--ink);color:#fff;border-color:var(--fg)}
+.dark .btn--line:hover{background:var(--white);color:var(--fg);border-color:#fff}
 .btn--wa{background:var(--wa);border-color:var(--wa)}
 .btn--wa:hover{background:#178f4a;border-color:#178f4a}
 .btn--lg{height:54px;padding:0 28px;font-size:15px}
@@ -60,7 +60,7 @@ ul,ol{list-style:none;padding:0}
 .pc__img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
 .pc:hover .pc__img{transform:scale(1.03)}
 .pc::after{content:"";position:absolute;inset:40% 0 0;z-index:1;background:linear-gradient(180deg,rgba(10,14,13,0),rgba(10,14,13,.82))}
-.pc__tag{position:absolute;left:20px;top:20px;z-index:2;background:#fff;color:var(--ink);font-size:12px;font-weight:600;padding:6px 12px;border-radius:999px}
+.pc__tag{position:absolute;left:20px;top:20px;z-index:2;background:var(--white);color:var(--fg);font-size:12px;font-weight:600;padding:6px 12px;border-radius:999px}
 .pc__body{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:24px}
 .pc__loc{font-size:13px;opacity:.85}
 .pc__name{font-size:22px;line-height:1.1;font-weight:600;letter-spacing:-.02em;margin:4px 0 8px}
@@ -81,7 +81,7 @@ ul,ol{list-style:none;padding:0}
 
 /* form fields: flat, square */
 .f{display:grid;gap:8px;font-size:14px;font-weight:600}
-.f input,.f select,.f textarea{width:100%;min-height:50px;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:#fff;font-weight:400;font-size:16px}
+.f input,.f select,.f textarea{width:100%;min-height:50px;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:var(--white);font-weight:400;font-size:16px}
 .f textarea{min-height:110px;resize:vertical}
 .ok{min-height:1.6em;font-size:14px;color:var(--sea)}
 
@@ -90,11 +90,11 @@ ul,ol{list-style:none;padding:0}
 .ci label{display:grid;gap:10px;font-size:15px;font-weight:600}
 .ci .rowl{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
 .ci output{font-weight:400;color:var(--mute);font-variant-numeric:tabular-nums}
-.ci input[type=number]{width:100%;height:52px;padding:0 14px;border:1px solid var(--line);border-radius:12px;background:#fff;font-weight:400;font-size:16px}
-.ci input[type=range]{width:100%;accent-color:var(--ink)}
+.ci input[type=number]{width:100%;height:52px;padding:0 14px;border:1px solid var(--line);border-radius:12px;background:var(--white);font-weight:400;font-size:16px}
+.ci input[type=range]{width:100%;accent-color:var(--fg)}
 .ci .two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .ci__h{font-size:13px;line-height:1.45;font-weight:400;color:var(--mute);margin-top:-10px}
-.sys{display:flex;overflow:hidden;border:1px solid var(--line);border-radius:999px;height:52px;background:#fff}
+.sys{display:flex;overflow:hidden;border:1px solid var(--line);border-radius:999px;height:52px;background:var(--white)}
 .sys button{flex:1;background:none;border:0;font-weight:600;color:var(--mute)}
 .sys button[aria-pressed="true"]{background:var(--ink);color:#fff}
 .co .big{font-size:clamp(38px,4.2vw,56px);line-height:1;font-weight:700;letter-spacing:-.035em;font-variant-numeric:tabular-nums}
