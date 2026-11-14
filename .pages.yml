@@ -39,6 +39,13 @@ content:
           - { name: pt, label: Português, type: string }
           - { name: en, label: English, type: string }
           - { name: de, label: Deutsch, type: string }
+      - name: theme
+        label: Aparência do site
+        type: select
+        options:
+          values:
+            - { value: light, label: Claro (fundo claro, faixas escuras) }
+            - { value: dark, label: Escuro (tudo escuro) }
       - { name: newsletterUrl, label: 'Newsletter: endereço do serviço de envio (vazio = só demonstração)', type: string }
       - { name: contactUrl, label: 'Formulário de contato: endereço de envio (vazio = só demonstração)', type: string }
       - { name: demoNote, label: 'Mostrar aviso "modelo de demonstração" no rodapé', type: boolean }

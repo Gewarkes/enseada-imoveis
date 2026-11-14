@@ -46,6 +46,7 @@ for f in sorted(glob.glob('content/fotos/*')):
     n+=1
 print('photos',n)
 
+THEME='dark' if site.get('theme')=='dark' else 'light'
 # 3 css + js
 css="@font-face{font-family:'Hanken Grotesk';font-style:normal;font-weight:100 900;font-display:swap;src:url(hanken-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}\n@font-face{font-family:'Hanken Grotesk';font-style:normal;font-weight:100 900;font-display:swap;src:url(hanken-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}\n"+rd('src/base.css')
 js='window.__DATA='+json.dumps({'site':site,'listings':listings,'posts':posts},ensure_ascii=False,separators=(',',':'))+';\n'+rd('src/core.js')
@@ -91,9 +92,10 @@ def page(route,lang,r):
     st={'base':BASE,'origin':ORIGIN,'lang':lang,'route':route or None}
     redir=REDIR if (route=='home' and lang=='pt') else ''
     return f'''<!DOCTYPE html>
-<html lang="{HL[lang]}">
+<html lang="{HL[lang]}" data-theme="{THEME}">
 <head>
 <meta charset="utf-8">
+<script>try{{var q=new URLSearchParams(location.search).get("theme");if(q==="dark"||q==="light")localStorage.setItem("theme",q);var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}}catch(e){{}}</script>
 {redir}<meta name="viewport" content="width=device-width,initial-scale=1">
 {head}<link rel="preload" as="font" type="font/woff2" href="{BASE}assets/hanken-latin.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="{BASE}assets/cormorant-latin.woff2" crossorigin>
