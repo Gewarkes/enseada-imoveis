@@ -1,0 +1,25 @@
+{
+ "slug": "alugar-por-temporada",
+ "date": "2026-09-12",
+ "img": "78",
+ "cat": {
+  "pt": "Aluguel",
+  "en": "Rentals",
+  "de": "Vermietung"
+ },
+ "title": {
+  "pt": "Alugar por temporada: como funciona a gestão",
+  "en": "Holiday lets: how management works",
+  "de": "Ferienvermietung: So läuft die Verwaltung"
+ },
+ "excerpt": {
+  "pt": "Anúncio, limpeza, check-in e prestação de contas todo mês.",
+  "en": "Listing, cleaning, check-in and a statement every month.",
+  "de": "Inserat, Reinigung, Check-in und jeden Monat eine Abrechnung."
+ },
+ "body": {
+  "pt": "Muitos proprietários moram longe e usam a casa poucas semanas por ano. No resto do tempo, o aluguel por temporada ajuda a pagar a manutenção.\n\nCuidamos do anúncio, da limpeza e da entrega das chaves. Todo mês o proprietário recebe um relatório com as reservas e as despesas.",
+  "en": "Many owners live far away and use the house a few weeks a year. The rest of the time, holiday lets help pay for upkeep.\n\nWe handle the listing, the cleaning and the key handover. Every month the owner gets a statement with bookings and expenses.",
+  "de": "Viele Eigentümer wohnen weit weg und nutzen ihr Haus nur wenige Wochen im Jahr. In der übrigen Zeit hilft die Ferienvermietung, den Unterhalt zu bezahlen.\n\nWir kümmern uns um Inserat, Reinigung und Schlüsselübergabe. Jeden Monat erhält der Eigentümer einen Bericht mit Buchungen und Ausgaben."
+ }
+}

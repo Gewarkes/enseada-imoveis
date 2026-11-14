@@ -1,0 +1,25 @@
+{
+ "slug": "estrangeiro-pode-comprar",
+ "date": "2026-10-21",
+ "img": "75",
+ "cat": {
+  "pt": "Comprar",
+  "en": "Buying",
+  "de": "Kaufen"
+ },
+ "title": {
+  "pt": "Estrangeiro pode comprar imóvel no Brasil?",
+  "en": "Can a foreigner buy property in Brazil?",
+  "de": "Können Ausländer in Brasilien Immobilien kaufen?"
+ },
+ "excerpt": {
+  "pt": "Sim. O caminho passa por CPF, remessa registrada e cartório.",
+  "en": "Yes. The path runs through a CPF, a registered transfer and the notary.",
+  "de": "Ja. Der Weg führt über die Steuernummer CPF, eine registrierte Überweisung und das Notariat."
+ },
+ "body": {
+  "pt": "A resposta curta é sim. O comprador precisa de um CPF, que pode ser pedido no consulado, e o dinheiro deve entrar no país por remessa registrada.\n\nAntes do sinal, um advogado confere a matrícula e as certidões do imóvel e do vendedor. A escritura é assinada em cartório e pode ser feita por procuração.",
+  "en": "The short answer is yes. The buyer needs a CPF tax number, which can be requested at the consulate, and the money must enter the country by registered transfer.\n\nBefore any deposit, a lawyer checks the title and the certificates of the property and the seller. The deed is signed at a notary office and can be done by power of attorney.",
+  "de": "Die kurze Antwort lautet: ja. Der Käufer braucht eine brasilianische Steuernummer (CPF), die sich im Konsulat beantragen lässt. Das Geld muss per registrierter Auslandsüberweisung ins Land kommen.\n\nVor der Anzahlung prüft ein Anwalt den Grundbucheintrag sowie die Bescheinigungen zu Objekt und Verkäufer. Der notarielle Kaufvertrag wird im Notariat unterzeichnet, auf Wunsch per Vollmacht."
+ }
+}
