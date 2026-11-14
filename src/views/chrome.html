@@ -166,6 +166,7 @@ de:{ch_imoveis:'Immobilien',ch_buy:'Kaufen',ch_rent:'Mieten',ch_land:'Grundstüc
   <button type="button" class="ft__pill ft__pill--ico" data-ch="band" aria-pressed="${st.paused}" aria-label="${tr(st.paused?'ch_play':'ch_pause')}">${st.paused?'<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>':'<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5v14M15 5v14"/></svg>'}</button>
   <span class="ft__pill">© ${new Date().getFullYear()} ${esc(SITE.brandFull)}. ${tr('ch_rights')}</span>
   <span class="ft__pill">${esc(SITE.agent.creci)}</span>
+  <button type="button" class="ft__pill" data-theme-toggle>${tr('thSw')}</button>
   ${SITE.brokerLink===false?'':`<a class="ft__pill" href="#publicar">${tr('ch_broker')}</a>`}
   <span class="ft__gap"></span>
   <button type="button" class="ft__pill" data-ch="top">${tr('ch_top')}<svg class="ico ico--n" viewBox="0 0 24 24" aria-hidden="true">${ICONS.up}</svg></button>

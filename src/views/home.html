@@ -6,10 +6,10 @@
 .hx-head{text-align:center;max-width:760px;margin:0 auto 54px;display:grid;gap:16px}
 .hx-head p{color:var(--mute);font-size:17px;line-height:1.6}
 .hx-sec{padding:110px 0}
-.hx-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:52px;padding:0 30px;border-radius:999px;background:var(--fg);color:#0d1211;font-weight:600;font-size:15px;border:1px solid var(--fg);transition:background .2s,color .2s}
+.hx-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:52px;padding:0 30px;border-radius:999px;background:var(--fg);color:var(--paper);font-weight:600;font-size:15px;border:1px solid var(--fg);transition:background .2s,color .2s}
 .hx-btn:hover{background:transparent;color:var(--fg)}
-.hx-btn--line{background:transparent;color:var(--fg);border-color:rgba(255,255,255,.45)}
-.hx-btn--line:hover{background:var(--fg);color:#0d1211}
+.hx-btn--line{background:transparent;color:var(--fg);border-color:var(--edge)}
+.hx-btn--line:hover{background:var(--fg);color:var(--paper)}
 .hx-btn--wa{background:var(--wa);border-color:var(--wa);color:#fff}
 .hx-btn--wa:hover{background:#178f4a;border-color:#178f4a;color:#fff}
 .hx-btn .ico{width:18px;height:18px}
@@ -238,20 +238,20 @@ ${feat?`<section class="hx-sec" style="padding-top:40px"><div class="wrap">
     <div class="hx-feat__ph"><img ${srcW(feat.imgs[0])} alt="${esc(feat.name)}"></div><span class="hx-feat__tag">${tr('hx_week')}</span>
     <div class="hx-feat__b"><div><div class="hx-loc">${esc(feat.loc)}</div><h3>${esc(feat.name)}</h3>${facts(feat)}</div><div class="hx-price num">${price(feat)}<small>${tr('hx_view')} →</small></div></div>
   </a></div></section>`:''}
-${grid.length?`<section class="hx-sec" style="padding-top:0"><div class="wrap">
+${grid.length?`<section class="hx-sec" style="padding-top:20px"><div class="wrap">
   <div class="hx-head"><div class="hx-eye">${tr('hx_sel_e')}</div><h2 class="hx-h hx-t">${tr('hx_sel_h')}</h2><p>${tr('hx_sel_p')}</p></div>
   <div class="hx-grid">${grid.map(card).join('')}</div>
   <div class="hx-more"><a class="hx-btn hx-btn--line" href="#imoveis">${tr('hx_all')}</a></div>
 </div></section>`:''}
-${feat&&feat.deal==='venda'?`<section class="hx-sec" style="padding-top:0" id="calc"><div class="wrap">
+${feat&&feat.deal==='venda'?`<section class="hx-sec hx-band" id="calc"><div class="wrap">
   <div class="hx-head"><div class="hx-eye">${tr('hx_fi_e')}</div><h2 class="hx-h hx-t">${tr('hx_fi_h')}</h2><p>${tr('hx_fi_p')}</p></div>
   <div class="hx-calc"><div class="calc">${calcHTML(feat.price)}</div><p class="fx num">${fxText()}</p></div>
 </div></section>`:''}
-<section class="hx-sec hx-band"><div class="wrap">
+<section class="hx-sec"><div class="wrap">
   <div class="hx-head"><div class="hx-eye">${tr('hx_cat_e')}</div><h2 class="hx-h hx-t">${tr('hx_cat_h')}</h2></div>
   <div class="hx-cats">${cat('imoveis-venda','hx_buy',buy,pic(buy.slice(1),m.proof))}${cat('imoveis-aluguel','hx_rent',rent,pic(rent,m.story1))}${cat('imoveis-terrenos','hx_land',land,pic(land,m.values))}</div>
 </div></section>
-<section class="hx-sec"><div class="wrap hx-about">
+<section class="hx-sec" style="padding-top:0"><div class="wrap hx-about">
   <div class="hx-about__ph"><img ${srcW(m.about)} alt="${tr('hx_alt2')}" loading="lazy"></div>
   <div class="hx-about__t"><div class="hx-eye">${tr('hx_ab_e')}</div><h2 class="hx-h hx-t">${tr('hx_ab_h')}</h2><p>${tr('hx_ab_p').replace('{y}',s.years)}</p>
     <div class="hx-stats num"><div><b data-count="${s.sold}">${s.sold}</b><span>${tr('hx_s1')}</span></div><div><b data-count="${s.years}">${s.years}</b><span>${tr('hx_s2')}</span></div><div><b data-count="${s.countries}">${s.countries}</b><span>${tr('hx_s3')}</span></div><div><b data-count="${s.rating}" data-dec="1">${nf(s.rating,1)}</b><span>${tr('hx_s4')}</span></div></div>
