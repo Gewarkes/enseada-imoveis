@@ -18,10 +18,9 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+          cache: pip
       - name: Werkzeuge installieren
-        run: |
-          pip install pillow playwright
-          python -m playwright install --with-deps chromium
+        run: pip install -r requirements.txt
       - name: Seiten bauen
         env:
           SITE_ORIGIN: https://${{ github.repository_owner }}.github.io
@@ -40,7 +39,6 @@ jobs:
       - id: deployment
         uses: actions/deploy-pages@v4
       - name: Suchmaschinen benachrichtigen (IndexNow)
-        continue-on-error: true
         run: |
           sleep 20
           curl -fsS "${{ steps.deployment.outputs.page_url }}indexnow.json" -o indexnow.json
