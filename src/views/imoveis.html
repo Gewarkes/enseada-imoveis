@@ -131,7 +131,7 @@ VIEWS.imoveis=(()=>{
     const act=Math.min(s.act,Math.max(0,list.length-1));
     let body;
     if(!list.length)body=`<div class="nil"><h2 class="h3">${tr('im_nil_t')}</h2><p>${tr('im_nil_p')}</p><div class="nil__b">${wa()}<button type="button" class="btn btn--line" data-clear>${tr('im_clear')}</button></div></div>`;
-    else if(land)body=`<div class="tl"><div class="tl__pic" aria-hidden="true">${list.map((l,i)=>`<img ${srcW(l.imgs[0])} alt="" class="${i===act?'on':''}" data-pic="${i}">`).join('')}</div>
+    else if(land)body=`<div class="tl"><div class="tl__pic" aria-hidden="true">${list.map((l,i)=>`<img ${srcW(l.imgs[0])} alt="${esc(l.name)}" class="${i===act?'on':''}" data-pic="${i}">`).join('')}</div>
       <ul class="tl__rows">${list.map((l,i)=>`<li><a class="tl__row${i===act?' on':''}" href="#imovel-${l.slug}" data-row="${i}"><img class="tl__th" src="${img(l.imgs[0])}" alt="${esc(l.name)}" loading="lazy"><span class="tl__tx"><span class="tl__n">${esc(l.name)}</span><span class="tl__l">${esc(l.loc)}</span></span><span class="tl__c num"><span>${price(l)}</span><span>${nf(l.lot)} m²</span></span></a></li>`).join('')}</ul></div>`;
     else body=cardBig(list[0],tr('im_see'))+(list.length>1?`<div class="grid">${list.slice(1).map(cardBelow).join('')}</div>`:'');
     return `<div class="v-imoveis">

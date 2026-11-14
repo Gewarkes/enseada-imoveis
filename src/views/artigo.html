@@ -62,7 +62,7 @@ VIEWS.artigo={
     const a=SITE.agent,body=L(p.body)||[];
     const mins=Math.max(1,Math.round(body.join(' ').split(/\s+/).length/200));
     const txt=body.map(x=>x.startsWith('## ')?`<h2>${esc(x.slice(3))}</h2>`:`<p>${esc(x)}</p>`).join('');
-    const card=o=>`<a class="mc" href="#artigo-${o.slug}"><div class="mc__ph"><img ${srcW(o.img)} alt="${esc(L(o.excerpt))}" loading="lazy"></div>
+    const card=o=>`<a class="mc" href="#artigo-${o.slug}"><div class="mc__ph"><img ${srcW(o.img)} alt="${esc(L(o.title))}" loading="lazy"></div>
       <div class="mc__m"><span>${esc(L(o.cat))}</span><time datetime="${o.date}">${fdate(o.date)}</time></div><h3 class="mc__t">${esc(L(o.title))}</h3></a>`;
     return `<div class="v-artigo">
 <article>

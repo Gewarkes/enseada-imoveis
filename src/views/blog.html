@@ -58,7 +58,7 @@ VIEWS.blog={
   title(){return tr('bl_title')},
   render(){
     const card=p=>`<a class="post" href="#artigo-${p.slug}">
-      <div class="post__ph"><img ${srcW(p.img)} alt="${esc(L(p.excerpt))}" loading="lazy"><div class="post__meta"><time datetime="${p.date}">${fdate(p.date)}</time><i></i><span>${esc(L(p.cat))}</span></div></div>
+      <div class="post__ph"><img ${srcW(p.img)} alt="${esc(L(p.title))}" loading="lazy"><div class="post__meta"><time datetime="${p.date}">${fdate(p.date)}</time><i></i><span>${esc(L(p.cat))}</span></div></div>
       <h2 class="post__t">${esc(L(p.title))}</h2></a>`;
     return `<div class="v-blog">
 <section class="head"><div class="wrap"><h1 class="head__t">${tr('bl_h1')}</h1><p class="head__p">${tr('bl_p')}</p></div></section>
