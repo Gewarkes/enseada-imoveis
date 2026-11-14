@@ -1,0 +1,49 @@
+{
+ "brand": "Enseada",
+ "brandFull": "Enseada Imóveis",
+ "city": "Pipa",
+ "state": "RN",
+ "agent": {
+  "name": "Helena Cavalcanti",
+  "initials": "HC",
+  "creci": "CRECI/RN 00000-F",
+  "langs": "PT · EN · DE",
+  "role": {
+   "pt": "Corretora e fundadora",
+   "en": "Broker and founder",
+   "de": "Maklerin und Gründerin"
+  }
+ },
+ "phone": "+55 84 99999-0000",
+ "wa": "5500000000000",
+ "email": "contato@enseadaimoveis.com.br",
+ "address": "Av. Baía dos Golfinhos, 000 · Pipa, Tibau do Sul/RN",
+ "hours": {
+  "pt": "Seg a sáb, 9h às 18h",
+  "en": "Mon to Sat, 9 am to 6 pm",
+  "de": "Mo–Sa, 9–18 Uhr"
+ },
+ "rate": 11.5,
+ "buyCosts": 0.045,
+ "media": {
+  "heroVideo": "",
+  "heroPoster": "70",
+  "about": "72",
+  "office": "map",
+  "team": "13",
+  "story1": "06",
+  "story2": "71",
+  "values": "73",
+  "cta": "74",
+  "publish": "21",
+  "portrait": "78",
+  "proof": "01"
+ },
+ "stats": {
+  "sold": 212,
+  "years": 14,
+  "countries": 23,
+  "rating": 4.9,
+  "reviews": 128
+ }
+}
