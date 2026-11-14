@@ -39,6 +39,9 @@ content:
           - { name: pt, label: Português, type: string }
           - { name: en, label: English, type: string }
           - { name: de, label: Deutsch, type: string }
+      - { name: newsletterUrl, label: 'Newsletter: endereço do serviço de envio (vazio = só demonstração)', type: string }
+      - { name: contactUrl, label: 'Formulário de contato: endereço de envio (vazio = só demonstração)', type: string }
+      - { name: gaId, label: 'Google Analytics (ex. G-XXXXXXX; vazio = desligado)', type: string }
       - { name: rate, label: 'Juros de exemplo da calculadora (% ao ano)', type: number }
       - { name: buyCosts, label: 'Custos de compra (0.045 = 4,5%)', type: number }
       - name: media
