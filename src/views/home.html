@@ -261,7 +261,7 @@ ${p[0]?cardBig(p[0],tr('hm_featBtn')):''}
   function blog(){const [a,...r]=SITE.posts;if(!a)return '';
     return `<section class="blog"><div class="wide"><div class="blog__grid">
 <a class="blog__main" href="#artigo-${a.slug}">
-  <div class="blog__ph"><img ${srcW(a.img)} alt="" loading="lazy"></div>
+  <div class="blog__ph"><img ${srcW(a.img)} alt="${esc(L(a.title))}" loading="lazy"></div>
   <div class="blog__cut"><p class="blog__meta">${esc(L(a.cat))} · ${fdate(a.date)}</p><h2 class="blog__t">${esc(L(a.title))}</h2><p class="blog__x">${esc(L(a.excerpt))}</p></div>
 </a>
 <div class="blog__side">${r.slice(0,3).map(p=>`<a class="bc" href="#artigo-${p.slug}"><h3 class="bc__t">${esc(L(p.title))}</h3><p class="bc__x">${esc(L(p.excerpt))}</p><span class="bc__go">${tr('hm_read')}${icon('up')}</span></a>`).join('')}
