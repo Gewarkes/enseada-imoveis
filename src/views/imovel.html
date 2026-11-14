@@ -15,7 +15,7 @@
 .v-imovel .gal img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
 .v-imovel .gal button:hover img{transform:scale(1.03)}
 .v-imovel .gal button:focus-visible{outline-offset:-4px;z-index:1}
-.v-imovel .galall{position:absolute;right:16px;bottom:16px;height:44px;padding:0 16px;border:0;border-radius:12px;background:var(--white);color:var(--ink);font-size:14px;font-weight:600;display:inline-flex;align-items:center;gap:8px;transition:background .2s}
+.v-imovel .galall{position:absolute;right:16px;bottom:16px;height:44px;padding:0 16px;border:0;border-radius:12px;background:var(--white);color:var(--fg);font-size:14px;font-weight:600;display:inline-flex;align-items:center;gap:8px;transition:background .2s}
 .v-imovel .galall:hover{background:var(--stone)}
 
 /* Vollbild-Galerie */
@@ -25,7 +25,7 @@
 .v-imovel .lb__bar b{font-weight:600}
 .v-imovel .lb__cnt{color:var(--mute-d);margin-left:14px}
 .v-imovel .lb button{display:grid;place-items:center;width:48px;height:48px;border:1px solid var(--line-d);border-radius:12px;background:#0b0f0e;color:#fff;transition:background .2s,color .2s}
-.v-imovel .lb button:hover{background:#fff;color:var(--ink)}
+.v-imovel .lb button:hover{background:var(--white);color:var(--fg)}
 .v-imovel .lb button:focus-visible{outline-color:#fff}
 .v-imovel .lb button .ico{width:22px;height:22px}
 .v-imovel .lb__stage{position:relative;min-height:0;display:grid;place-items:center;padding:0 88px 28px}
@@ -100,17 +100,17 @@
 .v-imovel .am li{display:flex;align-items:center;gap:14px;min-height:60px;padding:14px 22px;border-radius:var(--r);background:var(--paper);font-size:16px;line-height:1.2}
 .v-imovel .am .ico{width:24px;height:24px}
 .v-imovel .fin{margin-top:var(--sec)}
-.v-imovel .calc{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:stretch}
-.v-imovel .calc>.ci{padding:32px;border-radius:var(--r);background:var(--paper);align-content:start}
-.v-imovel .calc>.co{padding:32px;border-radius:var(--r);background:var(--ink);color:#eef0ee;display:flex;flex-direction:column}
-.v-imovel .calc .co__lab{font-size:14px;color:var(--mute-d);margin-bottom:10px}
-.v-imovel .calc .co__alt{margin-top:10px;font-size:15px;color:var(--mute-d);font-variant-numeric:tabular-nums}
-.v-imovel .calc .co dl{display:grid;grid-template-columns:1fr 1fr;gap:28px 24px;margin:36px 0 0;padding-top:32px;border-top:1px solid var(--line-d)}
-.v-imovel .calc .co dl div{display:block;padding:0;border:0}
-.v-imovel .calc .co dt{font-size:15px;line-height:1.35;color:var(--mute-d)}
-.v-imovel .calc .co dd{margin-top:6px;font-size:20px;line-height:27px}
-.v-imovel .calc .co__fine{margin-top:auto;padding-top:32px;font-size:13px;line-height:1.5;color:var(--mute-d)}
-.v-imovel .calc input[type=range]{height:44px;margin:-12px 0}
+:is(.v-imovel,.hx-calc) .calc{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:stretch}
+:is(.v-imovel,.hx-calc) .calc>.ci{padding:32px;border-radius:var(--r);background:var(--paper);align-content:start}
+:is(.v-imovel,.hx-calc) .calc>.co{padding:32px;border-radius:var(--r);background:var(--ink);color:#eef0ee;display:flex;flex-direction:column}
+:is(.v-imovel,.hx-calc) .calc .co__lab{font-size:14px;color:var(--mute-d);margin-bottom:10px}
+:is(.v-imovel,.hx-calc) .calc .co__alt{margin-top:10px;font-size:15px;color:var(--mute-d);font-variant-numeric:tabular-nums}
+:is(.v-imovel,.hx-calc) .calc .co dl{display:grid;grid-template-columns:1fr 1fr;gap:28px 24px;margin:36px 0 0;padding-top:32px;border-top:1px solid var(--line-d)}
+:is(.v-imovel,.hx-calc) .calc .co dl div{display:block;padding:0;border:0}
+:is(.v-imovel,.hx-calc) .calc .co dt{font-size:15px;line-height:1.35;color:var(--mute-d)}
+:is(.v-imovel,.hx-calc) .calc .co dd{margin-top:6px;font-size:20px;line-height:27px}
+:is(.v-imovel,.hx-calc) .calc .co__fine{margin-top:auto;padding-top:32px;font-size:13px;line-height:1.5;color:var(--mute-d)}
+:is(.v-imovel,.hx-calc) .calc input[type=range]{height:44px;margin:-12px 0}
 .v-imovel .fx{margin-top:16px;font-size:14px;color:var(--mute)}
 
 /* Detail-5 Kontakt zum Makler (Oriume) */
@@ -174,10 +174,10 @@
   .v-imovel .am{gap:8px}
   .v-imovel .am li{padding:12px 10px;gap:8px;font-size:14.5px;overflow-wrap:anywhere}
   .v-imovel .am .ico{width:22px;height:22px}
-  .v-imovel .calc{grid-template-columns:1fr}
-  .v-imovel .calc>.ci,.v-imovel .calc>.co{padding:24px 20px}
-  .v-imovel .calc .co dl{gap:22px 16px}
-  .v-imovel .calc .co dd{font-size:18px;white-space:normal}
+  :is(.v-imovel,.hx-calc) .calc{grid-template-columns:1fr}
+  :is(.v-imovel,.hx-calc) .calc>.ci,:is(.v-imovel,.hx-calc) .calc>.co{padding:24px 20px}
+  :is(.v-imovel,.hx-calc) .calc .co dl{gap:22px 16px}
+  :is(.v-imovel,.hx-calc) .calc .co dd{font-size:18px;white-space:normal}
   .v-imovel .ct__g{grid-template-columns:1fr;gap:28px}
   .v-imovel .ct__ph{aspect-ratio:370/288}
   .v-imovel .ct__ph b{font-size:88px}
