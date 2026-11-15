@@ -7,6 +7,7 @@
 <section class="hero">
   <div class="hero-media">
     {{ pic(site.media.hero, '(max-width:800px) 220vw, 100vw', t.heroAlt, '', true) }}
+    {% if site.media.get('heroVideo') %}<video class="hero-video" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1" data-video="{{ base }}video/{{ site.media.heroVideo }}" data-video-m="{{ base }}video/{{ site.media.get('heroVideoMobile') or site.media.heroVideo }}"></video>{% endif %}
     <div class="hero-text"><div class="wrap">
       <h1>{{ t.heroH }}</h1>
       <p>{{ t.heroP }}</p>
