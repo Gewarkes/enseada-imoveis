@@ -65,6 +65,8 @@ content:
         type: object
         fields:
           - { name: hero, label: Foto de abertura (página inicial), type: image }
+          - { name: heroVideo, label: 'Vídeo de abertura: nome do arquivo em content/video (ex. hero.mp4; vazio = só a foto)', type: string }
+          - { name: heroVideoMobile, label: 'Vídeo de abertura para celular (opcional, ex. hero-m.mp4)', type: string }
           - { name: about, label: Foto da seção Sobre, type: image }
           - { name: story, label: Sobre – segunda foto, type: image }
           - { name: sell, label: Foto da seção Proprietários, type: image }

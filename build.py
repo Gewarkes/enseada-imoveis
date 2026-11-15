@@ -115,6 +115,8 @@ dims = {}
 n = 0
 for f in sorted(glob.glob('content/fotos/*')):
     stem = ik(f)
+    if f.lower().endswith(('.mp4', '.webm', '.mov')):
+        continue
     try:
         im = Image.open(f).convert('RGB')
     except Exception as ex:
@@ -255,6 +257,8 @@ wr(f'{D}/assets/site.{hc}.css', css)
 wr(f'{D}/assets/site.{hj}.js', js)
 for f in glob.glob('src/fonts/*.woff2'):
     shutil.copy(f, f'{D}/assets/{os.path.basename(f)}')
+if os.path.isdir('content/video'):   # kurze Videos (z. B. Einstieg) werden unverändert übernommen
+    shutil.copytree('content/video', f'{D}/video')
 lcss = rd('src/vendor/leaflet.css')
 lcss = re.sub(r'url\(images/[^)]*\)', 'none', lcss)   # Standard-Marker werden nicht benutzt
 wr(f'{D}/assets/leaflet.css', lcss)

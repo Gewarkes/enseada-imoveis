@@ -49,5 +49,7 @@ cd dist && python -m http.server 8000
 
 ## Hinweise
 
+- Video im Einstieg: `content/video/hero.mp4` (Rechner) und `hero-m.mp4` (Handy), eingetragen in `site.json` unter `media`. Es startet erst nach dem Laden der Seite; das Foto `media.hero` bleibt Startbild. Das Demo-Video stammt von Pexels (Alef Morais, freie Pexels-Lizenz) und wird je Kunde ersetzt.
+
 - Kartenkacheln kommen von openstreetmap.org. Für Seiten mit sehr vielen Besuchern einen eigenen Kachel-Anbieter eintragen (`src/site.js`, Zeile mit `tile.openstreetmap.org`).
 - Wechselkurse (US$, €) werden nur abgefragt, wenn ein Besucher die Währung umstellt oder eine Objektseite öffnet (frankfurter.dev). Ersatzwerte stehen in `site.json` unter `fx`.
