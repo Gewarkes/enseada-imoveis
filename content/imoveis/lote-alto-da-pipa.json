@@ -1,22 +1,37 @@
 {
  "slug": "lote-alto-da-pipa",
+ "ref": "EN-1033",
  "deal": "venda",
  "type": "terreno",
  "name": "Lote Alto da Pipa",
+ "title": {
+  "pt": "Lote de 600 m² em loteamento fechado no Chapadão",
+  "en": "600 m² plot in a gated development in Chapadão",
+  "de": "Grundstück mit 600 m² in geschlossener Anlage, Chapadão"
+ },
  "loc": "Chapadão",
+ "lat": -6.2411,
+ "lng": -35.0433,
  "price": 420000,
+ "condo": 380,
+ "iptu": 840,
  "beds": 0,
+ "suites": 0,
  "baths": 0,
+ "parking": 0,
  "area": 0,
  "lot": 600,
  "year": 0,
  "beach": 700,
  "status": "disponivel",
+ "date": "2026-10-14",
  "imgs": [
   "79",
   "81",
-  "10"
+  "21"
  ],
+ "video": "",
+ "plan": "",
  "feats": [
   "deed",
   "paved",
@@ -29,10 +44,27 @@
   "center": "6 min",
   "airport": "1 h 25"
  },
+ "highlights": {
+  "pt": [
+   "Projeto aprovado para dois pavimentos",
+   "Rua calçada, energia e água no lote",
+   "Loteamento fechado com portaria"
+  ],
+  "en": [
+   "Approved plans for two floors",
+   "Paved road, power and water on site",
+   "Gated development with gatehouse"
+  ],
+  "de": [
+   "Genehmigte Planung für zwei Geschosse",
+   "Gepflasterte Straße, Strom und Wasser",
+   "Geschlossene Anlage mit Pforte"
+  ]
+ },
  "desc": {
-  "pt": "Lote de 600 m² em loteamento fechado, pronto para construir. Projeto aprovado para casa de até dois pavimentos.",
-  "en": "600 m² plot in a gated development, ready to build. Approved plans for a house of up to two floors.",
-  "de": "Grundstück mit 600 m² in einer geschlossenen Wohnanlage, baureif. Genehmigte Planung für ein Haus mit bis zu zwei Geschossen."
+  "pt": "O lote fica num loteamento fechado no alto do Chapadão, a 700 m do mirante e da descida para a praia. O centro de Pipa está a seis minutos de carro. O terreno tem 600 m², com 15 m de frente e 40 m de fundo, plano e já limpo.\n\nAs ruas internas são calçadas e iluminadas. Energia e água estão ligadas na frente do lote, e o esgoto é por fossa séptica. Há projeto aprovado na prefeitura para uma casa de até dois pavimentos. O comprador pode usar esse projeto ou apresentar outro, dentro das regras do loteamento, que definem recuos e altura máxima.\n\nO lote tem escritura e matrícula individual, e o loteamento está registrado em cartório. A taxa de condomínio é de R$ 380 por mês e cobre portaria e manutenção das vias. O IPTU está em dia. Não há prazo obrigatório para começar a obra.",
+  "en": "The plot is in a gated development on the Chapadão plateau, 700 m from the lookout and the path down to the beach. Pipa centre is six minutes by car. The plot has 600 m², 15 m of frontage and 40 m of depth. It is level and cleared.\n\nThe internal roads are paved and lit. Power and water are connected at the front of the plot, and sewage goes to a septic tank. Plans for a house of up to two floors have been approved by the town hall. The buyer may use them or submit a new design within the development's rules on setbacks and height.\n\nThe plot has a deed and its own registry entry, and the development itself is registered. The monthly fee is R$ 380 and covers the gatehouse and road maintenance. Property tax is paid up. There is no deadline for starting construction.",
+  "de": "Das Grundstück liegt in einer geschlossenen Anlage auf der Hochfläche des Chapadão, 700 m vom Aussichtspunkt und vom Abstieg zum Strand entfernt. Ins Zentrum von Pipa fahren Sie sechs Minuten. Die Fläche hat 600 m², 15 m Front und 40 m Tiefe, ist eben und bereits geräumt.\n\nDie internen Straßen sind gepflastert und beleuchtet. Strom und Wasser sind vorn am Grundstück angeschlossen, das Abwasser läuft in eine Klärgrube. Bei der Gemeinde liegt eine genehmigte Planung für ein Haus mit bis zu zwei Geschossen vor. Der Käufer kann sie übernehmen oder einen eigenen Entwurf einreichen. Die Regeln der Anlage legen Grenzabstände und maximale Höhe fest.\n\nDas Grundstück hat eine notarielle Urkunde und einen eigenen Grundbucheintrag, die Anlage selbst ist registriert. Die Monatsgebühr beträgt R$ 380 und deckt Pforte und Pflege der Wege. Die Grundsteuer ist bezahlt. Eine Frist für den Baubeginn gibt es nicht."
  },
  "ordem": 10
 }

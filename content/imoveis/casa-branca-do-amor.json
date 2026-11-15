@@ -1,24 +1,38 @@
 {
  "slug": "casa-branca-do-amor",
+ "ref": "EN-1008",
  "deal": "venda",
  "type": "casa",
  "name": "Casa Branca do Amor",
+ "title": {
+  "pt": "Casa de 4 suítes a 180 m da Praia do Amor",
+  "en": "Four-bedroom house 180 m from Praia do Amor",
+  "de": "Haus mit 4 Schlafzimmern, 180 m zur Praia do Amor"
+ },
  "loc": "Praia do Amor",
+ "lat": -6.2349,
+ "lng": -35.0441,
  "price": 3650000,
+ "condo": 0,
+ "iptu": 7600,
  "beds": 4,
+ "suites": 4,
  "baths": 4,
+ "parking": 2,
  "area": 330,
  "lot": 780,
  "year": 2019,
  "beach": 180,
  "status": "reservado",
+ "date": "2026-08-12",
  "imgs": [
   "24",
-  "15",
-  "44",
-  "49",
+  "01",
+  "43",
   "75"
  ],
+ "video": "",
+ "plan": "",
  "feats": [
   "pool",
   "seaview",
@@ -33,10 +47,27 @@
   "center": "7 min",
   "airport": "1 h 25"
  },
+ "highlights": {
+  "pt": [
+   "Escada da praia a 3 min a pé",
+   "Cozinha integrada ao terraço",
+   "Mar visto do pavimento superior"
+  ],
+  "en": [
+   "Beach steps 3 minutes on foot",
+   "Kitchen opens onto the terrace",
+   "Sea view from the upper floor"
+  ],
+  "de": [
+   "Strandtreppe in 3 Gehminuten",
+   "Küche öffnet sich zur Terrasse",
+   "Meerblick aus dem Obergeschoss"
+  ]
+ },
  "desc": {
-  "pt": "Arquitetura branca e baixa, a três minutos da escada da Praia do Amor. Quatro suítes e cozinha integrada ao terraço.",
-  "en": "Low white architecture, three minutes from the steps to Praia do Amor. Four en-suites and a kitchen that opens onto the terrace.",
-  "de": "Weiße, flache Architektur, drei Minuten von der Treppe zur Praia do Amor. Vier Schlafzimmer mit eigenem Bad, die Küche öffnet sich zur Terrasse."
+  "pt": "A casa fica numa rua calçada acima da Praia do Amor, a 180 m da escada de acesso à areia. O centro fica a sete minutos de carro. O lote de 780 m² é murado, com jardim na frente e piscina nos fundos.\n\nA construção é de 2019, em alvenaria pintada de branco, com 330 m² em dois pavimentos baixos. As quatro suítes têm ar-condicionado. Duas ficam no térreo e duas no piso superior, de onde se vê o mar. A cozinha abre para o terraço da churrasqueira por portas de correr. A garagem coberta recebe dois carros e a internet é por fibra.\n\nO imóvel tem matrícula individual e escritura, com IPTU em dia. A pintura externa foi refeita em 2025. No momento a casa está reservada, com proposta em análise. Anotamos o contato de interessados para o caso de a reserva não se confirmar.",
+  "en": "The house is on a paved road above Praia do Amor, 180 m from the steps down to the sand. The centre is seven minutes away by car. The 780 m² plot is walled, with a garden at the front and the pool at the back.\n\nBuilt in 2019 in white-painted masonry, the house has 330 m² on two low floors. The four en-suite bedrooms have air conditioning. Two are on the ground floor and two upstairs, where the sea is in view. The kitchen opens onto the barbecue terrace through sliding doors. The covered garage takes two cars and the internet is fibre.\n\nThe property has its own registry entry and a deed, and property tax is paid up. The exterior was repainted in 2025. The house is currently reserved, with an offer under review. We note interested buyers in case the reservation falls through.",
+  "de": "Das Haus liegt an einer gepflasterten Straße oberhalb der Praia do Amor, 180 m von der Treppe zum Sand entfernt. Zum Strand gehen Sie drei Minuten, ins Zentrum fahren Sie sieben. Das Grundstück mit 780 m² ist ummauert, vorn liegt der Garten, hinten der Pool.\n\nDas Haus wurde 2019 in weiß gestrichenem Mauerwerk gebaut und hat 330 m² auf zwei niedrigen Ebenen. Alle vier Schlafzimmer haben ein eigenes Bad und eine Klimaanlage. Zwei liegen im Erdgeschoss, zwei im Obergeschoss mit Blick aufs Meer. Die Küche öffnet sich über Schiebetüren zur Terrasse mit dem Grillplatz. Die überdachte Garage fasst zwei Autos, das Internet läuft über Glasfaser.\n\nDas Objekt hat einen eigenen Grundbucheintrag und eine notarielle Urkunde, die Grundsteuer ist bezahlt. Der Außenanstrich wurde 2025 erneuert. Derzeit ist das Haus reserviert, ein Angebot wird geprüft. Wir notieren Interessenten für den Fall, dass die Reservierung nicht zustande kommt."
  },
  "ordem": 4
 }

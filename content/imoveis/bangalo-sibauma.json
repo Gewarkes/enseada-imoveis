@@ -1,23 +1,37 @@
 {
  "slug": "bangalo-sibauma",
+ "ref": "EN-1015",
  "deal": "aluguel",
  "type": "casa",
  "name": "Bangalô Sibaúma",
+ "title": {
+  "pt": "Bangalô de madeira com 2 quartos em Sibaúma",
+  "en": "Two-bedroom timber bungalow in Sibaúma",
+  "de": "Holzbungalow mit 2 Schlafzimmern in Sibaúma"
+ },
  "loc": "Sibaúma",
+ "lat": -6.279,
+ "lng": -35.0352,
  "price": 7800,
+ "condo": 0,
+ "iptu": 1100,
  "beds": 2,
+ "suites": 0,
  "baths": 1,
+ "parking": 1,
  "area": 110,
  "lot": 400,
  "year": 2017,
  "beach": 200,
  "status": "disponivel",
+ "date": "2026-09-02",
  "imgs": [
   "56",
   "19",
-  "43",
-  "13"
+  "73"
  ],
+ "video": "",
+ "plan": "",
  "feats": [
   "ac",
   "furnished",
@@ -30,10 +44,27 @@
   "center": "18 min",
   "airport": "1 h 35"
  },
+ "highlights": {
+  "pt": [
+   "Praia de Sibaúma a 200 m",
+   "Varanda coberta em toda a frente",
+   "Lote de 400 m² com coqueiros"
+  ],
+  "en": [
+   "Sibaúma beach 200 m away",
+   "Covered veranda along the front",
+   "400 m² plot with coconut palms"
+  ],
+  "de": [
+   "Strand von Sibaúma in 200 m",
+   "Überdachte Veranda über die ganze Front",
+   "400 m² Grundstück mit Kokospalmen"
+  ]
+ },
  "desc": {
-  "pt": "Bangalô de madeira a 200 m da praia de Sibaúma. Dois quartos, varanda coberta e quintal com coqueiros.",
-  "en": "Wooden bungalow 200 m from Sibaúma beach. Two bedrooms, covered veranda and a yard with coconut palms.",
-  "de": "Holzbungalow, 200 m vom Strand von Sibaúma. Zwei Schlafzimmer, überdachte Veranda und Garten mit Kokospalmen."
+  "pt": "O bangalô fica na vila de Sibaúma, ao sul de Pipa, a 200 m da praia. O trajeto a pé leva três minutos, por rua de areia compactada. O lote de 400 m² é cercado, tem coqueiros e um trecho gramado. Até o centro de Pipa são dezoito minutos de carro.\n\nA casa é de madeira tratada sobre base de alvenaria, construída em 2017, com 110 m² num só piso. Tem dois quartos com ar-condicionado e um banheiro. A sala e a cozinha dividem o mesmo ambiente e abrem para a varanda coberta, que ocupa toda a frente. No quintal há churrasqueira e um deck. Um carro cabe dentro do lote. O aluguel inclui móveis e utensílios.\n\nO contrato é de doze meses, com caução de um aluguel. Energia e água são pagas pelo inquilino. O IPTU fica com o proprietário. A madeira recebeu verniz novo em 2026.",
+  "en": "The bungalow is in the village of Sibaúma, south of Pipa, 200 m from the beach. The walk takes three minutes along a compacted sand road. The 400 m² plot is fenced, with coconut palms and a stretch of lawn. Pipa centre is eighteen minutes by car.\n\nBuilt in 2017 of treated timber on a masonry base, the house has 110 m² on one level. It has two bedrooms with air conditioning and one bathroom. Living room and kitchen share one space and open onto the covered veranda, which runs along the whole front. The yard has a barbecue and a deck. One car fits inside the plot. The rent includes furniture and kitchenware.\n\nThe contract runs for twelve months, with a deposit of one month's rent. Electricity and water are paid by the tenant. Property tax stays with the owner. The timber was revarnished in 2026.",
+  "de": "Der Bungalow steht im Dorf Sibaúma südlich von Pipa, 200 m vom Strand entfernt. Zu Fuß sind es drei Minuten über einen festen Sandweg. Das Grundstück mit 400 m² ist eingezäunt, mit Kokospalmen und einem Stück Rasen. Ins Zentrum von Pipa fahren Sie achtzehn Minuten.\n\nDas Haus aus behandeltem Holz steht auf einem gemauerten Sockel, wurde 2017 gebaut und hat 110 m² auf einer Ebene. Es gibt zwei Schlafzimmer mit Klimaanlage und ein Badezimmer. Wohnraum und Küche teilen sich einen Raum und öffnen sich zur überdachten Veranda, die über die ganze Front läuft. Im Garten befinden sich ein Grillplatz und ein Deck. Ein Auto findet auf dem Grundstück Platz. Möbel und Küchenausstattung sind in der Miete enthalten.\n\nDer Vertrag läuft über zwölf Monate, die Kaution beträgt eine Monatsmiete. Strom und Wasser zahlt der Mieter. Die Grundsteuer trägt der Eigentümer. Das Holz wurde 2026 neu lackiert."
  },
  "ordem": 7
 }

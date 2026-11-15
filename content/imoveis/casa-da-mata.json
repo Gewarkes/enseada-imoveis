@@ -1,24 +1,37 @@
 {
  "slug": "casa-da-mata",
+ "ref": "EN-1034",
  "deal": "aluguel",
  "type": "casa",
  "name": "Casa da Mata",
+ "title": {
+  "pt": "Casa de 3 quartos para aluguel anual no Madeiro",
+  "en": "Three-bedroom house for yearly rent near Madeiro",
+  "de": "Haus mit 3 Schlafzimmern zur Jahresmiete am Madeiro"
+ },
  "loc": "Praia do Madeiro",
+ "lat": -6.2168,
+ "lng": -35.08,
  "price": 16500,
+ "condo": 0,
+ "iptu": 3200,
  "beds": 3,
+ "suites": 2,
  "baths": 3,
+ "parking": 2,
  "area": 260,
  "lot": 900,
  "year": 2020,
  "beach": 300,
  "status": "disponivel",
+ "date": "2026-10-20",
  "imgs": [
   "06",
-  "14",
-  "44",
-  "48",
-  "56"
+  "13",
+  "74"
  ],
+ "video": "",
+ "plan": "",
  "feats": [
   "pool",
   "ac",
@@ -32,10 +45,27 @@
   "center": "10 min",
   "airport": "1 h 25"
  },
+ "highlights": {
+  "pt": [
+   "Piscina natural, sem cloro",
+   "Mobiliada, com fibra instalada",
+   "Aceita animais de estimação"
+  ],
+  "en": [
+   "Natural pool, no chlorine",
+   "Furnished, fibre installed",
+   "Pets accepted"
+  ],
+  "de": [
+   "Naturpool ohne Chlor",
+   "Möbliert, Glasfaser vorhanden",
+   "Haustiere erlaubt"
+  ]
+ },
  "desc": {
-  "pt": "Aluguel anual. Casa cercada de mata, com piscina natural e deck. Mobiliada, internet por fibra, aceita animais.",
-  "en": "Yearly rental. A house surrounded by forest, with a natural pool and deck. Furnished, fibre internet, pets welcome.",
-  "de": "Jahresmiete. Haus mitten im Wald, mit Naturpool und Deck. Möbliert, Glasfaser-Internet, Haustiere erlaubt."
+  "pt": "A casa fica numa estrada de terra batida que sai da pista do Madeiro, a 300 m do acesso à praia. O lote de 900 m² é cercado e mantém a mata nativa em dois lados. De carro são dez minutos até o centro de Pipa.\n\nConstruída em 2020, a casa tem 260 m² em dois pavimentos. São três quartos com ar-condicionado, dois deles suítes, e um terceiro banheiro. A sala abre para um deck de madeira e para a piscina natural, tratada por filtro biológico. A casa é alugada mobiliada, com cozinha equipada e internet por fibra. Há espaço para dois carros dentro do lote.\n\nO aluguel é anual, com contrato de doze meses, renovável. O valor inclui a manutenção da piscina e do jardim. Energia, água e internet ficam por conta do inquilino. A caução é de dois aluguéis. Animais são aceitos.",
+  "en": "The house is on a compacted dirt road off the Madeiro road, 300 m from the beach access. The 900 m² plot is fenced and keeps native forest on two sides. The centre of Pipa is ten minutes away by car.\n\nBuilt in 2020, the house has 260 m² on two floors. There are three bedrooms with air conditioning, two of them en suite, and a third bathroom. The living room opens onto a timber deck and the natural pool, which is treated by a biological filter. The house is let furnished, with an equipped kitchen and fibre internet. Two cars can park inside the plot.\n\nThe let is yearly, on a twelve-month contract that can be renewed. The rent includes pool and garden maintenance. Electricity, water and internet are paid by the tenant. The deposit equals two months' rent. Pets are accepted.",
+  "de": "Das Haus liegt an einem befestigten Erdweg, der von der Straße nach Madeiro abgeht, 300 m vom Strandzugang entfernt. Das Grundstück mit 900 m² ist eingezäunt und hat an zwei Seiten den ursprünglichen Wald behalten. Das gibt über weite Teile des Tages Schatten. Ins Zentrum von Pipa fahren Sie zehn Minuten.\n\nDas Haus von 2020 hat 260 m² auf zwei Ebenen. Drei Schlafzimmer mit Klimaanlage, zwei davon mit eigenem Bad, dazu ein drittes Badezimmer. Der Wohnraum öffnet sich zu einem Holzdeck und zum Naturpool, der über einen biologischen Filter gereinigt wird. Vermietet wird möbliert, mit ausgestatteter Küche und Glasfaser. Auf dem Grundstück parken zwei Autos.\n\nDie Vermietung läuft über einen Jahresvertrag mit zwölf Monaten, der verlängert werden kann. In der Miete sind Pool- und Gartenpflege enthalten. Strom, Wasser und Internet zahlt der Mieter. Die Kaution beträgt zwei Monatsmieten. Haustiere sind erlaubt."
  },
  "ordem": 6
 }

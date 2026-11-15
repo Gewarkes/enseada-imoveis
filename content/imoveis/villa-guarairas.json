@@ -1,28 +1,42 @@
 {
  "slug": "villa-guarairas",
+ "ref": "EN-1039",
  "deal": "venda",
  "type": "casa",
  "name": "Villa Guaraíras",
+ "title": {
+  "pt": "Casa de 5 suítes de frente para a lagoa de Guaraíras",
+  "en": "Five-suite house facing the Guaraíras lagoon",
+  "de": "Haus mit 5 Schlafzimmern an der Lagune von Guaraíras"
+ },
  "loc": "Tibau do Sul",
+ "lat": -6.1893,
+ "lng": -35.0922,
  "price": 6200000,
+ "condo": 2400,
+ "iptu": 12400,
  "beds": 5,
+ "suites": 5,
  "baths": 6,
+ "parking": 4,
  "area": 580,
  "lot": 1800,
  "year": 2023,
  "beach": 120,
  "status": "novo",
+ "date": "2026-11-06",
  "imgs": [
   "04",
-  "16",
-  "43",
-  "48",
   "03",
+  "16",
+  "48",
   "72"
  ],
+ "video": "",
+ "plan": "",
  "feats": [
   "pool",
-  "seaview",
+  "lagoon",
   "ac",
   "furnished",
   "garage",
@@ -38,10 +52,27 @@
   "center": "14 min",
   "airport": "1 h 15"
  },
+ "highlights": {
+  "pt": [
+   "Sala e deck voltados para o poente",
+   "Poço próprio e energia solar",
+   "Condomínio fechado com portaria 24 h"
+  ],
+  "en": [
+   "Living room and deck face west",
+   "Own well and solar power",
+   "Gated community with 24-hour gatehouse"
+  ],
+  "de": [
+   "Wohnraum und Deck nach Westen",
+   "Eigener Brunnen und Solaranlage",
+   "Geschlossene Anlage, Pforte rund um die Uhr"
+  ]
+ },
  "desc": {
-  "pt": "De frente para a lagoa de Guaraíras, com pôr do sol da sala e do deck. Cinco suítes, energia solar e poço próprio.",
-  "en": "Facing the Guaraíras lagoon, with sunsets from the living room and the deck. Five en-suites, solar power and its own well.",
-  "de": "Direkt an der Lagune von Guaraíras, mit Sonnenuntergang vom Wohnzimmer und vom Deck aus. Fünf Schlafzimmer mit eigenem Bad, Solaranlage und eigener Brunnen."
+  "pt": "A casa fica em Tibau do Sul, num condomínio fechado com portaria 24 horas, a 120 m da margem da lagoa de Guaraíras. O lote tem 1.800 m² e desce em leve declive para o oeste. Por isso o sol se põe em frente à sala e ao deck. Até o centro de Pipa são catorze minutos de carro.\n\nA construção de 2023 soma 580 m² em dois pavimentos. São cinco suítes com ar-condicionado, duas delas no térreo. Há ainda um lavabo, sala com pé-direito duplo, cozinha com despensa e dependência para funcionários. O deck de madeira liga a sala à piscina. A garagem abriga quatro carros. A água vem de poço próprio e os painéis solares abastecem a casa.\n\nA venda inclui os móveis. O imóvel tem matrícula individual e escritura. A taxa de condomínio é de R$ 2.400 por mês e cobre portaria, vias internas e áreas comuns.",
+  "en": "The house is in Tibau do Sul, in a gated community with a 24-hour gatehouse, 120 m from the shore of the Guaraíras lagoon. The plot measures 1,800 m² and slopes gently to the west, so the sun sets in front of living room and deck. Pipa centre is fourteen minutes by car.\n\nBuilt in 2023, the house has 580 m² on two floors. It has five en-suite bedrooms with air conditioning, two on the ground floor. A guest WC, a double-height living room, a kitchen with pantry and staff quarters complete the layout. A timber deck links the living room to the pool. The garage holds four cars. Water comes from a private well and solar panels supply the house.\n\nFurniture is included. The property has its own registry entry and a deed. The community fee is R$ 2,400 a month and covers the gatehouse and shared areas.",
+  "de": "Das Haus liegt in Tibau do Sul in einer geschlossenen Wohnanlage mit durchgehend besetzter Pforte, 120 m vom Ufer der Lagune von Guaraíras entfernt. Das Grundstück misst 1.800 m² und fällt leicht nach Westen ab. Die Sonne geht deshalb vor Wohnraum und Deck unter. Ins Zentrum von Pipa sind es vierzehn Minuten mit dem Auto.\n\nDas Haus von 2023 hat 580 m² auf zwei Ebenen. Fünf Schlafzimmer mit eigenem Bad und Klimaanlage, zwei davon im Erdgeschoss. Dazu kommen ein Gäste-WC, ein Wohnraum mit doppelter Raumhöhe, eine Küche mit Vorratsraum und ein Personalbereich. Ein Holzdeck verbindet Wohnraum und Pool. Die Garage fasst vier Autos. Das Wasser kommt aus dem eigenen Brunnen, den Strom liefert die Solaranlage.\n\nDie Möbel sind im Kaufpreis enthalten. Das Objekt hat einen eigenen Grundbucheintrag und eine notarielle Urkunde. Die Gebühr der Anlage beträgt R$ 2.400 im Monat und deckt Pforte, interne Wege und Gemeinschaftsflächen."
  },
  "ordem": 3
 }

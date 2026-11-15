@@ -1,25 +1,40 @@
 {
  "slug": "terreno-ponta-da-lagoa",
+ "ref": "EN-1037",
  "deal": "venda",
  "type": "terreno",
  "name": "Terreno Ponta da Lagoa",
+ "title": {
+  "pt": "Terreno de 3.900 m² com 42 m de frente para a lagoa",
+  "en": "3,900 m² plot with 42 m of lagoon frontage",
+  "de": "Grundstück mit 3.900 m² und 42 m Front zur Lagune"
+ },
  "loc": "Tibau do Sul",
+ "lat": -6.1876,
+ "lng": -35.0908,
  "price": 1450000,
+ "condo": 0,
+ "iptu": 2600,
  "beds": 0,
+ "suites": 0,
  "baths": 0,
+ "parking": 0,
  "area": 0,
  "lot": 3900,
  "year": 0,
  "beach": 60,
  "status": "novo",
+ "date": "2026-11-03",
  "imgs": [
   "77",
   "53",
   "80"
  ],
+ "video": "",
+ "plan": "",
  "feats": [
   "deed",
-  "seaview",
+  "lagoon",
   "power",
   "water"
  ],
@@ -28,10 +43,27 @@
   "center": "12 min",
   "airport": "1 h 15"
  },
+ "highlights": {
+  "pt": [
+   "42 m de frente para a lagoa",
+   "Energia e água no limite do lote",
+   "Documentos conferidos por advogado"
+  ],
+  "en": [
+   "42 m of lagoon frontage",
+   "Power and water at the boundary",
+   "Paperwork checked by a lawyer"
+  ],
+  "de": [
+   "42 m Front zur Lagune",
+   "Strom und Wasser an der Grundstücksgrenze",
+   "Unterlagen anwaltlich geprüft"
+  ]
+ },
  "desc": {
-  "pt": "Quase 4.000 m² na ponta da lagoa, com 42 m de frente para a água. Documentação conferida por advogado parceiro.",
-  "en": "Almost 4,000 m² at the tip of the lagoon, with 42 m of waterfront. Paperwork checked by a partner lawyer.",
-  "de": "Knapp 4.000 m² an der Spitze der Lagune, mit 42 m Uferfront. Unterlagen von einem Partneranwalt geprüft."
+  "pt": "O terreno fica em Tibau do Sul, na ponta onde a lagoa de Guaraíras encontra o mar. São 3.900 m², com 42 m de frente para a água. A praia mais próxima está a 60 m. O acesso é por estrada de terra, a 300 m do calçamento, e o centro de Pipa fica a doze minutos de carro. É quase plano e voltado para o oeste.\n\nEnergia e água chegam ao limite do lote. A faixa junto à margem é terreno de marinha e área de preservação, onde não se constrói. O restante admite uso residencial, segundo consulta feita à prefeitura. Recuos e altura devem ser confirmados antes do projeto.\n\nO terreno tem escritura e matrícula. A parte de marinha está inscrita na SPU em regime de ocupação, com a taxa anual em dia. Na transferência incide laudêmio, cobrado pela SPU. Um advogado independente conferiu a documentação.",
+  "en": "The plot is in Tibau do Sul, on the point where the Guaraíras lagoon meets the sea. It measures 3,900 m², with 42 m of water frontage. The nearest beach is 60 m away. Access is by 300 m of dirt road. Pipa centre is twelve minutes by car. The land is almost level and faces west.\n\nPower and water reach the boundary. The strip along the shore is federal coastal land and a protected area where nothing may be built. The rest allows residential use, according to a town hall enquiry. Setbacks and height should be confirmed before design starts.\n\nThe plot has a deed and a registry entry. The federal strip is registered with the SPU under an occupancy regime, with the annual fee paid up. A transfer fee (laudêmio) is due on sale and is charged by the federal property office (SPU). An independent lawyer has checked the paperwork.",
+  "de": "Das Grundstück liegt in Tibau do Sul an der Spitze, an der die Lagune von Guaraíras ins Meer übergeht. Es misst 3.900 m² und hat 42 m Front zum Wasser. Der nächste Strand ist 60 m entfernt. Die Zufahrt führt über 300 m Erdweg, ins Zentrum von Pipa fahren Sie zwölf Minuten. Die Fläche ist fast eben und nach Westen ausgerichtet.\n\nStrom und Wasser liegen an der Grundstücksgrenze. Der Streifen am Ufer ist Küstenland in Bundesbesitz (terreno de marinha) und Schutzgebiet, dort darf nicht gebaut werden. Der übrige Teil lässt laut Auskunft der Gemeinde Wohnnutzung zu. Grenzabstände und Höhe sind vor der Planung zu bestätigen.\n\nDas Grundstück hat eine notarielle Urkunde und einen Grundbucheintrag. Der Bundesstreifen ist bei der Behörde SPU als Nutzung eingetragen, die Jahresgebühr ist bezahlt. Bei der Übertragung fällt die Abgabe laudêmio an, die die Bundesbehörde SPU erhebt. Ein unabhängiger Anwalt hat die Unterlagen geprüft."
  },
  "ordem": 9
 }

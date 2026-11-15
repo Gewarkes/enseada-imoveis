@@ -1,25 +1,38 @@
 {
  "slug": "casa-do-coqueiral",
+ "ref": "EN-1027",
  "deal": "venda",
  "type": "casa",
  "name": "Casa do Coqueiral",
+ "title": {
+  "pt": "Casa térrea de 3 suítes perto do centro de Pipa",
+  "en": "Single-storey three-bedroom house near Pipa centre",
+  "de": "Ebenerdiges Haus mit 3 Schlafzimmern nahe dem Zentrum"
+ },
  "loc": "Centro de Pipa",
+ "lat": -6.2297,
+ "lng": -35.0489,
  "price": 2380000,
+ "condo": 0,
+ "iptu": 4900,
  "beds": 3,
+ "suites": 3,
  "baths": 3,
+ "parking": 2,
  "area": 240,
  "lot": 520,
  "year": 2018,
  "beach": 400,
  "status": "disponivel",
+ "date": "2026-09-18",
  "imgs": [
   "05",
+  "23",
   "15",
-  "44",
-  "47",
-  "18",
-  "74"
+  "47"
  ],
+ "video": "",
+ "plan": "",
  "feats": [
   "pool",
   "ac",
@@ -34,10 +47,27 @@
   "center": "3 min",
   "airport": "1 h 20"
  },
+ "highlights": {
+  "pt": [
+   "Térrea, sem degraus entre os ambientes",
+   "Piscina de raia com 12 m",
+   "Rua principal a 5 min a pé"
+  ],
+  "en": [
+   "Single storey, no steps between rooms",
+   "Lap pool, 12 m long",
+   "Main street 5 minutes on foot"
+  ],
+  "de": [
+   "Ebenerdig, ohne Stufen zwischen den Räumen",
+   "Bahnenpool mit 12 m Länge",
+   "Hauptstraße in 5 Gehminuten"
+  ]
+ },
  "desc": {
-  "pt": "Casa térrea entre coqueiros, a cinco minutos a pé da rua principal. Três suítes, piscina de raia e jardim que não se vê da rua.",
-  "en": "Single-storey house among coconut palms, five minutes on foot from the main street. Three en-suites, lap pool and a garden hidden from the road.",
-  "de": "Ebenerdiges Haus zwischen Kokospalmen, fünf Gehminuten von der Hauptstraße. Drei Schlafzimmer mit eigenem Bad, Bahnenpool und ein Garten, der von der Straße nicht einsehbar ist."
+  "pt": "A casa fica numa rua residencial do centro de Pipa, a cinco minutos a pé da avenida principal e a 400 m da praia. O lote de 520 m² é plano, murado e plantado com coqueiros adultos. O muro e a vegetação fecham a vista de quem passa na rua.\n\nA construção é térrea, de 2018, com 240 m². As três suítes têm ar-condicionado e abrem para o jardim. Sala e cozinha formam um só ambiente, ligado à varanda da churrasqueira. A piscina de raia tem 12 m de comprimento. A garagem coberta comporta dois carros. Há alarme monitorado e internet por fibra.\n\nO imóvel tem matrícula individual e escritura, sem ônus registrados. O IPTU está em dia. O telhado foi revisado em 2025 e a casa está pronta para morar. Os móveis não entram no preço, mas podem ser negociados à parte.",
+  "en": "The house is on a residential street in the centre of Pipa, five minutes on foot from the main avenue and 400 m from the beach. The 520 m² plot is level, walled and planted with mature coconut palms. Wall and planting screen the garden from the street.\n\nThe single-storey building dates from 2018 and has 240 m². The three en-suite bedrooms have air conditioning and open onto the garden. Living room and kitchen form one space, linked to the veranda with the barbecue. The lap pool is 12 m long. The covered garage holds two cars. There is a monitored alarm and fibre internet.\n\nThe property has its own registry entry and a deed, with no charges recorded. Property tax is paid up. The roof was overhauled in 2025 and the house is ready to move into. Furniture is not included but can be negotiated.",
+  "de": "Das Haus liegt in einer Wohnstraße im Zentrum von Pipa, fünf Gehminuten von der Hauptstraße und 400 m vom Strand entfernt. Das Grundstück hat 520 m², ist eben, ummauert und mit ausgewachsenen Kokospalmen bepflanzt. Mauer und Bewuchs schirmen den Garten zur Straße hin ab.\n\nDas Gebäude von 2018 ist ebenerdig und hat 240 m² Wohnfläche. Die drei Schlafzimmer haben je ein eigenes Bad und eine Klimaanlage und öffnen sich zum Garten. Wohnraum und Küche bilden einen Raum, der an die Veranda mit dem Grillplatz anschließt. Der Bahnenpool ist 12 m lang. Die überdachte Garage bietet Platz für zwei Autos. Alarmanlage mit Aufschaltung und Glasfaser sind vorhanden.\n\nDas Objekt hat einen eigenen Grundbucheintrag und eine notarielle Urkunde, Belastungen sind nicht eingetragen. Die Grundsteuer ist bezahlt. Das Dach wurde 2025 überholt, das Haus ist bezugsfertig. Die Möbel sind nicht im Preis enthalten, lassen sich aber gesondert verhandeln."
  },
  "ordem": 2
 }

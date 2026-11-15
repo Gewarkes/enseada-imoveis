@@ -1,23 +1,37 @@
 {
  "slug": "apartamento-chapadao",
+ "ref": "EN-1031",
  "deal": "venda",
  "type": "apartamento",
  "name": "Apartamento Chapadão",
+ "title": {
+  "pt": "Apartamento de 2 quartos mobiliado no Chapadão",
+  "en": "Furnished two-bedroom apartment in Chapadão",
+  "de": "Möblierte Wohnung mit 2 Schlafzimmern im Chapadão"
+ },
  "loc": "Chapadão",
+ "lat": -6.2402,
+ "lng": -35.0428,
  "price": 890000,
+ "condo": 780,
+ "iptu": 1900,
  "beds": 2,
+ "suites": 1,
  "baths": 2,
+ "parking": 1,
  "area": 96,
  "lot": 0,
  "year": 2022,
  "beach": 600,
  "status": "disponivel",
+ "date": "2026-10-07",
  "imgs": [
-  "16",
-  "47",
-  "43",
-  "21"
+  "18",
+  "14",
+  "82"
  ],
+ "video": "",
+ "plan": "",
  "feats": [
   "pool",
   "ac",
@@ -31,10 +45,27 @@
   "center": "6 min",
   "airport": "1 h 25"
  },
+ "highlights": {
+  "pt": [
+   "Condomínio de 12 unidades com piscina",
+   "Vendido com móveis e equipamentos",
+   "Convenção permite aluguel por temporada"
+  ],
+  "en": [
+   "Complex of 12 units with a pool",
+   "Sold with furniture and appliances",
+   "Bylaws allow holiday lets"
+  ],
+  "de": [
+   "Anlage mit 12 Einheiten und Pool",
+   "Verkauf mit Möbeln und Geräten",
+   "Gemeinschaftsordnung erlaubt Ferienvermietung"
+  ]
+ },
  "desc": {
-  "pt": "Dois quartos em condomínio pequeno com piscina, perto do mirante do Chapadão. Vendido mobiliado, pronto para alugar por temporada.",
-  "en": "Two bedrooms in a small complex with a pool, near the Chapadão lookout. Sold furnished, ready for holiday lets.",
-  "de": "Zwei Schlafzimmer in einer kleinen Wohnanlage mit Pool, nahe dem Aussichtspunkt Chapadão. Verkauf möbliert, bereit für die Ferienvermietung."
+  "pt": "O apartamento fica num condomínio de doze unidades no Chapadão, a 600 m do mirante sobre a Praia do Amor. A caminhada até a praia leva oito minutos e o centro de Pipa está a seis minutos de carro. O acesso é por rua calçada, com portão eletrônico.\n\nA unidade tem 96 m² no primeiro andar de um prédio de 2022. São dois quartos com ar-condicionado, um deles suíte, e um banheiro social. A sala integrada à cozinha abre para uma varanda voltada para a piscina do condomínio. Há uma vaga coberta e internet por fibra. Móveis, eletrodomésticos e enxoval entram na venda.\n\nO imóvel tem matrícula individual e escritura. A taxa de condomínio é de R$ 780 por mês e inclui água, piscina e jardinagem. A convenção permite aluguel por temporada. O histórico de reservas pode ser mostrado ao comprador com autorização do proprietário.",
+  "en": "The apartment is in a complex of twelve units in Chapadão, 600 m from the lookout above Praia do Amor. The walk to the beach takes eight minutes and the centre of Pipa is six minutes away by car. Access is by a paved road, through an electric gate.\n\nThe unit has 96 m² on the first floor of a 2022 building. There are two bedrooms with air conditioning, one of them en suite, and a second bathroom. The living room with open kitchen leads to a veranda facing the shared pool. One covered parking space and fibre internet are included. Furniture, appliances and linen are part of the sale.\n\nThe property has its own registry entry and a deed. The service charge is R$ 780 a month and covers water, pool and gardening. The bylaws allow holiday lets. Booking history is available with the owner's consent.",
+  "de": "Die Wohnung liegt in einer Anlage mit zwölf Einheiten im Chapadão, 600 m vom Aussichtspunkt über der Praia do Amor entfernt. Zum Strand gehen Sie acht Minuten, ins Zentrum von Pipa fahren Sie sechs. Die Zufahrt führt über eine gepflasterte Straße und durch ein elektrisches Tor.\n\nDie Einheit hat 96 m² im ersten Obergeschoss eines Gebäudes von 2022. Zwei Schlafzimmer mit Klimaanlage, eines davon mit eigenem Bad, dazu ein zweites Badezimmer. Der Wohnraum mit offener Küche führt auf eine Veranda zum Gemeinschaftspool. Ein überdachter Stellplatz und Glasfaser gehören dazu. Möbel, Geräte und Wäsche werden mitverkauft.\n\nDie Wohnung hat einen eigenen Grundbucheintrag und eine notarielle Urkunde. Die Gebühr der Anlage beträgt R$ 780 im Monat und enthält Wasser, Pool und Gartenpflege. Die Gemeinschaftsordnung erlaubt Ferienvermietung. Die bisherigen Buchungen legen wir Käufern mit Zustimmung des Eigentümers vor."
  },
  "ordem": 5
 }

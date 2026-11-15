@@ -1,26 +1,40 @@
 {
  "slug": "casa-mirante-do-madeiro",
+ "ref": "EN-1042",
  "deal": "venda",
  "type": "casa",
  "name": "Casa Mirante do Madeiro",
+ "title": {
+  "pt": "Casa de 4 suítes com vista para o mar no Madeiro",
+  "en": "Four-bedroom house with sea view above Praia do Madeiro",
+  "de": "Haus mit 4 Schlafzimmern und Meerblick am Madeiro"
+ },
  "loc": "Praia do Madeiro",
+ "lat": -6.2142,
+ "lng": -35.0815,
  "price": 4850000,
+ "condo": 0,
+ "iptu": 9800,
  "beds": 4,
+ "suites": 4,
  "baths": 5,
+ "parking": 3,
  "area": 420,
  "lot": 1100,
  "year": 2021,
  "beach": 250,
  "status": "novo",
+ "date": "2026-11-10",
  "feat": true,
  "imgs": [
   "02",
   "17",
-  "43",
   "49",
-  "14",
+  "44",
   "71"
  ],
+ "video": "",
+ "plan": "",
  "feats": [
   "pool",
   "seaview",
@@ -38,10 +52,27 @@
   "center": "9 min",
   "airport": "1 h 25"
  },
+ "highlights": {
+  "pt": [
+   "Quatro suítes voltadas para o nordeste",
+   "Energia solar com 24 painéis",
+   "Casa de caseiro separada no lote"
+  ],
+  "en": [
+   "Four en-suite bedrooms facing north-east",
+   "Solar system with 24 panels",
+   "Separate caretaker's house on the plot"
+  ],
+  "de": [
+   "Vier Schlafzimmer mit Bad nach Nordosten",
+   "Solaranlage mit 24 Modulen",
+   "Separates Verwalterhaus auf dem Grundstück"
+  ]
+ },
  "desc": {
-  "pt": "Quatro suítes abertas para o mar, no alto da falésia do Madeiro. Piscina de borda infinita, casa de caseiro separada e acesso por rua calçada.",
-  "en": "Four en-suite bedrooms open to the sea, on top of the Madeiro cliffs. Infinity pool, separate caretaker house and paved road access.",
-  "de": "Vier Schlafzimmer mit eigenem Bad und Blick aufs Meer, oben auf der Steilküste von Madeiro. Infinity-Pool, separates Haus für den Hausverwalter und Zufahrt über eine gepflasterte Straße."
+  "pt": "A casa fica no alto da falésia do Madeiro, em rua calçada, a 250 m da escadaria que desce para a praia. O lote tem 1.100 m², é murado nas laterais e nos fundos e abre a frente para o nordeste, de onde se vê o mar. O centro de Pipa está a nove minutos de carro.\n\nSão 420 m² construídos em dois pavimentos, concluídos em 2021. As quatro suítes têm ar-condicionado e varanda. No térreo ficam a sala, a cozinha aberta, um lavabo e a churrasqueira, ao lado da piscina de borda infinita. A garagem coberta recebe três carros. Os 24 painéis solares cobrem boa parte do consumo e a internet chega por fibra. A casa do caseiro é separada, com entrada própria.\n\nA venda inclui os móveis, conforme lista. O imóvel tem matrícula individual, escritura e IPTU em dia. Madeiras e esquadrias passaram por manutenção em 2026.",
+  "en": "The house stands on top of the Madeiro cliffs, on a paved road, 250 m from the steps that lead down to the beach. The plot measures 1,100 m², is walled at the sides and rear and opens to the north-east, towards the sea. Pipa centre is nine minutes by car.\n\nThe built area is 420 m² on two floors, completed in 2021. All four en-suite bedrooms have air conditioning and a veranda. The ground floor holds the living room, an open kitchen, a guest WC and the barbecue area next to the infinity pool. The covered garage takes three cars. The 24 solar panels cover a good share of consumption. Internet is fibre. The caretaker's house has its own entrance.\n\nThe furniture is included, as per inventory. The property has its own registry entry, a deed and paid-up property tax. Timber and window frames were serviced in 2026.",
+  "de": "Das Haus steht oben auf der Steilküste von Madeiro an einer gepflasterten Straße, 250 m von der Treppe zum Strand entfernt. Das Grundstück misst 1.100 m², ist seitlich und hinten ummauert und öffnet sich nach Nordosten zum Meer. Bis ins Zentrum von Pipa fahren Sie neun Minuten.\n\nDie Wohnfläche beträgt 420 m² auf zwei Ebenen, Fertigstellung 2021. Alle vier Schlafzimmer haben ein eigenes Bad, Klimaanlage und Veranda. Im Erdgeschoss liegen Wohnraum, offene Küche, Gäste-WC und der Grillplatz neben dem Infinity-Pool. Die überdachte Garage fasst drei Autos. Die 24 Solarmodule decken einen guten Teil des Verbrauchs, das Internet läuft über Glasfaser. Das Haus des Hausbetreuers (caseiro) steht getrennt und hat einen eigenen Eingang.\n\nDie Möbel sind laut Inventarliste im Preis enthalten. Das Objekt hat einen eigenen Grundbucheintrag (matrícula), eine notarielle Urkunde und eine bezahlte Grundsteuer. Holz und Fensterrahmen wurden 2026 gewartet."
  },
  "ordem": 1
 }

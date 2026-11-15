@@ -1,22 +1,37 @@
 {
  "slug": "terreno-das-dunas",
+ "ref": "EN-1012",
  "deal": "venda",
  "type": "terreno",
  "name": "Terreno das Dunas",
+ "title": {
+  "pt": "Terreno plano de 2.400 m² em Sibaúma",
+  "en": "Level 2,400 m² plot in Sibaúma",
+  "de": "Ebenes Grundstück mit 2.400 m² in Sibaúma"
+ },
  "loc": "Sibaúma",
+ "lat": -6.2808,
+ "lng": -35.0362,
  "price": 780000,
+ "condo": 0,
+ "iptu": 1400,
  "beds": 0,
+ "suites": 0,
  "baths": 0,
+ "parking": 0,
  "area": 0,
  "lot": 2400,
  "year": 0,
  "beach": 350,
  "status": "disponivel",
+ "date": "2026-08-25",
  "imgs": [
   "76",
   "51",
-  "13"
+  "10"
  ],
+ "video": "",
+ "plan": "",
  "feats": [
   "deed",
   "paved",
@@ -28,10 +43,27 @@
   "center": "18 min",
   "airport": "1 h 35"
  },
+ "highlights": {
+  "pt": [
+   "40 m de frente por 60 m de fundo",
+   "Energia e água na rua",
+   "Escritura e matrícula individual"
+  ],
+  "en": [
+   "40 m frontage, 60 m deep",
+   "Power and water in the road",
+   "Deed and own registry entry"
+  ],
+  "de": [
+   "40 m Front, 60 m Tiefe",
+   "Strom und Wasser an der Straße",
+   "Urkunde und eigener Grundbucheintrag"
+  ]
+ },
  "desc": {
-  "pt": "Lote plano de 2.400 m² atrás das dunas, com escritura e matrícula individual. Rua com energia e água.",
-  "en": "Flat 2,400 m² plot behind the dunes, with deed and its own land registry entry. Road with power and water.",
-  "de": "Ebenes Grundstück mit 2.400 m² hinter den Dünen, mit notarieller Urkunde und eigenem Grundbucheintrag. Strom und Wasser liegen an der Straße."
+  "pt": "O terreno fica em Sibaúma, atrás da faixa de dunas, a 350 m da praia. A caminhada leva cinco minutos. São 2.400 m², com 40 m de frente para a rua calçada e 60 m de fundo. A superfície é plana e o solo é arenoso, com cajueiros e vegetação baixa. O centro de Pipa está a dezoito minutos de carro.\n\nA rede de energia e a de água passam na frente do lote. O esgoto, como em toda a vila, é resolvido com fossa séptica. Pelo zoneamento informado pela prefeitura, a área admite uso residencial e pousada de pequeno porte. O comprador deve confirmar altura e recuos numa consulta prévia. Recomendamos sondagem antes do projeto.\n\nO terreno tem escritura e matrícula individual, sem ônus registrados. O IPTU está em dia. O levantamento topográfico de 2024 acompanha a documentação. O corte de árvores depende de licença ambiental.",
+  "en": "The plot is in Sibaúma, behind the dune belt, 350 m from the beach. The walk takes five minutes. It measures 2,400 m², with 40 m of frontage on the paved road and a depth of 60 m. The ground is level and sandy, with cashew trees and low vegetation. Pipa centre is eighteen minutes by car.\n\nPower and water mains run along the front of the plot. Sewage is handled by septic tank, as everywhere in the village. According to town hall zoning information, the area allows residential use and a small guesthouse. The buyer should confirm height and setbacks through a preliminary enquiry. We recommend a soil survey before design work starts.\n\nThe plot has a deed and its own registry entry, with no charges recorded. Property tax is paid up. The 2024 topographic survey comes with the paperwork. Felling trees requires an environmental licence.",
+  "de": "Das Grundstück liegt in Sibaúma hinter dem Dünengürtel, 350 m vom Strand entfernt. Zu Fuß sind es fünf Minuten. Es misst 2.400 m², mit 40 m Front zur gepflasterten Straße und 60 m Tiefe. Die Fläche ist eben, der Boden sandig, bewachsen mit Cashewbäumen und niedrigem Gehölz. Ins Zentrum von Pipa fahren Sie achtzehn Minuten.\n\nStrom- und Wasserleitung verlaufen vor dem Grundstück. Das Abwasser wird wie überall im Dorf über eine Klärgrube entsorgt. Nach Auskunft der Gemeinde lässt die Zone Wohnnutzung und eine kleine Pension zu. Höhe und Grenzabstände sollte der Käufer über eine Bauvoranfrage bestätigen lassen. Vor der Planung empfehlen wir eine Baugrunduntersuchung.\n\nDas Grundstück hat eine notarielle Urkunde und einen eigenen Grundbucheintrag, Belastungen sind nicht eingetragen. Die Grundsteuer ist bezahlt. Die Vermessung von 2024 liegt den Unterlagen bei. Für das Fällen von Bäumen ist eine Umweltgenehmigung nötig."
  },
  "ordem": 8
 }
