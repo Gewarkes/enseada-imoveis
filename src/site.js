@@ -52,6 +52,17 @@
     b.addEventListener('click', function () { cur = b.dataset.cur; LS.set('cur', cur); applyCur(); if (cur !== 'BRL') liveFx(); });
   });
 
+  /* ---------- Video im Einstieg: erst nach dem Laden der Seite, nicht bei Datensparen oder reduzierter Bewegung ---------- */
+  var hv = $('.hero-video');
+  if (hv && !matchMedia('(prefers-reduced-motion:reduce)').matches && !((navigator.connection || {}).saveData)) {
+    var startVideo = function () {
+      hv.src = innerWidth < 800 ? hv.dataset.videoM : hv.dataset.video;
+      hv.addEventListener('playing', function () { hv.classList.add('on'); }, { once: true });
+      var pr = hv.play(); if (pr && pr.catch) pr.catch(function () {});
+    };
+    if (document.readyState === 'complete') setTimeout(startVideo, 300); else addEventListener('load', function () { setTimeout(startVideo, 300); });
+  }
+
   /* ---------- Menü ---------- */
   var menu = $('#menu');
   function setMenu(on) {
