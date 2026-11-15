@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% block main %}
+<div class="wrap">
+  <ol class="crumbs">
+    <li><a href="{{ url('home') }}">{{ t.navHome }}</a></li>
+    {% if cat %}<li><a href="{{ url('imoveis') }}">{{ t.navAll }}</a></li>{% endif %}
+    <li aria-current="page">{{ t[{'venda':'navBuy','aluguel':'navRent','terrenos':'navLand'}[cat]] if cat else t.navAll }}</li>
+  </ol>
+  <div class="page-head">
+    <h1>{{ h1 }}</h1>
+    <p>{{ lead }}</p>
+  </div>
+</div>
+
+<div class="filters" data-filters data-cat="{{ cat or '' }}">
+  <div class="wrap filters-in">
+    <nav class="tabs tabs-auto" aria-label="{{ t.sDeal }}">
+      {% for r, k, c2 in [('imoveis','tabAll', none),('imoveis-venda','navBuy','venda'),('imoveis-aluguel','navRent','aluguel'),('imoveis-terrenos','navLand','terrenos')] %}
+      <a href="{{ url(r) }}" data-keepq{% if cat == c2 %} aria-current="true"{% endif %}>{{ t[k] }}</a>
+      {% endfor %}
+    </nav>
+    <div class="filter-row">
+      <label class="chip"><span class="sr">{{ t.sWhere }}</span>
+        <select data-f="loc"><option value="">{{ t.sAnyLoc }}</option>{% for x in locs %}<option value="{{ x.slug }}">{{ x.name }}</option>{% endfor %}</select></label>
+      {% if cat != 'terrenos' %}
+      <label class="chip"><span class="sr">{{ t.sType }}</span>
+        <select data-f="type"><option value="">{{ t.sAnyType }}</option><option value="casa">{{ t.tCasa }}</option><option value="apartamento">{{ t.tApto }}</option>{% if not cat %}<option value="terreno">{{ t.tTerreno }}</option>{% endif %}</select></label>
+      <label class="chip"><span class="sr">{{ t.sBeds }}</span>
+        <select data-f="beds"><option value="">{{ t.sBeds }}</option>{% for n in [1, 2, 3, 4] %}<option value="{{ n }}">{{ n }}+ {{ t.beds }}</option>{% endfor %}</select></label>
+      {% endif %}
+      {% if cat %}
+      <label class="chip"><span class="sr">{{ t.sMax }}</span>
+        <select data-f="max"><option value="">{{ t.sMax }}</option>{% for v in maxopts %}<option value="{{ v }}">{{ t.upTo }} {{ money(v) }}</option>{% endfor %}</select></label>
+      {% endif %}
+      <label class="chip"><span class="sr">{{ t.sort }}</span>
+        <select data-f="sort"><option value="">{{ t.sortRec }}</option><option value="new">{{ t.sortNew }}</option><option value="asc">{{ t.sortAsc }}</option><option value="desc">{{ t.sortDesc }}</option></select></label>
+      <button class="chip-btn" type="button" data-maptoggle aria-pressed="false">{{ icon('map') }} {{ t.mapBtn }}</button>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="results-bar">
+    <span><b data-n>{{ items | length }}</b> <span data-nword data-one="{{ t.obj1 }}" data-many="{{ t.objN }}">{{ t.obj1 if items | length == 1 else t.objN }}</span></span>
+    <button class="link" type="button" data-reset hidden>{{ t.reset }}</button>
+  </div>
+  <div class="results" data-results>
+    <div class="map" data-map="pins" data-lazy><div class="map-ph">{{ t.mapLoad }}</div></div>
+    <script type="application/json" data-pins>{{ pins | tojson_safe }}</script>
+    <div>
+      <div class="grid" data-grid>
+        {% for l in items %}{{ m.card(l, true, loop.index) }}{% endfor %}
+      </div>
+      <div class="empty" data-empty>
+        <h2>{{ t.emptyH }}</h2>
+        <p>{{ t.emptyP }}</p>
+        <div class="btn-row"><button class="btn btn-primary" type="button" data-reset>{{ t.reset }}</button><a class="btn btn-wa" href="{{ wa(t.waSearch) }}" target="_blank" rel="noopener">{{ wa_icon() }} {{ t.emptyWa }}</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="sec sec-dark">
+  <div class="wrap">
+    <div class="split">
+      <div>
+        <h2>{{ t.offH }}</h2>
+        <p>{{ t.offP }}</p>
+        <div class="btn-row"><a class="btn btn-wa" href="{{ wa(t.waSearch) }}" target="_blank" rel="noopener">{{ wa_icon() }} {{ t.offBtn }}</a><a class="btn btn-ghost" href="{{ url('contato') }}">{{ t.navContact }}</a></div>
+      </div>
+      <ul class="hl" style="margin:0">
+        {% for k in ['off1', 'off2', 'off3'] %}<li>{{ icon('check') }}<span>{{ t[k] }}</span></li>{% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+{% endblock %}
