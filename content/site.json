@@ -27,11 +27,13 @@
  "rate": 11.5,
  "buyCosts": 0.045,
  "media": {
-  "hero": "71",
+  "hero": "hero-video",
   "about": "70",
-  "story": "74",
+  "story": "71",
   "sell": "05",
-  "cta": "72"
+  "cta": "72",
+  "heroVideo": "hero.mp4",
+  "heroVideoMobile": "hero-m.mp4"
  },
  "stats": {
   "sold": 212,
