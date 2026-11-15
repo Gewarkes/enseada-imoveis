@@ -19,6 +19,7 @@ content:
         fields:
           - { name: name, label: Nome, type: string }
           - { name: initials, label: Iniciais, type: string }
+          - { name: photo, label: 'Foto do corretor (vazio = iniciais)', type: image }
           - { name: creci, label: CRECI, type: string }
           - { name: langs, label: Idiomas (ex. PT · EN · DE), type: string }
           - name: role
@@ -49,7 +50,6 @@ content:
       - { name: newsletterUrl, label: 'Newsletter: endereço do serviço de envio (vazio = só demonstração)', type: string }
       - { name: contactUrl, label: 'Formulário de contato: endereço de envio (vazio = só demonstração)', type: string }
       - { name: demoNote, label: 'Mostrar aviso "modelo de demonstração" no rodapé', type: boolean }
-      - { name: brokerLink, label: 'Mostrar link "Área do corretor" (formulário de teste) no rodapé', type: boolean }
       - { name: openingHours, label: 'Horário para o Google (ex. Mo-Sa 09:00-18:00)', type: string }
       - name: geo
         label: Coordenadas do escritório
@@ -64,17 +64,33 @@ content:
         label: Fotos do site
         type: object
         fields:
-          - { name: heroPoster, label: Foto de abertura, type: image }
-          - { name: about, label: Foto da seção Sobre (início), type: image }
-          - { name: proof, label: Foto ao lado dos números, type: image }
-          - { name: portrait, label: Retrato do corretor, type: image }
-          - { name: story1, label: Sobre – foto 1, type: image }
-          - { name: story2, label: Sobre – foto 2, type: image }
-          - { name: team, label: Sobre – foto 3, type: image }
-          - { name: values, label: Sobre – foto 4, type: image }
-          - { name: cta, label: Contato – foto, type: image }
-          - { name: office, label: Contato – mapa ou escritório, type: image }
-          - { name: publish, label: Área do corretor – foto, type: image }
+          - { name: hero, label: Foto de abertura (página inicial), type: image }
+          - { name: about, label: Foto da seção Sobre, type: image }
+          - { name: story, label: Sobre – segunda foto, type: image }
+          - { name: sell, label: Foto da seção Proprietários, type: image }
+          - { name: cta, label: Foto da faixa de contato, type: image }
+      - { name: instagram, label: 'Instagram (endereço completo; vazio = não aparece)', type: string }
+      - { name: brokerUrl, label: 'Link "Área do corretor" no rodapé (vazio = não aparece)', type: string }
+      - name: reviews
+        label: Depoimentos
+        type: object
+        list: true
+        fields:
+          - { name: name, label: Nome, type: string }
+          - name: from
+            label: Quem é (ex. Comprou uma casa em Pipa)
+            type: object
+            fields:
+              - { name: pt, label: Português, type: string }
+              - { name: en, label: English, type: string }
+              - { name: de, label: Deutsch, type: string }
+          - name: text
+            label: Depoimento
+            type: object
+            fields:
+              - { name: pt, label: Português, type: text }
+              - { name: en, label: English, type: text }
+              - { name: de, label: Deutsch, type: text }
       - name: stats
         label: Números
         type: object
@@ -113,12 +129,29 @@ content:
             - { value: casa, label: Casa }
             - { value: apartamento, label: Apartamento }
             - { value: terreno, label: Terreno }
+      - { name: ref, label: 'Código do imóvel (ex. EN-1042)', type: string }
+      - { name: date, label: Data do anúncio, type: date }
       - { name: loc, label: Bairro ou praia, type: string, required: true }
+      - name: title
+        label: Linha de resumo (até 60 letras)
+        type: object
+        fields:
+          - { name: pt, label: Português, type: string }
+          - { name: en, label: English, type: string }
+          - { name: de, label: Deutsch, type: string }
       - { name: price, label: 'Preço em R$ (aluguel: por mês)', type: number, required: true }
       - { name: area, label: Área construída (m²), type: number }
       - { name: lot, label: Terreno (m²), type: number }
       - { name: beds, label: Quartos, type: number }
+      - { name: suites, label: Suítes, type: number }
       - { name: baths, label: Banheiros, type: number }
+      - { name: parking, label: Vagas, type: number }
+      - { name: condo, label: 'Condomínio por mês em R$ (0 = não há)', type: number }
+      - { name: iptu, label: IPTU por ano em R$, type: number }
+      - { name: lat, label: 'Latitude aproximada (ex. -6.2290)', type: number }
+      - { name: lng, label: 'Longitude aproximada (ex. -35.0478)', type: number }
+      - { name: video, label: 'Vídeo (link do YouTube; opcional)', type: string }
+      - { name: plan, label: Planta (imagem; opcional), type: image }
       - { name: year, label: Ano de construção, type: number }
       - { name: beach, label: Distância da praia (metros), type: number }
       - name: status
@@ -138,6 +171,13 @@ content:
           - { name: pt, label: Português, type: text, required: true }
           - { name: en, label: 'English (vazio = usa o português)', type: text }
           - { name: de, label: 'Deutsch (vazio = usa o português)', type: text }
+      - name: highlights
+        label: Três destaques (frases curtas)
+        type: object
+        fields:
+          - { name: pt, label: Português, type: string, list: true }
+          - { name: en, label: English, type: string, list: true }
+          - { name: de, label: Deutsch, type: string, list: true }
       - name: feats
         label: Características
         type: select
@@ -146,6 +186,7 @@ content:
           values:
             - { value: pool, label: Piscina }
             - { value: seaview, label: Vista para o mar }
+            - { value: lagoon, label: Vista para a lagoa }
             - { value: ac, label: Ar-condicionado }
             - { value: furnished, label: Mobiliada }
             - { value: garage, label: Garagem }
@@ -189,6 +230,8 @@ content:
           - { name: en, label: English, type: string }
           - { name: de, label: Deutsch, type: string }
       - { name: date, label: Data, type: date, required: true }
+      - { name: updated, label: 'Atualizado em (opcional)', type: date }
+      - { name: author, label: Autor(a), type: string }
       - { name: img, label: Foto, type: image }
       - name: cat
         label: Categoria
@@ -205,7 +248,7 @@ content:
           - { name: en, label: English, type: text }
           - { name: de, label: Deutsch, type: text }
       - name: body
-        label: 'Texto (linha em branco = novo parágrafo)'
+        label: 'Texto (linha em branco = novo parágrafo; linha começando com ## = subtítulo)'
         type: object
         fields:
           - { name: pt, label: Português, type: text, required: true }
