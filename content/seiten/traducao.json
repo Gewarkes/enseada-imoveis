@@ -4,7 +4,7 @@
   "pt": "Tradução juramentada",
   "en": "Sworn translation",
   "es": "Traducción jurada",
-  "de": "Beglaubigte Übersetzung"
+  "de": "Beeidigte Übersetzung"
  },
  "h1": {
   "pt": "Seus documentos em português, prontos para o cartório",
@@ -13,18 +13,18 @@
   "de": "Deine Dokumente auf Portugiesisch, fertig für das Notariat (Cartório)"
  },
  "lead": {
-  "pt": "Serviço de parceiro (Traduzme) para compradores estrangeiros. Preços conforme o site do prestador, em 16.11.2026.",
-  "en": "Partner service (Traduzme) for foreign buyers. Prices as shown on the provider’s site on 16.11.2026.",
-  "es": "Servicio de un socio (Traduzme) para compradores extranjeros. Precios según el sitio del proveedor, al 16.11.2026.",
-  "de": "Service eines Partners (Traduzme) für ausländische Käufer. Preise laut Website des Anbieters, Stand 16.11.2026."
+  "pt": "Serviço de parceiro (Traduzme) para compradores estrangeiros.",
+  "en": "Partner service (Traduzme) for foreign buyers.",
+  "es": "Servicio de un socio (Traduzme) para compradores extranjeros.",
+  "de": "Partnerservice (Traduzme) für ausländische Käufer."
  },
  "meta": {
   "pt": "Tradução juramentada de documentos para compra de imóvel no Brasil.",
   "en": "Sworn translation of documents for buying property in Brazil.",
   "es": "Traducción jurada de documentos para comprar una propiedad en Brasil.",
-  "de": "Beglaubigte Übersetzung von Dokumenten für den Immobilienkauf in Brasilien."
+  "de": "Beeidigte Übersetzung von Dokumenten für den Immobilienkauf in Brasilien."
  },
- "stand": "16.11.2026",
+ "stand": "17.11.2026",
  "blocks": [
   {
    "t": "h2",
@@ -71,43 +71,43 @@
    "t": "table",
    "head": [
     {
-     "pt": "Item",
-     "en": "Item",
-     "es": "Ítem",
-     "de": "Posten"
+     "pt": "Idioma do documento",
+     "en": "Document language",
+     "es": "Idioma del documento",
+     "de": "Sprache des Dokuments"
     },
     {
-     "pt": "Preço (R$)",
-     "en": "Price (R$)",
-     "es": "Precio (R$)",
-     "de": "Preis (R$)"
+     "pt": "Por documento, a partir de (R$)",
+     "en": "Per document, from (R$)",
+     "es": "Por documento, desde (R$)",
+     "de": "Pro Dokument, ab (R$)"
     }
    ],
    "rows": [
     [
      {
-      "pt": "Documento simples",
-      "en": "Simple document",
-      "es": "Documento simple",
-      "de": "Einfaches Dokument"
+      "pt": "Espanhol, francês, italiano",
+      "en": "Spanish, French, Italian",
+      "es": "Español, francés, italiano",
+      "de": "Spanisch, Französisch, Italienisch"
      },
      "119"
     ],
     [
      {
-      "pt": "Documento intermediário",
-      "en": "Intermediate document",
-      "es": "Documento intermedio",
-      "de": "Mittleres Dokument"
+      "pt": "Inglês",
+      "en": "English",
+      "es": "Inglés",
+      "de": "Englisch"
      },
      "129"
     ],
     [
      {
-      "pt": "Documento completo",
-      "en": "Full document",
-      "es": "Documento completo",
-      "de": "Umfangreiches Dokument"
+      "pt": "Alemão",
+      "en": "German",
+      "es": "Alemán",
+      "de": "Deutsch"
      },
      "149"
     ]
@@ -117,28 +117,28 @@
    "t": "note",
    "k": "info",
    "x": {
-    "pt": "Pagamento somente por Pix. Preços podem mudar: confirme com o prestador.",
-    "en": "Payment by Pix only. Prices may change: confirm with the provider.",
-    "es": "Pago solo por Pix (sistema de pago instantáneo de Brasil). Los precios pueden cambiar: confirma con el proveedor.",
-    "de": "Zahlung nur per Pix. Preise können sich ändern: Frag beim Anbieter nach."
+    "pt": "Preço fixo por documento. O valor final aparece na oferta on-line da Traduzme (traduzme.com.br). Pagamento só por Pix.",
+    "en": "Fixed price per document. The final price is shown in Traduzme’s online quote (traduzme.com.br). Payment by Pix only.",
+    "es": "Precio fijo por documento. El valor final aparece en la oferta en línea de Traduzme (traduzme.com.br). Pago solo por Pix.",
+    "de": "Festpreis pro Dokument. Der Endpreis steht im Online-Angebot von Traduzme (traduzme.com.br). Zahlung nur per Pix."
    }
   },
   {
    "t": "h2",
    "x": {
-    "pt": "Apostila: o que é?",
-    "en": "Apostille: what is it?",
-    "es": "Apostilla: ¿qué es?",
-    "de": "Apostille: Was ist das?"
+    "pt": "Preço a partir de, por documento. O valor final aparece na oferta on-line da Traduzme (traduzme.com.br). Pagamento por Pix.",
+    "en": "Price from, per document. The final price is shown in Traduzme’s online quote (traduzme.com.br). Payment by Pix.",
+    "es": "Precio desde, por documento. El valor final aparece en la oferta en línea de Traduzme (traduzme.com.br). Pago por Pix.",
+    "de": "Preis ab, pro Dokument. Der Endpreis steht im Online-Angebot von Traduzme (traduzme.com.br). Zahlung per Pix."
    }
   },
   {
    "t": "p",
    "x": {
-    "pt": "A apostila é um carimbo do país de origem que confirma que um documento é autêntico. Muitos países aceitam a apostila da Convenção de Haia no lugar da legalização no consulado. Depois, o documento é traduzido por tradutor juramentado.",
-    "en": "An apostille is a stamp from the country of origin confirming a document is authentic. Many countries accept the Hague Convention apostille instead of consular legalisation. The document is then translated by a sworn translator.",
-    "es": "La apostilla es un sello del país de origen que confirma que un documento es auténtico. Muchos países aceptan la apostilla del Convenio de La Haya en lugar de la legalización en el consulado. Después, un traductor jurado traduce el documento.",
-    "de": "Die Apostille ist ein Stempel des Herkunftslands, der bestätigt, dass ein Dokument echt ist. Viele Länder akzeptieren die Apostille nach dem Haager Übereinkommen statt der Legalisierung beim Konsulat. Danach wird das Dokument von einem beeidigten Übersetzer übersetzt."
+    "pt": "A apostila é um carimbo do país de origem que confirma que o documento é autêntico. Depois, um tradutor juramentado faz a tradução.",
+    "en": "The apostille is a stamp from the issuing country confirming the document is authentic. Afterwards a sworn translator does the translation.",
+    "es": "La apostilla es un sello del país de origen que confirma que el documento es auténtico. Después, un traductor jurado hace la traducción.",
+    "de": "Die Apostille ist ein Stempel des Herkunftslands, der die Echtheit des Dokuments bestätigt. Danach übersetzt ein beeidigter Übersetzer."
    }
   },
   {
@@ -147,7 +147,7 @@
     "pt": "Olá! Preciso de tradução juramentada para a compra de um imóvel.",
     "en": "Hello! I need a sworn translation for buying a property.",
     "es": "¡Hola! Necesito traducción jurada para comprar una propiedad.",
-    "de": "Hallo! Ich brauche eine beglaubigte Übersetzung für den Kauf einer Immobilie."
+    "de": "Hallo! Ich brauche eine beeidigte Übersetzung für den Kauf einer Immobilie."
    },
    "b": {
     "pt": "Pedir tradução",
@@ -159,7 +159,7 @@
  ],
  "sources": [
   [
-   "Traduzme · Preise laut Anbieterseite (16.11.2026)",
+   "Traduzme (traduzme.com.br), consulta em 16.11.2026",
    "https://traduzme.com.br/"
   ]
  ],

@@ -51,35 +51,35 @@
  "dist": {
   "beach": "4 min",
   "center": "9 min",
-  "airport": "1 h 25"
+  "airport": "~1 h 30"
  },
  "highlights": {
   "pt": [
-   "Quatro suítes voltadas para o nordeste",
-   "Energia solar com 24 painéis",
-   "Casa de caseiro separada no lote"
+   "Suítes voltadas para o nordeste",
+   "Piscina de borda infinita",
+   "Casa do caseiro com entrada própria"
   ],
   "en": [
-   "Four en-suite bedrooms facing north-east",
-   "Solar system with 24 panels",
-   "Separate caretaker's house on the plot"
+   "Bedrooms facing north-east",
+   "Infinity pool",
+   "Caretaker's house with own entrance"
   ],
   "es": [
-   "Cuatro suites orientadas al noreste",
-   "Energía solar con 24 paneles",
-   "Casa de cuidador separada en el lote"
+   "Suites orientadas al noreste",
+   "Piscina de borde infinito",
+   "Casa del cuidador con entrada propia"
   ],
   "de": [
-   "Vier Suiten mit Blick nach Nordosten",
-   "Solarenergie mit 24 Panels",
-   "Separates Haus für den Hausmeister (Caseiro) auf dem Grundstück"
+   "Suiten mit Blick nach Nordosten",
+   "Infinity-Pool",
+   "Hausmeisterhaus mit eigenem Eingang"
   ]
  },
  "desc": {
-  "pt": "A casa fica no alto da falésia do Madeiro, em rua calçada, a 250 m da escadaria que desce para a praia. O lote tem 1.100 m², é murado nas laterais e nos fundos e abre a frente para o nordeste, de onde se vê o mar. O centro de Pipa está a nove minutos de carro.\n\nSão 420 m² construídos em dois pavimentos, concluídos em 2021. As quatro suítes têm ar-condicionado e varanda. No térreo ficam a sala, a cozinha aberta, um lavabo e a churrasqueira, ao lado da piscina de borda infinita. A garagem coberta recebe três carros. Os 24 painéis solares cobrem boa parte do consumo e a internet chega por fibra. A casa do caseiro é separada, com entrada própria.\n\nA venda inclui os móveis, conforme lista. O imóvel tem matrícula individual, escritura e IPTU em dia. Madeiras e esquadrias passaram por manutenção em 2026.",
-  "en": "The house stands on top of the Madeiro cliffs, on a paved road, 250 m from the steps that lead down to the beach. The plot measures 1,100 m², is walled at the sides and rear and opens to the north-east, towards the sea. Pipa centre is nine minutes by car.\n\nThe built area is 420 m² on two floors, completed in 2021. All four en-suite bedrooms have air conditioning and a veranda. The ground floor holds the living room, an open kitchen, a guest WC and the barbecue area next to the infinity pool. The covered garage takes three cars. The 24 solar panels cover a good share of consumption. Internet is fibre. The caretaker's house has its own entrance.\n\nThe furniture is included, as per inventory. The property has its own registry entry, a deed and paid-up property tax. Timber and window frames were serviced in 2026.",
-  "es": "La casa está en lo alto del acantilado de Madeiro, en una calle empedrada, a 250 m de la escalera que baja a la playa. El lote tiene 1.100 m², está cercado por los lados y por el fondo, y abre el frente hacia el noreste, desde donde se ve el mar. El centro de Pipa queda a nueve minutos en auto.\n\nSon 420 m² construidos en dos niveles, terminados en 2021. Las cuatro suites tienen aire acondicionado y balcón. En la planta baja están la sala, la cocina abierta, un baño de visitas y la parrilla, junto a la piscina de borde infinito. La cochera techada recibe tres autos. Los 24 paneles solares cubren buena parte del consumo y el internet llega por fibra. La casa del cuidador es independiente, con entrada propia.\n\nLa venta incluye los muebles, según lista. El inmueble tiene matrícula individual, escritura e IPTU al día. Las maderas y los marcos recibieron mantenimiento en 2026.",
-  "de": "Das Haus steht oben auf der Klippe von Madeiro, an einer gepflasterten Straße, 250 m von der Treppe entfernt, die zum Strand hinunterführt. Das Grundstück hat 1.100 m², ist an den Seiten und hinten ummauert und öffnet sich vorne nach Nordosten, mit Blick aufs Meer. Das Zentrum von Pipa ist neun Minuten mit dem Auto entfernt.\n\nEs hat 420 m² Wohnfläche auf zwei Etagen, fertiggestellt 2021. Die vier Suiten haben Klimaanlage und Balkon. Im Erdgeschoss liegen das Wohnzimmer, die offene Küche, ein Gäste-WC und der Grillplatz, neben dem Infinity-Pool. Die überdachte Garage bietet Platz für drei Autos. Die 24 Solarpanels decken einen großen Teil des Stromverbrauchs, und das Internet kommt über Glasfaser. Das Haus des Hausmeisters ist getrennt und hat einen eigenen Eingang.\n\nDie Möbel sind im Preis enthalten, laut Liste. Die Immobilie hat einen eigenen Grundbuchauszug (Matrícula), eine Kaufurkunde (Escritura) und bezahlte Grundsteuer (IPTU). Holz und Fensterrahmen wurden 2026 gewartet."
+  "pt": "Casa no alto da falésia do Madeiro, em rua calçada. O lote é murado nas laterais e nos fundos e abre a frente para o mar.\n\nMóveis incluídos, conforme lista. Matrícula e certidões solicitadas; situação conforme os documentos. Madeiras e esquadrias passaram por manutenção em 2026.",
+  "en": "House on top of the Madeiro cliffs, on a paved road. The plot is walled at the sides and rear and opens at the front towards the sea.\n\nFurniture included, as per inventory. Matrícula and certificates requested; status as per the documents. Timber and window frames were serviced in 2026.",
+  "es": "Casa en lo alto del acantilado de Madeiro, en una calle empedrada. El lote está cercado por los lados y por el fondo, y abre el frente hacia el mar.\n\nMuebles incluidos, según lista. Matrícula y certificados solicitados; situación según los documentos. Las maderas y los marcos recibieron mantenimiento en 2026.",
+  "de": "Haus oben auf der Klippe von Madeiro, an einer gepflasterten Straße. Das Grundstück ist an den Seiten und hinten ummauert und öffnet sich vorne zum Meer.\n\nMöbel im Preis enthalten, laut Liste. Matrícula und Bescheinigungen angefragt; Stand siehe Unterlagen. Holz und Fensterrahmen wurden 2026 gewartet."
  },
  "ordem": 1
 }

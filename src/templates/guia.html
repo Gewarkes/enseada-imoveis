@@ -17,7 +17,7 @@
     {% elif b.t == 'note' %}<div class="note note-{{ b.k }}">{{ icon('info') }}<p><b>{{ t['n' ~ b.k[0]|upper ~ b.k[1:]] }}:</b> {{ L(b.x) }}</p></div>
     {% elif b.t == 'table' %}
     <div class="g-table-w"><table class="g-table"><thead><tr>{% for h in b.head %}<th>{{ L(h) }}</th>{% endfor %}</tr></thead>
-      <tbody>{% for r in b.rows %}<tr>{% for cell in r %}<td{% if loop.first %} class="g-first"{% endif %}>{{ L(cell) }}</td>{% endfor %}</tr>{% endfor %}</tbody></table></div>
+      <tbody>{% for r in b.rows %}<tr>{% for cell in r %}<td{% if loop.first %} class="g-first"{% else %} data-l="{{ L(b.head[loop.index0]) }}"{% endif %}>{{ L(cell) }}</td>{% endfor %}</tr>{% endfor %}</tbody></table></div>
     {% elif b.t == 'cards' %}
     <div class="gcards">{% for cd in b.x %}<a class="gcard" href="{{ url(cd.url) }}">{{ icon(cd.icon) }}<b>{{ L(cd.h) }}</b><span>{{ L(cd.p) }}</span></a>{% endfor %}</div>
     {% elif b.t == 'check' %}

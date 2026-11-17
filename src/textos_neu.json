@@ -30,10 +30,10 @@
   "de": "Quellen"
  },
  "nInfo": {
-  "pt": "Informação",
-  "en": "Information",
-  "es": "Información",
-  "de": "Information"
+  "pt": "Bom saber",
+  "en": "Good to know",
+  "es": "Bueno saber",
+  "de": "Gut zu wissen"
  },
  "nWarn": {
   "pt": "Atenção",
@@ -42,10 +42,10 @@
   "de": "Achtung"
  },
  "nUnclear": {
-  "pt": "Não está claro",
-  "en": "Unclear",
-  "es": "No está claro",
-  "de": "Unklar"
+  "pt": "Ainda não confirmado",
+  "en": "Not yet confirmed",
+  "es": "Aún sin confirmar",
+  "de": "Noch nicht bestätigt"
  },
  "nOk": {
   "pt": "Bom saber",
@@ -216,10 +216,10 @@
   "de": "Quelle und Stand"
  },
  "cbSrcTxt": {
-  "pt": "ITBI Natal 3 % (imprensa, amarelo); Tibau sem valor confirmado (vermelho); IOF: de 0 a 0,38 % (amarelo); escritura: tabela TJRN; registro: sem valor confirmado (vermelho). Consulta em 16.11.2026.",
-  "en": "Natal transfer tax 3 % (press, yellow); Tibau no confirmed figure (red); IOF: 0 to 0.38 % (yellow); deed: TJRN table; registry: no confirmed figure (red). Checked 16.11.2026.",
-  "es": "ITBI Natal 3 % (prensa, amarillo); Tibau sin valor confirmado (rojo); IOF: de 0 a 0,38 % (amarillo); escritura: tabla del TJRN; registro: sin valor confirmado (rojo). Consulta del 16.11.2026.",
-  "de": "ITBI Natal 3 % (Presse, gelb); Tibau ohne bestätigten Wert (rot); IOF: von 0 bis 0,38 % (gelb); Notarvertrag: Tabelle des TJRN; Eintragung: kein bestätigter Wert (rot). Abfrage am 16.11.2026."
+  "pt": "Valores de exemplo. Confirme na prefeitura e no cartório.",
+  "en": "Example values. Confirm with the city hall and the notary.",
+  "es": "Valores de ejemplo. Confirma en la alcaldía y en la notaría.",
+  "de": "Beispielwerte. Bei Prefeitura und Cartório bestätigen."
  },
  "gnSale": {
   "pt": "Preço de venda (R$)",
@@ -246,10 +246,10 @@
   "de": "Wohnsitz in Brasilien (15 bis 22,5 %)"
  },
  "gnNon": {
-  "pt": "Não residente (15 %)",
-  "en": "Non-resident (15 %)",
-  "es": "No residente (15 %)",
-  "de": "Ohne Wohnsitz in Brasilien (15 %)"
+  "pt": "Não residente (a partir de 15 %)",
+  "en": "Non-resident (from 15 %)",
+  "es": "No residente (desde 15 %)",
+  "de": "Ohne Wohnsitz in Brasilien (ab 15 %)"
  },
  "gnGain": {
   "pt": "Ganho",
@@ -294,10 +294,10 @@
   "de": "Unterlagen zu dieser Immobilie"
  },
  "mkNote": {
-  "pt": "Informações da corretora. Não há conferência pela plataforma.",
-  "en": "Information from the agent. The platform does not verify it.",
-  "es": "Información del corredor. La plataforma no la verifica.",
-  "de": "Angaben der Maklerin. Die Plattform prüft nichts nach."
+  "pt": "Informado pela corretora. Peça os comprovantes.",
+  "en": "Stated by the agent. Ask for the proof.",
+  "es": "Informado por la corredora. Pide los comprobantes.",
+  "de": "Angabe der Maklerin. Belege bitte anfordern."
  },
  "mkMat": {
   "pt": "Matrícula em mãos",
@@ -318,16 +318,16 @@
   "de": "am"
  },
  "mkNone": {
-  "pt": "Sem confirmação da corretora",
-  "en": "Not confirmed by the agent",
-  "es": "Sin confirmación del corredor",
-  "de": "Keine Bestätigung der Maklerin"
+  "pt": "Documentos ainda não recebidos",
+  "en": "Documents not received yet",
+  "es": "Documentos aún no recibidos",
+  "de": "Unterlagen liegen noch nicht vor"
  },
  "resChip": {
-  "pt": "Pode servir para pedido de residência",
-  "en": "May qualify for a residence application",
-  "es": "Puede servir para pedir la residencia",
-  "de": "Kann für einen Aufenthaltsantrag genügen"
+  "pt": "Valor acima do mínimo para o visto de investidor",
+  "en": "Price above the minimum for the investor residence permit",
+  "es": "Valor por encima del mínimo para la residencia por inversión",
+  "de": "Preis über der Mindestgrenze für den Aufenthalt über Investition"
  },
  "resChipL": {
   "pt": "Ver condições",
@@ -366,10 +366,10 @@
   "de": "Sicher kaufen, Schritt für Schritt"
  },
  "hubP": {
-  "pt": "Etapas, custos, residência e como evitar golpes, em linguagem simples.",
-  "en": "Steps, costs, residency and how to avoid scams, in plain language.",
-  "es": "Etapas, costos, residencia y cómo evitar estafas, en lenguaje simple.",
-  "de": "Schritte, Kosten, Aufenthalt und wie du Betrug vermeidest, in einfacher Sprache."
+  "pt": "Etapas, custos, residência e como reconhecer ofertas sérias, em linguagem simples.",
+  "en": "Steps, costs, residency and how to spot serious offers, in plain language.",
+  "es": "Etapas, costos, residencia y cómo reconocer ofertas serias, en lenguaje simple.",
+  "de": "Schritte, Kosten, Aufenthalt und wie du seriöse Angebote erkennst, einfach erklärt."
  },
  "hubBtn": {
   "pt": "Abrir o guia",

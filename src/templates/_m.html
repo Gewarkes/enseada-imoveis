@@ -25,7 +25,7 @@
     <span class="card-loc">{{ icon('pin') }}{{ l.loc }}</span>
     <h3 class="card-title"><a href="{{ url('imovel-' + l.slug) }}">{{ l.name }}</a></h3>
     <p class="card-sub">{{ L(l.highlights)[:2] | join(" · ") if L(l.highlights) else L(l.title) }}</p>
-    <p class="card-price">{{ price(l) }}{% if l.priceBefore %} <s class="was">{{ money(l.priceBefore) }}</s>{% endif %}</p>
+    <p class="card-price">{{ price(l) }}{% if l.priceBefore %} <s class="was" data-brl="{{ l.priceBefore | int }}">{{ money(l.priceBefore) }}</s>{% endif %}</p>
     <ul class="facts">
       {% for ic, n, w in facts(l) %}<li>{{ icon(ic) }}<span><b>{{ n }}</b> {{ w }}</span></li>{% endfor %}
     </ul>
@@ -134,9 +134,11 @@
 
 {% macro answers() %}
 <aside class="ans" aria-labelledby="ans-h">
-  <div class="ans-t"><b id="ans-h">{{ t.ansH }}</b><span>{{ t.ansP }}</span></div>
+  <div class="ans-t"><b id="ans-h">{{ t.ansH }}</b></div>
   <div class="ans-l">
-    {% for r, k in [('calculadoras','ansL1')] + ([] if lang == 'pt' else [('comprar-do-exterior','ansL2'),('comprar-do-exterior','ansL3'),('residencia','ansL4')]) + [('golpes','ansL5'),('comprar','ansL6')] %}<a href="{{ url(r) }}">{{ t[k] }}</a>{% endfor %}
+    <a href="{{ url('calculadoras') }}">{{ t.ansL1 }}</a>
+    {% if lang != 'pt' %}<a href="{{ url('comprar-do-exterior') }}">{{ t.ansL2 }}</a>{% endif %}
+    <a href="{{ url('comprar' if lang == 'pt' else 'comprar-do-exterior') }}">{{ t.ansL6 }}</a>
     <a href="{{ url('home') }}#faq">{{ t.ansL7 }}</a>
   </div>
 </aside>
@@ -147,7 +149,6 @@
     <div class="cta">
       {{ pic(imgkey, '100vw', '', 'cta-bg') }}
       <div><h2>{{ h }}</h2><p>{{ p }}</p></div>
-      {{ answers() }}
       <div class="btn-row">
         <a class="btn btn-wa" href="{{ wa(t.waHello) }}" target="_blank" rel="noopener">{{ wa_icon() }} {{ t.waWrite }}</a>
         <a class="btn btn-ghost" href="{{ url('contato') }}">{{ t.ctaVisit }}</a>

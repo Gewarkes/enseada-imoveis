@@ -42,35 +42,31 @@
  "dist": {
   "beach": "1 min",
   "center": "12 min",
-  "airport": "1 h 15"
+  "airport": "~1 h 30"
  },
  "highlights": {
   "pt": [
-   "42 m de frente para a lagoa",
-   "Energia e água no limite do lote",
-   "Documentos conferidos por advogado"
+   "Matrícula e certidões solicitadas; situação conforme os documentos.",
+   "Terreno de marinha: taxa anual (foro) à SPU"
   ],
   "en": [
-   "42 m of lagoon frontage",
-   "Power and water at the boundary",
-   "Paperwork checked by a lawyer"
+   "Matrícula and certificates requested; status as per the documents.",
+   "Terreno de marinha: annual fee (foro) to the SPU"
   ],
   "es": [
-   "42 m de frente a la laguna",
-   "Energía y agua en el límite del lote",
-   "Documentos revisados por un abogado"
+   "Matrícula y certificados solicitados; situación según los documentos.",
+   "Terreno de marinha: tasa anual (foro) a la SPU"
   ],
   "de": [
-   "42 m Frontlänge zur Lagune",
-   "Strom und Wasser an der Grundstücksgrenze",
-   "Unterlagen von einem Anwalt geprüft"
+   "Matrícula und Bescheinigungen angefragt; Stand siehe Unterlagen.",
+   "Terreno de marinha: jährliche Gebühr (Foro) an die SPU"
   ]
  },
  "desc": {
-  "pt": "O terreno fica em Tibau do Sul, na ponta onde a lagoa de Guaraíras encontra o mar. São 3.900 m², com 42 m de frente para a água. A praia mais próxima está a 60 m. O acesso é por estrada de terra, a 300 m do calçamento, e o centro de Pipa fica a doze minutos de carro. É quase plano e voltado para o oeste.\n\nEnergia e água chegam ao limite do lote. A faixa junto à margem é terreno de marinha e área de preservação, onde não se constrói. O restante admite uso residencial, segundo consulta feita à prefeitura. Recuos e altura devem ser confirmados antes do projeto.\n\nO terreno tem escritura e matrícula. A parte de marinha está inscrita na SPU em regime de ocupação, com a taxa anual em dia. Na transferência incide laudêmio, cobrado pela SPU. Um advogado independente conferiu a documentação.",
-  "en": "The plot is in Tibau do Sul, on the point where the Guaraíras lagoon meets the sea. It measures 3,900 m², with 42 m of water frontage. The nearest beach is 60 m away. Access is by 300 m of dirt road. Pipa centre is twelve minutes by car. The land is almost level and faces west.\n\nPower and water reach the boundary. The strip along the shore is federal coastal land and a protected area where nothing may be built. The rest allows residential use, according to a town hall enquiry. Setbacks and height should be confirmed before design starts.\n\nThe plot has a deed and a registry entry. The federal strip is registered with the SPU under an occupancy regime, with the annual fee paid up. A transfer fee (laudêmio) is due on sale and is charged by the federal property office (SPU). An independent lawyer has checked the paperwork.",
-  "es": "El terreno está en Tibau do Sul, en la punta donde la laguna de Guaraíras se encuentra con el mar. Son 3.900 m², con 42 m de frente al agua. La playa más cercana está a 60 m. El acceso es por un camino de tierra, a 300 m del pavimento, y el centro de Pipa queda a doce minutos en auto. Es casi plano y mira hacia el oeste.\n\nLa energía y el agua llegan al límite del lote. La franja junto a la orilla es terreno de marina y área de preservación, donde no se puede construir. El resto admite uso residencial, según una consulta hecha a la municipalidad. Los retiros y la altura deben confirmarse antes del proyecto.\n\nEl terreno tiene escritura y matrícula. La parte de marina está inscrita en la SPU en régimen de ocupación, con la tasa anual al día. En la transferencia se aplica el laudemio, que cobra la SPU. Un abogado independiente revisó la documentación.",
-  "de": "Das Grundstück liegt in Tibau do Sul, an der Spitze, wo die Lagune von Guaraíras auf das Meer trifft. Es hat 3.900 m², mit 42 m Frontlänge zum Wasser. Der nächste Strand ist 60 m entfernt. Die Zufahrt führt über eine Sandstraße, 300 m von der gepflasterten Straße entfernt, und das Zentrum von Pipa ist zwölf Minuten mit dem Auto entfernt. Es ist fast eben und nach Westen ausgerichtet.\n\nStrom und Wasser reichen bis an die Grundstücksgrenze. Der Streifen am Ufer ist Küstenland der Marine (Terreno de marinha) und Schutzgebiet, dort darf nicht gebaut werden. Der Rest erlaubt laut Anfrage bei der Stadtverwaltung Wohnnutzung. Abstände und Höhe müssen vor der Planung bestätigt werden.\n\nDas Grundstück hat eine Kaufurkunde (Escritura) und einen Grundbuchauszug (Matrícula). Der Teil mit Marine-Land ist bei der SPU (Bundesvermögensverwaltung) im Nutzungsrecht eingetragen, die Jahresgebühr ist bezahlt. Beim Eigentümerwechsel fällt eine Laudemie (Laudêmio) an, die die SPU erhebt. Ein unabhängiger Anwalt hat die Unterlagen geprüft."
+  "pt": "Em Tibau do Sul, na ponta onde a lagoa de Guaraíras encontra o mar. O acesso é por estrada de terra, a 300 m do calçamento.\n\nA faixa junto à margem é terreno de marinha (terreno perto do mar que pertence à União; paga-se taxa anual (foro) à SPU) e, em parte, área de preservação. Ali a construção é restrita. No restante, recuos, altura e uso devem ser confirmados na prefeitura. Na transferência incide laudêmio, cobrado pela SPU.",
+  "en": "In Tibau do Sul, on the point where the Guaraíras lagoon meets the sea. Access is by 300 m of dirt road.\n\nThe strip along the shore is terreno de marinha (land near the sea that belongs to the federal government; an annual fee (foro) is paid to the SPU) and partly a protected area. Building there is restricted. On the rest, setbacks, height and permitted use must be confirmed with the town hall. A transfer fee (laudêmio) is due on sale, charged by the SPU.",
+  "es": "En Tibau do Sul, en la punta donde la laguna de Guaraíras se encuentra con el mar. El acceso es por un camino de tierra, a 300 m del pavimento.\n\nLa franja junto a la orilla es terreno de marinha (terreno cerca del mar que pertenece a la Unión; se paga una tasa anual (foro) a la SPU) y en parte área de preservación. Allí la construcción está restringida. En el resto, los retiros, la altura y el uso deben confirmarse en la municipalidad. En la transferencia se aplica el laudemio, que cobra la SPU.",
+  "de": "In Tibau do Sul, an der Spitze, wo die Lagune von Guaraíras auf das Meer trifft. Die Zufahrt führt über 300 m Sandstraße.\n\nDer Uferstreifen ist Terreno de marinha (Grundstück nahe dem Meer, das dem Bund gehört; jährliche Gebühr (Foro) an die SPU) und teilweise Schutzgebiet. Dort ist das Bauen eingeschränkt. Für den Rest sind Abstände, Höhe und Nutzung bei der Prefeitura zu bestätigen. Beim Eigentümerwechsel fällt eine Laudemie (Laudêmio) an, die die SPU erhebt."
  },
  "ordem": 9
 }

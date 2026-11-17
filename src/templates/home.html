@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block first %}
-{% if lang == 'pt' %}<script>try{if(!localStorage.getItem("lang")){var n=(navigator.language||"").toLowerCase(),g=n.indexOf("es")==0?"es":n.indexOf("de")==0?"de":n.indexOf("en")==0?"en":"";localStorage.setItem("lang",g||"pt");if(g&&!/bot|crawl|spider|slurp/i.test(navigator.userAgent))location.replace("{{ base }}"+g+"/")}}catch(e){}</script>{% endif %}
+{% if lang == 'pt' %}<script>try{if(!localStorage.getItem("lang")&&(!document.referrer||document.referrer.indexOf(location.host)<0)){var n=(navigator.language||"").toLowerCase(),g=n.indexOf("es")==0?"es":n.indexOf("de")==0?"de":n.indexOf("en")==0?"en":"";localStorage.setItem("lang",g||"pt");if(g&&!/bot|crawl|spider|slurp/i.test(navigator.userAgent))location.replace("{{ base }}"+g+"/")}}catch(e){}</script>{% endif %}
 {% endblock %}
 {% block preload %}<link rel="preload" as="image" href="{{ img(site.media.hero) }}" imagesrcset="{{ img(site.media.hero, '-xs') }} 480w, {{ img(site.media.hero, '-s') }} 760w, {{ img(site.media.hero) }} 1400w" imagesizes="(max-width:800px) 220vw, 100vw" fetchpriority="high">{% endblock %}
 {% block main %}
@@ -37,7 +37,7 @@
       <li>{{ icon('check') }}<span><b>{{ site.stats.sold }}</b> {{ t.trSold }}</span></li>
       <li>{{ icon('check') }}<span>{{ t.trSince }} <b>{{ year - site.stats.years }}</b></span></li>
       <li>{{ icon('check') }}<span><b>{{ nf(site.stats.rating, 1) }}</b> {{ t.trRating }}</span></li>
-      <li>{{ icon('check') }}<span>{{ site.agent.creci }}</span></li>
+      <li>{{ icon('check') }}<span><a href="{{ url('verificada') }}">{{ t.creciLabel }} · {{ site.agent.creci }}</a></span></li>
     </ul>
   </div></div>
 </section>
@@ -109,15 +109,6 @@
   </div>
 </section>
 
-<section class="sec sec-dark" id="financiamento">
-  <div class="wrap">
-    <div class="sec-head">
-      <div><h2>{{ t.kH }}</h2><p>{{ t.kP }}</p></div>
-    </div>
-    {{ m.calc(calc_price) }}
-  </div>
-</section>
-
 <section class="sec sec-soft">
   <div class="wrap">
     <div class="split rev">
@@ -145,16 +136,6 @@
   </div>
 </section>
 
-<section class="sec">
-  <div class="wrap">
-    <div class="sec-head"><h2>{{ t.hubH }}</h2><p>{{ t.hubP }}</p></div>
-    <div class="gcards">
-      {% for r, ic in ([('comprar','globe')] if lang == 'pt' else [('comprar-do-exterior','globe')]) + [('golpes','shield'),('calculadoras','tag')] %}
-      <a class="gcard" href="{{ url(r) }}">{{ icon(ic) }}<b>{{ L(pages[r].nav) }}</b><span>{{ L(pages[r].lead) }}</span></a>{% endfor %}
-    </div>
-    <div class="btn-row" style="margin-top:22px"><a class="btn btn-primary" href="{{ url('comprar') }}">{{ t.hubBtn }}</a></div>
-  </div>
-</section>
 
 <section class="sec sec-soft" id="faq">
   <div class="wrap">

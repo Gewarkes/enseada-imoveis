@@ -264,10 +264,10 @@
   "de": "Immobilien in Pipa zum Kaufen und Mieten"
  },
  "heroP": {
-  "pt": "Imobiliária local desde {since}. Visitamos cada imóvel e conferimos matrícula e certidões antes de anunciar.",
-  "en": "Local agency since {since}. We visit every property and check the title record and certificates before we list it.",
-  "es": "Inmobiliaria local desde {since}. Visitamos cada propiedad y revisamos la matrícula (Matrícula) y los certificados antes de publicar.",
-  "de": "Lokale Maklerin in Pipa seit {since}. Wir besichtigen jede Immobilie und prüfen Grundbuchauszug (Matrícula) und Bescheinigungen, bevor wir inserieren."
+  "pt": "Imobiliária local em Pipa desde {since}. Em cada anúncio mostramos quais documentos já recebemos e quais faltam.",
+  "en": "Local agency in Pipa since {since}. Every listing shows which documents we have received and which are still missing.",
+  "es": "Inmobiliaria local en Pipa desde {since}. En cada anuncio mostramos qué documentos ya recibimos y cuáles faltan.",
+  "de": "Lokale Maklerin in Pipa seit {since}. Bei jeder Anzeige steht, welche Unterlagen vorliegen und welche noch fehlen."
  },
  "sDeal": {
   "pt": "O que você procura",
@@ -390,10 +390,10 @@
   "de": "Ausgewählte Immobilien"
  },
  "featP": {
-  "pt": "Casas e apartamentos que visitamos pessoalmente antes de anunciar.",
-  "en": "Houses and apartments we visited in person before listing them.",
-  "es": "Casas y departamentos que visitamos personalmente antes de publicar.",
-  "de": "Häuser und Wohnungen, die wir persönlich besichtigen, bevor wir sie inserieren."
+  "pt": "Casas e apartamentos de Pipa e Tibau do Sul. Cada anúncio mostra quais documentos já temos.",
+  "en": "Houses and apartments in Pipa and Tibau do Sul. Each listing shows which documents we already have.",
+  "es": "Casas y departamentos en Pipa y Tibau do Sul. Cada anuncio muestra qué documentos ya tenemos.",
+  "de": "Häuser und Wohnungen in Pipa und Tibau do Sul. Jede Anzeige zeigt, welche Unterlagen schon vorliegen."
  },
  "areasK": {
   "pt": "Regiões",
@@ -720,10 +720,10 @@
   "de": "Wir besichtigen die Immobilie, prüfen die Unterlagen und nennen dir einen Preis auf Basis aktueller Verkäufe in der Gegend."
  },
  "sell1": {
-  "pt": "Avaliação sem custo e sem compromisso",
-  "en": "Valuation free of charge and without obligation",
-  "es": "Tasación gratis y sin compromiso",
-  "de": "Bewertung kostenlos und unverbindlich"
+  "pt": "Avaliação de mercado gratuita (não é laudo oficial)",
+  "en": "Free market valuation (not an official appraisal)",
+  "es": "Tasación de mercado gratuita (no es peritaje oficial)",
+  "de": "Kostenlose Marktbewertung (kein Gutachten)"
  },
  "sell2": {
   "pt": "Fotos, vídeo e anúncio em três idiomas",
@@ -738,9 +738,9 @@
   "de": "Käufer aus Brasilien, Europa und Nordamerika"
  },
  "sellBtn": {
-  "pt": "Pedir avaliação",
-  "en": "Request a valuation",
-  "es": "Pedir tasación",
+  "pt": "Quero avaliar meu imóvel",
+  "en": "Get a valuation",
+  "es": "Quiero tasar mi propiedad",
   "de": "Bewertung anfragen"
  },
  "revK": {
@@ -792,10 +792,10 @@
   "de": "Dürfen Ausländer in Pipa eine Immobilie kaufen?"
  },
  "fq1a": {
-  "pt": "Sim. É preciso ter CPF, que pode ser pedido no consulado, e trazer o dinheiro por remessa internacional com contrato de câmbio. Acompanhamos cada etapa até o registro.",
-  "en": "Yes. You need a CPF tax number, which you can request at the consulate, and the money must arrive by international transfer with an exchange contract. We accompany every step up to the registration.",
-  "es": "Sí. Necesitas el CPF, que se puede pedir en el consulado, y traer el dinero por transferencia internacional con contrato de cambio. Te acompañamos en cada etapa hasta el registro.",
-  "de": "Ja. Du brauchst eine CPF (Steuernummer), die du beim Konsulat beantragen kannst, und musst das Geld per internationaler Überweisung mit Devisenvertrag (Contrato de câmbio) mitbringen. Wir begleiten dich bei jedem Schritt bis zur Eintragung."
+  "pt": "Sim. É preciso ter CPF, que se pede pela Receita e se conclui no consulado, e trazer o dinheiro por remessa internacional com contrato de câmbio. Como corretora, acompanhamos você até o registro; a parte jurídica é do seu advogado.",
+  "en": "Yes. You need a CPF tax number (requested via the Receita, finished at the consulate), and the money must arrive by international transfer with an exchange contract. As your agent we stay with you up to registration; legal work is done by your own lawyer.",
+  "es": "Sí. Necesitas el CPF (se pide por la Receita y se concluye en el consulado) y traer el dinero por transferencia internacional con contrato de cambio. Como corredora te acompañamos hasta el registro; la parte legal la hace tu abogado.",
+  "de": "Ja. Du brauchst eine CPF (Steuernummer; über die Receita beantragen, im Konsulat abschließen) und musst das Geld per internationaler Überweisung mit Câmbio-Vertrag schicken. Wir begleiten dich als Maklerin bis zur Eintragung; die Rechtsarbeit macht dein eigener Anwalt."
  },
  "fq2": {
   "pt": "Quais custos entram além do preço?",
@@ -804,10 +804,10 @@
   "de": "Welche Kosten kommen zum Preis dazu?"
  },
  "fq2a": {
-  "pt": "Em geral, ITBI, escritura e registro somam cerca de 4% a 5% do valor. O percentual exato depende do município e do cartório. Em terrenos de marinha pode haver ainda o laudêmio.",
-  "en": "As a rule, transfer tax, deed and registration add up to about 4% to 5% of the price. The exact figure depends on the municipality and the notary office. On federal coastal land a further fee (laudêmio) may apply.",
-  "es": "En general, el ITBI, la escritura pública (escritura) y el registro suman cerca del 4% al 5% del valor. El porcentaje exacto depende del municipio y de la notaría. En terrenos de marina (terrenos de marinha) también puede haber laudemio (laudêmio).",
-  "de": "Meist machen ITBI (Grunderwerbsteuer), Kaufvertrag beim Notar (Escritura) und Eintragung zusammen etwa 4 % bis 5 % des Werts aus. Der genaue Satz hängt von der Gemeinde und vom Notariat ab. Bei Grundstücken in Küstennähe (Terrenos de marinha) kann noch das Laudêmio dazukommen."
+  "pt": "Em geral, ITBI, escritura e registro somam cerca de 5 % a 7 % do valor (a simulação do site usa 6 %). O percentual exato depende do município e do cartório.",
+  "en": "As a rule, transfer tax, deed and registration add up to about 5% to 7% of the price (the site’s example uses 6%). The exact figure depends on the municipality and the notary office.",
+  "es": "En general suman cerca del 5% al 7% del valor (la simulación del sitio usa 6%). El porcentaje exacto depende del municipio y de la notaría.",
+  "de": "Meist machen ITBI, Urkunde und Eintragung zusammen etwa 5 % bis 7 % aus (der Rechner nutzt 6 %). Der genaue Satz hängt von Gemeinde und Notariat ab."
  },
  "fq3": {
   "pt": "Posso comprar sem viajar ao Brasil?",
@@ -1152,9 +1152,9 @@
   "de": "Ref."
  },
  "listed": {
-  "pt": "Anunciado em",
+  "pt": "Publicado em",
   "en": "Listed on",
-  "es": "Publicada el",
+  "es": "Publicado el",
   "de": "Angeboten seit"
  },
  "visit": {
@@ -1284,9 +1284,9 @@
   "de": "Sprich mit der Maklerin"
  },
  "simH": {
-  "pt": "Imóveis parecidos",
+  "pt": "Imóveis semelhantes",
   "en": "Similar properties",
-  "es": "Propiedades parecidas",
+  "es": "Propiedades similares",
   "de": "Ähnliche Immobilien"
  },
  "f_pool": {
@@ -1536,10 +1536,10 @@
   "de": "Enseada hat damit angefangen, Häuser von Freunden zu verkaufen, die nach Europa zurückgingen. Heute betreuen wir Käufer aus Brasilien und aus mehr als zwanzig Ländern, und viele kommen auf Empfehlung zu uns."
  },
  "story2": {
-  "pt": "Só anunciamos o que visitamos. Antes de publicar, pedimos a matrícula atualizada, as certidões do vendedor e os comprovantes de IPTU. Se algo não fecha, o imóvel não entra no site.",
-  "en": "We only list what we have visited. Before publishing, we ask for the current title record, the seller’s certificates and the property tax receipts. If something does not add up, the property does not go on the site.",
-  "es": "Solo publicamos lo que visitamos. Antes de publicar, pedimos la matrícula (Matrícula) actualizada, los certificados del vendedor y los comprobantes del IPTU. Si algo no cuadra, la propiedad no entra al sitio.",
-  "de": "Wir bieten nur an, was wir besichtigt haben. Bevor wir veröffentlichen, verlangen wir den aktuellen Grundbuchauszug (Matrícula), die Bescheinigungen des Verkäufers und die Grundsteuer-Nachweise (IPTU). Wenn etwas nicht stimmt, kommt die Immobilie nicht auf die Website."
+  "pt": "Antes de anunciar, pedimos a matrícula atualizada, as certidões do vendedor e os comprovantes de IPTU. O que ainda falta aparece em cada anúncio como pendente.",
+  "en": "Before listing, we ask for the current title record (matrícula), the seller’s certificates and the property tax receipts. What is still missing is shown as pending on each listing.",
+  "es": "Antes de anunciar, pedimos la matrícula actualizada, los certificados del vendedor y los comprobantes del IPTU. Lo que falta figura como pendiente en cada anuncio.",
+  "de": "Vor der Anzeige fordern wir den aktuellen Grundbuchauszug (Matrícula), die Bescheinigungen des Verkäufers und die IPTU-Nachweise an. Was noch fehlt, steht in jeder Anzeige als offen."
  },
  "agentLangs": {
   "pt": "Idiomas",
@@ -1821,7 +1821,7 @@
   "pt": "Quero receber",
   "en": "Subscribe",
   "es": "Quiero recibirlas",
-  "de": "Ich will das haben"
+  "de": "Anmelden"
  },
  "newsNote": {
   "pt": "Você pode cancelar a qualquer momento.",

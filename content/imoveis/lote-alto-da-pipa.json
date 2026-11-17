@@ -43,35 +43,35 @@
  "dist": {
   "beach": "9 min",
   "center": "6 min",
-  "airport": "1 h 25"
+  "airport": "~1 h 30"
  },
  "highlights": {
   "pt": [
-   "Projeto aprovado para dois pavimentos",
-   "Rua calçada, energia e água no lote",
-   "Loteamento fechado com portaria"
+   "Projeto já aprovado na prefeitura",
+   "Ruas internas calçadas e iluminadas",
+   "Sem prazo para começar a obra"
   ],
   "en": [
-   "Approved plans for two floors",
-   "Paved road, power and water on site",
-   "Gated development with gatehouse"
+   "Plans already approved by the town hall",
+   "Internal roads paved and lit",
+   "No deadline to start building"
   ],
   "es": [
-   "Proyecto aprobado para dos niveles",
-   "Calle empedrada, energía y agua en el lote",
-   "Urbanización cerrada con portería"
+   "Proyecto ya aprobado en la municipalidad",
+   "Calles internas empedradas e iluminadas",
+   "Sin plazo para comenzar la obra"
   ],
   "de": [
-   "Genehmigter Plan für zwei Etagen",
-   "Gepflasterte Straße, Strom und Wasser am Grundstück",
-   "Geschlossene Anlage mit Pförtner"
+   "Plan bereits von der Stadt genehmigt",
+   "Straßen gepflastert und beleuchtet",
+   "Keine Frist für den Baubeginn"
   ]
  },
  "desc": {
-  "pt": "O lote fica num loteamento fechado no alto do Chapadão, a 700 m do mirante e da descida para a praia. O centro de Pipa está a seis minutos de carro. O terreno tem 600 m², com 15 m de frente e 40 m de fundo, plano e já limpo.\n\nAs ruas internas são calçadas e iluminadas. Energia e água estão ligadas na frente do lote, e o esgoto é por fossa séptica. Há projeto aprovado na prefeitura para uma casa de até dois pavimentos. O comprador pode usar esse projeto ou apresentar outro, dentro das regras do loteamento, que definem recuos e altura máxima.\n\nO lote tem escritura e matrícula individual, e o loteamento está registrado em cartório. A taxa de condomínio é de R$ 380 por mês e cobre portaria e manutenção das vias. O IPTU está em dia. Não há prazo obrigatório para começar a obra.",
-  "en": "The plot is in a gated development on the Chapadão plateau, 700 m from the lookout and the path down to the beach. Pipa centre is six minutes by car. The plot has 600 m², 15 m of frontage and 40 m of depth. It is level and cleared.\n\nThe internal roads are paved and lit. Power and water are connected at the front of the plot, and sewage goes to a septic tank. Plans for a house of up to two floors have been approved by the town hall. The buyer may use them or submit a new design within the development's rules on setbacks and height.\n\nThe plot has a deed and its own registry entry, and the development itself is registered. The monthly fee is R$ 380 and covers the gatehouse and road maintenance. Property tax is paid up. There is no deadline for starting construction.",
-  "es": "El lote está en una urbanización cerrada en lo alto de Chapadão, a 700 m del mirador y del camino que baja a la playa. El centro de Pipa queda a seis minutos en auto. El terreno tiene 600 m², con 15 m de frente y 40 m de fondo, plano y ya limpio.\n\nLas calles internas están empedradas e iluminadas. La energía y el agua llegan al frente del lote, y el desagüe es por fosa séptica. Hay un proyecto aprobado en la municipalidad para una casa de hasta dos niveles. El comprador puede usar ese proyecto o presentar otro, dentro de las reglas de la urbanización, que definen retiros y altura máxima.\n\nEl lote tiene escritura y matrícula individual, y la urbanización está registrada en notaría. La cuota de condominio es de R$ 380 al mes y cubre la portería y el mantenimiento de las calles. El IPTU está al día. No hay plazo obligatorio para comenzar la obra.",
-  "de": "Das Grundstück liegt in einer geschlossenen Anlage oben im Chapadão, 700 m vom Aussichtspunkt und vom Abstieg zum Strand entfernt. Das Zentrum von Pipa ist sechs Minuten mit dem Auto entfernt. Das Grundstück hat 600 m², mit 15 m Breite zur Straße und 40 m Tiefe, es ist eben und schon gerodet.\n\nDie Straßen in der Anlage sind gepflastert und beleuchtet. Strom und Wasser liegen vorne am Grundstück an, das Abwasser läuft über eine Klärgrube. Bei der Stadtverwaltung ist ein Plan für ein Haus mit bis zu zwei Etagen genehmigt. Der Käufer kann diesen Plan nutzen oder einen anderen einreichen, im Rahmen der Regeln der Anlage, die Abstände und Höchsthöhe festlegen.\n\nDas Grundstück hat eine Kaufurkunde (Escritura) und einen eigenen Grundbuchauszug (Matrícula), und die Anlage ist im Grundbuchamt eingetragen. Die Gemeinschaftsgebühr beträgt R$ 380 pro Monat und deckt Pförtner und Instandhaltung der Straßen. Die Grundsteuer (IPTU) ist bezahlt. Es gibt keine Pflicht, bis zu einem bestimmten Termin mit dem Bau zu beginnen."
+  "pt": "Loteamento fechado no alto do Chapadão. O terreno é plano e já está limpo. O esgoto é por fossa séptica.\n\nMatrícula e certidões solicitadas; situação conforme os documentos. A taxa de condomínio cobre portaria e vias. O comprador pode usar o projeto aprovado ou apresentar outro; recuos, altura e demais regras devem ser confirmados na prefeitura e no loteamento.",
+  "en": "Gated development on the Chapadão plateau. The plot is level and already cleared. Sewage goes to a septic tank.\n\nMatrícula and certificates requested; status as per the documents. The fee covers the gatehouse and roads. The buyer may use the approved plans or submit another design; setbacks, height and other rules must be confirmed with the town hall and the development.",
+  "es": "Urbanización cerrada en lo alto de Chapadão. El terreno es plano y ya está limpio. El desagüe es por fosa séptica.\n\nMatrícula y certificados solicitados; situación según los documentos. La cuota cubre la portería y las calles. El comprador puede usar el proyecto aprobado o presentar otro; los retiros, la altura y demás reglas deben confirmarse en la municipalidad y en la urbanización.",
+  "de": "Geschlossene Anlage oben im Chapadão. Das Grundstück ist eben und schon gerodet. Das Abwasser läuft über eine Klärgrube.\n\nMatrícula und Bescheinigungen angefragt; Stand siehe Unterlagen. Die Gebühr deckt Pförtner und Straßen. Der Käufer kann den genehmigten Plan nutzen oder einen anderen einreichen; Abstände, Höhe und weitere Regeln sind bei der Stadtverwaltung (Prefeitura) und in der Anlage zu bestätigen."
  },
  "ordem": 10
 }

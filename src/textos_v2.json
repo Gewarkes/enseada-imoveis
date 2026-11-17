@@ -306,10 +306,10 @@
   "de": "Schließen"
  },
  "slSeal": {
-  "pt": "Corretora verificada",
-  "en": "Verified agent",
-  "es": "Corredora verificada",
-  "de": "Geprüfte Maklerin"
+  "pt": "Registro da corretora",
+  "en": "Agent registration",
+  "es": "Registro de la corredora",
+  "de": "Registrierung der Maklerin"
  },
  "slSealW": {
   "pt": "O que isso significa?",
@@ -768,16 +768,16 @@
   "de": "Beeidigte Übersetzung mit Traduzme"
  },
  "kp4": {
-  "pt": "Residência: a partir de R$ 700.000 no Nordeste dá para pedir a autorização de residência. A corretora acompanha o pedido.",
-  "en": "Residence: from R$ 700,000 in the Northeast you can apply for a residence permit. The agent supports the application.",
-  "es": "Residencia: a partir de R$ 700.000 en el Nordeste de Brasil se puede pedir la autorización de residencia. La corredora acompaña el trámite.",
-  "de": "Aufenthalt: Ab R$ 700.000 im Nordosten kannst du eine Aufenthaltsgenehmigung beantragen. Die Maklerin begleitet den Antrag."
+  "pt": "Residência: a partir de R$ 700.000 no Nordeste é possível pedir a autorização de residência, com advogado de imigração.",
+  "en": "Residence: from R$ 700,000 in the Northeast you can apply for a residence permit, with an immigration lawyer.",
+  "es": "Residencia: desde R$ 700.000 en el Nordeste se puede pedir la autorización de residencia, con un abogado de inmigración.",
+  "de": "Aufenthalt: Ab R$ 700.000 im Nordosten kannst du eine Aufenthaltsgenehmigung beantragen, mit einem Einwanderungsanwalt."
  },
  "kp4n": {
-  "pt": "Regra de 17.11.2026 (RN 36/2018 e RN 46/2022). Prazos e exigências: veja a página de residência.",
-  "en": "Rule as of 17.11.2026 (RN 36/2018 and RN 46/2022). Times and requirements: see the residence page.",
-  "es": "Regla al 17.11.2026 (RN 36/2018 y RN 46/2022). Plazos y requisitos: ver la página de residencia.",
-  "de": "Regel vom 17.11.2026 (RN 36/2018 und RN 46/2022). Fristen und Anforderungen: siehe Seite zum Aufenthalt."
+  "pt": "Regra de 17.11.2026 (RN CNIg 36/2018, alterada pela RN 46/2021). Detalhes: página de residência.",
+  "en": "Rule as of 17.11.2026 (CNIg RN 36/2018, amended by RN 46/2021). Details: residence page.",
+  "es": "Regla al 17.11.2026 (RN CNIg 36/2018, modificada por la RN 46/2021). Detalles: página de residencia.",
+  "de": "Regel vom 17.11.2026 (RN CNIg 36/2018, geändert durch RN 46/2021). Details: Seite zum Aufenthalt."
  },
  "kpNo": {
   "pt": "Bancos, contador e seguros: a corretora não faz. Procure sozinho.",
@@ -786,10 +786,10 @@
   "de": "Banken, Buchhalter und Versicherungen: Das macht die Maklerin nicht. Such dir das selbst."
  },
  "ansH": {
-  "pt": "Sua dúvida provavelmente já tem resposta aqui",
-  "en": "Your question probably has an answer here",
-  "es": "Tu duda probablemente ya tiene respuesta aquí",
-  "de": "Deine Frage ist wahrscheinlich schon beantwortet"
+  "pt": "Respostas rápidas",
+  "en": "Quick answers",
+  "es": "Respuestas rápidas",
+  "de": "Schnelle Antworten"
  },
  "ansP": {
   "pt": "Olhe primeiro aqui: a resposta aparece na hora. Só escreva para a corretora se não encontrar.",
@@ -822,10 +822,10 @@
   "de": "Aufenthalt in Brasilien"
  },
  "ansL5": {
-  "pt": "Como evitar golpes",
-  "en": "How to avoid scams",
-  "es": "Cómo evitar estafas",
-  "de": "Betrug erkennen"
+  "pt": "Como identificar uma oferta confiável",
+  "en": "Spot a trustworthy offer",
+  "es": "Cómo identificar una oferta confiable",
+  "de": "Seriöse Angebote erkennen"
  },
  "ansL6": {
   "pt": "Passo a passo da compra",
@@ -846,10 +846,10 @@
   "de": "Ausstattung"
  },
  "fgB": {
-  "pt": "Angebot",
-  "en": "Offer",
-  "es": "Oferta",
-  "de": "Angebot"
+  "pt": "Ofertas",
+  "en": "Offers",
+  "es": "Ofertas",
+  "de": "Angebote"
  },
  "fgC": {
   "pt": "Documentos e regras",
@@ -936,9 +936,9 @@
   "de": "Bei jeder Immobilie steht, welche Unterlagen vorhanden sind und welche noch fehlen. Auch als PDF zum Weiterschicken."
  },
  "trC3h": {
-  "pt": "Reconhecer ofertas sérias",
-  "en": "Spot a serious offer",
-  "es": "Reconocer ofertas serias",
+  "pt": "Como identificar uma oferta confiável",
+  "en": "Spot a trustworthy offer",
+  "es": "Cómo identificar una oferta confiable",
   "de": "Seriöse Angebote erkennen"
  },
  "trC3p": {
@@ -966,16 +966,16 @@
   "de": "Faustregel: erst prüfen, dann zahlen. Überweise nur auf das Konto, das im Vertrag steht."
  },
  "fq6": {
-  "pt": "Como reconheço um golpe?",
-  "en": "How do I spot a scam?",
-  "es": "¿Cómo reconozco una estafa?",
-  "de": "Woran erkenne ich Betrug?"
+  "pt": "Como reconheço uma oferta séria?",
+  "en": "How do I spot a serious offer?",
+  "es": "¿Cómo reconozco una oferta seria?",
+  "de": "Woran erkenne ich ein seriöses Angebot?"
  },
  "fq6a": {
-  "pt": "Desconfie de preço bom demais, de pressa e de pedido de dinheiro antes da conferência dos documentos. Veja a página de golpes, que mostra a diferença lado a lado.",
-  "en": "Be wary of prices that are too good, of rush, and of requests for money before the papers are checked. See the scams page, which shows the difference side by side.",
-  "es": "Desconfía de precios demasiado buenos, de la prisa y de pedidos de dinero antes de comprobar los documentos. Mira la página de estafas, que muestra la diferencia lado a lado.",
-  "de": "Sei misstrauisch bei zu guten Preisen, bei Zeitdruck und bei Geldforderungen, bevor die Unterlagen geprüft sind. Die Betrugs-Seite zeigt den Unterschied nebeneinander."
+  "pt": "Documentos à vista, corretora com CRECI ativo e pagamento só depois da conferência. Veja a página “Compra segura”.",
+  "en": "Documents shown, an agent with an active CRECI, and payment only after the checks. See the “Safe buying” page.",
+  "es": "Documentos a la vista, corredora con CRECI activo y pago solo tras la revisión. Mira la página “Compra segura”.",
+  "de": "Unterlagen offen gezeigt, Maklerin mit aktivem CRECI und Zahlung erst nach der Prüfung. Siehe Seite „Seriöse Angebote erkennen“."
  },
  "fq7": {
   "pt": "Preciso de um advogado?",
@@ -996,10 +996,10 @@
   "de": "Bekomme ich durch den Kauf Aufenthalt?"
  },
  "fq8a": {
-  "pt": "A partir de R$ 700.000 (Nordeste) é possível pedir autorização de residência, e a corretora acompanha. Não é automático. As condições estão na página de residência.",
-  "en": "From R$ 700,000 (Northeast) you can apply for a residence permit, and the agent accompanies you. It is not automatic. The conditions are on the residence page.",
-  "es": "Desde R$ 700.000 (Nordeste) se puede pedir autorización de residencia, y la corredora te acompaña. No es automático. Las condiciones están en la página de residencia.",
-  "de": "Ab R$ 700.000 (Nordeste) kann man eine Aufenthaltsgenehmigung beantragen, die Maklerin begleitet dich. Automatisch ist das nicht. Die Bedingungen stehen auf der Aufenthalts-Seite."
+  "pt": "A partir de R$ 700.000 (Nordeste) é possível pedir autorização de residência. Não é automático e o pedido é feito com advogado de imigração. Veja a página de residência.",
+  "en": "From R$ 700,000 (Northeast) you can apply for a residence permit. It is not automatic and the application is made with an immigration lawyer. See the residence page.",
+  "es": "Desde R$ 700.000 (Nordeste) se puede pedir autorización de residencia. No es automático y el trámite se hace con un abogado de inmigración. Mira la página de residencia.",
+  "de": "Ab R$ 700.000 (Nordosten) kannst du eine Aufenthaltsgenehmigung beantragen. Es ist nicht automatisch, der Antrag läuft mit einem Einwanderungsanwalt. Siehe Seite zum Aufenthalt."
  },
  "fq9": {
   "pt": "Quanto tempo leva a compra?",
@@ -1050,10 +1050,10 @@
   "de": "Nein. Brasilianische Banken finanzieren Nicht-Ansässige selten. Der Rechner zeigt nur ein Rechenbeispiel."
  },
  "sell4": {
-  "pt": "Você vende com segurança: documentos conferidos antes e pagamento só depois da escritura",
-  "en": "You sell safely: documents checked first, payment only after the deed is signed",
-  "es": "Vendes con seguridad: documentos revisados antes y pago solo tras la escritura",
-  "de": "Du verkaufst sicher: Unterlagen vorab geprüft, Zahlung erst nach dem Notarvertrag"
+  "pt": "Conferimos os documentos com você antes de anunciar; o pagamento segue o contrato e o registro",
+  "en": "We check the documents with you before listing; payment follows the contract and registration",
+  "es": "Revisamos los documentos contigo antes de publicar; el pago sigue el contrato y el registro",
+  "de": "Wir prüfen die Unterlagen vorab mit dir; die Zahlung folgt Vertrag und Eintragung"
  },
  "rqSafeH": {
   "pt": "Compra segura",
@@ -1080,9 +1080,45 @@
   "de": "Preis und Anzahlung ändern: Das Ergebnis aktualisiert sich sofort."
  },
  "sellSafeH": {
-  "pt": "Você vende com segurança",
-  "en": "You sell safely",
-  "es": "Vendes con seguridad",
-  "de": "Du verkaufst sicher"
+  "pt": "Venda com acompanhamento",
+  "en": "Selling with support",
+  "es": "Venta con acompañamiento",
+  "de": "Verkaufen mit Begleitung"
+ },
+ "readMore": {
+  "pt": "Ler mais",
+  "en": "Read more",
+  "es": "Leer más",
+  "de": "Mehr lesen"
+ },
+ "glH": {
+  "pt": "Comodidades",
+  "en": "Amenities",
+  "es": "Comodidades",
+  "de": "Ausstattung"
+ },
+ "distH": {
+  "pt": "Distâncias",
+  "en": "Distances",
+  "es": "Distancias",
+  "de": "Entfernungen"
+ },
+ "trustNo": {
+  "pt": "Corretora inscrita no CRECI-RN",
+  "en": "Agent registered with CRECI-RN",
+  "es": "Corredora inscrita en el CRECI-RN",
+  "de": "Maklerin, eingetragen im CRECI-RN"
+ },
+ "suWaT": {
+  "pt": "Quero vender meu imóvel:",
+  "en": "I want to sell my property:",
+  "es": "Quiero vender mi propiedad:",
+  "de": "Ich möchte meine Immobilie verkaufen:"
+ },
+ "suWaGo": {
+  "pt": "Abrindo o WhatsApp: é só enviar a mensagem.",
+  "en": "Opening WhatsApp: just send the message.",
+  "es": "Abriendo WhatsApp: solo envía el mensaje.",
+  "de": "WhatsApp öffnet sich: Nachricht einfach abschicken."
  }
 }

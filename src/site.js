@@ -1,6 +1,6 @@
 /* Enseada – ein kleines Skript für: Menü, Währung, Suche, Filter, Fotos, Rechner, Karte, Formulare. Keine Bibliothek außer der Karte (Leaflet, erst bei Bedarf geladen). */
 (function () {
-  try { if ('scrollRestoration' in history) history.scrollRestoration = 'manual'; if (!location.hash) scrollTo(0, 0); addEventListener('pageshow', function () { if (!location.hash) scrollTo(0, 0); }); } catch (e) {}
+  try { var nav0 = (performance.getEntriesByType('navigation')[0] || {}).type; if (nav0 !== 'back_forward' && !location.hash) scrollTo(0, 0); } catch (e) {}
   'use strict';
   var S = window.SITE || {}, T = S.t || {};
   var $ = function (s, r) { return (r || document).querySelector(s); };
@@ -70,8 +70,9 @@
     if (!menu) return;
     menu.classList.toggle('on', on);
     document.documentElement.style.overflow = on ? 'hidden' : '';
+    Array.prototype.forEach.call(document.body.children, function (el) { if (el !== menu && el.tagName !== 'SCRIPT') { if (on) el.setAttribute('inert', ''); else el.removeAttribute('inert'); } });
     $$('[data-open=menu]').forEach(function (b) { b.setAttribute('aria-expanded', String(on)); });
-    if (on) { var x = $('[data-close=menu]', menu); if (x) x.focus(); } else { var o = $('[data-open=menu]'); if (o && document.activeElement === document.body) o.focus(); }
+    if (on) { var x = $('[data-close=menu]', menu); if (x) x.focus(); } else { var o = $('[data-open=menu]'); if (o) o.focus(); }
   }
   $$('[data-open=menu]').forEach(function (b) { b.addEventListener('click', function () { setMenu(true); }); });
   $$('[data-close=menu]').forEach(function (b) { b.addEventListener('click', function () { setMenu(false); }); });
@@ -137,9 +138,14 @@
       el._map = map;
       var BB = L.latLngBounds([-6.3371, -35.1343], [-6.1187, -34.9805]);
       var WB = L.latLngBounds([-6.4463, -35.332], [-6.0532, -34.8926]);
-      L.imageOverlay(S.base + 'assets/map-pipa-wide.jpg', WB).addTo(map);
-      L.imageOverlay(S.base + 'assets/map-pipa.jpg', BB, { attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>' }).addTo(map);
-      map.setMaxBounds(WB); map.options.maxZoom = 15; el._fitMin = function () { map.invalidateSize(); map.setMinZoom(Math.max(9, map.getBoundsZoom(WB, true))); };
+      var live = /\.github\.io$/.test(location.hostname) || S.tiles;
+      if (live) {
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 18, attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>' }).addTo(map);
+      } else {
+        L.imageOverlay(S.base + 'assets/map-pipa-wide.jpg', WB).addTo(map);
+        L.imageOverlay(S.base + 'assets/map-pipa.jpg', BB, { attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>' }).addTo(map);
+      }
+      map.setMaxBounds(WB.pad(0.4)); map.options.maxZoom = live ? 18 : 15; el._fitMin = function () { map.invalidateSize(); map.setMinZoom(Math.max(9, map.getBoundsZoom(WB, true))); };
       map.on('click', function () { map.scrollWheelZoom.enable(); map.dragging.enable(); });
       var zc = function () { el.classList.toggle('zoomed', map.getZoom() >= 14); }; map.on('zoomend', zc);
       var kind = el.dataset.map;
@@ -148,7 +154,7 @@
         el._marks = {};
         data.forEach(function (p) {
           var mk = L.marker([p.lat, p.lng], { icon: L.divIcon({ className: '', html: '<div class="pin" data-pin="' + p.slug + '"></div>', iconSize: [0, 0] }), keyboard: true, title: p.name });
-          mk.bindPopup('<a class="pop" href="' + p.url + '"><img src="' + p.img + '" alt="" loading="lazy"><div><b>' + p.name + '</b><span>' + p.loc + '</span><strong data-pp></strong></div></a>', { closeButton: false, offset: [0, -10] });
+          mk.bindPopup('<a class="pop" href="' + p.url + '"><img src="' + p.img + '" alt="" loading="lazy"><div><b>' + p.name + '</b><span>' + p.loc + '</span><strong data-pp></strong></div></a>', { closeButton: false, offset: [0, -10], autoPanPaddingTopLeft: [24, 70], autoPanPaddingBottomRight: [24, 24] });
           mk.on('popupopen', function (e) { var s = $('[data-pp]', e.popup.getElement()); if (s) s.textContent = fmt(p.price) + (p.rent ? T.perMonth : ''); });
           mk._p = p; el._marks[p.slug] = mk;
         });
@@ -280,7 +286,7 @@
   $$('[data-calc]').forEach(function (box) {
     var k = function (n) { return $('[data-k=' + n + ']', box); }, o = function (n) { return $('[data-o=' + n + ']', box); };
     var run = function () {
-      var price = Math.max(0, +k('price').value || 0), down = +k('down').value, years = +k('years').value, rate = Math.max(0, +String(k('rate').value).replace(',', '.') || 0);
+      var price = Math.min(1e12, Math.max(0, +k('price').value || 0)), down = +k('down').value, years = +k('years').value, rate = Math.min(100, Math.max(0, +String(k('rate').value).replace(',', '.') || 0));
       var sys = ($('[data-k=sys]:checked', box) || {}).value || 'sac';
       var loan = price * (1 - down / 100), n = years * 12, i = Math.pow(1 + rate / 100, 1 / 12) - 1, first, last, interest;
       if (sys === 'sac') { var am = loan / n; first = am + loan * i; last = am + am * i; interest = i * loan * (n + 1) / 2; }
@@ -305,7 +311,7 @@
     form.addEventListener('submit', function (ev) {
       ev.preventDefault();
       var fd = new FormData(form), name = (fd.get('name') || '').trim(), phone = (fd.get('phone') || '').trim();
-      if (!name || !phone) { say(form, T.required, true); return; }
+      if (!name || !/^\+?[\d\s().-]{8,}$/.test(phone)) { say(form, T.required, true); return; }
       var em = $('[name=email]', form);
       if (em && em.value && !em.checkValidity()) { say(form, T.emailBad, true); em.focus(); return; }
       var subject = fd.get('subject') || form.dataset.subject || '';

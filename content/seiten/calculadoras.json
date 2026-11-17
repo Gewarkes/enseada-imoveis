@@ -13,10 +13,10 @@
   "de": "Rechner für Kosten und Steuern"
  },
  "lead": {
-  "pt": "Faixas com fonte e data. Valores sem comprovação aparecem como campo para você preencher.",
-  "en": "Ranges with source and date. Unproven values appear as a field for you to fill in.",
-  "es": "Rangos con fuente y fecha. Los valores sin comprobación aparecen como un campo para que lo completes.",
-  "de": "Spannen mit Quelle und Datum. Werte ohne Nachweis erscheinen als Feld zum Selbstausfüllen."
+  "pt": "Valores de exemplo para você ter uma ideia dos custos.",
+  "en": "Example values to give you an idea of the costs.",
+  "es": "Valores de ejemplo para que tengas una idea de los costos.",
+  "de": "Beispielwerte, damit du die Kosten einschätzen kannst."
  },
  "meta": {
   "pt": "Calculadora de custos de compra e de imposto sobre ganho de capital em imóveis no Brasil.",
@@ -24,7 +24,7 @@
   "es": "Calculadora de costos de compra y de impuesto sobre la ganancia de capital en propiedades de Brasil.",
   "de": "Rechner für Kaufkosten und für die Steuer auf den Gewinn bei Immobilien in Brasilien."
  },
- "stand": "16.11.2026",
+ "stand": "17.11.2026",
  "blocks": [
   {
    "t": "h2",
@@ -56,10 +56,30 @@
    "t": "note",
    "k": "info",
    "x": {
-    "pt": "Simulação simplificada, sem isenções. Não substitui contador ou advogado.",
-    "en": "Simplified simulation, without exemptions. Does not replace an accountant or lawyer.",
-    "es": "Simulación simplificada, sin exenciones. No reemplaza a un contador ni a un abogado.",
-    "de": "Vereinfachte Rechnung, ohne Befreiungen. Ersetzt keinen Steuerberater oder Anwalt."
+    "pt": "Valores de exemplo. Confirme na prefeitura e no cartório.",
+    "en": "Example values. Confirm with the prefeitura and the cartório.",
+    "es": "Valores de ejemplo. Confírmalos en la prefeitura y en el cartório.",
+    "de": "Beispielwerte. Bei Prefeitura und Cartório bestätigen."
+   }
+  },
+  {
+   "t": "note",
+   "k": "info",
+   "x": {
+    "pt": "Cartório: valor de 2023; a tabela do TJRN é ajustada todo ano. Confirme com o tabelião. Não residente: 15 % sobre o ganho até R$ 5 mi (faixas progressivas até 22,5 %); sem as isenções de residente. Pergunte a um contador.",
+    "en": "Cartório: value from 2023; the TJRN table is adjusted every year. Confirm with the notary. Non-resident: 15 % on the gain up to R$ 5m (progressive brackets up to 22.5 %); without resident exemptions. Ask an accountant.",
+    "es": "Cartório: valor de 2023; la tabla del TJRN se ajusta cada año. Confírmalo con el notario. No residente: 15 % sobre la ganancia hasta R$ 5 millones (tramos progresivos hasta 22,5 %); sin las exenciones de residente. Pregunta a un contador.",
+    "de": "Cartório: Wert von 2023; die TJRN-Tabelle wird jährlich angepasst, beim Notar bestätigen. Nichtresident: 15 % auf den Gewinn bis R$ 5 Mio. (progressive Stufen bis 22,5 %); ohne die Befreiungen für Residente. Frag einen Steuerberater."
+   }
+  },
+  {
+   "t": "note",
+   "k": "info",
+   "x": {
+    "pt": "Cálculo simplificado, sem considerar isenções (residentes podem ter).",
+    "en": "Simplified calculation, without considering exemptions (residents may have some).",
+    "es": "Cálculo simplificado, sin considerar exenciones (los residentes pueden tenerlas).",
+    "de": "Vereinfachte Berechnung, ohne Befreiungen (Residente können welche haben)."
    }
   }
  ],

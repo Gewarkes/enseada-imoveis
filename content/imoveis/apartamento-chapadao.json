@@ -1,84 +1,80 @@
 {
- "slug": "apartamento-chapadao",
- "ref": "EN-1031",
- "deal": "venda",
- "type": "apartamento",
- "name": "Apartamento Chapadão",
- "title": {
-  "pt": "Apartamento de 2 quartos mobiliado no Chapadão",
-  "en": "Furnished two-bedroom apartment in Chapadão",
-  "es": "Departamento amoblado de 2 habitaciones en Chapadão",
-  "de": "Möblierte 2-Zimmer-Wohnung im Chapadão"
- },
- "loc": "Chapadão",
- "lat": -6.2402,
- "lng": -35.0428,
- "price": 890000,
- "condo": 780,
- "iptu": 1900,
- "beds": 2,
- "suites": 1,
- "baths": 2,
- "parking": 1,
- "area": 96,
- "lot": 0,
- "year": 2022,
- "beach": 600,
- "status": "disponivel",
- "date": "2026-10-07",
- "imgs": [
-  "18",
-  "14",
-  "82"
- ],
- "video": "",
- "plan": "",
- "feats": [
-  "pool",
-  "ac",
-  "furnished",
-  "garage",
-  "gated",
-  "fiber"
- ],
- "dist": {
-  "beach": "8 min",
-  "center": "6 min",
-  "airport": "1 h 25"
- },
- "highlights": {
-  "pt": [
-   "Condomínio de 12 unidades com piscina",
-   "Vendido com móveis e equipamentos",
-   "Convenção permite aluguel por temporada"
+  "slug": "apartamento-chapadao",
+  "ref": "EN-1031",
+  "deal": "venda",
+  "type": "apartamento",
+  "name": "Apartamento Chapadão",
+  "title": {
+    "pt": "Apartamento de 2 quartos mobiliado no Chapadão",
+    "en": "Furnished two-bedroom apartment in Chapadão",
+    "es": "Departamento amoblado de 2 habitaciones en Chapadão",
+    "de": "Möblierte 2-Zimmer-Wohnung im Chapadão"
+  },
+  "loc": "Chapadão",
+  "lat": -6.2402,
+  "lng": -35.0428,
+  "price": 890000,
+  "condo": 780,
+  "iptu": 1900,
+  "beds": 2,
+  "suites": 1,
+  "baths": 2,
+  "parking": 1,
+  "area": 96,
+  "lot": 0,
+  "year": 2022,
+  "beach": 600,
+  "status": "disponivel",
+  "date": "2026-10-07",
+  "imgs": [
+    "18",
+    "14",
+    "82"
   ],
-  "en": [
-   "Complex of 12 units with a pool",
-   "Sold with furniture and appliances",
-   "Bylaws allow holiday lets"
+  "video": "",
+  "plan": "",
+  "feats": [
+    "pool",
+    "ac",
+    "furnished",
+    "garage",
+    "gated",
+    "fiber"
   ],
-  "es": [
-   "Condominio de 12 unidades con piscina",
-   "Se vende con muebles y equipos",
-   "El reglamento permite el alquiler por temporada"
-  ],
-  "de": [
-   "Anlage mit 12 Einheiten und Pool",
-   "Wird mit Möbeln und Geräten verkauft",
-   "Hausordnung erlaubt Ferienvermietung"
-  ]
- },
- "desc": {
-  "pt": "O apartamento fica num condomínio de doze unidades no Chapadão, a 600 m do mirante sobre a Praia do Amor. A caminhada até a praia leva oito minutos e o centro de Pipa está a seis minutos de carro. O acesso é por rua calçada, com portão eletrônico.\n\nA unidade tem 96 m² no primeiro andar de um prédio de 2022. São dois quartos com ar-condicionado, um deles suíte, e um banheiro social. A sala integrada à cozinha abre para uma varanda voltada para a piscina do condomínio. Há uma vaga coberta e internet por fibra. Móveis, eletrodomésticos e enxoval entram na venda.\n\nO imóvel tem matrícula individual e escritura. A taxa de condomínio é de R$ 780 por mês e inclui água, piscina e jardinagem. A convenção permite aluguel por temporada. O histórico de reservas pode ser mostrado ao comprador com autorização do proprietário.",
-  "en": "The apartment is in a complex of twelve units in Chapadão, 600 m from the lookout above Praia do Amor. The walk to the beach takes eight minutes and the centre of Pipa is six minutes away by car. Access is by a paved road, through an electric gate.\n\nThe unit has 96 m² on the first floor of a 2022 building. There are two bedrooms with air conditioning, one of them en suite, and a second bathroom. The living room with open kitchen leads to a veranda facing the shared pool. One covered parking space and fibre internet are included. Furniture, appliances and linen are part of the sale.\n\nThe property has its own registry entry and a deed. The service charge is R$ 780 a month and covers water, pool and gardening. The bylaws allow holiday lets. Booking history is available with the owner's consent.",
-  "es": "El departamento está en un condominio de doce unidades en Chapadão, a 600 m del mirador sobre la Praia do Amor. La caminata hasta la playa toma ocho minutos y el centro de Pipa queda a seis minutos en auto. El acceso es por una calle empedrada, con portón eléctrico.\n\nLa unidad tiene 96 m² en el primer piso de un edificio de 2022. Son dos habitaciones con aire acondicionado, una de ellas en suite, y un baño social. La sala integrada a la cocina se abre a un balcón con vista a la piscina del condominio. Hay una cochera techada e internet por fibra. Los muebles, los electrodomésticos y la ropa de cama están incluidos en la venta.\n\nEl inmueble tiene matrícula individual y escritura. La cuota de condominio es de R$ 780 al mes e incluye agua, piscina y jardinería. El reglamento permite el alquiler por temporada. El historial de reservas puede mostrarse al comprador con autorización del propietario.",
-  "de": "Die Wohnung liegt in einer Anlage mit zwölf Einheiten im Chapadão, 600 m vom Aussichtspunkt über der Praia do Amor. Zu Fuß zum Strand sind es acht Minuten, und das Zentrum von Pipa ist sechs Minuten mit dem Auto entfernt. Die Zufahrt führt über eine gepflasterte Straße mit elektrischem Tor.\n\nDie Einheit hat 96 m² im ersten Stock eines Gebäudes von 2022. Es gibt zwei Schlafzimmer mit Klimaanlage, eines davon mit eigenem Bad (Suite), und ein weiteres Bad. Das Wohnzimmer mit offener Küche geht auf einen Balkon mit Blick auf den Pool der Anlage. Dazu gehören ein überdachter Stellplatz und Glasfaser-Internet. Möbel, Geräte und Wäsche sind im Verkauf enthalten.\n\nDie Immobilie hat einen eigenen Grundbuchauszug (Matrícula) und eine Kaufurkunde (Escritura). Die Hausgebühr (Condomínio) beträgt R$ 780 im Monat und enthält Wasser, Pool und Gartenpflege. Die Hausordnung erlaubt Ferienvermietung. Die Buchungshistorie kann dem Käufer mit Erlaubnis des Eigentümers gezeigt werden."
- },
- "ordem": 5,
- "checks": {
-  "matricula": true,
-  "debts": true,
-  "date": "2026-11-10"
- },
- "temporada": "sim"
+  "dist": {
+    "beach": "8 min",
+    "center": "6 min",
+    "airport": "~1 h 30"
+  },
+  "highlights": {
+    "pt": [
+      "Condomínio de apenas 12 unidades",
+      "Histórico de reservas disponível"
+    ],
+    "en": [
+      "Complex of only 12 units",
+      "Booking history available"
+    ],
+    "es": [
+      "Condominio de solo 12 unidades",
+      "Historial de reservas disponible"
+    ],
+    "de": [
+      "Anlage mit nur 12 Einheiten",
+      "Buchungshistorie verfügbar"
+    ]
+  },
+  "desc": {
+    "pt": "Condomínio pequeno no Chapadão, perto do mirante sobre a Praia do Amor. O acesso é por rua calçada, com portão eletrônico. A varanda da sala dá para a piscina.\n\nMatrícula individual e escritura. A taxa de condomínio inclui água, piscina e jardinagem, e a convenção permite aluguel por temporada. Móveis, eletrodomésticos e enxoval entram na venda.",
+    "en": "A small complex in Chapadão, close to the lookout above Praia do Amor. Access is by a paved road, through an electric gate. The living-room veranda faces the pool.\n\nOwn registry entry and a deed. The service charge covers water, pool and gardening, and the bylaws allow holiday lets. Furniture, appliances and linen are part of the sale.",
+    "es": "Condominio pequeño en Chapadão, cerca del mirador sobre la Praia do Amor. El acceso es por una calle empedrada, con portón eléctrico. El balcón de la sala da a la piscina.\n\nMatrícula individual y escritura. La cuota de condominio incluye agua, piscina y jardinería, y el reglamento permite el alquiler por temporada. Los muebles, los electrodomésticos y la ropa de cama están incluidos en la venta.",
+    "de": "Kleine Anlage im Chapadão, nahe dem Aussichtspunkt über der Praia do Amor. Die Zufahrt führt über eine gepflasterte Straße mit elektrischem Tor. Der Balkon des Wohnzimmers geht zum Pool.\n\nEigener Grundbuchauszug (Matrícula) und Kaufurkunde (Escritura). Die Hausgebühr (Condomínio) enthält Wasser, Pool und Gartenpflege, und die Hausordnung erlaubt Ferienvermietung. Möbel, Geräte und Wäsche sind im Verkauf enthalten."
+  },
+  "ordem": 5,
+  "checks": {
+    "matricula": true,
+    "debts": true,
+    "date": "2026-11-10"
+  },
+  "temporada": "sim"
 }

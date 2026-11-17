@@ -46,35 +46,35 @@
  "dist": {
   "beach": "6 min",
   "center": "3 min",
-  "airport": "1 h 20"
+  "airport": "~1 h 30"
  },
  "highlights": {
   "pt": [
    "Térrea, sem degraus entre os ambientes",
-   "Piscina de raia com 12 m",
-   "Rua principal a 5 min a pé"
+   "Coqueiros adultos no lote",
+   "Piscina de raia com 12 m"
   ],
   "en": [
    "Single storey, no steps between rooms",
-   "Lap pool, 12 m long",
-   "Main street 5 minutes on foot"
+   "Mature coconut palms on the plot",
+   "Lap pool, 12 m long"
   ],
   "es": [
-   "De un solo piso, sin escalones entre los ambientes",
-   "Piscina de carril de 12 m",
-   "Calle principal a 5 min a pie"
+   "De un solo piso, sin escalones entre ambientes",
+   "Cocoteros adultos en el lote",
+   "Piscina de carril de 12 m"
   ],
   "de": [
    "Einstöckig, keine Stufen zwischen den Räumen",
-   "Bahnenpool mit 12 m Länge",
-   "Hauptstraße 5 Min. zu Fuß"
+   "Ausgewachsene Kokospalmen auf dem Grundstück",
+   "Bahnenpool mit 12 m Länge"
   ]
  },
  "desc": {
-  "pt": "A casa fica numa rua residencial do centro de Pipa, a cinco minutos a pé da avenida principal e a 400 m da praia. O lote de 520 m² é plano, murado e plantado com coqueiros adultos. O muro e a vegetação fecham a vista de quem passa na rua.\n\nA construção é térrea, de 2018, com 240 m². As três suítes têm ar-condicionado e abrem para o jardim. Sala e cozinha formam um só ambiente, ligado à varanda da churrasqueira. A piscina de raia tem 12 m de comprimento. A garagem coberta comporta dois carros. Há alarme monitorado e internet por fibra.\n\nO imóvel tem matrícula individual e escritura, sem ônus registrados. O IPTU está em dia. O telhado foi revisado em 2025 e a casa está pronta para morar. Os móveis não entram no preço, mas podem ser negociados à parte.",
-  "en": "The house is on a residential street in the centre of Pipa, five minutes on foot from the main avenue and 400 m from the beach. The 520 m² plot is level, walled and planted with mature coconut palms. Wall and planting screen the garden from the street.\n\nThe single-storey building dates from 2018 and has 240 m². The three en-suite bedrooms have air conditioning and open onto the garden. Living room and kitchen form one space, linked to the veranda with the barbecue. The lap pool is 12 m long. The covered garage holds two cars. There is a monitored alarm and fibre internet.\n\nThe property has its own registry entry and a deed, with no charges recorded. Property tax is paid up. The roof was overhauled in 2025 and the house is ready to move into. Furniture is not included but can be negotiated.",
-  "es": "La casa está en una calle residencial del centro de Pipa, a cinco minutos a pie de la avenida principal y a 400 m de la playa. El lote de 520 m² es plano, cercado y está plantado con cocoteros adultos. El muro y la vegetación impiden ver hacia adentro desde la calle.\n\nLa construcción es de un solo piso, de 2018, con 240 m². Las tres suites tienen aire acondicionado y se abren al jardín. La sala y la cocina forman un solo ambiente, conectado con el balcón de la parrilla. La piscina de carril mide 12 m de largo. La cochera techada tiene lugar para dos autos. Hay alarma monitoreada e internet por fibra.\n\nEl inmueble tiene matrícula individual y escritura, sin gravámenes registrados. El IPTU está al día. El techo fue revisado en 2025 y la casa está lista para habitar. Los muebles no están incluidos en el precio, pero pueden negociarse aparte.",
-  "de": "Das Haus liegt an einer Wohnstraße im Zentrum von Pipa, fünf Minuten zu Fuß von der Hauptstraße und 400 m vom Strand. Das 520 m² große Grundstück ist eben, ummauert und mit ausgewachsenen Kokospalmen bepflanzt. Mauer und Bepflanzung nehmen Vorbeigehenden auf der Straße die Sicht.\n\nDas einstöckige Gebäude stammt von 2018 und hat 240 m². Die drei Suiten haben Klimaanlage und öffnen sich zum Garten. Wohnzimmer und Küche bilden einen Raum, der mit der Veranda mit Grill verbunden ist. Der Bahnenpool ist 12 m lang. Die überdachte Garage fasst zwei Autos. Es gibt eine überwachte Alarmanlage und Glasfaser-Internet.\n\nDie Immobilie hat einen eigenen Grundbuchauszug (Matrícula) und eine Kaufurkunde (Escritura), ohne eingetragene Belastungen. Die Grundsteuer (IPTU) ist bezahlt. Das Dach wurde 2025 überprüft, und das Haus ist bezugsfertig. Die Möbel sind nicht im Preis enthalten, können aber separat verhandelt werden."
+  "pt": "Casa numa rua residencial do centro de Pipa. O lote é plano e murado; muro e vegetação protegem a vista da rua.\n\nMatrícula e certidões solicitadas; situação conforme os documentos. O telhado foi revisado em 2025 e a casa está pronta para morar. Os móveis não entram no preço, mas podem ser negociados à parte.",
+  "en": "House on a residential street in the centre of Pipa. The plot is level and walled; wall and planting screen it from the street.\n\nMatrícula and certificates requested; status as per the documents. The roof was overhauled in 2025 and the house is ready to move into. Furniture is not included in the price but can be negotiated separately.",
+  "es": "Casa en una calle residencial del centro de Pipa. El lote es plano y cercado; el muro y la vegetación impiden ver hacia adentro desde la calle.\n\nMatrícula y certificados solicitados; situación según los documentos. El techo fue revisado en 2025 y la casa está lista para habitar. Los muebles no están incluidos en el precio, pero pueden negociarse aparte.",
+  "de": "Haus an einer Wohnstraße im Zentrum von Pipa. Das Grundstück ist eben und ummauert; Mauer und Bepflanzung nehmen die Sicht von der Straße.\n\nMatrícula und Bescheinigungen angefragt; Stand siehe Unterlagen. Das Dach wurde 2025 überprüft, das Haus ist bezugsfertig. Die Möbel sind nicht im Preis enthalten, können aber separat verhandelt werden."
  },
  "ordem": 2,
  "priceBefore": 2580000

@@ -46,35 +46,31 @@
  "dist": {
   "beach": "3 min",
   "center": "7 min",
-  "airport": "1 h 25"
+  "airport": "~1 h 30"
  },
  "highlights": {
   "pt": [
-   "Escada da praia a 3 min a pé",
-   "Cozinha integrada ao terraço",
-   "Mar visto do pavimento superior"
+   "Mar visto do piso superior",
+   "Cozinha integrada ao terraço"
   ],
   "en": [
-   "Beach steps 3 minutes on foot",
-   "Kitchen opens onto the terrace",
-   "Sea view from the upper floor"
+   "Sea view from the upper floor",
+   "Kitchen opens onto the terrace"
   ],
   "es": [
-   "Escalera a la playa a 3 min a pie",
-   "Cocina integrada a la terraza",
-   "Vista al mar desde el piso superior"
+   "Vista al mar desde el piso superior",
+   "Cocina integrada a la terraza"
   ],
   "de": [
-   "Strandtreppe 3 Min. zu Fuß",
-   "Küche öffnet sich zur Terrasse",
-   "Meerblick vom Obergeschoss"
+   "Meerblick vom Obergeschoss",
+   "Küche öffnet sich zur Terrasse"
   ]
  },
  "desc": {
-  "pt": "A casa fica numa rua calçada acima da Praia do Amor, a 180 m da escada de acesso à areia. O centro fica a sete minutos de carro. O lote de 780 m² é murado, com jardim na frente e piscina nos fundos.\n\nA construção é de 2019, em alvenaria pintada de branco, com 330 m² em dois pavimentos baixos. As quatro suítes têm ar-condicionado. Duas ficam no térreo e duas no piso superior, de onde se vê o mar. A cozinha abre para o terraço da churrasqueira por portas de correr. A garagem coberta recebe dois carros e a internet é por fibra.\n\nO imóvel tem matrícula individual e escritura, com IPTU em dia. A pintura externa foi refeita em 2025. No momento a casa está reservada, com proposta em análise. Anotamos o contato de interessados para o caso de a reserva não se confirmar.",
-  "en": "The house is on a paved road above Praia do Amor, 180 m from the steps down to the sand. The centre is seven minutes away by car. The 780 m² plot is walled, with a garden at the front and the pool at the back.\n\nBuilt in 2019 in white-painted masonry, the house has 330 m² on two low floors. The four en-suite bedrooms have air conditioning. Two are on the ground floor and two upstairs, where the sea is in view. The kitchen opens onto the barbecue terrace through sliding doors. The covered garage takes two cars and the internet is fibre.\n\nThe property has its own registry entry and a deed, and property tax is paid up. The exterior was repainted in 2025. The house is currently reserved, with an offer under review. We note interested buyers in case the reservation falls through.",
-  "es": "La casa está en una calle empedrada sobre la Praia do Amor, a 180 m de la escalera de acceso a la arena. El centro queda a siete minutos en auto. El lote de 780 m² está cercado, con jardín al frente y piscina al fondo.\n\nLa construcción es de 2019, de mampostería pintada de blanco, con 330 m² en dos niveles bajos. Las cuatro suites tienen aire acondicionado. Dos están en la planta baja y dos en el piso superior, desde donde se ve el mar. La cocina se abre a la terraza de la parrilla por puertas corredizas. La cochera techada recibe dos autos y el internet es por fibra.\n\nEl inmueble tiene matrícula individual y escritura, con IPTU al día. La pintura exterior se rehízo en 2025. Por el momento la casa está reservada, con una oferta en análisis. Anotamos el contacto de los interesados por si la reserva no se concreta.",
-  "de": "Das Haus liegt an einer gepflasterten Straße oberhalb der Praia do Amor, 180 m von der Treppe hinunter zum Sand. Das Zentrum ist sieben Minuten mit dem Auto entfernt. Das 780 m² große Grundstück ist ummauert, mit Garten vorn und Pool hinten.\n\nDas Gebäude von 2019 ist weiß gestrichenes Mauerwerk und hat 330 m² auf zwei niedrigen Geschossen. Die vier Suiten haben Klimaanlage. Zwei liegen im Erdgeschoss und zwei oben, von wo man das Meer sieht. Die Küche öffnet sich über Schiebetüren zur Grillterrasse. Die überdachte Garage nimmt zwei Autos auf, und das Internet läuft über Glasfaser.\n\nDie Immobilie hat einen eigenen Grundbuchauszug (Matrícula) und eine Kaufurkunde (Escritura), die Grundsteuer (IPTU) ist bezahlt. Der Außenanstrich wurde 2025 erneuert. Im Moment ist das Haus reserviert, ein Angebot wird geprüft. Wir notieren die Kontaktdaten von Interessenten für den Fall, dass die Reservierung nicht zustande kommt."
+  "pt": "Casa branca numa rua calçada acima da Praia do Amor, com escada de acesso à areia. O lote é murado e tem jardim na frente.\n\nMatrícula e certidões solicitadas; situação conforme os documentos. A pintura externa foi refeita em 2025. No momento a casa está reservada, com proposta em análise. Anotamos o contato de interessados caso a reserva não se confirme.",
+  "en": "White house on a paved road above Praia do Amor, with steps down to the sand. The plot is walled and has a garden at the front.\n\nMatrícula and certificates requested; status as per the documents. The exterior was repainted in 2025. The house is currently reserved, with an offer under review. We note interested buyers in case the reservation falls through.",
+  "es": "Casa blanca en una calle empedrada sobre la Praia do Amor, con escalera de acceso a la arena. El lote está cercado y tiene jardín al frente.\n\nMatrícula y certificados solicitados; situación según los documentos. La pintura exterior se rehízo en 2025. Por el momento la casa está reservada, con una oferta en análisis. Anotamos el contacto de los interesados por si la reserva no se concreta.",
+  "de": "Weißes Haus an einer gepflasterten Straße oberhalb der Praia do Amor, mit Treppe hinunter zum Sand. Das Grundstück ist ummauert und hat vorn einen Garten.\n\nMatrícula und Bescheinigungen angefragt; Stand siehe Unterlagen. Der Außenanstrich wurde 2025 erneuert. Im Moment ist das Haus reserviert, ein Angebot wird geprüft. Wir notieren Interessenten für den Fall, dass die Reservierung nicht zustande kommt."
  },
  "ordem": 4
 }

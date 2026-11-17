@@ -3,6 +3,7 @@
 {% block preload %}<link rel="preload" as="image" href="{{ img(l.imgs[0]) }}" imagesrcset="{{ img(l.imgs[0], '-xs') }} 480w, {{ img(l.imgs[0], '-s') }} 760w, {{ img(l.imgs[0]) }} 1400w" imagesizes="(min-width:800px) 66vw, 100vw" fetchpriority="high">{% endblock %}
 {% block main %}
 {% set land = l.type == 'terreno' %}
+{% set fi = {'pool':'wave','ac':'snow','furnished':'sofa','fiber':'wifi','garage':'car','gated':'gate','garden':'leaf','solar':'sun','water':'drop','well':'drop','power':'bolt','seaview':'eye','lagoon':'wave','alarm':'shield','staff':'user','deed':'doc','paved':'car'} %}
 <div class="wrap">
   <ol class="crumbs">
     <li><a href="{{ url('home') }}">{{ t.navHome }}</a></li>
@@ -39,17 +40,17 @@
           <span data-fxline data-brl="{{ l.price | int }}"></span>
           {% if l.area and l.deal == 'venda' %}<span>· <span data-brl="{{ (l.price / l.area) | round | int }}">{{ money(l.price / l.area) }}</span>/m²</span>{% endif %}
         </div>
-        {% if l.deal == 'venda' and not land and l.price >= taxes.residence.northeast %}<p class="ichip">{{ icon('user') }}{{ t.resChip }} · <a href="{{ url('residencia') }}">{{ t.resChipL }}</a></p>{% endif %}
+        {% if lang != 'pt' and l.deal == 'venda' and not land and l.price >= taxes.residence.northeast %}<p class="ichip">{{ icon('user') }}<span>{{ t.resChip }}</span> <a href="{{ url('residencia') }}">{{ t.resChipL }}</a></p>{% endif %}
         {% if l.temporada in ('sim','nao') %}<p class="ichip">{{ icon('cal') }}{{ t.tempOk if l.temporada == 'sim' else t.tempNo }}</p>{% endif %}
-        <ul class="keys">
+        <ul class="keys gl{% if land %} k2{% endif %}">
           {% if land %}
-          <li>{{ icon('lot') }}<div><b>{{ nf(l.lot) }} m²</b><span>{{ t.lotWord }}</span></div></li>
-          <li>{{ icon('pin') }}<div><b>{{ nf(l.beach) }} m</b><span>{{ t.toBeach }}</span></div></li>
+          <li>{{ icon('lot') }}<span><b>{{ nf(l.lot) }} m²</b> {{ t.lotWord }}</span></li>
+          <li>{{ icon('pin') }}<span><b>{{ nf(l.beach) }} m</b> {{ t.toBeach }}</span></li>
           {% else %}
-          <li>{{ icon('bed') }}<div><b>{{ l.beds }}</b><span>{{ t.bed1 if l.beds == 1 else t.beds }}</span></div></li>
-          <li>{{ icon('bath') }}<div><b>{{ l.baths }}</b><span>{{ t.bath1 if l.baths == 1 else t.baths }}</span></div></li>
-          <li>{{ icon('area') }}<div><b>{{ nf(l.area) }} m²</b><span>{{ t.built }}</span></div></li>
-          <li>{{ icon('car') }}<div><b>{{ l.parking }}</b><span>{{ t.park1 if l.parking == 1 else t.parks }}</span></div></li>
+          <li>{{ icon('bed') }}<span><b>{{ l.beds }}</b> {{ t.bed1 if l.beds == 1 else t.beds }}</span></li>
+          <li>{{ icon('bath') }}<span><b>{{ l.baths }}</b> {{ t.bath1 if l.baths == 1 else t.baths }}</span></li>
+          <li>{{ icon('area') }}<span><b>{{ nf(l.area) }} m²</b> {{ t.built }}</span></li>
+          <li>{{ icon('car') }}<span><b>{{ l.parking }}</b> {{ t.park1 if l.parking == 1 else t.parks }}</span></li>
           {% endif %}
         </ul>
         <div class="det-actions" data-actions>
@@ -60,15 +61,30 @@
         </div>
       </div>
 
+      <section class="block glance">
+        {% if l.feats %}<h2>{{ t.glH }}</h2>
+        <ul class="gl">{% for f in l.feats %}<li>{{ icon(fi.get(f, 'check')) }}<span>{{ t['f_' ~ f] }}</span></li>{% endfor %}</ul>{% endif %}
+        {% if l.dist %}
+        <h2 class="gl-h2">{{ t.distH }}</h2>
+        <ul class="gl dist">
+          {% if l.dist.get('beach') %}<li>{{ icon('wave') }}<span><b>{{ l.dist.get('beach') }}</b> {{ t.dBeach }}</span></li>{% endif %}
+          {% if l.dist.get('center') %}<li>{{ icon('pin') }}<span><b>{{ l.dist.get('center') }}</b> {{ t.dCenter }}</span></li>{% endif %}
+          {% if l.dist.get('airport') %}<li>{{ icon('car') }}<span><b>{{ l.dist.get('airport') }}</b> {{ t.dAirport }}</span></li>{% endif %}
+        </ul>
+        <p class="form-note">{{ t.dDistNote }}</p>
+        {% endif %}
+      </section>
+
       <section class="block">
         <h2>{{ t.dAbout }}</h2>
         {% if L(l.highlights) %}
         <ul class="hl">{% for h in L(l.highlights) %}<li>{{ icon('check') }}<span>{{ h }}</span></li>{% endfor %}</ul>
         {% endif %}
-        <div class="prose">{% for para in L(l.desc).split('\n\n') %}<p>{{ para }}</p>{% endfor %}</div>
+        {% set paras = L(l.desc).split('\n\n') %}
+        <div class="prose"><p>{{ paras[0] }}</p>{% if paras | length > 1 %}<details class="readmore"><summary>{{ t.readMore }}</summary>{% for para in paras[1:] %}<p>{{ para }}</p>{% endfor %}</details>{% endif %}</div>
       </section>
 
-      {% if l.deal == 'venda' %}
+      {% if l.deal == 'venda' and not land %}
       <section class="block" id="financiamento">
         <h2>{{ t.kCardH }}</h2><p class="calc-sub">{{ t.kCardP }}</p>
         {{ m.calc(calc_price) }}
@@ -89,27 +105,13 @@
         <dl class="table">
           <div><dt>{{ t.ref }}</dt><dd>{{ l.ref }}</dd></div>
           <div><dt>{{ t.dType }}</dt><dd>{{ t['t_' ~ l.type] }}</dd></div>
-          {% if not land %}
-          <div><dt>{{ t.bedsCap }}</dt><dd>{{ l.beds }}{% if l.suites and l.suites == l.beds and l.beds > 1 %} ({{ t.allSuites }}){% elif l.suites %} ({{ l.suites }} {{ t.suite1 if l.suites == 1 else t.suites }}){% endif %}</dd></div>
-          <div><dt>{{ t.bathsCap }}</dt><dd>{{ l.baths }}</dd></div>
-          <div><dt>{{ t.built }}</dt><dd>{{ nf(l.area) }} m²</dd></div>
-          {% endif %}
           {% if l.lot %}<div><dt>{{ t.lotCap }}</dt><dd>{{ nf(l.lot) }} m²</dd></div>{% endif %}
-          {% if not land %}<div><dt>{{ t.parksCap }}</dt><dd>{{ l.parking }}</dd></div>{% endif %}
           {% if l.year %}<div><dt>{{ t.dYear }}</dt><dd>{{ l.year }}</dd></div>{% endif %}
-          {% if l.beach %}<div><dt>{{ t.toBeachCap }}</dt><dd>{{ nf(l.beach) }} m</dd></div>{% endif %}
           <div><dt>{{ t.dCondo }}</dt><dd>{% if l.condo %}<span data-brl="{{ l.condo | int }}">{{ money(l.condo) }}</span>{{ t.perMonth }}{% else %}{{ t.none }}{% endif %}</dd></div>
           {% if l.iptu %}<div><dt>{{ t.dIptu }}</dt><dd><span data-brl="{{ l.iptu | int }}">{{ money(l.iptu) }}</span>{{ t.perYear }}</dd></div>{% endif %}
           <div><dt>{{ t.dStatus }}</dt><dd>{{ t['st_' ~ l.status] }}</dd></div>
         </dl>
       </section>
-
-      {% if l.feats %}
-      <section class="block">
-        <h2>{{ t.dFeats }}</h2>
-        <ul class="feats">{% for f in l.feats %}<li>{{ icon('check') }}{{ t['f_' ~ f] }}</li>{% endfor %}</ul>
-      </section>
-      {% endif %}
 
       {% if l.video %}
       <section class="block">
@@ -129,14 +131,6 @@
         {% if l.lat %}
         <div class="map map-s" data-map="area" data-lat="{{ l.lat }}" data-lng="{{ l.lng }}"><div class="map-ph">{{ t.mapLoad }}</div></div>
         <p class="map-note">{{ icon('info') }}<span>{{ t.mapApprox }} <a href="https://www.google.com/maps/search/?api=1&query={{ l.lat }},{{ l.lng }}" target="_blank" rel="noopener" style="text-decoration:underline">{{ t.mapGoogle }}</a></span></p>
-        {% endif %}
-        {% if l.dist %}
-        <ul class="dist">
-          {% if l.dist.get('beach') %}<li><b>{{ l.dist.get('beach') }}</b><span>{{ t.dBeach }}</span></li>{% endif %}
-          {% if l.dist.get('center') %}<li><b>{{ l.dist.get('center') }}</b><span>{{ t.dCenter }}</span></li>{% endif %}
-          {% if l.dist.get('airport') %}<li><b>{{ l.dist.get('airport') }}</b><span>{{ t.dAirport }}</span></li>{% endif %}
-        </ul>
-        <p class="form-note" style="margin-top:8px">{{ t.dDistNote }}</p>
         {% endif %}
       </section>
 

@@ -1,79 +1,75 @@
 {
- "slug": "bangalo-sibauma",
- "ref": "EN-1015",
- "deal": "aluguel",
- "type": "casa",
- "name": "Bangalô Sibaúma",
- "title": {
-  "pt": "Bangalô de madeira com 2 quartos em Sibaúma",
-  "en": "Two-bedroom timber bungalow in Sibaúma",
-  "es": "Bungalow de madera con 2 habitaciones en Sibaúma",
-  "de": "Holzbungalow mit 2 Schlafzimmern in Sibaúma"
- },
- "loc": "Sibaúma",
- "lat": -6.279,
- "lng": -35.0352,
- "price": 7800,
- "condo": 0,
- "iptu": 1100,
- "beds": 2,
- "suites": 0,
- "baths": 1,
- "parking": 1,
- "area": 110,
- "lot": 400,
- "year": 2017,
- "beach": 200,
- "status": "disponivel",
- "date": "2026-09-02",
- "imgs": [
-  "56",
-  "19",
-  "73"
- ],
- "video": "",
- "plan": "",
- "feats": [
-  "ac",
-  "furnished",
-  "garden",
-  "bbq",
-  "deck"
- ],
- "dist": {
-  "beach": "3 min",
-  "center": "18 min",
-  "airport": "1 h 35"
- },
- "highlights": {
-  "pt": [
-   "Praia de Sibaúma a 200 m",
-   "Varanda coberta em toda a frente",
-   "Lote de 400 m² com coqueiros"
+  "slug": "bangalo-sibauma",
+  "ref": "EN-1015",
+  "deal": "aluguel",
+  "type": "casa",
+  "name": "Bangalô Sibaúma",
+  "title": {
+    "pt": "Bangalô de madeira com 2 quartos em Sibaúma",
+    "en": "Two-bedroom timber bungalow in Sibaúma",
+    "es": "Bungalow de madera con 2 habitaciones en Sibaúma",
+    "de": "Holzbungalow mit 2 Schlafzimmern in Sibaúma"
+  },
+  "loc": "Sibaúma",
+  "lat": -6.279,
+  "lng": -35.0352,
+  "price": 7800,
+  "condo": 0,
+  "iptu": 1100,
+  "beds": 2,
+  "suites": 0,
+  "baths": 1,
+  "parking": 1,
+  "area": 110,
+  "lot": 400,
+  "year": 2017,
+  "beach": 200,
+  "status": "disponivel",
+  "date": "2026-09-02",
+  "imgs": [
+    "56",
+    "19",
+    "73"
   ],
-  "en": [
-   "Sibaúma beach 200 m away",
-   "Covered veranda along the front",
-   "400 m² plot with coconut palms"
+  "video": "",
+  "plan": "",
+  "feats": [
+    "ac",
+    "furnished",
+    "garden",
+    "bbq",
+    "deck"
   ],
-  "es": [
-   "Playa de Sibaúma a 200 m",
-   "Galería techada en todo el frente",
-   "Lote de 400 m² con cocoteros"
-  ],
-  "de": [
-   "Strand von Sibaúma 200 m entfernt",
-   "Überdachte Veranda über die ganze Front",
-   "400 m² großes Grundstück mit Kokospalmen"
-  ]
- },
- "desc": {
-  "pt": "O bangalô fica na vila de Sibaúma, ao sul de Pipa, a 200 m da praia. O trajeto a pé leva três minutos, por rua de areia compactada. O lote de 400 m² é cercado, tem coqueiros e um trecho gramado. Até o centro de Pipa são dezoito minutos de carro.\n\nA casa é de madeira tratada sobre base de alvenaria, construída em 2017, com 110 m² num só piso. Tem dois quartos com ar-condicionado e um banheiro. A sala e a cozinha dividem o mesmo ambiente e abrem para a varanda coberta, que ocupa toda a frente. No quintal há churrasqueira e um deck. Um carro cabe dentro do lote. O aluguel inclui móveis e utensílios.\n\nO contrato é de doze meses, com caução de um aluguel. Energia e água são pagas pelo inquilino. O IPTU fica com o proprietário. A madeira recebeu verniz novo em 2026.",
-  "en": "The bungalow is in the village of Sibaúma, south of Pipa, 200 m from the beach. The walk takes three minutes along a compacted sand road. The 400 m² plot is fenced, with coconut palms and a stretch of lawn. Pipa centre is eighteen minutes by car.\n\nBuilt in 2017 of treated timber on a masonry base, the house has 110 m² on one level. It has two bedrooms with air conditioning and one bathroom. Living room and kitchen share one space and open onto the covered veranda, which runs along the whole front. The yard has a barbecue and a deck. One car fits inside the plot. The rent includes furniture and kitchenware.\n\nThe contract runs for twelve months, with a deposit of one month's rent. Electricity and water are paid by the tenant. Property tax stays with the owner. The timber was revarnished in 2026.",
-  "es": "El bungalow está en el pueblo de Sibaúma, al sur de Pipa, a 200 m de la playa. El trayecto a pie toma tres minutos, por una calle de arena compactada. El lote de 400 m² está cercado, tiene cocoteros y un sector con césped. Hasta el centro de Pipa son dieciocho minutos en auto.\n\nLa casa es de madera tratada sobre una base de mampostería, construida en 2017, con 110 m² en un solo piso. Tiene dos habitaciones con aire acondicionado y un baño. La sala y la cocina comparten el mismo ambiente y se abren a la galería techada, que ocupa todo el frente. En el patio hay parrilla y un deck. Dentro del lote cabe un auto. El alquiler incluye muebles y utensilios.\n\nEl contrato es de doce meses, con un depósito de garantía equivalente a un alquiler. La energía y el agua las paga el inquilino. El IPTU queda a cargo del propietario. La madera recibió barniz nuevo en 2026.",
-  "de": "Der Bungalow liegt im Dorf Sibaúma, südlich von Pipa, 200 m vom Strand. Zu Fuß sind es drei Minuten über eine festgefahrene Sandstraße. Das 400 m² große Grundstück ist eingezäunt und hat Kokospalmen und ein Stück Rasen. Bis zum Zentrum von Pipa sind es achtzehn Minuten mit dem Auto.\n\nDas Haus ist 2017 aus behandeltem Holz auf einem gemauerten Sockel gebaut und hat 110 m² auf einer Ebene. Es hat zwei Schlafzimmer mit Klimaanlage und ein Bad. Wohnzimmer und Küche teilen sich einen Raum und gehen auf die überdachte Veranda, die die ganze Front einnimmt. Im Garten gibt es einen Grill und eine Terrasse (Deck). Ein Auto passt auf das Grundstück. Die Miete enthält Möbel und Küchenausstattung.\n\nDer Vertrag läuft zwölf Monate, mit einer Kaution von einer Monatsmiete. Strom und Wasser zahlt der Mieter. Die Grundsteuer (IPTU) bleibt beim Eigentümer. Das Holz wurde 2026 neu lackiert."
- },
- "ordem": 7,
- "checks": {},
- "temporada": ""
+  "dist": {
+    "beach": "3 min",
+    "center": "20-25 min",
+    "airport": "~1 h 30"
+  },
+  "highlights": {
+    "pt": [
+      "Varanda coberta em toda a frente",
+      "Madeira com verniz novo (2026)"
+    ],
+    "en": [
+      "Covered veranda along the front",
+      "Timber revarnished in 2026"
+    ],
+    "es": [
+      "Galería techada en todo el frente",
+      "Madera con barniz nuevo (2026)"
+    ],
+    "de": [
+      "Überdachte Veranda über die ganze Front",
+      "Holz 2026 neu lackiert"
+    ]
+  },
+  "desc": {
+    "pt": "Casa de madeira na vila tranquila de Sibaúma, ao sul de Pipa, numa rua de areia compactada. O lote é cercado, com coqueiros e um trecho gramado.\n\nAluguel com móveis e utensílios, contrato de doze meses e caução de um aluguel. Energia e água ficam com o inquilino, o IPTU com o proprietário.",
+    "en": "Timber house in the quiet village of Sibaúma, south of Pipa, on a compacted sand road. The plot is fenced, with coconut palms and a stretch of lawn.\n\nLet with furniture and kitchenware, on a twelve-month contract with a deposit of one month's rent. Electricity and water are paid by the tenant, property tax by the owner.",
+    "es": "Casa de madera en el tranquilo pueblo de Sibaúma, al sur de Pipa, sobre una calle de arena compactada. El lote está cercado, con cocoteros y un sector con césped.\n\nSe alquila con muebles y utensilios, con contrato de doce meses y un depósito equivalente a un alquiler. La energía y el agua las paga el inquilino, el IPTU el propietario.",
+    "de": "Holzhaus im ruhigen Dorf Sibaúma, südlich von Pipa, an einer festgefahrenen Sandstraße. Das Grundstück ist eingezäunt, mit Kokospalmen und einem Stück Rasen.\n\nVermietet mit Möbeln und Küchenausstattung, Vertrag über zwölf Monate mit einer Monatsmiete Kaution. Strom und Wasser zahlt der Mieter, die Grundsteuer (IPTU) der Eigentümer."
+  },
+  "ordem": 7,
+  "checks": {},
+  "temporada": ""
 }
