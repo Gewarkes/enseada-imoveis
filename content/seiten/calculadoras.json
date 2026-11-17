@@ -1,0 +1,73 @@
+{
+ "slug": "calculadoras",
+ "nav": {
+  "pt": "Calculadoras",
+  "en": "Calculators",
+  "es": "Calculadoras",
+  "de": "Rechner"
+ },
+ "h1": {
+  "pt": "Calculadoras de custos e de imposto",
+  "en": "Cost and tax calculators",
+  "es": "Calculadoras de costos y de impuestos",
+  "de": "Rechner für Kosten und Steuern"
+ },
+ "lead": {
+  "pt": "Faixas com fonte e data. Valores sem comprovação aparecem como campo para você preencher.",
+  "en": "Ranges with source and date. Unproven values appear as a field for you to fill in.",
+  "es": "Rangos con fuente y fecha. Los valores sin comprobación aparecen como un campo para que lo completes.",
+  "de": "Spannen mit Quelle und Datum. Werte ohne Nachweis erscheinen als Feld zum Selbstausfüllen."
+ },
+ "meta": {
+  "pt": "Calculadora de custos de compra e de imposto sobre ganho de capital em imóveis no Brasil.",
+  "en": "Calculator for purchase costs and capital-gain tax on property in Brazil.",
+  "es": "Calculadora de costos de compra y de impuesto sobre la ganancia de capital en propiedades de Brasil.",
+  "de": "Rechner für Kaufkosten und für die Steuer auf den Gewinn bei Immobilien in Brasilien."
+ },
+ "stand": "16.11.2026",
+ "blocks": [
+  {
+   "t": "h2",
+   "x": {
+    "pt": "Custos de compra",
+    "en": "Purchase costs",
+    "es": "Costos de compra",
+    "de": "Kaufkosten"
+   }
+  },
+  {
+   "t": "widget",
+   "x": "buycosts"
+  },
+  {
+   "t": "h2",
+   "x": {
+    "pt": "Imposto sobre o ganho (venda futura)",
+    "en": "Tax on the gain (future sale)",
+    "es": "Impuesto sobre la ganancia (venta futura)",
+    "de": "Steuer auf den Gewinn (späterer Verkauf)"
+   }
+  },
+  {
+   "t": "widget",
+   "x": "gains"
+  },
+  {
+   "t": "note",
+   "k": "info",
+   "x": {
+    "pt": "Simulação simplificada, sem isenções. Não substitui contador ou advogado.",
+    "en": "Simplified simulation, without exemptions. Does not replace an accountant or lawyer.",
+    "es": "Simulación simplificada, sin exenciones. No reemplaza a un contador ni a un abogado.",
+    "de": "Vereinfachte Rechnung, ohne Befreiungen. Ersetzt keinen Steuerberater oder Anwalt."
+   }
+  }
+ ],
+ "sources": [
+  [
+   "Lei 13.259/2016 (ganho de capital)",
+   "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13259.htm"
+  ]
+ ],
+ "icon": "tag"
+}

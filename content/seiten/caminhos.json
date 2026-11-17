@@ -1,0 +1,251 @@
+{
+ "slug": "caminhos",
+ "nav": {
+  "pt": "Caminhos de compra",
+  "en": "Ways to buy",
+  "es": "Caminos de compra",
+  "de": "Kaufwege"
+ },
+ "h1": {
+  "pt": "Três caminhos para comprar: à vista, na planta e financiado",
+  "en": "Three ways to buy: cash, off-plan and financed",
+  "es": "Tres caminos para comprar: al contado, en planos y con financiación",
+  "de": "Drei Wege zum Kauf: bar, vom Plan und mit Finanzierung"
+ },
+ "lead": {
+  "pt": "Valores de prazo e percentual são de referência, de blogs de bancos, portais e escritórios (consulta em 16.11.2026).",
+  "en": "Timings and percentages are reference values from bank blogs, portals and law firms (checked on 16.11.2026).",
+  "es": "Los plazos y porcentajes son de referencia, tomados de blogs de bancos, portales y estudios jurídicos (consulta del 16.11.2026).",
+  "de": "Fristen und Prozentwerte sind Richtwerte, aus Blogs von Banken, Portalen und Kanzleien (abgerufen am 16.11.2026)."
+ },
+ "meta": {
+  "pt": "Como comprar imóvel no Brasil: à vista, na planta ou com financiamento.",
+  "en": "How to buy property in Brazil: cash, off-plan or financed.",
+  "es": "Cómo comprar una propiedad en Brasil: al contado, en planos o con financiación.",
+  "de": "Wie man eine Immobilie in Brasilien kauft: bar, vom Plan oder mit Finanzierung."
+ },
+ "stand": "16.11.2026",
+ "blocks": [
+  {
+   "t": "h2",
+   "x": {
+    "pt": "A. Compra à vista (imóvel usado), cerca de 60 a 90 dias",
+    "en": "A. Cash purchase (resale), about 60 to 90 days",
+    "es": "A. Compra al contado (propiedad usada), unos 60 a 90 días",
+    "de": "A. Barkauf (gebrauchte Immobilie), etwa 60 bis 90 Tage"
+   }
+  },
+  {
+   "t": "steps",
+   "x": [
+    {
+     "h": {
+      "pt": "Visita e proposta",
+      "en": "Viewing and offer",
+      "es": "Visita y oferta",
+      "de": "Besichtigung und Angebot"
+     },
+     "p": {
+      "pt": "Preço, forma de pagamento e prazos por escrito.",
+      "en": "Price, payment and deadlines in writing.",
+      "es": "Precio, forma de pago y plazos por escrito.",
+      "de": "Preis, Zahlungsart und Fristen schriftlich."
+     },
+     "n": null
+    },
+    {
+     "h": {
+      "pt": "Contrato preliminar",
+      "en": "Preliminary contract",
+      "es": "Contrato preliminar",
+      "de": "Vorvertrag"
+     },
+     "p": {
+      "pt": "Sinal, multa e condições. Pode ser averbado na matrícula.",
+      "en": "Deposit, penalty and conditions. It can be noted on the title record.",
+      "es": "Seña, multa y condiciones. Se puede anotar en la matrícula (la ficha oficial de la propiedad).",
+      "de": "Anzahlung, Vertragsstrafe und Bedingungen. Kann im Grundbuchauszug (Matrícula) vermerkt werden."
+     },
+     "n": null
+    },
+    {
+     "h": {
+      "pt": "Conferência de documentos",
+      "en": "Document check",
+      "es": "Revisión de documentos",
+      "de": "Prüfung der Unterlagen"
+     },
+     "p": {
+      "pt": "Matrícula atualizada, ônus (dívidas e restrições do imóvel), certidões do vendedor, IPTU, condomínio e Habite-se (licença da prefeitura que diz que a obra está pronta e pode ser usada).",
+      "en": "Up-to-date title record, encumbrances (debts and restrictions on the property), seller’s certificates, IPTU, condominium and Habite-se (town hall certificate that the building is finished and can be used).",
+      "es": "Matrícula actualizada, cargas (deudas y restricciones de la propiedad), certificados del vendedor, IPTU (impuesto municipal anual), gastos de condominio y Habite-se (certificado municipal de fin de obra).",
+      "de": "Aktueller Grundbuchauszug (Matrícula), Belastungen (Schulden und Einschränkungen der Immobilie), Bescheinigungen des Verkäufers, Grundsteuer (IPTU), Hausgeld und Habite-se (Genehmigung der Stadt, die sagt, dass der Bau fertig ist und genutzt werden darf)."
+     },
+     "n": null
+    },
+    {
+     "h": {
+      "pt": "ITBI e escritura",
+      "en": "Transfer tax and deed",
+      "es": "ITBI y escritura",
+      "de": "ITBI und Kaufurkunde"
+     },
+     "p": {
+      "pt": "Guia do ITBI na prefeitura, escritura no tabelionato, pagamento do saldo.",
+      "en": "Transfer-tax slip at the town hall, deed at the notary, payment of the balance.",
+      "es": "Boleto del ITBI (impuesto municipal de compra) en la municipalidad, escritura (documento público de venta) en la notaría, pago del saldo.",
+      "de": "ITBI-Bescheid bei der Stadt, Kaufurkunde (Escritura) beim Notariat, Zahlung des Restbetrags."
+     },
+     "n": null
+    },
+    {
+     "h": {
+      "pt": "Registro e chaves",
+      "en": "Registration and keys",
+      "es": "Registro y llaves",
+      "de": "Eintragung und Schlüssel"
+     },
+     "p": {
+      "pt": "Só com o registro no Registro de Imóveis você é o proprietário.",
+      "en": "Only registration makes you the owner.",
+      "es": "Solo con el registro en el Registro de la Propiedad eres el propietario.",
+      "de": "Nur mit der Eintragung im Grundbuchamt (Registro de Imóveis) bist du Eigentümer."
+     },
+     "n": null
+    }
+   ]
+  },
+  {
+   "t": "h2",
+   "x": {
+    "pt": "B. Imóvel na planta (lançamento)",
+    "en": "B. Off-plan (new development)",
+    "es": "B. Propiedad en planos (lanzamiento)",
+    "de": "B. Immobilie vom Plan (Neubauprojekt)"
+   }
+  },
+  {
+   "t": "steps",
+   "x": [
+    {
+     "h": {
+      "pt": "Reserva e sinal",
+      "en": "Reservation and deposit",
+      "es": "Reserva y seña",
+      "de": "Reservierung und Anzahlung"
+     },
+     "p": {
+      "pt": "Reserve a unidade e peça o contrato completo antes de pagar.",
+      "en": "Reserve the unit and ask for the full contract before paying.",
+      "es": "Reserva la unidad y pide el contrato completo antes de pagar.",
+      "de": "Reserviere die Einheit und verlange vor dem Zahlen den vollständigen Vertrag."
+     },
+     "n": null
+    },
+    {
+     "h": {
+      "pt": "Contrato com a incorporadora",
+      "en": "Contract with the developer",
+      "es": "Contrato con la desarrolladora",
+      "de": "Vertrag mit dem Bauträger"
+     },
+     "p": {
+      "pt": "Preço total, plano de pagamento, correção (INCC, índice que reajusta o preço durante a obra), prazo de obra e tolerância, direitos de desistência.",
+      "en": "Total price, payment plan, indexation (INCC), build time and tolerance, withdrawal rights.",
+      "es": "Precio total, plan de pago, ajuste (INCC, índice de costo de obra), plazo de obra y tolerancia, derechos de desistimiento.",
+      "de": "Gesamtpreis, Zahlungsplan, Preisanpassung (INCC, ein Index, der den Preis während des Baus anpasst), Bauzeit und Toleranz, Rücktrittsrechte."
+     },
+     "n": null
+    },
+    {
+     "h": {
+      "pt": "Documentos da obra",
+      "en": "Project documents",
+      "es": "Documentos de la obra",
+      "de": "Unterlagen zum Bau"
+     },
+     "p": {
+      "pt": "Registro de Incorporação no cartório, matrícula do terreno, patrimônio de afetação (proteção em caso de falência), memorial descritivo, licenças.",
+      "en": "Incorporation registration at the cartório, land title, patrimônio de afetação (protection if the developer fails), specification, permits.",
+      "es": "Registro de Incorporación en la notaría o registro (cartório), matrícula del terreno, patrimonio de afectación (protección en caso de quiebra), memoria descriptiva, licencias.",
+      "de": "Eintragung des Bauvorhabens (Registro de Incorporação) im Grundbuchamt, Grundbuchauszug des Grundstücks, Vermögensabsonderung (Patrimônio de afetação, Schutz bei Insolvenz), Baubeschreibung, Genehmigungen."
+     },
+     "n": null
+    },
+    {
+     "h": {
+      "pt": "Entrega",
+      "en": "Handover",
+      "es": "Entrega",
+      "de": "Übergabe"
+     },
+     "p": {
+      "pt": "Habite-se, vistoria com engenheiro ou arquiteto, termo de recebimento, escritura e registro.",
+      "en": "Habite-se, inspection by an engineer or architect, handover record, deed and registration.",
+      "es": "Habite-se, inspección con ingeniero o arquitecto, acta de recepción, escritura y registro.",
+      "de": "Habite-se, Abnahme mit Ingenieur oder Architekt, Übergabeprotokoll, Kaufurkunde und Eintragung."
+     },
+     "n": null
+    }
+   ]
+  },
+  {
+   "t": "note",
+   "k": "warn",
+   "x": {
+    "pt": "Riscos: atraso, aumento do INCC, falência da incorporadora sem patrimônio de afetação e distrato (perda de parte do valor pago, até cerca de 25 % segundo um portal; confira no contrato).",
+    "en": "Risks: delay, INCC increases, developer failure without patrimônio de afetação and cancellation (loss of part of what you paid, up to about 25 % according to one portal; check your contract).",
+    "es": "Riesgos: atraso, aumento del INCC, quiebra de la desarrolladora sin patrimonio de afectación y distrato (cancelación del contrato, con pérdida de parte de lo pagado, hasta cerca de 25 % según un portal; revisa el contrato).",
+    "de": "Risiken: Verspätung, Anstieg des INCC, Insolvenz des Bauträgers ohne Vermögensabsonderung und Vertragsauflösung (Distrato; du verlierst einen Teil des gezahlten Betrags, bis etwa 25 % laut einem Portal; prüfe das im Vertrag)."
+   }
+  },
+  {
+   "t": "h2",
+   "x": {
+    "pt": "C. Com financiamento (para quem mora no Brasil), 50 a 80 dias",
+    "en": "C. Financed (for residents of Brazil), 50 to 80 days",
+    "es": "C. Con financiación (para quien vive en Brasil), 50 a 80 días",
+    "de": "C. Mit Finanzierung (für Menschen, die in Brasilien wohnen), 50 bis 80 Tage"
+   }
+  },
+  {
+   "t": "p",
+   "x": {
+    "pt": "O banco avalia renda e o imóvel e a parcela costuma ser limitada a 30 % da renda. O contrato é registrado na matrícula (alienação fiduciária): o banco fica como proprietário até a quitação. Use a calculadora na página inicial para uma simulação de exemplo.",
+    "en": "The bank assesses income and the property, and the instalment is usually capped at 30 % of income. The contract is registered on the title (alienação fiduciária): the bank stays owner until the loan is repaid. Use the calculator on the home page for an example simulation.",
+    "es": "El banco evalúa tus ingresos y la propiedad. La cuota suele estar limitada al 30 % de los ingresos. El contrato se registra en la matrícula (alienação fiduciária: el banco queda como propietario hasta que termines de pagar). Usa la calculadora de la página de inicio para una simulación de ejemplo.",
+    "de": "Die Bank prüft Einkommen und Immobilie, und die Rate ist meist auf 30 % des Einkommens begrenzt. Der Vertrag wird im Grundbuchauszug (Matrícula) eingetragen (Alienação fiduciária): Die Bank bleibt Eigentümerin, bis alles bezahlt ist. Nutze den Rechner auf der Startseite für eine Beispielrechnung."
+   }
+  },
+  {
+   "t": "wa",
+   "m": {
+    "pt": "Olá! Quero entender qual caminho de compra é melhor para mim.",
+    "en": "Hello! I want to understand which way of buying is best for me.",
+    "es": "¡Hola! Quiero entender cuál camino de compra es mejor para mí.",
+    "de": "Hallo! Ich möchte verstehen, welcher Kaufweg für mich am besten ist."
+   },
+   "b": {
+    "pt": "Falar com a corretora",
+    "en": "Talk to the agent",
+    "es": "Hablar con la corredora",
+    "de": "Mit der Maklerin sprechen"
+   }
+  }
+ ],
+ "sources": [
+  [
+   "MySide · Financiamento imobiliário",
+   "https://myside.com.br/guia-imoveis/melhor-banco-financiamento-imobiliario"
+  ],
+  [
+   "Portas · Imóvel na planta",
+   "https://portas.com.br/"
+  ],
+  [
+   "QuintoAndar · Guia de compra",
+   "https://www.quintoandar.com.br/guias/"
+  ]
+ ],
+ "icon": "home"
+}

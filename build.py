@@ -17,8 +17,8 @@ from markupsafe import Markup
 ORIGIN = os.environ.get('SITE_ORIGIN', 'https://gewarkes.github.io').rstrip('/').lower()
 BASE = os.environ.get('SITE_BASE', '/enseada-imoveis/')
 INDEXNOW_KEY = '7c1e5a9d3b2f4e6a8c0d1f2b3a4c5d6e'
-LANGS = ['pt', 'en', 'de']
-HL = {'pt': 'pt-BR', 'en': 'en', 'de': 'de'}
+LANGS = ['pt', 'en', 'es', 'de']
+HL = {'pt': 'pt-BR', 'en': 'en', 'es': 'es', 'de': 'de'}
 D = 'dist'
 
 
@@ -42,7 +42,7 @@ def tri(v):
     """Text in drei Sprachen; fehlt eine Sprache, gilt Portugiesisch."""
     if not isinstance(v, dict):
         v = {'pt': v or ''}
-    base = v.get('pt') or v.get('en') or v.get('de') or ''
+    base = v.get('pt') or v.get('en') or v.get('es') or ''
     return {k: (v.get(k) or base) for k in LANGS}
 
 
@@ -53,11 +53,15 @@ def ik(k):
 
 # ---------- 1 Inhalte ----------
 site = json.loads(rd('content/site.json'))
-for k, v in {'theme': 'light', 'instagram': '', 'brokerUrl': '', 'contactUrl': '', 'newsletterUrl': '', 'gaId': '', 'reviews': [], 'demoNote': False,
+for k, v in {'uploadUrl': '', 'channelUrl': '', 'theme': 'light', 'instagram': '', 'brokerUrl': '', 'contactUrl': '', 'newsletterUrl': '', 'gaId': '', 'reviews': [], 'demoNote': False,
              'rate': 11.5, 'buyCosts': 0.045, 'fx': {'date': '', 'USD': 0.178, 'EUR': 0.16}, 'geo': {}, 'stats': {}, 'media': {}}.items():
     site.setdefault(k, v)
 site['agent'].setdefault('photo', '')
 T = json.loads(rd('src/textos.json'))
+T.update(json.loads(rd('src/textos_neu.json')))
+V2 = json.loads(rd('src/textos_v2.json'))
+T.update(V2)
+paises = json.loads(rd('content/paises.json'))
 HERO = (site.get('media') or {}).get('hero') or '02'
 
 listings = [json.loads(rd(f)) for f in sorted(glob.glob('content/imoveis/*.json'))]
@@ -75,13 +79,23 @@ for l in listings:
     l['status'] = l.get('status') or 'disponivel'
     l['date'] = l.get('date') or '2026-01-01'
     l['ref'] = l.get('ref') or l['slug'].upper()[:8]
-    for k in ('video', 'plan', 'lat', 'lng'):
+    for k in ('video', 'plan', 'lat', 'lng', 'temporada'):
         l.setdefault(k, '')
+    l['priceBefore'] = l.get('priceBefore') or 0
+    l['checks'] = {'matricula': False, 'debts': False, 'date': '', **(l.get('checks') or {})}
     l['plan'] = ik(l['plan']) if l['plan'] else ''
     l['locslug'] = slug(l.get('loc', ''))
     l['cat'] = 'terrenos' if l.get('type') == 'terreno' else ('aluguel' if l.get('deal') == 'aluguel' else 'venda')
 listings.sort(key=lambda x: (x.get('ordem') or 999, x['slug']))
 
+taxes = json.loads(rd('content/taxas.json'))
+pages = {}
+for f in sorted(glob.glob('content/seiten/*.json')):
+    pg = json.loads(rd(f))
+    pages[pg['slug']] = pg
+site['partners'] = []
+site['agent'].setdefault('verifiedAt', '')
+site['agent'].setdefault('creciUrl', 'https://www.cofeci.gov.br/')
 posts = [json.loads(rd(f)) for f in sorted(glob.glob('content/blog/*.json'))]
 for p in posts:
     p['slug'] = slug(p.get('slug') or tri(p['title'])['pt'])
@@ -90,7 +104,7 @@ for p in posts:
     b = p.get('body')
     b = b if isinstance(b, dict) else {'pt': b or ''}
     b = {k: [x.strip() for x in re.split(r'\n\s*\n', b.get(k) or '') if x.strip()] for k in LANGS}
-    p['body'] = {k: (b[k] or b['pt'] or b['en'] or b['de']) for k in LANGS}
+    p['body'] = {k: (b[k] or b['pt'] or b['en'] or b['es'] or b['de']) for k in LANGS}
     p['img'] = ik(p.get('img') or HERO)
     p['author'] = p.get('author') or site['agent']['name']
     p['read'] = {k: max(1, round(sum(len(x.split()) for x in p['body'][k]) / 200)) for k in LANGS}
@@ -128,6 +142,8 @@ for f in sorted(glob.glob('content/fotos/*')):
         j.thumbnail((w, w * 3))
         j.save(o, quality=62 if suf == '' else 58, method=6)
         dims[stem + suf] = j.size
+    os.makedirs(f'{D}/img/pdf', exist_ok=True)
+    jp = im.copy(); jp.thumbnail((900, 900 * 3)); jp.save(f'{D}/img/pdf/{stem}.jpg', quality=80, optimize=True)
     n += 1
 print('Fotos:', n)
 
@@ -145,18 +161,26 @@ ICONS = {
     'share': 'M12 15V4M8 8l4-4 4 4M5 12v7h14v-7', 'map': 'M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2zM9 4v14M15 6v14',
     'list': 'M8 6h12M8 12h12M8 18h12M4 6h.010M4 12h.010M4 18h.010', 'doc': 'M7 3h7l5 5v13H7zM14 3v5h5M10 13h6M10 17h6',
     'globe': 'M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18',
-    'home': 'M4 11l8-7 8 7v9h-5v-6H9v6H4z', 'shield': 'M12 3 5 6v6c0 4.500 3 7.500 7 9 4-1.500 7-4.500 7-9V6zM9 12l2 2 4-4',
+    'home': 'M4 11l8-7 8 7v9h-5v-6H9v6H4z', 'alert': 'M12 3 2 20h20zM12 10v5M12 17.500h.010', 'shield': 'M12 3 5 6v6c0 4.500 3 7.500 7 9 4-1.500 7-4.500 7-9V6zM9 12l2 2 4-4',
     'clock': 'M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM12 7v5l3 2', 'user': 'M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM4 21a8 8 0 0 1 16 0',
     'ig': 'M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4zM12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM17.500 6.500h.010',
+    'heart': 'M12 20s-7-4.500-7-10a4 4 0 0 1 7-2.500A4 4 0 0 1 19 10c0 5.500-7 10-7 10z', 'filter': 'M4 5h16l-6 8v6l-4-2v-4z',
     'tag': 'M3 12V4h8l10 10-8 8zM7.500 8.500h.010', 'sort': 'M7 4v16M3 16l4 4 4-4M17 20V4M13 8l4-4 4 4',
     'info': 'M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM12 11v6M12 7.500h.010', 'play': 'M8 5v14l11-7z',
 }
-WA = 'M12 2a10 10 0 0 0-8.600 15.100L2 22l5-1.300A10 10 0 1 0 12 2zm0 1.800a8.200 8.200 0 1 1-4.200 15.300l-.300-.200-2.900.800.800-2.800-.200-.300A8.200 8.200 0 0 1 12 3.800zm-3.300 3.900c-.200 0-.500.100-.700.300-.300.300-1 1-1 2.300s1 2.700 1.200 2.900c.100.200 2 3.100 4.900 4.300 2.400.900 2.900.800 3.400.700.500 0 1.700-.700 1.900-1.300.200-.700.200-1.200.200-1.300-.100-.200-.300-.200-.600-.400l-2-.900c-.300-.100-.500-.200-.700.100l-.900 1.100c-.200.200-.300.200-.600.100-.300-.200-1.200-.500-2.300-1.400-.900-.800-1.400-1.700-1.600-2-.200-.300 0-.500.100-.600l.400-.500.300-.500v-.500l-.900-2.100c-.200-.500-.400-.500-.600-.500z'
+WA = 'M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z'
 STAR = 'M12 3.500l2.600 5.300 5.900.900-4.300 4.100 1 5.800L12 16.900 6.800 19.600l1-5.800L3.500 9.700l5.900-.900z'
 MONTHS = {
     'pt': 'janeiro fevereiro março abril maio junho julho agosto setembro outubro novembro dezembro'.split(),
     'en': 'January February March April May June July August September October November December'.split(),
     'de': 'Januar Februar März April Mai Juni Juli August September Oktober November Dezember'.split(),
+    'es': 'enero febrero marzo abril mayo junio julio agosto septiembre octubre noviembre diciembre'.split(),
+}
+FLG = {
+    'pt': Markup('<svg viewBox="0 0 28 20"><rect width="28" height="20" fill="#009c3b"/><path d="M14 2.500L25 10 14 17.500 3 10z" fill="#ffdf00"/><circle cx="14" cy="10" r="4.300" fill="#002776"/></svg>'),
+    'en': Markup('<svg viewBox="0 0 28 20"><rect width="28" height="20" fill="#012169"/><path d="M0 0l28 20M28 0L0 20" stroke="#fff" stroke-width="4"/><path d="M0 0l28 20M28 0L0 20" stroke="#c8102e" stroke-width="1.600"/><path d="M14 0v20M0 10h28" stroke="#fff" stroke-width="6"/><path d="M14 0v20M0 10h28" stroke="#c8102e" stroke-width="3.400"/></svg>'),
+    'es': Markup('<svg viewBox="0 0 28 20"><rect width="28" height="20" fill="#c60b1e"/><rect y="5" width="28" height="10" fill="#ffc400"/></svg>'),
+    'de': Markup('<svg viewBox="0 0 28 20"><rect width="28" height="7" fill="#000"/><rect y="7" width="28" height="6" fill="#d00"/><rect y="13" width="28" height="7" fill="#ffce00"/></svg>'),
 }
 e = lambda s: html.escape(str(s), quote=True)
 
@@ -216,7 +240,7 @@ def make_ctx(lang, route):
     def fdate(d):
         y, m, dd = [int(x) for x in d.split('-')]
         mo = MONTHS[lang][m - 1]
-        return {'pt': f'{dd} de {mo} de {y}', 'en': f'{dd} {mo} {y}', 'de': f'{dd}. {mo} {y}'}[lang]
+        return {'pt': f'{dd} de {mo} de {y}', 'en': f'{dd} {mo} {y}', 'es': f'{dd} de {mo} de {y}', 'de': f'{dd}. {mo} {y}'}[lang]
 
     def plural(n, one, many):
         return f'{n} {t[one] if n == 1 else t[many]}'
@@ -240,23 +264,25 @@ def make_ctx(lang, route):
 
     return dict(lang=lang, hl=HL[lang], route=route, t=t, L=L, url=url, pic=pic, money=money, price=price, fdate=fdate,
                 plural=plural, wa=wa, facts=facts, icon=icon, wa_icon=wa_icon, stars=stars, nf=lambda n, d=0: nf(n, lang, d),
-                site=site, listings=listings, posts=posts, locs=locs, langs=LANGS, base=BASE, origin=ORIGIN,
+                site=site, taxes=taxes, paises=paises, v2={k: t[k] for k in V2}, pages=pages, listings=listings, posts=posts, locs=locs, langs=LANGS, base=BASE, origin=ORIGIN,
                 alt_url=lambda lg: BASE + path(route, lg), abs=lambda r, lg=None: ORIGIN + BASE + path(r, lg or lang),
                 img=lambda k, s='': f'{BASE}img/{ik(k)}{s}.webp', imgabs=lambda k: f'{ORIGIN}{BASE}img/{ik(k)}.webp',
                 year=datetime.date.today().year, demo=bool(site.get('demoNote')))
 
 
 # ---------- 4 Stil und Skript ----------
-css = rd('src/site.css')
+css = rd('src/site.css') + '\n' + rd('src/guia.css')
 css = re.sub(r'/\*.*?\*/', '', css, flags=re.S)
 css = re.sub(r'\s*\n\s*', '\n', css).strip()
-js = rd('src/site.js')
+js = rd('src/site.js') + '\n' + rd('src/guia.js')
 hc = hashlib.md5(css.encode()).hexdigest()[:8]
 hj = hashlib.md5(js.encode()).hexdigest()[:8]
 wr(f'{D}/assets/site.{hc}.css', css)
 wr(f'{D}/assets/site.{hj}.js', js)
 for f in glob.glob('src/fonts/*.woff2'):
     shutil.copy(f, f'{D}/assets/{os.path.basename(f)}')
+shutil.copy('src/static/map-pipa.jpg', f'{D}/assets/map-pipa.jpg')
+shutil.copy('src/static/map-pipa-wide.jpg', f'{D}/assets/map-pipa-wide.jpg')
 if os.path.isdir('content/video'):   # kurze Videos (z. B. Einstieg) werden unverändert übernommen
     shutil.copytree('content/video', f'{D}/video')
 lcss = rd('src/vendor/leaflet.css')
@@ -265,7 +291,7 @@ wr(f'{D}/assets/leaflet.css', lcss)
 shutil.copy('src/vendor/leaflet.js', f'{D}/assets/leaflet.js')
 
 env = Environment(loader=FileSystemLoader('src/templates'), autoescape=True, undefined=StrictUndefined, trim_blocks=True, lstrip_blocks=True)
-env.globals.update(css_file=f'{BASE}assets/site.{hc}.css', js_file=f'{BASE}assets/site.{hj}.js')
+env.globals.update(FLG=FLG, css_file=f'{BASE}assets/site.{hc}.css', js_file=f'{BASE}assets/site.{hj}.js')
 env.filters['tojson_safe'] = lambda o: Markup(json.dumps(o, ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/'))
 
 
@@ -277,7 +303,7 @@ def org_ld(lang):
             'address': {'@type': 'PostalAddress', 'streetAddress': site['address'].split('·')[0].strip(), 'addressLocality': site.get('city', ''),
                         'addressRegion': site.get('state', ''), 'addressCountry': 'BR'},
             'geo': {'@type': 'GeoCoordinates', 'latitude': a.get('lat'), 'longitude': a.get('lng')},
-            'openingHours': site.get('openingHours', ''), 'areaServed': [x['name'] for x in locs], 'knowsLanguage': ['pt-BR', 'en', 'de'],
+            'openingHours': site.get('openingHours', ''), 'areaServed': [x['name'] for x in locs], 'knowsLanguage': ['pt-BR', 'en', 'es', 'de'],
             'priceRange': 'R$', **({'sameAs': [site['instagram']]} if site.get('instagram') else {})}
 
 
@@ -323,7 +349,7 @@ def ld(graph):
 
 # ---------- 6 Seiten ----------
 CATS = {'imoveis': None, 'imoveis-venda': 'venda', 'imoveis-aluguel': 'aluguel', 'imoveis-terrenos': 'terrenos'}
-routes = ['home', 'imoveis', 'imoveis-venda', 'imoveis-aluguel', 'imoveis-terrenos', 'sobre', 'blog', 'contato', 'privacidade'] \
+routes = ['home', 'imoveis', 'imoveis-venda', 'imoveis-aluguel', 'imoveis-terrenos', 'sobre', 'blog', 'contato', 'privacidade'] + list(pages) \
     + ['imovel-' + l['slug'] for l in listings] + ['artigo-' + p['slug'] for p in posts]
 urls = []
 
@@ -368,6 +394,15 @@ for lang in LANGS:
             desc = clip(l['title'][lang] + '. ' + l['desc'][lang].split('\n')[0])
             c.update(msg=f"{t['waInterest']} {l['name']} ({l['ref']}).", l=l, similar=sim, catroute=catroute, catname=catname, pins=pins([l], c), calc_price=int(l['price']))
             graph += [crumbs_ld([home, (catname, c['abs'](catroute)), (l['name'], c['abs'](route))]), listing_ld(l, lang, c)]
+        elif route in pages:
+            tpl = 'guia.html'
+            pg = pages[route]
+            title, desc = f"{pg['h1'][lang]} · {brand}", pg['meta'][lang]
+            c.update(pg=pg)
+            graph += [crumbs_ld([home, (pg['nav'][lang], c['abs'](route))])]
+            fq = [b for b in pg['blocks'] if b['t'] == 'faq']
+            if fq:
+                graph += [{'@type': 'FAQPage', 'mainEntity': [{'@type': 'Question', 'name': i['q'][lang], 'acceptedAnswer': {'@type': 'Answer', 'text': i['a'][lang]}} for i in fq[0]['x']]}]
         elif route == 'sobre':
             tpl, title, desc = 'sobre.html', f"{t['aboutTitle']} · {brand}", t['aboutMeta']
             graph += [crumbs_ld([home, (t['navAbout'], c['abs'](route))])]
@@ -391,11 +426,20 @@ for lang in LANGS:
         else:
             tpl, title, desc = 'privacidade.html', f"{t['privH']} · {brand}", t['privMeta']
         og = c['imgabs'](c['l']['imgs'][0] if 'l' in c else (c['p']['img'] if 'p' in c else HERO))
-        c.update(oglocale={'pt': 'pt_BR', 'en': 'en_US', 'de': 'de_DE'}[lang], title=title, desc=desc, canonical=c['abs'](route), ogimg=og, ld=Markup(ld(graph)), noindex=False,
+        c.update(oglocale={'pt': 'pt_BR', 'en': 'en_US', 'es': 'es_ES', 'de': 'de_DE'}[lang], title=title, desc=desc, canonical=c['abs'](route), ogimg=og, ld=Markup(ld(graph)), noindex=False,
                  alts=[(HL[x], ORIGIN + BASE + path(route, x)) for x in LANGS], xdef=ORIGIN + BASE + path(route, 'pt'))
         out = env.get_template(tpl).render(**c)
         wr(f'{D}/{path(route, lang)}index.html', out)
         urls.append((route, lang))
+
+
+# ---------- 6b Exposé-Seiten (Druckvorlage für das PDF, nicht indexiert) ----------
+FICHA_CSS = rd('src/ficha.css')
+for lang in LANGS:
+    for l in listings:
+        c = make_ctx(lang, 'imovel-' + l['slug'])
+        c.update(l=l, ficha_css=FICHA_CSS, today_str=datetime.date.today().strftime('%d.%m.%Y'))
+        wr(f'{D}/ficha/{lang}/{l["slug"]}/index.html', env.get_template('ficha.html').render(**c))
 
 c = make_ctx('pt', 'home')
 c.update(oglocale='pt_BR', title=site['brandFull'], desc='', canonical='', ogimg='', ld=Markup('{}'), noindex=True, alts=[], xdef='')
@@ -416,7 +460,7 @@ wr(f'{D}/robots.txt', 'User-agent: *\nAllow: /\n\n' + ''.join(f'User-agent: {x}\
 te = {k: (v.get('en') or v.get('pt')) if isinstance(v, dict) else v for k, v in T.items()}
 deal = {'venda': 'for sale', 'aluguel': 'for rent'}
 x = f"# {site['brandFull']}\n\n> Real estate agency in Pipa and Tibau do Sul (Rio Grande do Norte, Brazil): houses, apartments and land to buy or rent. Service in Portuguese, English and German. Prices in Brazilian reais (BRL).\n\n"
-x += f"- Phone / WhatsApp: {site['phone']}\n- Email: {site['email']}\n- Licence: {site['agent']['creci']}\n- Address: {site['address']}\n- Opening hours: {site['hours']['en']}\n- Languages: [Português]({U('home', 'pt')}), [English]({U('home', 'en')}), [Deutsch]({U('home', 'de')})\n\n## Properties\n\n"
+x += f"- Phone / WhatsApp: {site['phone']}\n- Email: {site['email']}\n- Licence: {site['agent']['creci']}\n- Address: {site['address']}\n- Opening hours: {site['hours']['en']}\n- Languages: [Português]({U('home', 'pt')}), [English]({U('home', 'en')}), [Español]({U('home', 'es')}), [Deutsch]({U('home', 'de')})\n\n## Properties\n\n"
 for l in listings:
     f = [deal.get(l.get('deal'), ''), l.get('loc', ''), f"BRL {int(l['price']):,}" + (' per month' if l['deal'] == 'aluguel' else ''), 'ref ' + l['ref']]
     if l['beds']:
@@ -429,10 +473,10 @@ for l in listings:
         f.append(f"{l['lot']:,} m² plot")
     if l['status'] == 'reservado':
         f.append('reserved')
-    x += f"- [{l['name']}]({U('imovel-' + l['slug'], 'en')}): {', '.join(v for v in f if v)}. {l['desc']['en'].split(chr(10))[0]} ([Português]({U('imovel-' + l['slug'], 'pt')}), [Deutsch]({U('imovel-' + l['slug'], 'de')}))\n"
+    x += f"- [{l['name']}]({U('imovel-' + l['slug'], 'en')}): {', '.join(v for v in f if v)}. {l['desc']['en'].split(chr(10))[0]} ([Português]({U('imovel-' + l['slug'], 'pt')}), [Español]({U('imovel-' + l['slug'], 'es')}), [Deutsch]({U('imovel-' + l['slug'], 'de')}))\n"
 x += "\n## Guides\n\n" + ''.join(f"- [{p['title']['en']}]({U('artigo-' + p['slug'], 'en')}): {p['excerpt']['en']}\n" for p in posts)
 x += '\n## Frequently asked questions\n\n' + ''.join(f"- **{te['fq' + str(i)]}** {te['fq' + str(i) + 'a']}\n" for i in range(1, 6))
-x += f"\n## Pages\n\n- [All properties]({U('imoveis', 'en')})\n- [For sale]({U('imoveis-venda', 'en')})\n- [Rentals]({U('imoveis-aluguel', 'en')})\n- [Land]({U('imoveis-terrenos', 'en')})\n- [About the agency]({U('sobre', 'en')})\n- [Contact]({U('contato', 'en')})\n- [Sitemap]({ORIGIN}{BASE}sitemap.xml)\n"
+x += f"\n## Pages\n\n- [All properties]({U('imoveis', 'en')})\n- [For sale]({U('imoveis-venda', 'en')})\n- [Rentals]({U('imoveis-aluguel', 'en')})\n- [Land]({U('imoveis-terrenos', 'en')})\n- [Buying guide]({U('comprar', 'en')})\n- [Buying from abroad]({U('comprar-do-exterior', 'en')})\n- [Avoiding scams]({U('golpes', 'en')})\n- [Sell]({U('vender', 'en')})\n- [About the agency]({U('sobre', 'en')})\n- [Contact]({U('contato', 'en')})\n- [Sitemap]({ORIGIN}{BASE}sitemap.xml)\n"
 wr(f'{D}/llms.txt', x)
 wr(f'{D}/{INDEXNOW_KEY}.txt', INDEXNOW_KEY)
 wr(f'{D}/indexnow.json', json.dumps({'host': ORIGIN.split('//')[1], 'key': INDEXNOW_KEY, 'keyLocation': f'{ORIGIN}{BASE}{INDEXNOW_KEY}.txt', 'urlList': [U(r, l) for r, l in urls]}))

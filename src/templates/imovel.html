@@ -39,6 +39,8 @@
           <span data-fxline data-brl="{{ l.price | int }}"></span>
           {% if l.area and l.deal == 'venda' %}<span>· <span data-brl="{{ (l.price / l.area) | round | int }}">{{ money(l.price / l.area) }}</span>/m²</span>{% endif %}
         </div>
+        {% if l.deal == 'venda' and not land and l.price >= taxes.residence.northeast %}<p class="ichip">{{ icon('user') }}{{ t.resChip }} · <a href="{{ url('residencia') }}">{{ t.resChipL }}</a></p>{% endif %}
+        {% if l.temporada in ('sim','nao') %}<p class="ichip">{{ icon('cal') }}{{ t.tempOk if l.temporada == 'sim' else t.tempNo }}</p>{% endif %}
         <ul class="keys">
           {% if land %}
           <li>{{ icon('lot') }}<div><b>{{ nf(l.lot) }} m²</b><span>{{ t.lotWord }}</span></div></li>
@@ -51,9 +53,10 @@
           {% endif %}
         </ul>
         <div class="det-actions" data-actions>
-          <a class="btn btn-wa" href="{{ wa(msg) }}" target="_blank" rel="noopener">{{ wa_icon() }} {{ t.waWrite }}</a>
           <a class="btn btn-primary" href="#contato">{{ icon('cal') }} {{ t.visit }}</a>
           <button class="btn btn-line" type="button" data-share data-title="{{ l.name }}">{{ icon('share') }} {{ t.share }}</button>
+          <a class="btn btn-pdf" href="{{ base }}pdf/{{ lang }}/{{ l.slug }}.pdf" download><span class="pdf-tag">PDF</span> {{ t.pdfBtn }}</a>
+          <button class="btn btn-line btn-fav" type="button" data-fav data-slug="{{ l.slug }}" data-name="{{ l.name }}" data-url="{{ url('imovel-' + l.slug) }}" data-price="{{ l.price | int }}" aria-pressed="false">{{ icon('heart') }} <span data-fav-t data-a="{{ t.mlAdd }}" data-b="{{ t.mlDel }}">{{ t.mlAdd }}</span></button>
         </div>
       </div>
 
@@ -64,6 +67,16 @@
         {% endif %}
         <div class="prose">{% for para in L(l.desc).split('\n\n') %}<p>{{ para }}</p>{% endfor %}</div>
       </section>
+
+      {% if l.deal == 'venda' %}
+      <section class="block mk">
+        <h3>{{ t.mkH }}</h3>
+        {% if l.checks.matricula or l.checks.debts %}
+        <ul>{% if l.checks.matricula %}<li>{{ icon('check') }}{{ t.mkMat }}</li>{% endif %}{% if l.checks.debts %}<li>{{ icon('check') }}{{ t.mkDebt }}{% if l.checks.date %} · {{ t.mkOn }} {{ fdate(l.checks.date) }}{% endif %}</li>{% endif %}</ul>
+        {% else %}<p>{{ t.mkNone }}</p>{% endif %}
+        <small>{{ t.mkNote }} <a href="{{ url('golpes') }}">{{ pages['golpes'].nav[lang] }}</a></small>
+      </section>
+      {% endif %}
 
       <section class="block">
         <h2>{{ t.dData }}</h2>
@@ -130,6 +143,7 @@
     </div>
 
     <aside class="det-side" id="contato">
+      {{ m.answers() }}
       <div class="agent">
         <h2 style="font-size:1.25rem">{{ t.dContact }}</h2>
         {{ m.agentbox() }}

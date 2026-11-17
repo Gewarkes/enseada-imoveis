@@ -1,0 +1,344 @@
+{
+ "slug": "comprar-do-exterior",
+ "nav": {
+  "pt": "Comprar do exterior",
+  "en": "Buying from abroad",
+  "es": "Comprar desde el exterior",
+  "de": "Aus dem Ausland kaufen"
+ },
+ "h1": {
+  "pt": "Comprar imóvel no Brasil morando no exterior: as 12 etapas",
+  "en": "Buying property in Brazil from abroad: the 12 steps",
+  "es": "Comprar una propiedad en Brasil viviendo en el exterior: los 12 pasos",
+  "de": "Immobilie in Brasilien kaufen und im Ausland wohnen: die 12 Schritte"
+ },
+ "lead": {
+  "pt": "Do primeiro contato às chaves. Valores de prazo são de referência; onde as fontes se contradizem, dizemos isso e indicamos consultar um advogado.",
+  "en": "From first contact to the keys. Timings are reference values; where sources disagree, we say so and suggest asking a lawyer.",
+  "es": "Desde el primer contacto hasta las llaves. Los plazos son de referencia. Donde las fuentes se contradicen, lo decimos y recomendamos consultar a un abogado.",
+  "de": "Vom ersten Kontakt bis zu den Schlüsseln. Fristen sind Richtwerte; wo sich Quellen widersprechen, sagen wir das und raten, einen Anwalt zu fragen."
+ },
+ "meta": {
+  "pt": "As 12 etapas para estrangeiros comprarem imóvel no Brasil, com CPF, procuração, câmbio, ITBI, escritura e registro.",
+  "en": "The 12 steps for foreigners buying property in Brazil, with CPF, power of attorney, exchange, transfer tax, deed and registration.",
+  "es": "Los 12 pasos para que extranjeros compren una propiedad en Brasil, con CPF (número de contribuyente brasileño), poder notarial, cambio, ITBI, escritura y registro.",
+  "de": "Die 12 Schritte für Ausländer, die eine Immobilie in Brasilien kaufen, mit CPF, Vollmacht, Währungstausch, ITBI, Kaufurkunde und Eintragung."
+ },
+ "stand": "16.11.2026",
+ "blocks": [
+  {
+   "t": "note",
+   "k": "info",
+   "x": {
+    "pt": "Prazo de referência na compra à vista de imóvel usado: 60 a 90 dias.",
+    "en": "Reference duration for a cash purchase of a resale property: 60 to 90 days.",
+    "es": "Plazo de referencia en la compra al contado de una propiedad usada: 60 a 90 días.",
+    "de": "Richtwert beim Barkauf einer gebrauchten Immobilie: 60 bis 90 Tage."
+   }
+  },
+  {
+   "t": "widget",
+   "x": "countrypick"
+  },
+  {
+   "t": "steps",
+   "x": [
+    {
+     "h": {
+      "pt": "Escolher e visitar o imóvel",
+      "en": "Choose and view the property",
+      "es": "Elegir y visitar la propiedad",
+      "de": "Immobilie auswählen und besichtigen"
+     },
+     "p": {
+      "pt": "Presencialmente ou por vídeo. A corretora envia fotos, ficha do imóvel e informa quais documentos existem.",
+      "en": "In person or by video. The agent sends photos, the property sheet and says which documents exist.",
+      "es": "En persona o por video. La corredora inmobiliaria envía fotos y la ficha de la propiedad, e informa qué documentos existen.",
+      "de": "Vor Ort oder per Video. Die Maklerin schickt Fotos und das Datenblatt der Immobilie und sagt, welche Unterlagen es gibt."
+     },
+     "n": null
+    },
+    {
+     "h": {
+      "pt": "Obter o CPF",
+      "en": "Get a CPF tax number",
+      "es": "Obtener el CPF",
+      "de": "CPF besorgen"
+     },
+     "p": {
+      "pt": "Sem CPF não há compra. O CPF é o número de contribuinte brasileiro. Peça on-line na Receita Federal (o órgão de impostos), no consulado ou por um advogado com procuração.",
+      "en": "No CPF, no purchase. The CPF is the Brazilian taxpayer number. Apply online at the Receita Federal (the tax authority), at a consulate, or through a lawyer with a power of attorney.",
+      "es": "Sin CPF no hay compra. El CPF es el número de contribuyente brasileño. Se pide en línea en la Receita Federal (la agencia de impuestos), en el consulado o por medio de un abogado con poder notarial (procuração).",
+      "de": "Ohne CPF kein Kauf. Der CPF ist die brasilianische Steuernummer. Beantrage ihn online bei der Receita Federal (der Steuerbehörde), beim Konsulat oder über einen Anwalt mit Vollmacht."
+     },
+     "n": null
+    },
+    {
+     "h": {
+      "pt": "Procuração (se você não vier ao Brasil)",
+      "en": "Power of attorney (if you do not come to Brazil)",
+      "es": "Poder notarial, si no vienes a Brasil",
+      "de": "Vollmacht (wenn du nicht nach Brasilien kommst)"
+     },
+     "p": {
+      "pt": "A procuração dá poder a uma pessoa de confiança no Brasil para comprar por você. Ela deve ser pública (feita em cartório) e específica para esta compra. Em geral é o seu próprio advogado, nunca a corretora nem o advogado do vendedor. Um escritório indica estes passos. Primeiro, o tabelião (cartório) do seu país. Depois, a apostila, um carimbo que prova que o documento é autêntico. Depois, a tradução juramentada, que é uma tradução oficial. Por fim, o registro em cartório no Brasil.",
+      "en": "The power of attorney lets a trusted person in Brazil buy for you. It must be public (made at a notary office) and specific to this purchase. Usually this is your own lawyer, never the agent or the seller’s lawyer. One law firm gives these steps. First, a notary in your country. Then the apostille, a stamp that proves the document is authentic. Then the sworn translation, an official translation. Finally, registration at a cartório (notary office) in Brazil.",
+      "es": "El poder notarial permite que una persona de confianza en Brasil compre por ti. Debe ser público (hecho ante notario) y específico para esta compra. Normalmente es tu propio abogado, nunca la corredora inmobiliaria ni el abogado del vendedor. Un despacho jurídico indica estos pasos. Primero, un notario en tu país. Después, la apostilla, un sello que prueba que el documento es auténtico. Después, la traducción jurada, que es una traducción oficial. Por último, el registro en una notaría (cartório) de Brasil.",
+      "de": "Die Vollmacht gibt einer Vertrauensperson in Brasilien die Befugnis, für dich zu kaufen. Sie muss öffentlich sein (beim Notar gemacht) und genau für diesen Kauf gelten. Meist ist das dein eigener Anwalt, nie die Maklerin und nie der Anwalt des Verkäufers. Eine Kanzlei nennt diese Schritte. Zuerst der Notar (Tabelião) in deinem Land. Dann die Apostille, ein Stempel, der beweist, dass das Dokument echt ist. Dann die beeidigte Übersetzung (Tradução juramentada), eine amtliche Übersetzung. Zum Schluss die Eintragung beim Notariat in Brasilien."
+     },
+     "n": {
+      "pt": "Fontes divergem: uma cita o tabelião no exterior, outra o consulado. Confirme com um advogado.",
+      "en": "Sources differ: one names a notary abroad, another the consulate. Confirm with a lawyer.",
+      "es": "Las fuentes no coinciden: una menciona al notario en el exterior, otra al consulado. Confirma con un abogado.",
+      "de": "Die Quellen widersprechen sich: Eine nennt den Notar im Ausland, eine andere das Konsulat. Kläre das mit einem Anwalt."
+     }
+    },
+    {
+     "h": {
+      "pt": "Trazer o dinheiro pelo câmbio oficial",
+      "en": "Bring the money in through official exchange",
+      "es": "Traer el dinero por el cambio oficial",
+      "de": "Das Geld über den offiziellen Wechselkurs holen"
+     },
+     "p": {
+      "pt": "A remessa (envio de dinheiro do exterior) é feita por uma instituição autorizada, com contrato de câmbio (o documento da troca de moeda). Guarde os comprovantes de origem e de transferência. O registro no Banco Central permite depois enviar o dinheiro de volta ao exterior.",
+      "en": "The remessa (money transfer from abroad) goes through an authorised institution, with an exchange contract (the document for the currency exchange). Keep proof of origin and of the transfer. Registration with the Central Bank later allows the money to be sent back abroad.",
+      "es": "El envío (remessa) de dinero desde el exterior se hace por una institución autorizada, con contrato de cambio (el documento de la conversión de moneda). Guarda los comprobantes del origen y de la transferencia. El registro en el Banco Central permite después enviar el dinero de vuelta al exterior.",
+      "de": "Die Überweisung (Geld aus dem Ausland schicken) läuft über ein zugelassenes Institut, mit Wechselvertrag (Contrato de câmbio, das Dokument zum Geldtausch). Bewahre die Belege zur Herkunft und zur Überweisung auf. Die Registrierung bei der Zentralbank erlaubt es dir später, das Geld wieder ins Ausland zu schicken."
+     },
+     "n": {
+      "pt": "Não está claro, para imóveis, a partir de que valor e em que prazo o registro é exigido. Pergunte ao advogado ou à casa de câmbio.",
+      "en": "For property it is not clear from what amount and by when registration is required. Ask your lawyer or the exchange house.",
+      "es": "No está claro, para propiedades, desde qué monto y en qué plazo se exige el registro. Pregunta al abogado o a la casa de cambio.",
+      "de": "Bei Immobilien ist unklar, ab welchem Betrag und in welcher Frist die Registrierung verlangt wird. Frag den Anwalt oder die Wechselstube."
+     }
+    },
+    {
+     "h": {
+      "pt": "Proposta",
+      "en": "Offer",
+      "es": "Oferta",
+      "de": "Angebot"
+     },
+     "p": {
+      "pt": "Preço, forma de pagamento e prazos por escrito.",
+      "en": "Price, payment terms and deadlines in writing.",
+      "es": "Precio, forma de pago y plazos por escrito.",
+      "de": "Preis, Zahlungsart und Fristen schriftlich."
+     },
+     "n": null
+    },
+    {
+     "h": {
+      "pt": "Contrato preliminar (compromisso de compra e venda)",
+      "en": "Preliminary contract",
+      "es": "Contrato preliminar (compromisso de compra e venda)",
+      "de": "Vorvertrag (Compromisso de compra e venda)"
+     },
+     "p": {
+      "pt": "Define preço, sinal (entrada de garantia; frequentemente 10 a 20 %, algumas fontes citam até 30 %), multa e condições. O contrato pode ser averbado (anotado) na matrícula.",
+      "en": "Sets price, deposit (often 10 to 20 %, some sources say up to 30 %), penalty and conditions. The contract can be noted on the title record.",
+      "es": "Define precio, seña (frecuentemente 10 a 20 %, algunas fuentes citan hasta 30 %), multa y condiciones. El contrato se puede anotar en la matrícula.",
+      "de": "Legt Preis, Anzahlung (Sicherheitszahlung; oft 10 bis 20 %, einige Quellen nennen bis zu 30 %), Vertragsstrafe und Bedingungen fest. Der Vertrag kann im Grundbuchauszug (Matrícula) vermerkt werden."
+     },
+     "n": {
+      "pt": "Atenção: o sinal normalmente vai direto ao vendedor, sem conta de garantia. Pague só depois de conferir os documentos e de seu advogado ler o contrato.",
+      "en": "Careful: the deposit normally goes straight to the seller, with no escrow. Pay only after checking the documents and after your lawyer has read the contract.",
+      "es": "Atención: la seña normalmente va directo al vendedor, sin cuenta de garantía. Paga solo después de revisar los documentos y de que tu abogado lea el contrato.",
+      "de": "Achtung: Die Anzahlung geht normalerweise direkt an den Verkäufer, ohne Treuhandkonto. Zahle erst, nachdem du die Unterlagen geprüft hast und dein Anwalt den Vertrag gelesen hat."
+     }
+    },
+    {
+     "h": {
+      "pt": "Conferência dos documentos (due diligence)",
+      "en": "Document check (due diligence)",
+      "es": "Revisión de los documentos (due diligence)",
+      "de": "Prüfung der Unterlagen (Due Diligence)"
+     },
+     "p": {
+      "pt": "Peça a matrícula atualizada ao cartório. Confira os ônus (dívidas e restrições registradas no imóvel), as certidões do vendedor e se o IPTU e o condomínio estão quitados. Confira o Habite-se (licença da prefeitura que diz que a obra está pronta e pode ser usada) e o alvará (licença da prefeitura para construir). Confira a anuência do cônjuge ou dos herdeiros (a concordância deles com a venda). No litoral, veja se é terreno de marinha (área perto do mar que pertence à União).",
+      "en": "Request the up-to-date title record (matrícula) from the cartório. Check the encumbrances (debts and restrictions registered on the property), the seller’s certificates, and that IPTU and condominium are paid. Check the Habite-se (town hall certificate that the building is finished and can be used) and the alvará (town hall building permit). Check the consent of the spouse or heirs (their agreement to the sale). On the coast, check whether it is marinha land (land near the sea owned by the federal government).",
+      "es": "Pide la matrícula actualizada al Registro de la Propiedad (cartório). Revisa las cargas (deudas y restricciones registradas sobre la propiedad), los certificados del vendedor y que el IPTU y los gastos de condominio estén pagados. Revisa el Habite-se (certificado municipal de fin de obra) y el alvará (licencia municipal de construcción). Revisa el consentimiento del cónyuge o de los herederos (su acuerdo con la venta). En la costa, verifica si es terreno de marinha (terreno de la Unión cerca del mar).",
+      "de": "Fordere beim Grundbuchamt den aktuellen Grundbuchauszug an. Prüfe die Belastungen (im Grundbuch eingetragene Schulden und Einschränkungen), die Bescheinigungen des Verkäufers und ob Grundsteuer (IPTU) und Hausgeld bezahlt sind. Prüfe das Habite-se (Genehmigung der Stadt, die sagt, dass der Bau fertig ist und genutzt werden darf) und die Baugenehmigung (Alvará, Genehmigung der Stadt zum Bauen). Prüfe die Zustimmung des Ehepartners oder der Erben (ihr Einverständnis zum Verkauf). An der Küste schau, ob es Küstenland der Marine ist (Terreno de marinha, Küstenstreifen, der dem Staat gehört)."
+     },
+     "n": null
+    },
+    {
+     "h": {
+      "pt": "ITBI",
+      "en": "Transfer tax (ITBI)",
+      "es": "ITBI",
+      "de": "ITBI"
+     },
+     "p": {
+      "pt": "Imposto da prefeitura sobre a compra, pago antes da escritura. A alíquota (o percentual) depende do município.",
+      "en": "Municipal tax, paid before the deed. The rate depends on the municipality.",
+      "es": "Impuesto municipal sobre la compra, se paga antes de la escritura. La tasa depende del municipio.",
+      "de": "Steuer der Stadt auf den Kauf, die vor der Kaufurkunde bezahlt wird. Der Steuersatz (der Prozentwert) hängt von der Gemeinde ab."
+     },
+     "n": {
+      "pt": "Natal cobra 3 % (informação de imprensa). Para Tibau do Sul não há valor confirmado: consulte a prefeitura.",
+      "en": "Natal charges 3 % (press statement). For Tibau do Sul there is no confirmed figure: ask the town hall.",
+      "es": "Natal cobra 3 % (información de prensa). Para Tibau do Sul no hay un valor confirmado: consulta la municipalidad.",
+      "de": "Natal verlangt 3 % (Angabe aus der Presse). Für Tibau do Sul gibt es keinen bestätigten Wert: Frag bei der Stadtverwaltung nach."
+     }
+    },
+    {
+     "h": {
+      "pt": "Escritura no tabelionato",
+      "en": "Deed at the notary",
+      "es": "Escritura en la notaría",
+      "de": "Kaufurkunde beim Notariat"
+     },
+     "p": {
+      "pt": "A escritura é o documento oficial da venda, feito no cartório de notas. Ela é obrigatória para imóveis acima de 30 salários mínimos (referência, 17.11.2026). Aqui você paga o saldo, o valor que falta.",
+      "en": "The deed (escritura) is the official document of the sale, made at the notary office. It is mandatory for property above 30 minimum wages (reference, 17.11.2026). Here you pay the balance, the amount still due.",
+      "es": "La escritura es el documento oficial de la venta, otorgado en la notaría. Es obligatoria para propiedades de más de 30 salarios mínimos (referencia, 17.11.2026). Aquí pagas el saldo, el valor que falta.",
+      "de": "Die Kaufurkunde (Escritura) ist das offizielle Dokument des Verkaufs, erstellt im Notariat (Cartório de notas). Sie ist Pflicht für Immobilien über 30 Mindestlöhnen (Richtwert, 17.11.2026). Hier zahlst du den Restbetrag, also das, was noch fehlt."
+     },
+     "n": null
+    },
+    {
+     "h": {
+      "pt": "Registro no Registro de Imóveis",
+      "en": "Registration at the land registry",
+      "es": "Registro en el Registro de la Propiedad",
+      "de": "Eintragung im Grundbuchamt"
+     },
+     "p": {
+      "pt": "Só com o registro você se torna proprietário. O cartório analisa o título em poucos dias (referência de 5 a 10 dias) e pode pedir correções.",
+      "en": "Only registration makes you the owner. The registry reviews the deed within a few days (reference 5 to 10 days) and may ask for corrections.",
+      "es": "Solo con el registro te conviertes en propietario. El Registro de la Propiedad analiza la escritura en pocos días (referencia de 5 a 10 días) y puede pedir correcciones.",
+      "de": "Erst mit der Eintragung wirst du Eigentümer. Das Grundbuchamt prüft den Titel in wenigen Tagen (Richtwert 5 bis 10 Tage) und kann Korrekturen verlangen."
+     },
+     "n": null
+    },
+    {
+     "h": {
+      "pt": "Chaves e transferência de contas",
+      "en": "Keys and transfer of accounts",
+      "es": "Llaves y cambio de titular de las cuentas",
+      "de": "Schlüssel und Umschreibung der Verträge"
+     },
+     "p": {
+      "pt": "IPTU, condomínio, luz e água passam para o seu nome.",
+      "en": "IPTU, condominium, electricity and water move to your name.",
+      "es": "IPTU, gastos de condominio, luz y agua pasan a tu nombre.",
+      "de": "Grundsteuer (IPTU), Hausgeld, Strom und Wasser laufen dann auf deinen Namen."
+     },
+     "n": null
+    },
+    {
+     "h": {
+      "pt": "Depois da compra",
+      "en": "After the purchase",
+      "es": "Después de la compra",
+      "de": "Nach dem Kauf"
+     },
+     "p": {
+      "pt": "Seguro, administração à distância, locação por temporada (o condomínio permite?), impostos sobre aluguel e sobre uma venda futura.",
+      "en": "Insurance, remote management, short-term letting (does the condominium allow it?), tax on rent and on a future sale.",
+      "es": "Seguro, administración a distancia, alquiler por temporada (¿el condominio lo permite?), impuestos sobre el alquiler y sobre una venta futura.",
+      "de": "Versicherung, Verwaltung aus der Ferne, Ferienvermietung (erlaubt das die Eigentümergemeinschaft?), Steuern auf Mieteinnahmen und auf einen späteren Verkauf."
+     },
+     "n": null
+    }
+   ]
+  },
+  {
+   "t": "check",
+   "h": {
+    "pt": "Lista de documentos",
+    "en": "Document checklist",
+    "es": "Lista de documentos",
+    "de": "Liste der Unterlagen"
+   },
+   "x": [
+    {
+     "pt": "Passaporte",
+     "en": "Passport",
+     "es": "Pasaporte",
+     "de": "Reisepass"
+    },
+    {
+     "pt": "CPF",
+     "en": "CPF tax number",
+     "es": "CPF",
+     "de": "CPF"
+    },
+    {
+     "pt": "Certidão de casamento ou nascimento, se pedida (apostila e tradução juramentada)",
+     "en": "Marriage or birth certificate, if requested (apostille and sworn translation)",
+     "es": "Certificado de matrimonio o de nacimiento, si lo piden (apostilla y traducción jurada)",
+     "de": "Heirats- oder Geburtsurkunde, falls verlangt (Apostille und beeidigte Übersetzung)"
+    },
+    {
+     "pt": "Procuração (apostila, tradução, registro em cartório)",
+     "en": "Power of attorney (apostille, translation, cartório registration)",
+     "es": "Poder notarial (apostilla, traducción, registro en notaría)",
+     "de": "Vollmacht (Apostille, Übersetzung, Eintragung beim Notariat)"
+    },
+    {
+     "pt": "Comprovante da origem do dinheiro e da remessa (contrato de câmbio)",
+     "en": "Proof of origin of the money and of the transfer (exchange contract)",
+     "es": "Comprobante del origen del dinero y del envío (contrato de cambio)",
+     "de": "Nachweis der Herkunft des Geldes und der Überweisung (Wechselvertrag)"
+    },
+    {
+     "pt": "Matrícula atualizada do imóvel",
+     "en": "Up-to-date title record of the property",
+     "es": "Matrícula actualizada de la propiedad",
+     "de": "Aktueller Grundbuchauszug der Immobilie"
+    },
+    {
+     "pt": "Certidões do vendedor",
+     "en": "Seller’s certificates",
+     "es": "Certificados del vendedor",
+     "de": "Bescheinigungen des Verkäufers"
+    },
+    {
+     "pt": "IPTU e condomínio quitados",
+     "en": "IPTU and condominium paid",
+     "es": "IPTU y gastos de condominio pagados",
+     "de": "Grundsteuer (IPTU) und Hausgeld bezahlt"
+    },
+    {
+     "pt": "Habite-se e alvará (se houver construção)",
+     "en": "Habite-se and building permit (if built)",
+     "es": "Habite-se y licencia de obra (si hay construcción)",
+     "de": "Habite-se und Baugenehmigung (falls gebaut wurde)"
+    }
+   ]
+  },
+  {
+   "t": "wa",
+   "m": {
+    "pt": "Olá! Quero comprar um imóvel em Pipa morando no exterior e preciso de ajuda com as etapas.",
+    "en": "Hello! I want to buy a property in Pipa from abroad and need help with the steps.",
+    "es": "¡Hola! Quiero comprar una propiedad en Pipa viviendo en el exterior y necesito ayuda con los pasos.",
+    "de": "Hallo! Ich möchte in Pipa eine Immobilie kaufen und wohne im Ausland. Ich brauche Hilfe bei den Schritten."
+   },
+   "b": {
+    "pt": "Falar com a corretora",
+    "en": "Talk to the agent",
+    "es": "Hablar con la corredora",
+    "de": "Mit der Maklerin sprechen"
+   }
+  }
+ ],
+ "sources": [
+  [
+   "ZS Associados · Buying Property in Brazil as a Foreigner (2026)",
+   "https://zsassociados.com/services/buying-property-brazil/"
+  ],
+  [
+   "ZS Associados · Bringing Money Into and Out of Brazil (12.06.2026)",
+   "https://zsassociados.com/blog/bringing-money-in-out-brazil-central-bank/"
+  ],
+  [
+   "Santander Brasil · Sou estrangeiro: posso comprar imóvel no Brasil? (13.05.2024)",
+   "https://www.santander.com.br/blog/para-voce/estrangeiro-comprar-imovel-no-brasil/"
+  ]
+ ],
+ "icon": "globe"
+}

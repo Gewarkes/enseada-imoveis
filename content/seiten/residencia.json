@@ -1,0 +1,132 @@
+{
+ "slug": "residencia",
+ "nav": {
+  "pt": "Residência",
+  "en": "Residency",
+  "es": "Residencia",
+  "de": "Aufenthaltserlaubnis"
+ },
+ "h1": {
+  "pt": "Residência no Brasil por compra de imóvel",
+  "en": "Residency in Brazil through a property purchase",
+  "es": "Residencia en Brasil por compra de una propiedad",
+  "de": "Aufenthaltserlaubnis in Brasilien durch Immobilienkauf"
+ },
+ "lead": {
+  "pt": "Informação neutra. A compra de um imóvel pode permitir pedir autorização de residência, mas não a concede automaticamente.",
+  "en": "Neutral information. Buying property can allow you to apply for a residence permit, but it does not grant one automatically.",
+  "es": "Información neutral. Comprar una propiedad puede permitir pedir un permiso de residencia, pero no lo otorga automáticamente.",
+  "de": "Neutrale Information. Mit dem Kauf einer Immobilie kannst du eine Aufenthaltserlaubnis beantragen, du bekommst sie aber nicht automatisch."
+ },
+ "meta": {
+  "pt": "Autorização de residência para investidores em imóveis no Brasil: valores mínimos e condições.",
+  "en": "Residence permit for property investors in Brazil: minimum amounts and conditions.",
+  "es": "Permiso de residencia para inversores en propiedades en Brasil: valores mínimos y condiciones.",
+  "de": "Aufenthaltserlaubnis für Immobilieninvestoren in Brasilien: Mindestwerte und Bedingungen."
+ },
+ "stand": "16.11.2026",
+ "blocks": [
+  {
+   "t": "table",
+   "head": [
+    {
+     "pt": "Região",
+     "en": "Region",
+     "es": "Región",
+     "de": "Region"
+    },
+    {
+     "pt": "Valor mínimo (referência)",
+     "en": "Minimum amount (reference)",
+     "es": "Valor mínimo (referencia)",
+     "de": "Mindestwert (Richtwert)"
+    }
+   ],
+   "rows": [
+    [
+     {
+      "pt": "Brasil em geral",
+      "en": "Brazil in general",
+      "es": "Brasil en general",
+      "de": "Brasilien allgemein"
+     },
+     "R$ 1.000.000"
+    ],
+    [
+     {
+      "pt": "Norte e Nordeste (inclui o Rio Grande do Norte e Pipa)",
+      "en": "North and Northeast (includes Rio Grande do Norte and Pipa)",
+      "es": "Norte y Nordeste de Brasil (incluye Rio Grande do Norte y Pipa)",
+      "de": "Norden und Nordosten (mit Rio Grande do Norte und Pipa)"
+     },
+     "R$ 700.000"
+    ]
+   ]
+  },
+  {
+   "t": "ul",
+   "x": [
+    {
+     "pt": "Imóvel urbano, com recursos vindos do exterior.",
+     "en": "Urban property, funded from abroad.",
+     "es": "Propiedad urbana, con fondos que vienen del exterior.",
+     "de": "Immobilie in der Stadt, mit Geld aus dem Ausland."
+    },
+    {
+     "pt": "Base: Resolução Normativa 36/2018, alterada pela RN 46/2022.",
+     "en": "Basis: Normative Resolution 36/2018, amended by RN 46/2022.",
+     "es": "Base: Resolução Normativa 36/2018, modificada por la RN 46/2022.",
+     "de": "Grundlage: Resolução Normativa 36/2018, geändert durch RN 46/2022."
+    },
+    {
+     "pt": "Pipa fica no Nordeste: vale o valor menor.",
+     "en": "Pipa is in the Northeast: the lower amount applies.",
+     "es": "Pipa está en el Nordeste de Brasil: vale el valor menor.",
+     "de": "Pipa liegt im Nordosten: Es gilt der niedrigere Wert."
+    }
+   ]
+  },
+  {
+   "t": "note",
+   "k": "unclear",
+   "x": {
+    "pt": "As fontes divergem em pontos como duração inicial (2 ou 4 anos) e exigência de permanência (14 ou 30 dias). Confirme com um advogado de imigração antes de decidir.",
+    "en": "Sources differ on points such as initial duration (2 or 4 years) and required stay (14 or 30 days). Confirm with an immigration lawyer before deciding.",
+    "es": "Las fuentes no coinciden en puntos como la duración inicial (2 o 4 años) y la exigencia de permanencia (14 o 30 días). Confírmalo con un abogado de inmigración antes de decidir.",
+    "de": "Die Quellen widersprechen sich bei Punkten wie der Anfangsdauer (2 oder 4 Jahre) und der Pflicht zum Aufenthalt (14 oder 30 Tage). Lass dich vor der Entscheidung von einem Einwanderungsanwalt beraten."
+   }
+  },
+  {
+   "t": "note",
+   "k": "info",
+   "x": {
+    "pt": "Informação geral, sem garantia de aprovação. Imóveis abaixo desses valores não dão direito a este pedido.",
+    "en": "General information, no guarantee of approval. Properties below these amounts do not qualify.",
+    "es": "Información general, sin garantía de aprobación. Las propiedades por debajo de estos valores no dan derecho a este pedido.",
+    "de": "Allgemeine Information, ohne Garantie auf Genehmigung. Immobilien unter diesen Werten berechtigen nicht zu diesem Antrag."
+   }
+  },
+  {
+   "t": "wa",
+   "m": {
+    "pt": "Olá! Tenho interesse em comprar um imóvel e gostaria de entender a residência.",
+    "en": "Hello! I am interested in buying a property and would like to understand residency.",
+    "es": "¡Hola! Me interesa comprar una propiedad y me gustaría entender lo de la residencia.",
+    "de": "Hallo! Ich interessiere mich für den Kauf einer Immobilie und möchte die Aufenthaltserlaubnis verstehen."
+   },
+   "b": {
+    "pt": "Falar com a corretora",
+    "en": "Talk to the agent",
+    "es": "Hablar con la corredora",
+    "de": "Mit der Maklerin sprechen"
+   }
+  }
+ ],
+ "sources": [
+  [
+   "Ministério da Justiça · Resolução Normativa 36/2018 (RN 46/2022)",
+   "https://www.gov.br/mj/pt-br"
+  ]
+ ],
+ "icon": "user"
+}

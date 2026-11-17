@@ -1,0 +1,167 @@
+{
+ "slug": "traducao",
+ "nav": {
+  "pt": "Tradução juramentada",
+  "en": "Sworn translation",
+  "es": "Traducción jurada",
+  "de": "Beglaubigte Übersetzung"
+ },
+ "h1": {
+  "pt": "Seus documentos em português, prontos para o cartório",
+  "en": "Your documents in Portuguese, ready for the notary",
+  "es": "Tus documentos en portugués, listos para la notaría",
+  "de": "Deine Dokumente auf Portugiesisch, fertig für das Notariat (Cartório)"
+ },
+ "lead": {
+  "pt": "Serviço de parceiro (Traduzme) para compradores estrangeiros. Preços conforme o site do prestador, em 16.11.2026.",
+  "en": "Partner service (Traduzme) for foreign buyers. Prices as shown on the provider’s site on 16.11.2026.",
+  "es": "Servicio de un socio (Traduzme) para compradores extranjeros. Precios según el sitio del proveedor, al 16.11.2026.",
+  "de": "Service eines Partners (Traduzme) für ausländische Käufer. Preise laut Website des Anbieters, Stand 16.11.2026."
+ },
+ "meta": {
+  "pt": "Tradução juramentada de documentos para compra de imóvel no Brasil.",
+  "en": "Sworn translation of documents for buying property in Brazil.",
+  "es": "Traducción jurada de documentos para comprar una propiedad en Brasil.",
+  "de": "Beglaubigte Übersetzung von Dokumenten für den Immobilienkauf in Brasilien."
+ },
+ "stand": "16.11.2026",
+ "blocks": [
+  {
+   "t": "h2",
+   "x": {
+    "pt": "Quais documentos",
+    "en": "Which documents",
+    "es": "Qué documentos",
+    "de": "Welche Dokumente"
+   }
+  },
+  {
+   "t": "ul",
+   "x": [
+    {
+     "pt": "Passaporte e certidões de nascimento ou casamento",
+     "en": "Passport and birth or marriage certificates",
+     "es": "Pasaporte y certificados de nacimiento o de matrimonio",
+     "de": "Reisepass und Geburts- oder Heiratsurkunden"
+    },
+    {
+     "pt": "Procuração",
+     "en": "Power of attorney",
+     "es": "Poder notarial (procuração)",
+     "de": "Vollmacht (Procuração)"
+    },
+    {
+     "pt": "Comprovantes de renda ou de origem do dinheiro, quando pedidos",
+     "en": "Proof of income or origin of funds, when requested",
+     "es": "Comprobantes de ingresos o del origen del dinero, cuando los piden",
+     "de": "Einkommensnachweise oder Nachweise über die Herkunft des Geldes, wenn verlangt"
+    }
+   ]
+  },
+  {
+   "t": "h2",
+   "x": {
+    "pt": "Preços",
+    "en": "Prices",
+    "es": "Precios",
+    "de": "Preise"
+   }
+  },
+  {
+   "t": "table",
+   "head": [
+    {
+     "pt": "Item",
+     "en": "Item",
+     "es": "Ítem",
+     "de": "Posten"
+    },
+    {
+     "pt": "Preço (R$)",
+     "en": "Price (R$)",
+     "es": "Precio (R$)",
+     "de": "Preis (R$)"
+    }
+   ],
+   "rows": [
+    [
+     {
+      "pt": "Documento simples",
+      "en": "Simple document",
+      "es": "Documento simple",
+      "de": "Einfaches Dokument"
+     },
+     "119"
+    ],
+    [
+     {
+      "pt": "Documento intermediário",
+      "en": "Intermediate document",
+      "es": "Documento intermedio",
+      "de": "Mittleres Dokument"
+     },
+     "129"
+    ],
+    [
+     {
+      "pt": "Documento completo",
+      "en": "Full document",
+      "es": "Documento completo",
+      "de": "Umfangreiches Dokument"
+     },
+     "149"
+    ]
+   ]
+  },
+  {
+   "t": "note",
+   "k": "info",
+   "x": {
+    "pt": "Pagamento somente por Pix. Preços podem mudar: confirme com o prestador.",
+    "en": "Payment by Pix only. Prices may change: confirm with the provider.",
+    "es": "Pago solo por Pix (sistema de pago instantáneo de Brasil). Los precios pueden cambiar: confirma con el proveedor.",
+    "de": "Zahlung nur per Pix. Preise können sich ändern: Frag beim Anbieter nach."
+   }
+  },
+  {
+   "t": "h2",
+   "x": {
+    "pt": "Apostila: o que é?",
+    "en": "Apostille: what is it?",
+    "es": "Apostilla: ¿qué es?",
+    "de": "Apostille: Was ist das?"
+   }
+  },
+  {
+   "t": "p",
+   "x": {
+    "pt": "A apostila é um carimbo do país de origem que confirma que um documento é autêntico. Muitos países aceitam a apostila da Convenção de Haia no lugar da legalização no consulado. Depois, o documento é traduzido por tradutor juramentado.",
+    "en": "An apostille is a stamp from the country of origin confirming a document is authentic. Many countries accept the Hague Convention apostille instead of consular legalisation. The document is then translated by a sworn translator.",
+    "es": "La apostilla es un sello del país de origen que confirma que un documento es auténtico. Muchos países aceptan la apostilla del Convenio de La Haya en lugar de la legalización en el consulado. Después, un traductor jurado traduce el documento.",
+    "de": "Die Apostille ist ein Stempel des Herkunftslands, der bestätigt, dass ein Dokument echt ist. Viele Länder akzeptieren die Apostille nach dem Haager Übereinkommen statt der Legalisierung beim Konsulat. Danach wird das Dokument von einem beeidigten Übersetzer übersetzt."
+   }
+  },
+  {
+   "t": "wa",
+   "m": {
+    "pt": "Olá! Preciso de tradução juramentada para a compra de um imóvel.",
+    "en": "Hello! I need a sworn translation for buying a property.",
+    "es": "¡Hola! Necesito traducción jurada para comprar una propiedad.",
+    "de": "Hallo! Ich brauche eine beglaubigte Übersetzung für den Kauf einer Immobilie."
+   },
+   "b": {
+    "pt": "Pedir tradução",
+    "en": "Request translation",
+    "es": "Pedir traducción",
+    "de": "Übersetzung anfragen"
+   }
+  }
+ ],
+ "sources": [
+  [
+   "Traduzme · Preise laut Anbieterseite (16.11.2026)",
+   "https://traduzme.com.br/"
+  ]
+ ],
+ "icon": "doc"
+}

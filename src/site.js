@@ -1,11 +1,12 @@
 /* Enseada – ein kleines Skript für: Menü, Währung, Suche, Filter, Fotos, Rechner, Karte, Formulare. Keine Bibliothek außer der Karte (Leaflet, erst bei Bedarf geladen). */
 (function () {
+  try { if ('scrollRestoration' in history) history.scrollRestoration = 'manual'; if (!location.hash) scrollTo(0, 0); addEventListener('pageshow', function () { if (!location.hash) scrollTo(0, 0); }); } catch (e) {}
   'use strict';
   var S = window.SITE || {}, T = S.t || {};
   var $ = function (s, r) { return (r || document).querySelector(s); };
   var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
   var LS = { get: function (k) { try { return localStorage.getItem(k); } catch (e) { return null; } }, set: function (k, v) { try { localStorage.setItem(k, v); } catch (e) {} } };
-  var LOC = { pt: 'pt-BR', en: 'en-US', de: 'de-DE' }[S.lang] || 'pt-BR';
+  var LOC = { pt: 'pt-BR', en: 'en-US', es: 'es-AR', de: 'de-DE' }[S.lang] || 'pt-BR';
   var nf = function (n, d) { return Number(n).toLocaleString(LOC, { minimumFractionDigits: d || 0, maximumFractionDigits: d || 0 }); };
   if (!LS.get('lang')) LS.set('lang', S.lang);
   $$('[data-lang]').forEach(function (a) { a.addEventListener('click', function () { LS.set('lang', a.dataset.lang); }); });
@@ -134,7 +135,11 @@
       var map = L.map(el, { scrollWheelZoom: false, dragging: !touch, zoomControl: true, attributionControl: true });
       map.attributionControl.setPrefix(false);
       el._map = map;
-      L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 18, attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>' }).addTo(map);
+      var BB = L.latLngBounds([-6.3371, -35.1343], [-6.1187, -34.9805]);
+      var WB = L.latLngBounds([-6.4463, -35.332], [-6.0532, -34.8926]);
+      L.imageOverlay(S.base + 'assets/map-pipa-wide.jpg', WB).addTo(map);
+      L.imageOverlay(S.base + 'assets/map-pipa.jpg', BB, { attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>' }).addTo(map);
+      map.setMaxBounds(WB); map.options.maxZoom = 16; el._fitMin = function () { map.invalidateSize(); map.setMinZoom(Math.max(9, map.getBoundsZoom(WB, true))); };
       map.on('click', function () { map.scrollWheelZoom.enable(); map.dragging.enable(); });
       var zc = function () { el.classList.toggle('zoomed', map.getZoom() >= 14); }; map.on('zoomend', zc);
       var kind = el.dataset.map;
@@ -166,7 +171,7 @@
         if (kind === 'area') L.circle(ll, { radius: 320, color: '#0F3B37', weight: 2, fillColor: '#0F3B37', fillOpacity: 0.16 }).addTo(map);
         else L.marker(ll, { icon: L.divIcon({ className: '', html: '<div class="pin on">' + T.office + '</div>', iconSize: [0, 0] }) }).addTo(map);
       }
-      setTimeout(function () { map.invalidateSize(); if (el._show) el._show(el._want || null); }, 60);
+      setTimeout(function () { map.invalidateSize(); if (el._fitMin) el._fitMin(); if (el._show) el._show(el._want || null); }, 60);
       return el;
     }).catch(function () { var ph = $('.map-ph', el); if (ph) ph.textContent = '–'; });
     return el._ready;
@@ -182,14 +187,25 @@
   if (fbar) {
     var grid = $('[data-grid]'), cards = $$('[data-card]', grid), res = $('[data-results]'), lmap = $('[data-map]', res);
     var sels = {}; $$('[data-f]', fbar).forEach(function (s) { sels[s.dataset.f] = s; });
+    var xs = $$('[data-x]', fbar);
+    var xq = (new URLSearchParams(location.search).get('x') || '').split(',');
+    xs.forEach(function (x) { x.checked = xq.indexOf(x.dataset.x) > -1; });
     var q = new URLSearchParams(location.search);
     Object.keys(sels).forEach(function (k) { var v = q.get(k); if (v && $('option[value="' + v + '"]', sels[k])) sels[k].value = v; });
-    var mapOn = q.get('mapa') === '1' || (q.get('mapa') !== '0' && innerWidth >= 1100);
+    var mapOn = q.get('mapa') === '1' || false;
     var apply = function () {
       var f = {}; Object.keys(sels).forEach(function (k) { f[k] = sels[k].value; sels[k].parentNode.classList.toggle('on', !!sels[k].value && k !== 'sort'); });
       var shown = [];
       cards.forEach(function (c) {
-        var d = c.dataset, ok = (!f.loc || d.loc === f.loc) && (!f.type || d.type === f.type) && (!f.beds || +d.beds >= +f.beds) && (!f.max || +d.price <= +f.max);
+        var d = c.dataset, fs = ' ' + (d.feats || '') + ' ';
+        var ok = (!f.loc || d.loc === f.loc) && (!f.type || d.type === f.type) && (!f.beds || +d.beds >= +f.beds) && (!f.max || +d.price <= +f.max)
+          && (!f.baths || +d.baths >= +f.baths) && (!f.area || +d.area >= +f.area) && (!f.lot || +d.lot >= +f.lot) && (!f.beachd || (+d.beach > 0 && +d.beach <= +f.beachd));
+        xs.forEach(function (x) {
+          if (!x.checked) return; var k = x.dataset.x;
+          if (k === 'seaview' || k === 'pool' || k === 'furnished') ok = ok && fs.indexOf(' ' + k + ' ') > -1;
+          else if (k === 'parking') ok = ok && +d.parking > 0;
+          else ok = ok && d[k] === '1';
+        });
         c.hidden = !ok; if (ok) shown.push(c);
       });
       var key = { 'new': function (a, b) { return b.dataset.date.localeCompare(a.dataset.date); }, asc: function (a, b) { return a.dataset.price - b.dataset.price; }, desc: function (a, b) { return b.dataset.price - a.dataset.price; } }[f.sort] || function (a, b) { return a.dataset.order - b.dataset.order; };
@@ -197,9 +213,12 @@
       $('[data-n]').textContent = shown.length;
       var w = $('[data-nword]'); w.textContent = shown.length === 1 ? w.dataset.one : w.dataset.many;
       $('[data-empty]').classList.toggle('on', !shown.length);
-      var any = !!(f.loc || f.type || f.beds || f.max);
+      var nx = xs.filter(function (x) { return x.checked; }).length, nm = (f.baths ? 1 : 0) + (f.beachd ? 1 : 0) + (f.area ? 1 : 0) + (f.lot ? 1 : 0) + nx;
+      var any = !!(f.loc || f.type || f.beds || f.max || nm);
+      var mn = $('[data-more-n]'); if (mn) { mn.hidden = !nm; mn.textContent = nm; }
       $$('[data-reset]').forEach(function (b) { if (b.classList.contains('link')) b.hidden = !any; });
       var p = new URLSearchParams(); Object.keys(f).forEach(function (k) { if (f[k]) p.set(k, f[k]); });
+      if (nx) p.set('x', xs.filter(function (x) { return x.checked; }).map(function (x) { return x.dataset.x; }).join(','));
       if (mapOn && innerWidth < 1100) p.set('mapa', '1');
       var s = p.toString(); history.replaceState(null, '', location.pathname + (s ? '?' + s : ''));
       var keep = new URLSearchParams(); ['loc', 'type', 'beds'].forEach(function (k) { if (f[k]) keep.set(k, f[k]); });
@@ -210,12 +229,15 @@
     };
     var setMap = function (on) {
       mapOn = on; res.classList.toggle('map-on', on);
-      $('[data-maptoggle]').setAttribute('aria-pressed', String(on));
+      $$('[data-view]').forEach(function (b) { b.setAttribute('aria-pressed', String((b.dataset.view === 'map') === on)); });
       if (on) initMap(lmap).then(function () { if (lmap._map) { lmap._map.invalidateSize(); lmap._show(lmap._want || null); } });
     };
     Object.keys(sels).forEach(function (k) { sels[k].addEventListener('change', apply); });
-    $$('[data-reset]').forEach(function (b) { b.addEventListener('click', function () { Object.keys(sels).forEach(function (k) { if (k !== 'sort') sels[k].value = ''; }); apply(); }); });
-    $('[data-maptoggle]').addEventListener('click', function () { setMap(!mapOn); apply(); if (mapOn && innerWidth < 1100) res.scrollIntoView({ block: 'start' }); });
+    xs.forEach(function (x) { x.addEventListener('change', apply); });
+    var mb = $('[data-morebtn]'), mp = $('[data-more]');
+    if (mb) { var openMore = function (o) { mp.hidden = !o; mb.setAttribute('aria-expanded', String(o)); var tt = $('[data-more-t]', mb); tt.textContent = o ? tt.dataset.b : tt.dataset.a; }; mb.addEventListener('click', function () { openMore(mp.hidden); }); if (xs.some(function (x) { return x.checked; }) || q.get('baths') || q.get('beachd')) openMore(true); }
+    $$('[data-reset]').forEach(function (b) { b.addEventListener('click', function () { Object.keys(sels).forEach(function (k) { if (k !== 'sort') sels[k].value = ''; }); xs.forEach(function (x) { x.checked = false; }); apply(); }); });
+    $$('[data-view]').forEach(function (b) { b.addEventListener('click', function () { setMap(b.dataset.view === 'map'); apply(); if (mapOn && innerWidth < 1100) res.scrollIntoView({ block: 'start' }); }); });
     apply(); setMap(mapOn);
     cards.forEach(function (c) {
       c.addEventListener('mouseenter', function () { var d = $('[data-pin="' + c.dataset.slug + '"]', lmap); if (d) d.classList.add('on'); });

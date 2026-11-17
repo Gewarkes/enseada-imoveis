@@ -1,7 +1,7 @@
 {# Bausteine, die auf mehreren Seiten vorkommen #}
 
 {% macro card(l, swipe=false, order=0, sizes='(min-width:1000px) 380px, (min-width:640px) 50vw, 100vw') %}
-<article class="card{% if l.status == 'reservado' %} is-res{% endif %}" data-card data-cat="{{ l.cat }}" data-loc="{{ l.locslug }}" data-type="{{ l.type }}" data-price="{{ l.price | int }}" data-beds="{{ l.beds }}" data-date="{{ l.date }}" data-order="{{ order }}" data-slug="{{ l.slug }}">
+<article class="card{% if l.status == 'reservado' %} is-res{% endif %}" data-card data-cat="{{ l.cat }}" data-loc="{{ l.locslug }}" data-type="{{ l.type }}" data-price="{{ l.price | int }}" data-beds="{{ l.beds }}" data-area="{{ l.area | int }}" data-lot="{{ l.lot | int }}" data-date="{{ l.date }}" data-order="{{ order }}" data-slug="{{ l.slug }}" data-baths="{{ l.baths }}" data-beach="{{ l.beach }}" data-parking="{{ l.parking }}" data-feats="{{ l.feats | join(' ') }}" data-new="{{ 1 if l.status == 'novo' else 0 }}" data-red="{{ 1 if l.priceBefore else 0 }}" data-docs="{{ 1 if l.checks.matricula and l.checks.debts else 0 }}" data-res="{{ 1 if l.cat == 'venda' and l.price >= taxes.residence.northeast else 0 }}" data-temp="{{ 1 if l.temporada == 'sim' else 0 }}" data-name="{{ l.name }}">
   <div class="card-media">
     <div class="card-photos"{% if swipe %} data-swipe{% endif %}>
       {% for k in (l.imgs[:5] if swipe else l.imgs[:1]) %}
@@ -9,10 +9,11 @@
       {% endfor %}
     </div>
     <div class="badges">
-      {% if l.status == 'novo' %}<span class="badge badge-new">{{ t.stNew }}</span>{% elif l.status == 'reservado' %}<span class="badge badge-res">{{ t.stRes }}</span>{% endif %}
+      {% if l.priceBefore %}<span class="badge badge-red">{{ t.stRed }}</span>{% endif %}{% if l.status == 'novo' %}<span class="badge badge-new">{{ t.stNew }}</span>{% elif l.status == 'reservado' %}<span class="badge badge-res">{{ t.stRes }}</span>{% endif %}
       <span class="badge">{{ t.dealRent if l.deal == 'aluguel' else t.dealSale }}</span>
     </div>
     {% if l.imgs | length > 1 %}
+    <button class="card-fav" type="button" data-fav data-slug="{{ l.slug }}" data-name="{{ l.name }}" data-url="{{ url('imovel-' + l.slug) }}" data-price="{{ l.price | int }}" aria-pressed="false" aria-label="{{ t.mlAdd }}">{{ icon('heart') }}</button>
     <span class="card-count">{{ icon('camera') }}<span data-count>{{ l.imgs | length }}</span></span>
     {% if swipe %}
     <button class="card-arrow prev" type="button" data-step="-1" aria-label="{{ t.prev }}">{{ icon('arrow') }}</button>
@@ -24,12 +25,31 @@
     <span class="card-loc">{{ icon('pin') }}{{ l.loc }}</span>
     <h3 class="card-title"><a href="{{ url('imovel-' + l.slug) }}">{{ l.name }}</a></h3>
     <p class="card-sub">{{ L(l.highlights)[:2] | join(" · ") if L(l.highlights) else L(l.title) }}</p>
-    <p class="card-price">{{ price(l) }}</p>
+    <p class="card-price">{{ price(l) }}{% if l.priceBefore %} <s class="was">{{ money(l.priceBefore) }}</s>{% endif %}</p>
     <ul class="facts">
       {% for ic, n, w in facts(l) %}<li>{{ icon(ic) }}<span><b>{{ n }}</b> {{ w }}</span></li>{% endfor %}
     </ul>
   </div>
 </article>
+{% endmacro %}
+
+
+{% macro wishbox() %}
+<section class="sec sec-soft wish-sec"><div class="wrap"><div class="wish" data-wish>
+  <h2>{{ t.wH }}</h2><p>{{ t.wP }}</p>
+  <div class="wg"><b>{{ t.wDeal }}</b><div class="chips">
+    <button type="button" class="wc" data-wg="deal" data-v="buy" aria-pressed="true">{{ t.wBuy }}</button><button type="button" class="wc" data-wg="deal" data-v="rent" aria-pressed="false">{{ t.wRent }}</button></div></div>
+  <div class="wg"><b>{{ t.wWhere }}</b><div class="chips">
+    <button type="button" class="wc" data-wg="where" data-v="" aria-pressed="true">{{ t.wAny }}</button>{% for x in locs %}<button type="button" class="wc" data-wg="where" data-v="{{ x.name }}" aria-pressed="false">{{ x.name }}</button>{% endfor %}</div></div>
+  <div class="wg"><b>{{ t.wPrice }}</b>
+    <div class="chips" data-wp="buy">{% for v in [500000, 1000000, 2000000, 5000000] %}<button type="button" class="wc" data-wg="price" data-v="{{ v }}" aria-pressed="false">{{ money(v) }}</button>{% endfor %}</div>
+    <div class="chips" data-wp="rent" hidden>{% for v in [3000, 5000, 10000] %}<button type="button" class="wc" data-wg="price" data-v="{{ v }}" aria-pressed="false">{{ money(v) }}</button>{% endfor %}</div></div>
+  <div class="wg"><b>{{ t.wBeds }}</b><div class="chips">{% for n in [1, 2, 3, 4] %}<button type="button" class="wc" data-wg="beds" data-v="{{ n }}" aria-pressed="false">{{ n }}+</button>{% endfor %}</div></div>
+  <label class="wg wf"><b>{{ t.wFrom }}</b><select class="inp" data-wish-from><option value="">–</option></select></label>
+  <a class="btn btn-wa btn-block btn-lg" data-wish-wa href="#" target="_blank" rel="noopener">{{ wa_icon() }} {{ t.wSend }}</a>
+  <div class="chan"><div><b>{{ t.chH }}</b><span>{{ t.chP }}</span></div>
+    {% if site.channelUrl %}<a class="btn btn-line" href="{{ site.channelUrl }}" target="_blank" rel="noopener">{{ wa_icon() }} {{ t.chBtn }}</a>{% else %}<span class="btn btn-line is-off" aria-disabled="true">{{ t.chSoon }}</span>{% endif %}</div>
+</div></div></section>
 {% endmacro %}
 
 {% macro post(p, sizes='(min-width:1000px) 380px, (min-width:700px) 50vw, 100vw') %}
@@ -80,7 +100,6 @@
       <div><small>{{ t.kCosts }}</small><b data-o="costs">–</b></div>
     </div>
     <p class="calc-note">{{ t.kNote }}</p>
-    <a class="btn btn-light btn-block" href="{{ wa(t.waFinance) }}" target="_blank" rel="noopener">{{ wa_icon() }} {{ t.kAsk }}</a>
   </div>
 </div>
 {% endmacro %}
@@ -113,12 +132,22 @@
 </div>
 {% endmacro %}
 
+{% macro answers() %}
+<aside class="ans" aria-labelledby="ans-h">
+  <div class="ans-t"><b id="ans-h">{{ t.ansH }}</b><span>{{ t.ansP }}</span></div>
+  <div class="ans-l">
+    {% for r, k in [('calculadoras','ansL1'),('comprar-do-exterior','ansL2'),('comprar-do-exterior','ansL3'),('residencia','ansL4'),('golpes','ansL5'),('comprar','ansL6')] %}<a href="{{ url(r) }}">{{ t[k] }}</a>{% endfor %}
+    <a href="{{ url('home') }}#faq">{{ t.ansL7 }}</a>
+  </div>
+</aside>
+{% endmacro %}
 {% macro ctaband(h, p, imgkey) %}
 <section class="sec">
   <div class="wrap">
     <div class="cta">
       {{ pic(imgkey, '100vw', '', 'cta-bg') }}
       <div><h2>{{ h }}</h2><p>{{ p }}</p></div>
+      {{ answers() }}
       <div class="btn-row">
         <a class="btn btn-wa" href="{{ wa(t.waHello) }}" target="_blank" rel="noopener">{{ wa_icon() }} {{ t.waWrite }}</a>
         <a class="btn btn-ghost" href="{{ url('contato') }}">{{ t.ctaVisit }}</a>

@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block first %}
-{% if lang == 'pt' %}<script>try{if(!localStorage.getItem("lang")){var n=(navigator.language||"").toLowerCase(),g=n.indexOf("de")==0?"de":n.indexOf("en")==0?"en":"";localStorage.setItem("lang",g||"pt");if(g&&!/bot|crawl|spider|slurp/i.test(navigator.userAgent))location.replace("{{ base }}"+g+"/")}}catch(e){}</script>{% endif %}
+{% if lang == 'pt' %}<script>try{if(!localStorage.getItem("lang")){var n=(navigator.language||"").toLowerCase(),g=n.indexOf("es")==0?"es":n.indexOf("de")==0?"de":n.indexOf("en")==0?"en":"";localStorage.setItem("lang",g||"pt");if(g&&!/bot|crawl|spider|slurp/i.test(navigator.userAgent))location.replace("{{ base }}"+g+"/")}}catch(e){}</script>{% endif %}
 {% endblock %}
 {% block preload %}<link rel="preload" as="image" href="{{ img(site.media.hero) }}" imagesrcset="{{ img(site.media.hero, '-xs') }} 480w, {{ img(site.media.hero, '-s') }} 760w, {{ img(site.media.hero) }} 1400w" imagesizes="(max-width:800px) 220vw, 100vw" fetchpriority="high">{% endblock %}
 {% block main %}
@@ -56,13 +56,37 @@
   </div>
 </section>
 
+
+
+
+<section class="sec sec-trust" id="seguranca">
+  <div class="wrap">
+    <div class="sec-head"><div><span class="kick">{{ t.trK }}</span><h2>{{ t.trH }}</h2><p>{{ t.trP }}</p></div></div>
+    <div class="tr-grid">
+      {% for i, ic, r in [(1,'shield','verificada'),(2,'doc','imoveis'),(3,'alert','golpes'),(4,'check','comprar')] %}
+      <a class="tr-card" href="{{ url(r) }}"><span class="tr-ic">{{ icon(ic) }}</span><b>{{ t['trC' ~ i ~ 'h'] }}</b><span>{{ t['trC' ~ i ~ 'p'] }}</span></a>
+      {% endfor %}
+    </div>
+    <p class="tr-rule">{{ icon('info') }}<span>{{ t.trRule }}</span></p>
+  </div>
+</section>
+
+<section class="sec sec-soft" id="faq">
+  <div class="wrap">
+    <div class="sec-head"><div><h2>{{ t.fqH }}</h2></div></div>
+    {{ m.answers() }}
+    {{ m.faq(12) }}
+  </div>
+</section>
+
+
 <section class="sec sec-soft">
   <div class="wrap">
     <div class="sec-head">
       <div><h2>{{ t.areasH }}</h2><p>{{ t.areasP }}</p></div>
       <a class="link" href="{{ url('imoveis') }}?mapa=1">{{ t.mapOpen }} {{ icon('arrow') }}</a>
     </div>
-    <div class="map" data-map="pins"><div class="map-ph">{{ t.mapLoad }}</div></div>
+    <div class="map map-s" data-map="pins"><div class="map-ph">{{ t.mapLoad }}</div></div>
     <script type="application/json" data-pins>{{ pins | tojson_safe }}</script>
     <p class="map-note">{{ icon('info') }}<span>{{ t.mapNote }}</span></p>
     <div class="tiles{% if locs | length == 6 %} six{% endif %}" style="margin-top:20px">
@@ -114,7 +138,7 @@
         <ul class="hl" style="margin-top:18px">
           {% for k in ['sell1', 'sell2', 'sell3'] %}<li>{{ icon('check') }}<span>{{ t[k] }}</span></li>{% endfor %}
         </ul>
-        <div class="btn-row"><a class="btn btn-primary" href="{{ url('contato') }}?assunto=vender">{{ t.sellBtn }}</a><a class="btn btn-line" href="{{ wa(t.waSell) }}" target="_blank" rel="noopener">{{ wa_icon() }} WhatsApp</a></div>
+        <div class="btn-row"><a class="btn btn-primary" href="{{ url('vender') }}">{{ t.sellBtn }}</a><a class="btn btn-line" href="{{ wa(t.waSell) }}" target="_blank" rel="noopener">{{ wa_icon() }} WhatsApp</a></div>
       </div>
     </div>
   </div>
@@ -131,10 +155,14 @@
   </div>
 </section>
 
-<section class="sec sec-soft">
+<section class="sec">
   <div class="wrap">
-    <div class="sec-head"><div><h2>{{ t.fqH }}</h2></div></div>
-    {{ m.faq(5) }}
+    <div class="sec-head"><h2>{{ t.hubH }}</h2><p>{{ t.hubP }}</p></div>
+    <div class="gcards">
+      {% for r, ic in [('comprar-do-exterior','globe'),('golpes','shield'),('calculadoras','tag')] %}
+      <a class="gcard" href="{{ url(r) }}">{{ icon(ic) }}<b>{{ L(pages[r].nav) }}</b><span>{{ L(pages[r].lead) }}</span></a>{% endfor %}
+    </div>
+    <div class="btn-row" style="margin-top:22px"><a class="btn btn-primary" href="{{ url('comprar') }}">{{ t.hubBtn }}</a></div>
   </div>
 </section>
 

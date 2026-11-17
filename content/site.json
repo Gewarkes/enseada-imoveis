@@ -11,6 +11,7 @@
   "role": {
    "pt": "Corretora e fundadora",
    "en": "Estate agent and founder",
+   "es": "Corredora y fundadora",
    "de": "Maklerin und Gründerin"
   },
   "photo": ""
@@ -22,7 +23,8 @@
  "hours": {
   "pt": "Seg a sáb, 9h às 18h",
   "en": "Mon to Sat, 9 am to 6 pm",
-  "de": "Mo–Sa, 9–18 Uhr"
+  "es": "Lun a sáb, de 9 a 18 h",
+  "de": "Mo bis Sa, 9 bis 18 Uhr"
  },
  "rate": 11.5,
  "buyCosts": 0.045,
@@ -73,12 +75,14 @@
    "from": {
     "pt": "Comprou uma casa na Praia do Madeiro",
     "en": "Bought a house at Praia do Madeiro",
-    "de": "Hat ein Haus an der Praia do Madeiro gekauft"
+    "es": "Compró una casa en Praia do Madeiro",
+    "de": "Hat ein Haus in Praia do Madeiro gekauft"
    },
    "text": {
     "pt": "A matrícula e as contas da casa já estavam conferidas antes da primeira visita. Fechamos a compra de Lisboa, por procuração, e não houve surpresa no cartório.",
     "en": "The title record and the bills of the house had been checked before the first viewing. We completed the purchase from Lisbon by power of attorney, and there were no surprises at the notary.",
-    "de": "Grundbucheintrag und Abrechnungen des Hauses waren schon vor der ersten Besichtigung geprüft. Den Kauf haben wir von Lissabon aus per Vollmacht abgeschlossen, ohne Überraschungen beim Notar."
+    "es": "La Matrícula y las cuentas de la casa ya estaban verificadas antes de la primera visita. Cerramos la compra desde Lisboa, con poder notarial, y no hubo sorpresas en la notaría.",
+    "de": "Der Grundbuchauszug (Matrícula) und die Hausrechnungen waren schon vor dem ersten Besuch geprüft. Wir haben den Kauf von Lissabon aus per Vollmacht abgeschlossen, und es gab keine Überraschung im Notariat."
    }
   },
   {
@@ -86,12 +90,14 @@
    "from": {
     "pt": "Compraram um terreno em Sibaúma",
     "en": "Bought a plot in Sibaúma",
+    "es": "Compraron un terreno en Sibaúma",
     "de": "Haben ein Grundstück in Sibaúma gekauft"
    },
    "text": {
     "pt": "Vimos o terreno primeiro por vídeo e depois no local. Tudo foi explicado em alemão, do CPF ao registro, e os prazos combinados foram cumpridos.",
     "en": "We saw the plot first by video and then on site. Everything was explained in German, from the CPF to the registration, and the agreed dates were kept.",
-    "de": "Wir haben das Grundstück zuerst per Video und dann vor Ort gesehen. Alles wurde auf Deutsch erklärt, von der Steuernummer bis zur Eintragung, und die vereinbarten Termine wurden eingehalten."
+    "es": "Primero vimos el terreno por video y después en el lugar. Todo se explicó en alemán, desde el CPF hasta el registro, y se cumplieron los plazos acordados.",
+    "de": "Wir haben das Grundstück zuerst per Video und dann vor Ort gesehen. Alles wurde auf Deutsch erklärt, vom CPF bis zur Eintragung, und die vereinbarten Fristen wurden eingehalten."
    }
   },
   {
@@ -99,12 +105,14 @@
    "from": {
     "pt": "Proprietário, aluga por temporada",
     "en": "Owner, lets to holiday guests",
-    "de": "Eigentümer, vermietet an Feriengäste"
+    "es": "Propietario, alquila por temporada",
+    "de": "Eigentümer, vermietet auf Zeit"
    },
    "text": {
     "pt": "Moro em São Paulo e a Enseada cuida da casa o ano inteiro. Recebo o relatório no começo de cada mês, com reservas, gastos e fotos da manutenção.",
     "en": "I live in São Paulo and Enseada looks after the house all year. I get the report at the start of each month, with bookings, costs and photos of the maintenance.",
-    "de": "Ich lebe in São Paulo, und Enseada kümmert sich das ganze Jahr um das Haus. Am Monatsanfang bekomme ich die Abrechnung mit Buchungen, Kosten und Fotos der Instandhaltung."
+    "es": "Vivo en São Paulo y Enseada cuida la casa todo el año. Recibo el informe a principios de cada mes, con reservas, gastos y fotos del mantenimiento.",
+    "de": "Ich wohne in São Paulo, und Enseada kümmert sich das ganze Jahr um das Haus. Den Bericht bekomme ich am Anfang jedes Monats, mit Buchungen, Ausgaben und Fotos der Instandhaltung."
    }
   }
  ]

@@ -7,7 +7,8 @@
  "title": {
   "pt": "Casa de 5 suítes de frente para a lagoa de Guaraíras",
   "en": "Five-suite house facing the Guaraíras lagoon",
-  "de": "Haus mit 5 Schlafzimmern an der Lagune von Guaraíras"
+  "es": "Casa de 5 suites frente a la laguna de Guaraíras",
+  "de": "Haus mit 5 Suiten direkt an der Lagune von Guaraíras"
  },
  "loc": "Tibau do Sul",
  "lat": -6.1893,
@@ -63,16 +64,22 @@
    "Own well and solar power",
    "Gated community with 24-hour gatehouse"
   ],
+  "es": [
+   "Sala y deck orientados al poniente",
+   "Pozo propio y energía solar",
+   "Condominio cerrado con portería las 24 h"
+  ],
   "de": [
-   "Wohnraum und Deck nach Westen",
-   "Eigener Brunnen und Solaranlage",
-   "Geschlossene Anlage, Pforte rund um die Uhr"
+   "Wohnzimmer und Deck mit Blick auf den Sonnenuntergang",
+   "Eigener Brunnen und Solarenergie",
+   "Geschlossene Anlage mit Pförtner rund um die Uhr"
   ]
  },
  "desc": {
   "pt": "A casa fica em Tibau do Sul, num condomínio fechado com portaria 24 horas, a 120 m da margem da lagoa de Guaraíras. O lote tem 1.800 m² e desce em leve declive para o oeste. Por isso o sol se põe em frente à sala e ao deck. Até o centro de Pipa são catorze minutos de carro.\n\nA construção de 2023 soma 580 m² em dois pavimentos. São cinco suítes com ar-condicionado, duas delas no térreo. Há ainda um lavabo, sala com pé-direito duplo, cozinha com despensa e dependência para funcionários. O deck de madeira liga a sala à piscina. A garagem abriga quatro carros. A água vem de poço próprio e os painéis solares abastecem a casa.\n\nA venda inclui os móveis. O imóvel tem matrícula individual e escritura. A taxa de condomínio é de R$ 2.400 por mês e cobre portaria, vias internas e áreas comuns.",
   "en": "The house is in Tibau do Sul, in a gated community with a 24-hour gatehouse, 120 m from the shore of the Guaraíras lagoon. The plot measures 1,800 m² and slopes gently to the west, so the sun sets in front of living room and deck. Pipa centre is fourteen minutes by car.\n\nBuilt in 2023, the house has 580 m² on two floors. It has five en-suite bedrooms with air conditioning, two on the ground floor. A guest WC, a double-height living room, a kitchen with pantry and staff quarters complete the layout. A timber deck links the living room to the pool. The garage holds four cars. Water comes from a private well and solar panels supply the house.\n\nFurniture is included. The property has its own registry entry and a deed. The community fee is R$ 2,400 a month and covers the gatehouse and shared areas.",
-  "de": "Das Haus liegt in Tibau do Sul in einer geschlossenen Wohnanlage mit durchgehend besetzter Pforte, 120 m vom Ufer der Lagune von Guaraíras entfernt. Das Grundstück misst 1.800 m² und fällt leicht nach Westen ab. Die Sonne geht deshalb vor Wohnraum und Deck unter. Ins Zentrum von Pipa sind es vierzehn Minuten mit dem Auto.\n\nDas Haus von 2023 hat 580 m² auf zwei Ebenen. Fünf Schlafzimmer mit eigenem Bad und Klimaanlage, zwei davon im Erdgeschoss. Dazu kommen ein Gäste-WC, ein Wohnraum mit doppelter Raumhöhe, eine Küche mit Vorratsraum und ein Personalbereich. Ein Holzdeck verbindet Wohnraum und Pool. Die Garage fasst vier Autos. Das Wasser kommt aus dem eigenen Brunnen, den Strom liefert die Solaranlage.\n\nDie Möbel sind im Kaufpreis enthalten. Das Objekt hat einen eigenen Grundbucheintrag und eine notarielle Urkunde. Die Gebühr der Anlage beträgt R$ 2.400 im Monat und deckt Pforte, interne Wege und Gemeinschaftsflächen."
+  "es": "La casa está en Tibau do Sul, en un condominio cerrado con portería las 24 horas, a 120 m de la orilla de la laguna de Guaraíras. El lote tiene 1.800 m² y baja en leve pendiente hacia el oeste. Por eso el sol se pone frente a la sala y al deck. Hasta el centro de Pipa son catorce minutos en auto.\n\nLa construcción de 2023 suma 580 m² en dos niveles. Son cinco suites con aire acondicionado, dos de ellas en la planta baja. Hay además un baño de visitas, una sala con doble altura, una cocina con despensa y un cuarto de servicio. El deck de madera conecta la sala con la piscina. La cochera aloja cuatro autos. El agua viene de un pozo propio y los paneles solares abastecen la casa.\n\nLa venta incluye los muebles. El inmueble tiene matrícula individual y escritura. La cuota de condominio es de R$ 2.400 al mes y cubre la portería, las calles internas y las áreas comunes.",
+  "de": "Das Haus steht in Tibau do Sul, in einer geschlossenen Anlage mit Pförtner rund um die Uhr, 120 m vom Ufer der Lagune von Guaraíras entfernt. Das Grundstück hat 1.800 m² und fällt leicht nach Westen ab. Deshalb geht die Sonne direkt vor dem Wohnzimmer und dem Deck unter. Bis ins Zentrum von Pipa sind es vierzehn Minuten mit dem Auto.\n\nDas Haus von 2023 hat 580 m² auf zwei Etagen. Es gibt fünf Suiten mit Klimaanlage, zwei davon im Erdgeschoss. Dazu kommen ein Gäste-WC, ein Wohnzimmer mit doppelter Raumhöhe, eine Küche mit Vorratsraum und ein Zimmer für Personal. Das Holzdeck verbindet das Wohnzimmer mit dem Pool. Die Garage bietet Platz für vier Autos. Das Wasser kommt aus einem eigenen Brunnen, und Solarpanels versorgen das Haus.\n\nDie Möbel sind im Preis enthalten. Die Immobilie hat einen eigenen Grundbuchauszug (Matrícula) und eine Kaufurkunde (Escritura). Die Gemeinschaftsgebühr beträgt R$ 2.400 pro Monat und deckt Pförtner, interne Straßen und Gemeinschaftsflächen."
  },
  "ordem": 3
 }

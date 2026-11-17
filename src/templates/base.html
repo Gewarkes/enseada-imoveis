@@ -33,6 +33,7 @@
 </head>
 <body class="{% block bodyclass %}{% endblock %}">
 <a class="sr" href="#main">{{ t.skip }}</a>
+<div class="creci-bar"><div class="wrap"><a class="creci-seal" href="{{ url('verificada') }}">{{ icon('shield') }}<b>{{ t.slSeal }}</b><span class="cs-x"> · {{ site.agent.name }} · {{ t.creciLabel }}</span> · <b class="cs-n">{{ site.agent.creci }}</b></a><a class="creci-what" href="{{ url('verificada') }}">{{ t.slSealW }}</a></div></div>
 <header class="head">
   <div class="wrap head-in">
     <a class="logo" href="{{ url('home') }}" aria-label="{{ site.brandFull }}">
@@ -40,7 +41,7 @@
       <span>{{ site.brandFull }}</span>
     </a>
     <nav class="nav" aria-label="{{ t.menu }}">
-      {% for r, k in [('imoveis-venda','navBuy'),('imoveis-aluguel','navRent'),('imoveis-terrenos','navLand'),('sobre','navAbout'),('blog','navGuide'),('contato','navContact')] %}
+      {% for r, k in [('imoveis-venda','navBuy'),('imoveis-aluguel','navRent'),('imoveis-terrenos','navLand'),('comprar','navBuyGuideS'),('vender','navSellS'),('sobre','navAbout'),('contato','navContact')] %}
       <a href="{{ url(r) }}"{% if route == r %} aria-current="page"{% endif %}>{{ t[k] }}</a>
       {% endfor %}
     </nav>
@@ -49,10 +50,11 @@
         {% for c, s in [('BRL','R$'),('USD','US$'),('EUR','€')] %}<button type="button" data-cur="{{ c }}" aria-pressed="{{ 'true' if c == 'BRL' else 'false' }}">{{ s }}</button>{% endfor %}
       </div>
       <div class="seg" role="group" aria-label="{{ t.language }}">
-        {% for lg in langs %}<a href="{{ alt_url(lg) }}" hreflang="{{ lg }}" data-lang="{{ lg }}"{% if lg == lang %} aria-current="true"{% endif %}>{{ lg | upper }}</a>{% endfor %}
+        {% for lg in langs %}<a href="{{ alt_url(lg) }}" hreflang="{{ lg }}" data-lang="{{ lg }}"{% if lg == lang %} aria-current="true"{% endif %}><span class="fl" aria-hidden="true">{{ FLG[lg] }}</span><span>{{ lg | upper }}</span></a>{% endfor %}
       </div>
       <a class="btn btn-wa btn-s" href="{{ wa(t.waHello) }}" target="_blank" rel="noopener">{{ wa_icon() }} WhatsApp</a>
     </div>
+    <div class="seg seg-m" role="group" aria-label="{{ t.language }}">{% for lg in langs %}<a href="{{ alt_url(lg) }}" hreflang="{{ lg }}" data-lang="{{ lg }}"{% if lg == lang %} aria-current="true"{% endif %}><span class="fl" aria-hidden="true">{{ FLG[lg] }}</span><span class="sr">{{ lg | upper }}</span></a>{% endfor %}</div>
     <button class="burger" type="button" data-open="menu" aria-label="{{ t.menu }}" aria-expanded="false">{{ icon('menu') }}</button>
   </div>
 </header>
@@ -64,12 +66,12 @@
   </div>
   <div class="sheet-body">
     <nav class="sheet-nav">
-      {% for r, k in [('imoveis-venda','navBuy'),('imoveis-aluguel','navRent'),('imoveis-terrenos','navLand'),('imoveis','navAll'),('sobre','navAbout'),('blog','navGuide'),('contato','navContact')] %}
+      {% for r, k in [('imoveis-venda','navBuy'),('imoveis-aluguel','navRent'),('imoveis-terrenos','navLand'),('imoveis','navAll'),('comprar','navBuyGuide'),('vender','navSell'),('sobre','navAbout'),('blog','navGuide'),('contato','navContact')] %}
       <a href="{{ url(r) }}">{{ t[k] }} {{ icon('arrow') }}</a>
       {% endfor %}
     </nav>
     <div class="sheet-row"><span>{{ t.language }}</span>
-      <div class="seg">{% for lg in langs %}<a href="{{ alt_url(lg) }}" hreflang="{{ lg }}" data-lang="{{ lg }}"{% if lg == lang %} aria-current="true"{% endif %}>{{ lg | upper }}</a>{% endfor %}</div>
+      <div class="seg">{% for lg in langs %}<a href="{{ alt_url(lg) }}" hreflang="{{ lg }}" data-lang="{{ lg }}"{% if lg == lang %} aria-current="true"{% endif %}><span class="fl" aria-hidden="true">{{ FLG[lg] }}</span><span>{{ lg | upper }}</span></a>{% endfor %}</div>
     </div>
     <div class="sheet-row"><span>{{ t.currency }}</span>
       <div class="seg">{% for c, s in [('BRL','R$'),('USD','US$'),('EUR','€')] %}<button type="button" data-cur="{{ c }}" aria-pressed="{{ 'true' if c == 'BRL' else 'false' }}">{{ s }}</button>{% endfor %}</div>
@@ -109,7 +111,11 @@
             <li><a href="{{ url('imoveis-aluguel') }}">{{ t.navRent }}</a></li>
             <li><a href="{{ url('imoveis-terrenos') }}">{{ t.navLand }}</a></li>
             <li><a href="{{ url('imoveis') }}">{{ t.navAll }}</a></li>
-            <li><a href="{{ url('contato') }}?assunto=vender">{{ t.navSell }}</a></li>
+            <li><a href="{{ url('vender') }}">{{ t.navSell }}</a></li>
+            <li><a href="{{ url('comprar') }}">{{ t.navBuyGuide }}</a></li>
+            <li><a href="{{ url('comprar-do-exterior') }}">{{ pages['comprar-do-exterior'].nav[lang] }}</a></li>
+            <li><a href="{{ url('golpes') }}">{{ pages['golpes'].nav[lang] }}</a></li>
+            <li><a href="{{ url('calculadoras') }}">{{ pages['calculadoras'].nav[lang] }}</a></li>
           </ul>
         </div>
         <div>
@@ -150,14 +156,16 @@
   {% if demo %}<div class="demo-note">{{ t.demoFoot }}</div>{% endif %}
 </footer>
 
-<a class="wa-fab" href="{{ wa(t.waHello) }}" target="_blank" rel="noopener" aria-label="{{ t.waWrite }}">{{ wa_icon('') }}</a>
 {% block after %}{% endblock %}
+<button class="fav-pill" type="button" data-fav-open hidden>{{ icon('heart') }}<span data-fav-n>0</span></button>
+<a class="wa-fab" href="{{ wa(t.waHello) }}" target="_blank" rel="noopener" aria-label="{{ t.waWrite }}">{{ wa_icon('') }}</a>
+<div class="fav-sheet" data-fav-sheet hidden role="dialog" aria-label="{{ t.mlH }}"><div class="fav-in"><div class="fav-top"><h2>{{ t.mlH }}</h2><button type="button" class="link" data-fav-close>{{ t.mlClose }}</button></div><div data-fav-list></div><p class="form-note">{{ t.mlNote }}</p><a class="btn btn-wa btn-block" data-fav-wa href="#" target="_blank" rel="noopener">{{ wa_icon() }} {{ t.mlSend }}</a></div></div>
 <div class="consent" id="consent" role="dialog" aria-label="{{ t.consentH }}">
   <p><b>{{ t.consentH }}</b><br>{{ t.consentP }} <a href="{{ url('privacidade') }}" style="text-decoration:underline">{{ t.privH }}</a></p>
   <div class="btn-row"><button class="btn btn-primary btn-s" type="button" data-consent="yes">{{ t.consentYes }}</button><button class="btn btn-line btn-s" type="button" data-consent="no">{{ t.consentNo }}</button></div>
 </div>
-<script>window.SITE={{ {'base': base, 'lang': lang, 'wa': site.wa, 'fx': site.fx, 'contactUrl': site.contactUrl, 'newsletterUrl': site.newsletterUrl, 'gaId': site.gaId, 'rate': site.rate, 'buyCosts': site.buyCosts, 'geo': site.geo,
- 't': {'perMonth': t.perMonth, 'sent': t.fSent, 'sendErr': t.fErr, 'newsOk': t.newsOk, 'newsDemo': t.newsDemo, 'copied': t.copied, 'years': t.years, 'mapLoad': t.mapLoad, 'office': t.office, 'waForm': t.waForm, 'fName': t.fName, 'fPhone': t.fPhone, 'fEmail': t.fEmail, 'fSubject': t.fSubject, 'mi': t.mi, 'mil': t.mil, 'required': t.fRequired, 'waOpen': t.waOpen, 'emailBad': t.fEmailBad}} | tojson_safe }}</script>
+<script>window.SITE={{ {'base': base, 'lang': lang, 'wa': site.wa, 'fx': site.fx, 'contactUrl': site.contactUrl, 'newsletterUrl': site.newsletterUrl, 'gaId': site.gaId, 'rate': site.rate, 'buyCosts': site.buyCosts, 'geo': site.geo, 'taxes': taxes, 'ap': paises.apostille, 'cc': paises.all, 'uploadUrl': site.uploadUrl, 'v': v2,
+ 't': {'perMonth': t.perMonth, 'sent': t.fSent, 'sendErr': t.fErr, 'newsOk': t.newsOk, 'newsDemo': t.newsDemo, 'copied': t.copied, 'years': t.years, 'mapLoad': t.mapLoad, 'office': t.office, 'waForm': t.waForm, 'fName': t.fName, 'fPhone': t.fPhone, 'fEmail': t.fEmail, 'fSubject': t.fSubject, 'mi': t.mi, 'mil': t.mil, 'required': t.fRequired, 'waOpen': t.waOpen, 'emailBad': t.fEmailBad, 'cbOpen': t.cbOpen, 'cbNotEx': t.cbExS, 'cbNotOpen': t.cbNotOpen, 'chkDone': t.chkDone}} | tojson_safe }}</script>
 <script defer src="{{ js_file }}"></script>
 </body>
 </html>

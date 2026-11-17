@@ -7,7 +7,8 @@
  "title": {
   "pt": "Apartamento de 2 quartos mobiliado no Chapadão",
   "en": "Furnished two-bedroom apartment in Chapadão",
-  "de": "Möblierte Wohnung mit 2 Schlafzimmern im Chapadão"
+  "es": "Departamento amoblado de 2 habitaciones en Chapadão",
+  "de": "Möblierte 2-Zimmer-Wohnung im Chapadão"
  },
  "loc": "Chapadão",
  "lat": -6.2402,
@@ -56,16 +57,28 @@
    "Sold with furniture and appliances",
    "Bylaws allow holiday lets"
   ],
+  "es": [
+   "Condominio de 12 unidades con piscina",
+   "Se vende con muebles y equipos",
+   "El reglamento permite el alquiler por temporada"
+  ],
   "de": [
    "Anlage mit 12 Einheiten und Pool",
-   "Verkauf mit Möbeln und Geräten",
-   "Gemeinschaftsordnung erlaubt Ferienvermietung"
+   "Wird mit Möbeln und Geräten verkauft",
+   "Hausordnung erlaubt Ferienvermietung"
   ]
  },
  "desc": {
   "pt": "O apartamento fica num condomínio de doze unidades no Chapadão, a 600 m do mirante sobre a Praia do Amor. A caminhada até a praia leva oito minutos e o centro de Pipa está a seis minutos de carro. O acesso é por rua calçada, com portão eletrônico.\n\nA unidade tem 96 m² no primeiro andar de um prédio de 2022. São dois quartos com ar-condicionado, um deles suíte, e um banheiro social. A sala integrada à cozinha abre para uma varanda voltada para a piscina do condomínio. Há uma vaga coberta e internet por fibra. Móveis, eletrodomésticos e enxoval entram na venda.\n\nO imóvel tem matrícula individual e escritura. A taxa de condomínio é de R$ 780 por mês e inclui água, piscina e jardinagem. A convenção permite aluguel por temporada. O histórico de reservas pode ser mostrado ao comprador com autorização do proprietário.",
   "en": "The apartment is in a complex of twelve units in Chapadão, 600 m from the lookout above Praia do Amor. The walk to the beach takes eight minutes and the centre of Pipa is six minutes away by car. Access is by a paved road, through an electric gate.\n\nThe unit has 96 m² on the first floor of a 2022 building. There are two bedrooms with air conditioning, one of them en suite, and a second bathroom. The living room with open kitchen leads to a veranda facing the shared pool. One covered parking space and fibre internet are included. Furniture, appliances and linen are part of the sale.\n\nThe property has its own registry entry and a deed. The service charge is R$ 780 a month and covers water, pool and gardening. The bylaws allow holiday lets. Booking history is available with the owner's consent.",
-  "de": "Die Wohnung liegt in einer Anlage mit zwölf Einheiten im Chapadão, 600 m vom Aussichtspunkt über der Praia do Amor entfernt. Zum Strand gehen Sie acht Minuten, ins Zentrum von Pipa fahren Sie sechs. Die Zufahrt führt über eine gepflasterte Straße und durch ein elektrisches Tor.\n\nDie Einheit hat 96 m² im ersten Obergeschoss eines Gebäudes von 2022. Zwei Schlafzimmer mit Klimaanlage, eines davon mit eigenem Bad, dazu ein zweites Badezimmer. Der Wohnraum mit offener Küche führt auf eine Veranda zum Gemeinschaftspool. Ein überdachter Stellplatz und Glasfaser gehören dazu. Möbel, Geräte und Wäsche werden mitverkauft.\n\nDie Wohnung hat einen eigenen Grundbucheintrag und eine notarielle Urkunde. Die Gebühr der Anlage beträgt R$ 780 im Monat und enthält Wasser, Pool und Gartenpflege. Die Gemeinschaftsordnung erlaubt Ferienvermietung. Die bisherigen Buchungen legen wir Käufern mit Zustimmung des Eigentümers vor."
+  "es": "El departamento está en un condominio de doce unidades en Chapadão, a 600 m del mirador sobre la Praia do Amor. La caminata hasta la playa toma ocho minutos y el centro de Pipa queda a seis minutos en auto. El acceso es por una calle empedrada, con portón eléctrico.\n\nLa unidad tiene 96 m² en el primer piso de un edificio de 2022. Son dos habitaciones con aire acondicionado, una de ellas en suite, y un baño social. La sala integrada a la cocina se abre a un balcón con vista a la piscina del condominio. Hay una cochera techada e internet por fibra. Los muebles, los electrodomésticos y la ropa de cama están incluidos en la venta.\n\nEl inmueble tiene matrícula individual y escritura. La cuota de condominio es de R$ 780 al mes e incluye agua, piscina y jardinería. El reglamento permite el alquiler por temporada. El historial de reservas puede mostrarse al comprador con autorización del propietario.",
+  "de": "Die Wohnung liegt in einer Anlage mit zwölf Einheiten im Chapadão, 600 m vom Aussichtspunkt über der Praia do Amor. Zu Fuß zum Strand sind es acht Minuten, und das Zentrum von Pipa ist sechs Minuten mit dem Auto entfernt. Die Zufahrt führt über eine gepflasterte Straße mit elektrischem Tor.\n\nDie Einheit hat 96 m² im ersten Stock eines Gebäudes von 2022. Es gibt zwei Schlafzimmer mit Klimaanlage, eines davon mit eigenem Bad (Suite), und ein weiteres Bad. Das Wohnzimmer mit offener Küche geht auf einen Balkon mit Blick auf den Pool der Anlage. Dazu gehören ein überdachter Stellplatz und Glasfaser-Internet. Möbel, Geräte und Wäsche sind im Verkauf enthalten.\n\nDie Immobilie hat einen eigenen Grundbuchauszug (Matrícula) und eine Kaufurkunde (Escritura). Die Hausgebühr (Condomínio) beträgt R$ 780 im Monat und enthält Wasser, Pool und Gartenpflege. Die Hausordnung erlaubt Ferienvermietung. Die Buchungshistorie kann dem Käufer mit Erlaubnis des Eigentümers gezeigt werden."
  },
- "ordem": 5
+ "ordem": 5,
+ "checks": {
+  "matricula": true,
+  "debts": true,
+  "date": "2026-11-10"
+ },
+ "temporada": "sim"
 }

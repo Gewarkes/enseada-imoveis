@@ -34,13 +34,27 @@
       {% endif %}
       <label class="chip"><span class="sr">{{ t.sort }}</span>
         <select data-f="sort"><option value="">{{ t.sortRec }}</option><option value="new">{{ t.sortNew }}</option><option value="asc">{{ t.sortAsc }}</option><option value="desc">{{ t.sortDesc }}</option></select></label>
-      <button class="chip-btn" type="button" data-maptoggle aria-pressed="false">{{ icon('map') }} {{ t.mapBtn }}</button>
+      <button class="chip-btn" type="button" data-morebtn aria-expanded="false">{{ icon('filter') }} <span data-more-t data-a="{{ t.fMore }}" data-b="{{ t.fLess }}">{{ t.fMore }}</span><b class="cnt" data-more-n hidden></b></button>
+    </div>
+    <div class="more" data-more hidden>
+      <div class="mg mg-d"><h3>{{ t.fgD }}</h3><div class="mg-i">
+        <label class="chip"><span class="sr">{{ t.fArea }}</span><select data-f="area"><option value="">{{ t.fArea }}</option>{% for n in [60, 100, 150, 200, 300] %}<option value="{{ n }}">{{ t.fAreaN | replace('{n}', n) }}</option>{% endfor %}</select></label>
+        <label class="chip"><span class="sr">{{ t.fLot }}</span><select data-f="lot"><option value="">{{ t.fLot }}</option>{% for n in [300, 500, 1000, 2000] %}<option value="{{ n }}">{{ t.fAreaN | replace('{n}', n) }}</option>{% endfor %}</select></label>
+        <label class="chip"><span class="sr">{{ t.fBaths }}</span><select data-f="baths"><option value="">{{ t.fBaths }}</option>{% for n in [1, 2, 3, 4] %}<option value="{{ n }}">{{ n }}+</option>{% endfor %}</select></label>
+        <label class="chip"><span class="sr">{{ t.fBeach }}</span><select data-f="beachd"><option value="">{{ t.fBeach }}</option><option value="200">{{ t.fBeach1 }}</option><option value="500">{{ t.fBeach2 }}</option><option value="1000">{{ t.fBeach3 }}</option></select></label>
+      </div></div>
+      {% for g, gt, items2 in [('a','fgA',[('seaview','fSea'),('pool','fPool'),('furnished','fFurn'),('parking','fPark')]),('b','fgB',[('new','fNew'),('red','fRed'),('temp','fTemp')]),('c','fgC',[('docs','fDocs'),('res','fRes')])] %}
+      <div class="mg mg-{{ g }}"><h3>{{ t[gt] }}</h3><div class="mg-i">
+        {% for k, lab in items2 %}<label class="tgl"><input type="checkbox" data-x="{{ k }}"><span>{{ t[lab] }}</span></label>{% endfor %}
+      </div></div>
+      {% endfor %}
     </div>
   </div>
 </div>
 
 <div class="wrap">
   <div class="results-bar">
+    <div class="vw" role="group" aria-label="{{ t.viewList }} / {{ t.viewMap }}"><button type="button" data-view="list" aria-pressed="true">{{ icon('list') }} {{ t.viewList }}</button><button type="button" data-view="map" aria-pressed="false">{{ icon('map') }} {{ t.viewMap }}</button></div>
     <span><b data-n>{{ items | length }}</b> <span data-nword data-one="{{ t.obj1 }}" data-many="{{ t.objN }}">{{ t.obj1 if items | length == 1 else t.objN }}</span></span>
     <button class="link" type="button" data-reset hidden>{{ t.reset }}</button>
   </div>
@@ -60,18 +74,7 @@
   </div>
 </div>
 
-<section class="sec sec-dark">
-  <div class="wrap">
-    <div class="split">
-      <div>
-        <h2>{{ t.offH }}</h2>
-        <p>{{ t.offP }}</p>
-        <div class="btn-row"><a class="btn btn-wa" href="{{ wa(t.waSearch) }}" target="_blank" rel="noopener">{{ wa_icon() }} {{ t.offBtn }}</a><a class="btn btn-ghost" href="{{ url('contato') }}">{{ t.navContact }}</a></div>
-      </div>
-      <ul class="hl" style="margin:0">
-        {% for k in ['off1', 'off2', 'off3'] %}<li>{{ icon('check') }}<span>{{ t[k] }}</span></li>{% endfor %}
-      </ul>
-    </div>
-  </div>
-</section>
+<div class="wrap">{{ m.answers() }}</div>
+{{ m.wishbox() }}
+
 {% endblock %}

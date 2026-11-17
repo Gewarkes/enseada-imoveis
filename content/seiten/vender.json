@@ -1,0 +1,237 @@
+{
+ "slug": "vender",
+ "icon": "tag",
+ "nav": {
+  "pt": "Vender",
+  "en": "Sell",
+  "es": "Vender",
+  "de": "Verkaufen"
+ },
+ "h1": {
+  "pt": "Quer vender seu imóvel? É simples.",
+  "en": "Want to sell your property? It is simple.",
+  "es": "¿Quieres vender tu propiedad? Es simple.",
+  "de": "Du willst deine Immobilie verkaufen? Ganz einfach."
+ },
+ "lead": {
+  "pt": "Escolha o que você tem e envie. Ou fale pelo WhatsApp. Os dois jeitos funcionam.",
+  "en": "Choose what you have and send it. Or talk on WhatsApp. Both ways work.",
+  "es": "Elige lo que tengas y envía. O habla por WhatsApp. Los dos caminos funcionan.",
+  "de": "Wähle, was du hast, und schick es uns. Oder schreib uns per WhatsApp. Beides funktioniert."
+ },
+ "meta": {
+  "pt": "Venda seu imóvel em Pipa: envie fotos e documentos ou fale pelo WhatsApp.",
+  "en": "Sell your property in Pipa: send photos and documents or talk on WhatsApp.",
+  "es": "Vende tu propiedad en Pipa: envía fotos y documentos o habla por WhatsApp.",
+  "de": "Verkaufe deine Immobilie in Pipa: Schick Fotos und Dokumente oder schreib per WhatsApp."
+ },
+ "stand": "17.11.2026",
+ "blocks": [
+  {
+   "t": "widget",
+   "x": "sellupload"
+  },
+  {
+   "t": "h2",
+   "x": {
+    "pt": "Quais documentos eu preciso?",
+    "en": "Which documents do I need?",
+    "es": "¿Qué documentos necesito?",
+    "de": "Welche Dokumente brauche ich?"
+   }
+  },
+  {
+   "t": "p",
+   "x": {
+    "pt": "Para começar, quase nada. Os outros papéis vêm depois, na hora de fechar a venda.",
+    "en": "To start, almost nothing. The other papers come later, when you close the sale.",
+    "es": "Para empezar, casi nada. Los otros papeles vienen después, al cerrar la venta.",
+    "de": "Für den Anfang fast nichts. Die anderen Papiere kommen später, wenn der Verkauf abgeschlossen wird."
+   }
+  },
+  {
+   "t": "check",
+   "h": {
+    "pt": "Para anunciar (basta foto do celular)",
+    "en": "To list your property (a phone photo is enough)",
+    "es": "Para publicar (basta con una foto del celular)",
+    "de": "Zum Inserieren (Handyfotos reichen)"
+   },
+   "x": [
+    {
+     "pt": "RG ou CNH e CPF do dono",
+     "en": "ID (RG or CNH) and CPF of the owner",
+     "es": "Documento (RG o CNH) y CPF del dueño",
+     "de": "Ausweis (RG) oder Führerschein (CNH) und CPF des Eigentümers"
+    },
+    {
+     "pt": "Matrícula do imóvel (o registro oficial dele) ou só o número e o cartório",
+     "en": "Property title (matrícula, the official record of the property), or just its number and the registry office",
+     "es": "Matrícula de la propiedad (el registro oficial) o solo el número y el Registro de la Propiedad (cartório)",
+     "de": "Grundbuchauszug der Immobilie (Matrícula, das offizielle Register) oder nur die Nummer und das Notariat (Cartório)"
+    },
+    {
+     "pt": "Capa do IPTU (a primeira folha do imposto anual da prefeitura sobre o imóvel)",
+     "en": "IPTU cover page (first page of the annual property tax bill from the town hall)",
+     "es": "Primera hoja del IPTU (el impuesto municipal anual sobre la propiedad)",
+     "de": "Deckblatt des IPTU (die erste Seite der jährlichen Grundsteuer der Stadt für die Immobilie)"
+    },
+    {
+     "pt": "Se for casado: certidão de casamento",
+     "en": "If married: marriage certificate",
+     "es": "Si estás casado: certificado de matrimonio",
+     "de": "Wenn verheiratet: Heiratsurkunde"
+    },
+    {
+     "pt": "Se for empresa: contrato social e CNPJ",
+     "en": "If a company: articles of association and CNPJ",
+     "es": "Si es una empresa: contrato social y CNPJ",
+     "de": "Wenn Firma: Gesellschaftsvertrag (Contrato social) und CNPJ"
+    },
+    {
+     "pt": "Foto do condomínio (valor) e planta, se tiver",
+     "en": "Condominium fee and floor plan, if you have them",
+     "es": "Valor de los gastos de condominio y plano, si los tienes",
+     "de": "Foto vom Hausgeld (Condomínio, Betrag) und Grundriss, falls vorhanden"
+    }
+   ]
+  },
+  {
+   "t": "note",
+   "k": "info",
+   "x": {
+    "pt": "A autorização de venda (o contrato com a corretora) é feita pela corretora. Você só assina.",
+    "en": "The sales authorization (the contract with the agent) is prepared by the agent. You only sign.",
+    "es": "La autorización de venta (el contrato con la corredora inmobiliaria) la prepara ella. Tú solo firmas.",
+    "de": "Die Verkaufsvollmacht (der Vertrag mit der Maklerin) wird von der Maklerin erstellt. Du unterschreibst nur."
+   }
+  },
+  {
+   "t": "h2",
+   "x": {
+    "pt": "Para fechar a venda (mais tarde)",
+    "en": "To close the sale (later)",
+    "es": "Para cerrar la venta (más adelante)",
+    "de": "Für den Verkaufsabschluss (später)"
+   }
+  },
+  {
+   "t": "p",
+   "x": {
+    "pt": "A corretora avisa o que falta. A lista exata varia de cartório para cartório. Quem decide é o tabelião (o responsável pelo cartório de notas).",
+    "en": "The agent tells you what is missing. The exact list varies by notary office. The notary decides.",
+    "es": "La corredora te avisa qué falta. La lista exacta varía según la notaría. Decide el notario.",
+    "de": "Die Maklerin sagt dir, was fehlt. Die genaue Liste ist von Notariat zu Notariat verschieden. Entscheiden tut der Notar (Tabelião, der Leiter des Notariats)."
+   }
+  },
+  {
+   "t": "check",
+   "h": {
+    "pt": "Para a escritura",
+    "en": "For the deed",
+    "es": "Para la escritura",
+    "de": "Für die Urkunde (Escritura)"
+   },
+   "x": [
+    {
+     "pt": "Matrícula atualizada (em geral vale 30 dias; referência, 17.11.2026)",
+     "en": "Up-to-date title (usually valid 30 days; reference, 17.11.2026)",
+     "es": "Matrícula actualizada (en general vale 30 días; referencia, 17.11.2026)",
+     "de": "Aktueller Grundbuchauszug (gilt meist 30 Tage; Richtwert, 17.11.2026)"
+    },
+    {
+     "pt": "Certidão de ônus reais (mostra se o imóvel tem dívida, hipoteca ou penhora)",
+     "en": "Certificate of encumbrances (shows whether the property has debts, a mortgage or a seizure)",
+     "es": "Certificado de cargas reales (muestra si la propiedad tiene deudas, hipoteca o embargo)",
+     "de": "Lastenbescheinigung (Certidão de ônus reais, zeigt, ob die Immobilie Schulden, eine Hypothek oder eine Pfändung hat)"
+    },
+    {
+     "pt": "Certidão negativa de IPTU (papel que prova que não há dívida de IPTU), ou comprovante de pagamento",
+     "en": "IPTU clearance certificate (a paper proving there is no IPTU debt), or proof of payment",
+     "es": "Certificado de no adeudo del IPTU (papel que prueba que no hay deuda de IPTU), o comprobante de pago",
+     "de": "Negativbescheinigung zum IPTU (Papier, das belegt, dass keine IPTU-Schulden bestehen) oder Zahlungsnachweis"
+    },
+    {
+     "pt": "Certidões negativas do vendedor (papéis que provam que ele não tem dívidas): federal, da justiça, trabalhista e de protestos (dívidas registradas em cartório)",
+     "en": "Clearance certificates of the seller (papers proving the seller has no debts): federal, courts, labour and protests (debts registered at a notary office)",
+     "es": "Certificados de no adeudo del vendedor (papeles que prueban que no tiene deudas): federal, de la justicia, laboral y de protestos (deudas registradas en una notaría)",
+     "de": "Negativbescheinigungen des Verkäufers (Papiere, die belegen, dass er keine Schulden hat): Bund, Gericht, Arbeitsgericht und Proteste (beim Notariat eingetragene Schulden)"
+    },
+    {
+     "pt": "Declaração de quitação do condomínio (apartamento)",
+     "en": "Condominium paid-up declaration (apartment)",
+     "es": "Declaración de que los gastos de condominio están al día (departamento)",
+     "de": "Erklärung über bezahltes Hausgeld (Wohnung)"
+    },
+    {
+     "pt": "Habite-se (licença da prefeitura que diz que a obra está pronta e pode ser usada) e averbação (anotação oficial) da construção na matrícula",
+     "en": "Habite-se (town hall certificate that the building is finished and can be used) and registration of the building in the title",
+     "es": "Habite-se (certificado municipal de fin de obra) y registro de la construcción en la matrícula",
+     "de": "Habite-se (Bescheinigung der Stadt, dass der Bau fertig ist und genutzt werden darf) und Eintragung (Averbação, offizieller Vermerk) des Gebäudes im Grundbuchauszug"
+    },
+    {
+     "pt": "Se casado: RG e CPF do cônjuge e, conforme o regime de bens, a autorização dele",
+     "en": "If married: ID and CPF of the spouse and, depending on the marital property regime, their consent",
+     "es": "Si estás casado: documento y CPF del cónyuge y, según el régimen de bienes, su autorización",
+     "de": "Wenn verheiratet: RG und CPF des Ehepartners und, je nach Güterstand, seine Zustimmung"
+    },
+    {
+     "pt": "Se alguém assina por você: procuração (papel que dá poder a outra pessoa)",
+     "en": "If someone signs for you: power of attorney (a paper that gives another person the authority)",
+     "es": "Si alguien firma por ti: poder notarial (procuração)",
+     "de": "Wenn jemand für dich unterschreibt: Vollmacht (Procuração, ein Papier, das einer anderen Person Vollmacht gibt)"
+    }
+   ]
+  },
+  {
+   "t": "check",
+   "h": {
+    "pt": "Casos especiais",
+    "en": "Special cases",
+    "es": "Casos especiales",
+    "de": "Sonderfälle"
+   },
+   "x": [
+    {
+     "pt": "Terreno de marinha (área perto do mar ou da lagoa que é da União): laudêmio, uma taxa de 5 % cobrada pela União e paga pelo vendedor (referência, 17.11.2026). Também a CAT, certidão da SPU, órgão do governo que cuida das áreas perto do mar.",
+     "en": "Marine land (area near the sea or lagoon that belongs to the federal government): laudémio, a 5 % fee charged by the federal government and paid by the seller (reference, 17.11.2026). Also the CAT, a certificate from the SPU, the government body that manages land near the sea.",
+     "es": "Terreno de marinha (área cercana al mar o a la laguna que pertenece a la Unión): laudemio, una tasa del 5 % que cobra la Unión y paga el vendedor (referencia, 17.11.2026). También el CAT, certificado de la SPU, el organismo del gobierno que administra las áreas cercanas al mar.",
+     "de": "Marinegrundstück (Terreno de marinha, Fläche nahe am Meer oder an der Lagune, die dem Staat gehört): Laudêmio, eine Gebühr von 5 %, die der Staat erhebt und der Verkäufer zahlt (Richtwert, 17.11.2026). Dazu die CAT, eine Bescheinigung der SPU, der Behörde, die sich um die Flächen am Meer kümmert."
+    },
+    {
+     "pt": "Imóvel rural: CCIR quitado (certificado do Incra, órgão do governo, que cadastra o imóvel rural), ITR (imposto sobre imóvel rural) e, conforme o tamanho, georreferenciamento (SIGEF, sistema do governo que registra os limites do terreno)",
+     "en": "Rural property: paid CCIR (a certificate from Incra, the government agency, that registers rural property), ITR (rural property tax) and, depending on size, georeferencing (SIGEF, the government system that records the plot boundaries)",
+     "es": "Propiedad rural: CCIR pagado (certificado del Incra, organismo del gobierno, que registra la propiedad rural), ITR (impuesto sobre la propiedad rural) y, según el tamaño, georreferenciación (SIGEF, sistema del gobierno que registra los límites del terreno)",
+     "de": "Ländliche Immobilie: bezahltes CCIR (Bescheinigung der Behörde Incra, die ländliche Immobilien erfasst), ITR (Steuer auf ländliche Immobilien) und, je nach Größe, Georeferenzierung (SIGEF, staatliches System, das die Grenzen des Grundstücks erfasst)"
+    },
+    {
+     "pt": "Herança: o imóvel tem que estar no nome do vendedor (formal de partilha, o documento da justiça que divide a herança, ou escritura de inventário)",
+     "en": "Inheritance: the property must be in the seller's name (formal de partilha, the court document that divides the inheritance, or inventory deed)",
+     "es": "Herencia: la propiedad tiene que estar a nombre del vendedor (formal de partilha, el documento judicial que divide la herencia, o escritura de inventario)",
+     "de": "Erbschaft: Die Immobilie muss auf den Namen des Verkäufers laufen (Formal de partilha, das Gerichtsdokument, das die Erbschaft aufteilt, oder Erbschaftsurkunde)"
+    },
+    {
+     "pt": "Dono mora fora do Brasil: CPF obrigatório e procuração com apostila (carimbo que prova que o documento é autêntico) e tradução juramentada (tradução oficial)",
+     "en": "Owner lives abroad: CPF is mandatory and power of attorney with apostille (a stamp proving the document is authentic) and sworn translation (an official translation)",
+     "es": "El dueño vive fuera de Brasil: CPF obligatorio y poder notarial con apostilla (sello que prueba que el documento es auténtico) y traducción jurada (traducción oficial)",
+     "de": "Eigentümer wohnt im Ausland: CPF ist Pflicht, dazu eine Vollmacht mit Apostille (Stempel, der beweist, dass das Dokument echt ist) und beglaubigte Übersetzung (offizielle Übersetzung)"
+    }
+   ]
+  },
+  {
+   "t": "note",
+   "k": "unclear",
+   "x": {
+    "pt": "Não confirmado: prazo exato das certidões, se cada certidão é obrigatória em todo cartório, e a regra para quem tem cônjuge no exterior. Pergunte ao cartório.",
+    "en": "Not confirmed: exact validity of the certificates, whether each one is mandatory at every notary office, and the rule for owners whose spouse lives abroad. Ask the notary office.",
+    "es": "Sin confirmar: validez exacta de los certificados, si cada uno es obligatorio en toda notaría, y la regla para quien tiene cónyuge en el exterior. Pregunta en la notaría.",
+    "de": "Nicht bestätigt: die genaue Gültigkeitsdauer der Bescheinigungen, ob jede Bescheinigung in jedem Notariat Pflicht ist, und die Regel für Verheiratete mit Ehepartner im Ausland. Frag beim Notariat nach."
+   }
+  }
+ ],
+ "sources": [
+  [
+   "Guias de cartório e portais (QuintoAndar, IRIB, TJSC, portas.com.br, geracontratos), consulta em 17.11.2026. Fonte oficial: Decreto-Lei 2.398/1987 (terrenos de marinha). Os prazos variam por cartório."
+  ]
+ ]
+}
