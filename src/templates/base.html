@@ -98,9 +98,7 @@
           <li>{{ icon('pin') }}<span>{{ site.address }}</span></li>
           <li>{{ icon('clock') }}<span>{{ L(site.hours) }}</span></li>
         </ul>
-        {% if site.instagram %}
-        <div class="social"><a href="{{ site.instagram }}" target="_blank" rel="noopener" aria-label="Instagram">{{ icon('ig') }}</a></div>
-        {% endif %}
+        {% include '_social.html' %}
       </div>
       <div class="foot-cols">
         <div>

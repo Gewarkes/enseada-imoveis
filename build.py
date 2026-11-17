@@ -53,7 +53,7 @@ def ik(k):
 
 # ---------- 1 Inhalte ----------
 site = json.loads(rd('content/site.json'))
-for k, v in {'uploadUrl': '', 'channelUrl': '', 'theme': 'light', 'instagram': '', 'brokerUrl': '', 'contactUrl': '', 'newsletterUrl': '', 'gaId': '', 'reviews': [], 'demoNote': False,
+for k, v in {'uploadUrl': '', 'channelUrl': '', 'theme': 'light', 'instagram': '', 'facebook': '', 'youtube': '', 'tiktok': '', 'brokerUrl': '', 'contactUrl': '', 'newsletterUrl': '', 'gaId': '', 'reviews': [], 'demoNote': False,
              'rate': 11.5, 'buyCosts': 0.045, 'fx': {'date': '', 'USD': 0.178, 'EUR': 0.16}, 'geo': {}, 'stats': {}, 'media': {}}.items():
     site.setdefault(k, v)
 site['agent'].setdefault('photo', '')
@@ -318,7 +318,7 @@ def org_ld(lang):
                         'addressRegion': site.get('state', ''), 'addressCountry': 'BR'},
             'geo': {'@type': 'GeoCoordinates', 'latitude': a.get('lat'), 'longitude': a.get('lng')},
             'openingHours': site.get('openingHours', ''), 'areaServed': [x['name'] for x in locs], 'knowsLanguage': ['pt-BR', 'en', 'es', 'de'],
-            'priceRange': 'R$', **({'sameAs': [site['instagram']]} if site.get('instagram') else {})}
+            'priceRange': 'R$', **({'sameAs': [u for u in (site.get(k) for k in ('instagram','facebook','youtube','tiktok')) if u]})}
 
 
 def crumbs_ld(items):
