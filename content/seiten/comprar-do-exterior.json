@@ -121,32 +121,12 @@
       "de": "Angebot"
      },
      "p": {
-      "pt": "Preço, pagamento e prazos por escrito.",
-      "en": "Put the price, payment terms and deadlines in writing.",
-      "es": "Precio, pago y plazos por escrito.",
-      "de": "Preis, Zahlung und Fristen schriftlich."
+      "pt": "Preço, pagamento e prazos por escrito. Ainda sem pagar sinal.",
+      "en": "Put the price, payment terms and deadlines in writing. No deposit yet.",
+      "es": "Precio, pago y plazos por escrito. Todavía sin pagar seña.",
+      "de": "Preis, Zahlung und Fristen schriftlich. Noch kein Sinal."
      },
      "n": null
-    },
-    {
-     "h": {
-      "pt": "Contrato preliminar (compromisso de compra e venda)",
-      "en": "Preliminary contract",
-      "es": "Contrato preliminar (compromisso de compra e venda)",
-      "de": "Vorvertrag (Compromisso de compra e venda)"
-     },
-     "p": {
-      "pt": "Define preço, sinal (entrada de garantia, em geral 10 a 20%), multa e condições. Pode ser anotado na matrícula.",
-      "en": "Sets the price, sinal (earnest money deposit, usually 10% to 20%), penalty and conditions. It can be noted on the matrícula.",
-      "es": "Define precio, seña (anticipo de garantía, en general 10 a 20 %), multa y condiciones. Puede anotarse en la matrícula.",
-      "de": "Hier stehen Preis, Sinal (Anzahlung, meist 10 bis 20 %), Vertragsstrafe und Bedingungen. Der Vertrag kann in der Matrícula vermerkt werden."
-     },
-     "n": {
-      "pt": "Atenção: o sinal vai direto ao vendedor. Pague só depois de conferir os documentos e de seu advogado ler o contrato.",
-      "en": "Careful: the sinal goes straight to the seller. Pay only after the documents are checked and your lawyer has read the contract.",
-      "es": "Atención: la seña va directo al vendedor. Paga solo después de verificar los documentos y de que tu abogado lea el contrato.",
-      "de": "Achtung: Das Sinal geht direkt an den Verkäufer. Zahle erst, wenn die Dokumente geprüft sind und dein Anwalt den Vertrag gelesen hat."
-     }
     },
     {
      "h": {
@@ -161,7 +141,32 @@
       "es": "Tu abogado pide la matrícula actualizada y verifica deudas, certificados del vendedor, IPTU, condominio, Habite-se (certificado de obra terminada) y alvará (permiso de obra). También el consentimiento del cónyuge o de los herederos. En la costa, mira si es terreno de marinha.",
       "de": "Dein Anwalt fordert den aktuellen Grundbuchauszug (Matrícula) an und prüft Schulden, Bescheinigungen des Verkäufers, IPTU, Hausgeld, Habite-se (Bescheinigung, dass der Bau fertig ist) und Alvará (Baugenehmigung). Dazu kommt die Zustimmung von Ehepartner oder Erben. An der Küste prüft er, ob das Grundstück Terreno de marinha ist (Küstenland des Bundes)."
      },
-     "n": null
+     "n": {
+      "pt": "Só depois desta conferência pague o sinal. Se o vendedor pedir sinal antes, ponha no contrato: “pagamento só após conferência positiva”.",
+      "en": "Pay the sinal only after this check. If the seller wants a deposit earlier, put in the contract: “payment only after a positive document check”.",
+      "es": "Paga la seña solo después de esta revisión. Si el vendedor pide una seña antes, pon en el contrato: “pago solo tras una revisión positiva”.",
+      "de": "Zahle das Sinal erst nach dieser Prüfung. Verlangt der Verkäufer es früher, schreibe in den Vertrag: „Zahlung erst nach positiver Prüfung“."
+     }
+    },
+    {
+     "h": {
+      "pt": "Contrato preliminar (compromisso de compra e venda) e sinal",
+      "en": "Preliminary contract and deposit",
+      "es": "Contrato preliminar (compromisso de compra e venda) y seña",
+      "de": "Vorvertrag (Compromisso de compra e venda) und Sinal"
+     },
+     "p": {
+      "pt": "Define preço, sinal (entrada de garantia, em geral 10 a 20%), multa e condições. Pode ser anotado na matrícula.",
+      "en": "Sets the price, sinal (earnest money deposit, usually 10% to 20%), penalty and conditions. It can be noted on the matrícula.",
+      "es": "Define precio, seña (anticipo de garantía, en general 10 a 20 %), multa y condiciones. Puede anotarse en la matrícula.",
+      "de": "Hier stehen Preis, Sinal (Anzahlung, meist 10 bis 20 %), Vertragsstrafe und Bedingungen. Der Vertrag kann in der Matrícula vermerkt werden."
+     },
+     "n": {
+      "pt": "Atenção: o sinal vai direto ao vendedor. Pague só com os documentos conferidos e depois que seu advogado ler o contrato.",
+      "en": "Careful: the sinal goes straight to the seller. Pay only once the documents are checked and your lawyer has read the contract.",
+      "es": "Atención: la seña va directo al vendedor. Paga solo con los documentos verificados y después de que tu abogado lea el contrato.",
+      "de": "Achtung: Das Sinal geht direkt an den Verkäufer. Zahle erst, wenn die Dokumente geprüft sind und dein Anwalt den Vertrag gelesen hat."
+     }
     },
     {
      "h": {
@@ -206,10 +211,10 @@
       "de": "Eintragung im Grundbuchamt"
      },
      "p": {
-      "pt": "Só com o registro você é o proprietário. O cartório analisa em poucos dias e pode pedir correções.",
-      "en": "You are the owner only once the deed is registered. The registry reviews it within a few days and may ask for corrections.",
-      "es": "Solo con el registro eres propietario. El registro lo revisa en pocos días y puede pedir correcciones.",
-      "de": "Erst mit der Eintragung bist du Eigentümer. Das Grundbuchamt prüft die Unterlagen in wenigen Tagen und kann Korrekturen verlangen."
+      "pt": "Só com o registro você é o proprietário. O cartório costuma analisar em 1 a 3 semanas e pode pedir correções.",
+      "en": "You are the owner only once the deed is registered. The registry usually reviews it within 1 to 3 weeks and may ask for corrections.",
+      "es": "Solo con el registro eres propietario. El registro suele revisarlo en 1 a 3 semanas y puede pedir correcciones.",
+      "de": "Erst mit der Eintragung bist du Eigentümer. Das Grundbuchamt prüft die Unterlagen meist in 1 bis 3 Wochen und kann Korrekturen verlangen."
      },
      "n": null
     },

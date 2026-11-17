@@ -124,15 +124,6 @@
    }
   },
   {
-   "t": "h2",
-   "x": {
-    "pt": "Preço a partir de, por documento. O valor final aparece na oferta on-line da Traduzme (traduzme.com.br). Pagamento por Pix.",
-    "en": "Starting price per document. You will see the final price in Traduzme’s online quote (traduzme.com.br). Payment by Pix.",
-    "es": "Precio desde, por documento. El valor final aparece en la oferta en línea de Traduzme (traduzme.com.br). Pago por Pix.",
-    "de": "Preis ab, pro Dokument. Der Endpreis steht im Online-Angebot von Traduzme (traduzme.com.br). Zahlung per Pix (brasilianisches Sofortzahlungssystem)."
-   }
-  },
-  {
    "t": "p",
    "x": {
     "pt": "A apostila é um carimbo do país de origem que confirma que o documento é autêntico. Depois, um tradutor juramentado faz a tradução.",

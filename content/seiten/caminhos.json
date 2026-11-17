@@ -46,25 +46,10 @@
       "de": "Besichtigung und Angebot"
      },
      "p": {
-      "pt": "Preço, pagamento e prazos por escrito.",
-      "en": "Put the price, payment terms and deadlines in writing.",
-      "es": "Precio, pago y plazos por escrito.",
-      "de": "Preis, Zahlung und Fristen schriftlich."
-     },
-     "n": null
-    },
-    {
-     "h": {
-      "pt": "Contrato preliminar",
-      "en": "Preliminary contract",
-      "es": "Contrato preliminar",
-      "de": "Vorvertrag"
-     },
-     "p": {
-      "pt": "Sinal, multa e condições. Pode ser anotado na matrícula.",
-      "en": "Covers the deposit, penalty and conditions. It can be noted on the matrícula.",
-      "es": "Seña, multa y condiciones. Puede anotarse en la matrícula.",
-      "de": "Anzahlung, Vertragsstrafe und Bedingungen. Kann in der Matrícula vermerkt werden."
+      "pt": "Preço, pagamento e prazos por escrito. Ainda sem pagar sinal.",
+      "en": "Put the price, payment terms and deadlines in writing. No deposit yet.",
+      "es": "Precio, pago y plazos por escrito. Todavía sin pagar seña.",
+      "de": "Preis, Zahlung und Fristen schriftlich. Noch kein Sinal."
      },
      "n": null
     },
@@ -80,6 +65,21 @@
       "en": "Your lawyer checks the current matrícula (the official property record), debts, the seller’s certificates, IPTU (property tax), condominium fees and the habite-se (certificate of completion).",
       "es": "Matrícula actualizada (el registro oficial de la propiedad), deudas, certificados del vendedor, IPTU, condominio y Habite-se (certificado de obra terminada).",
       "de": "Aktueller Grundbuchauszug (Matrícula), Schulden, Bescheinigungen des Verkäufers, IPTU, Hausgeld und Habite-se (Bescheinigung, dass der Bau fertig ist)."
+     },
+     "n": null
+    },
+    {
+     "h": {
+      "pt": "Contrato preliminar e sinal",
+      "en": "Preliminary contract and deposit",
+      "es": "Contrato preliminar y seña",
+      "de": "Vorvertrag und Sinal"
+     },
+     "p": {
+      "pt": "Só depois da conferência: sinal, multa e condições. Pode ser anotado na matrícula. Se precisar assinar antes, ponha “pagamento só após conferência positiva”.",
+      "en": "Only after the check: deposit, penalty and conditions. It can be noted on the matrícula. If you must sign earlier, add “payment only after a positive document check”.",
+      "es": "Solo después de la revisión: seña, multa y condiciones. Puede anotarse en la matrícula. Si debes firmar antes, añade “pago solo tras una revisión positiva”.",
+      "de": "Erst nach der Prüfung: Anzahlung, Vertragsstrafe und Bedingungen. Kann in der Matrícula vermerkt werden. Musst du früher unterschreiben, ergänze „Zahlung erst nach positiver Prüfung“."
      },
      "n": null
     },
@@ -129,31 +129,16 @@
    "x": [
     {
      "h": {
-      "pt": "Reserva e sinal",
-      "en": "Reservation and deposit",
-      "es": "Reserva y seña",
-      "de": "Reservierung und Anzahlung"
+      "pt": "Reserva",
+      "en": "Reservation",
+      "es": "Reserva",
+      "de": "Reservierung"
      },
      "p": {
-      "pt": "Reserve a unidade e peça o contrato completo antes de pagar.",
-      "en": "Reserve the unit and ask for the full contract before paying.",
-      "es": "Reserva la unidad y pide el contrato completo antes de pagar.",
-      "de": "Reserviere die Einheit und verlange den vollständigen Vertrag, bevor du zahlst."
-     },
-     "n": null
-    },
-    {
-     "h": {
-      "pt": "Contrato com a incorporadora",
-      "en": "Contract with the developer",
-      "es": "Contrato con la desarrolladora",
-      "de": "Vertrag mit dem Bauträger"
-     },
-     "p": {
-      "pt": "Preço total, plano de pagamento, correção (INCC, índice que reajusta o preço durante a obra), prazo de obra e direito de desistência.",
-      "en": "Total price, payment plan, price adjustments (INCC, the index that raises the price during construction), completion deadline and your right to withdraw.",
-      "es": "Precio total, plan de pago, ajuste (INCC, índice que reajusta el precio durante la obra), plazo de obra y derecho de desistimiento.",
-      "de": "Gesamtpreis, Zahlungsplan, Anpassung (INCC, der Baukostenindex, der den Preis während des Baus anhebt), Bauzeit und Rücktrittsrecht."
+      "pt": "Reserve a unidade e peça o contrato completo. Não pague sinal grande antes de conferir.",
+      "en": "Reserve the unit and ask for the full contract. Do not pay a large deposit before the check.",
+      "es": "Reserva la unidad y pide el contrato completo. No pagues una seña grande antes de revisar.",
+      "de": "Reserviere die Einheit und verlange den vollständigen Vertrag. Zahle kein größeres Sinal vor der Prüfung."
      },
      "n": null
     },
@@ -169,6 +154,21 @@
       "en": "Check the Registro de Incorporação (the project’s registration), the land matrícula, the patrimônio de afetação (protection if the developer goes bankrupt) and the permits.",
       "es": "Registro de Incorporação, matrícula del terreno, patrimônio de afetação (protección si la incorporadora quiebra) y licencias.",
       "de": "Registro de Incorporação, Matrícula des Grundstücks, Patrimônio de afetação (Schutz bei Insolvenz des Bauträgers) und Genehmigungen."
+     },
+     "n": null
+    },
+    {
+     "h": {
+      "pt": "Contrato com a incorporadora e sinal",
+      "en": "Contract with the developer and deposit",
+      "es": "Contrato con la desarrolladora y seña",
+      "de": "Vertrag mit dem Bauträger und Sinal"
+     },
+     "p": {
+      "pt": "Depois de conferir os documentos da obra: preço total, plano de pagamento, correção (INCC, índice que reajusta o preço durante a obra), prazo de obra, direito de desistência e sinal.",
+      "en": "After checking the project documents: total price, payment plan, price adjustments (INCC, the index that raises the price during construction), completion deadline, your right to withdraw, and the deposit.",
+      "es": "Después de revisar los documentos de la obra: precio total, plan de pago, ajuste (INCC, índice que reajusta el precio durante la obra), plazo de obra, derecho de desistimiento y seña.",
+      "de": "Nach der Prüfung der Bauunterlagen: Gesamtpreis, Zahlungsplan, Anpassung (INCC, der Baukostenindex, der den Preis während des Baus anhebt), Bauzeit, Rücktrittsrecht und Sinal."
      },
      "n": null
     },
@@ -202,10 +202,10 @@
   {
    "t": "h2",
    "x": {
-    "pt": "C. Com financiamento (para quem mora no Brasil): 50 a 80 dias",
-    "en": "C. Financed (for people living in Brazil): 50 to 80 days",
-    "es": "C. Con financiamiento (para quien vive en Brasil): 50 a 80 días",
-    "de": "C. Mit Finanzierung (für Menschen, die in Brasilien leben): 50 bis 80 Tage"
+    "pt": "C. Com financiamento (para quem mora no Brasil): 50 a 80 dias Antes de pagar sinal, confira os documentos. Se pagar antes da aprovação do crédito, ponha no contrato que o sinal volta se o banco negar o financiamento.",
+    "en": "C. Financed (for people living in Brazil): 50 to 80 days Check the documents before paying any sinal. If you pay before the loan is approved, put in the contract that the sinal is refunded if the bank refuses the loan.",
+    "es": "C. Con financiamiento (para quien vive en Brasil): 50 a 80 días Revisa los documentos antes de pagar cualquier seña. Si pagas antes de la aprobación del crédito, pon en el contrato que la seña se devuelve si el banco niega el financiamiento.",
+    "de": "C. Mit Finanzierung (für Menschen, die in Brasilien leben): 50 bis 80 Tage Prüfe die Unterlagen, bevor du ein Sinal zahlst. Zahlst du vor der Kreditzusage, schreibe in den Vertrag, dass das Sinal zurückgezahlt wird, wenn die Bank die Finanzierung ablehnt."
    }
   },
   {

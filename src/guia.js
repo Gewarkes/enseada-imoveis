@@ -138,7 +138,7 @@
     var list = $('[data-fav-list]', sheet || document);
     if (list) {
       list.innerHTML = favs.length ? favs.map(function (x) { return '<div class="fav-r"><a href="' + x.url + '">' + x.name.replace(/</g, '&lt;') + '</a><span>R$ ' + nf(x.price) + '</span><button type="button" data-fav-rm="' + x.slug + '" aria-label="×">×</button></div>'; }).join('') : '<p>' + V.mlEmpty + '</p>';
-      var wl = [V.mlMsg, ''].concat(favs.map(function (x) { return x.name + ' – R$ ' + nf(x.price) + '\n' + location.origin + favUrl(x.slug); }));
+      if (window.__applyCur) window.__applyCur(); var wl = [V.mlMsg, ''].concat(favs.map(function (x) { return x.name + ' – R$ ' + nf(x.price) + '\n' + location.origin + favUrl(x.slug); }));
       var a = $('[data-fav-wa]', sheet); if (a) { a.href = waLink(wl.join('\n')); a.hidden = !favs.length; }
     }
   };

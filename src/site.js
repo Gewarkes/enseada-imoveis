@@ -28,6 +28,7 @@
     return SYM[c] + nf(v);
   }
   var curHooks = [];
+  window.__applyCur = function () { applyCur(); };
   function applyCur() {
     $$('[data-cur]').forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.cur === cur)); });
     $$('[data-brl]').forEach(function (el) {

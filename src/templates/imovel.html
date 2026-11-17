@@ -84,7 +84,7 @@
         <div class="prose"><p>{{ paras[0] }}</p>{% if paras | length > 1 %}<details class="readmore"><summary>{{ t.readMore }}</summary>{% for para in paras[1:] %}<p>{{ para }}</p>{% endfor %}</details>{% endif %}</div>
       </section>
 
-      {% if l.deal == 'venda' and not land %}
+      {% if l.deal == 'venda' and not land and lang == 'pt' %}
       <section class="block" id="financiamento">
         <h2>{{ t.kCardH }}</h2><p class="calc-sub">{{ t.kCardP }}</p>
         {{ m.calc(calc_price) }}
