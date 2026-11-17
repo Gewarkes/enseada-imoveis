@@ -505,3 +505,16 @@ h1,h2{overflow-wrap:break-word;hyphens:auto}
 .seal-badge .sb-role{color:var(--muted);font-size:.9375rem}
 .seal-badge .sb-num{display:inline-block;margin-top:4px;padding:4px 12px;border-radius:999px;background:#172220;color:#F3E3B5;font-weight:700;font-size:.875rem;letter-spacing:.03em}
 .seal-badge .sb-link{margin-top:8px;font-size:.9375rem;font-weight:600;text-decoration:underline;text-underline-offset:3px;min-height:32px;display:inline-flex;align-items:center}
+
+/* v14 service cards */
+.points.serv{gap:14px}
+.points.serv .point{align-items:center;gap:18px;padding:20px 20px;border:0;border-radius:20px;background:#fff;box-shadow:0 6px 20px rgba(23,34,32,.08);position:relative;overflow:hidden;--ac:#0F3B36}
+.points.serv .point::before{content:"";position:absolute;left:0;top:0;bottom:0;width:6px;background:var(--ac)}
+.points.serv .point:nth-child(2){--ac:#B8892B}
+.points.serv .point:nth-child(3){--ac:#1C7C8C}
+.points.serv .point:nth-child(4){--ac:#C2603A}
+.points.serv .point-ico{flex:none;width:68px;height:68px;border-radius:20px;background:var(--ac);display:grid;place-items:center;box-shadow:0 6px 14px rgba(23,34,32,.18)}
+.points.serv .point-ico .ico,.points.serv .point-ico svg{width:36px;height:36px;color:#fff;stroke-width:1.8}
+.points.serv .point h3{font-size:1.25rem;margin-bottom:4px}
+.points.serv .point p{font-size:1rem;color:var(--muted)}
+@media (max-width:599px){.points.serv .point{padding:18px 16px 18px 20px;gap:16px}.points.serv .point-ico{width:60px;height:60px}}

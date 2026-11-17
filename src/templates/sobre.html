@@ -55,7 +55,7 @@
 <section class="sec sec-soft">
   <div class="wrap">
     <div class="sec-head"><div><h2>{{ t.servH }}</h2></div></div>
-    <div class="points">
+    <div class="points serv">
       {% for ic, k in [('home','sv1'),('tag','sv2'),('cal','sv3'),('doc','sv4')] %}
       <div class="point"><span class="point-ico">{{ icon(ic) }}</span><div><h3>{{ t[k] }}</h3><p>{{ t[k ~ 'p'] }}</p></div></div>
       {% endfor %}
