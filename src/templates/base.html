@@ -65,7 +65,7 @@
   </div>
   <div class="sheet-body">
     <nav class="sheet-nav">
-      {% for r, k in [('imoveis-venda','navBuy'),('imoveis-aluguel','navRent'),('imoveis','navAll'),('comprar','navBuyGuide'),('vender','navSellS'),('sobre','navAbout'),('blog','navGuide'),('contato','navContact')] %}
+      {% for r, k in [('imoveis-venda','navBuy'),('imoveis-aluguel','navRent'),('comprar','navBuyGuide'),('vender','navSellS'),('sobre','navAbout'),('contato','navContact')] %}
       <a href="{{ url(r) }}">{{ t[k] }}</a>
       {% endfor %}
     </nav>

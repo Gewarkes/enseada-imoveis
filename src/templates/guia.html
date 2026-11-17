@@ -7,9 +7,10 @@
   <div class="wrap guide">
     <h1>{{ L(pg.h1) }}</h1>
     <p class="prose-lead">{{ L(pg.lead) }}</p>
-    <p class="g-stand">{{ t.gStand }} {{ pg.stand }}</p>
+    {% if route != 'vender' %}<p class="g-stand">{{ t.gStand }} {{ pg.stand }}</p>{% endif %}
     {% for b in pg.blocks %}
-    {% if b.t == 'h2' %}<h2 class="g-h2">{{ L(b.x) }}</h2>
+    {% if route == 'vender' and loop.index0 == 5 %}<details class="fold"><summary>{{ L(b.x) }}</summary>
+    {% elif b.t == 'h2' %}<h2 class="g-h2">{{ L(b.x) }}</h2>
     {% elif b.t == 'p' %}<p class="g-p">{{ L(b.x) }}</p>
     {% elif b.t == 'ul' %}<ul class="g-ul">{% for i in b.x %}<li>{{ L(i) }}</li>{% endfor %}</ul>
     {% elif b.t == 'steps' %}
@@ -44,10 +45,12 @@
       {% if site.demoNote %}<p class="g-unclear">{{ icon('info') }}<span>{{ t.slDemo }}</span></p>{% endif %}
     </div>
     {% elif b.t == 'timeline' %}
-    <ol class="tl">{% for s in b.x %}<li class="tl-i"><span class="tl-n">{{ loop.index }}</span><div class="tl-b"><h3>{{ L(s.h) }}</h3><p>{{ L(s.p) }}</p><span class="tl-d">{{ icon('clock') }}{{ L(s.d) }}</span></div></li>{% endfor %}</ol>
+    <ol class="tl">{% for s in b.x %}<li class="tl-i"><span class="tl-n">{{ loop.index }}</span><div class="tl-b"><h3>{{ L(s.h) }}</h3><p>{{ L(s.p) }}</p><span class="tl-d">{{ icon('clock') }}{{ L(s.d) }}</span></div></li>
+    {% endfor %}</ol>
     {% elif b.t == 'kp' %}
     <div class="kp"><h2 class="g-h2" style="margin-top:0">{{ t.kpH }}</h2><p class="g-p">{{ t.kpP }}</p>
-      <ul class="hl">{% for k in ['kp1','kp2','kp3','kp4'] %}<li>{{ icon('check') }}<span>{{ t[k] }}</span></li>{% endfor %}</ul>
+      <ul class="hl">{% for k in ['kp1','kp2','kp3','kp4'] %}<li>{{ icon('check') }}<span>{{ t[k] }}</span></li>
+    {% endfor %}</ul>
       <p class="g-unclear">{{ icon('info') }}<span>{{ t.kp4n }}</span></p>
       <div class="btn-row"><a class="btn btn-line" href="{{ url('traducao') }}">{{ pages['traducao'].nav[lang] }}</a><a class="btn btn-line" href="{{ url('residencia') }}">{{ pages['residencia'].nav[lang] }}</a></div></div>
     {% elif b.t == 'widget' %}
@@ -120,6 +123,7 @@
       </form>
       {% endif %}
     {% endif %}
+    {% if route == 'vender' and loop.last %}</details>{% endif %}
     {% endfor %}
     {% if pg.sources %}
     <h2 class="g-h2">{{ t.gSources }}</h2>

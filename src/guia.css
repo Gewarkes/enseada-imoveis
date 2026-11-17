@@ -488,3 +488,11 @@ h1,h2{overflow-wrap:break-word;hyphens:auto}
 .seg a[data-lang] span:last-child{font-size:.75rem}
 .know-g a{font-size:.9375rem}
 .stats div{min-height:104px}
+
+/* v13 */
+.fold{margin:28px 0;border:1px solid var(--line,#e4e0d8);border-radius:14px;background:#fff;padding:0 18px}
+.fold>summary{cursor:pointer;list-style:none;font-weight:700;font-size:1.15rem;padding:16px 0;min-height:44px;display:flex;align-items:center;justify-content:space-between}
+.fold>summary::-webkit-details-marker{display:none}
+.fold>summary::after{content:"+";font-size:1.5rem;font-weight:400}
+.fold[open]>summary::after{content:"–"}
+.fold[open]{padding-bottom:12px}
