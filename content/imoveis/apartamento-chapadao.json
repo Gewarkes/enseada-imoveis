@@ -7,7 +7,7 @@
   "title": {
     "pt": "Apartamento de 2 quartos mobiliado no Chapadão",
     "en": "Furnished two-bedroom apartment in Chapadão",
-    "es": "Departamento amoblado de 2 habitaciones en Chapadão",
+    "es": "Departamento amueblado de 2 habitaciones en Chapadão",
     "de": "Möblierte 2-Zimmer-Wohnung im Chapadão"
   },
   "loc": "Chapadão",
@@ -66,9 +66,9 @@
   },
   "desc": {
     "pt": "Condomínio pequeno no Chapadão, perto do mirante sobre a Praia do Amor. O acesso é por rua calçada, com portão eletrônico. A varanda da sala dá para a piscina.\n\nMatrícula individual e escritura. A taxa de condomínio inclui água, piscina e jardinagem, e a convenção permite aluguel por temporada. Móveis, eletrodomésticos e enxoval entram na venda.",
-    "en": "A small complex in Chapadão, close to the lookout above Praia do Amor. Access is by a paved road, through an electric gate. The living-room veranda faces the pool.\n\nOwn registry entry and a deed. The service charge covers water, pool and gardening, and the bylaws allow holiday lets. Furniture, appliances and linen are part of the sale.",
+    "en": "A small complex in Chapadão, close to the lookout above Praia do Amor. Access is by a paved road, through an electric gate. The living-room veranda faces the pool.\n\nThe unit has its own registry entry and title deed. The condo fee covers water, pool and gardening, and the bylaws allow vacation rentals. Furniture, appliances and linen are included in the sale.",
     "es": "Condominio pequeño en Chapadão, cerca del mirador sobre la Praia do Amor. El acceso es por una calle empedrada, con portón eléctrico. El balcón de la sala da a la piscina.\n\nMatrícula individual y escritura. La cuota de condominio incluye agua, piscina y jardinería, y el reglamento permite el alquiler por temporada. Los muebles, los electrodomésticos y la ropa de cama están incluidos en la venta.",
-    "de": "Kleine Anlage im Chapadão, nahe dem Aussichtspunkt über der Praia do Amor. Die Zufahrt führt über eine gepflasterte Straße mit elektrischem Tor. Der Balkon des Wohnzimmers geht zum Pool.\n\nEigener Grundbuchauszug (Matrícula) und Kaufurkunde (Escritura). Die Hausgebühr (Condomínio) enthält Wasser, Pool und Gartenpflege, und die Hausordnung erlaubt Ferienvermietung. Möbel, Geräte und Wäsche sind im Verkauf enthalten."
+    "de": "Kleine Anlage im Chapadão, nahe dem Aussichtspunkt über der Praia do Amor. Die Zufahrt führt über eine gepflasterte Straße mit elektrischem Tor. Der Balkon des Wohnzimmers geht zum Pool.\n\nDie Wohnung hat einen eigenen Grundbuchauszug (Matrícula) und eine Kaufurkunde (Escritura). Das Hausgeld (Condomínio) deckt Wasser, Pool und Gartenpflege, und die Hausordnung erlaubt Ferienvermietung. Möbel, Geräte und Wäsche sind im Verkauf enthalten."
   },
   "ordem": 5,
   "checks": {

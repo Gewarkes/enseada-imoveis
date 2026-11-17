@@ -42,7 +42,7 @@
         </div>
         {% if lang != 'pt' and l.deal == 'venda' and not land and l.price >= taxes.residence.northeast %}<p class="ichip">{{ icon('user') }}<span>{{ t.resChip }}</span> <a href="{{ url('residencia') }}">{{ t.resChipL }}</a></p>{% endif %}
         {% if l.temporada in ('sim','nao') %}<p class="ichip">{{ icon('cal') }}{{ t.tempOk if l.temporada == 'sim' else t.tempNo }}</p>{% endif %}
-        <ul class="keys gl{% if land %} k2{% endif %}">
+        <ul class="keys gl {{ "c2" if land else "c4" }}">
           {% if land %}
           <li>{{ icon('lot') }}<span><b>{{ nf(l.lot) }} m²</b> {{ t.lotWord }}</span></li>
           <li>{{ icon('pin') }}<span><b>{{ nf(l.beach) }} m</b> {{ t.toBeach }}</span></li>
@@ -63,10 +63,10 @@
 
       <section class="block glance">
         {% if l.feats %}<h2>{{ t.glH }}</h2>
-        <ul class="gl">{% for f in l.feats %}<li>{{ icon(fi.get(f, 'check')) }}<span>{{ t['f_' ~ f] }}</span></li>{% endfor %}</ul>{% endif %}
+        {% set fn = l.feats|length %}<ul class="gl {{ "c5" if fn%5==0 else ("c4" if fn%4==0 else ("c3" if fn%3==0 else "c2")) }}">{% for f in l.feats %}<li>{{ icon(fi.get(f, 'check')) }}<span>{{ t['f_' ~ f] }}</span></li>{% endfor %}</ul>{% endif %}
         {% if l.dist %}
         <h2 class="gl-h2">{{ t.distH }}</h2>
-        <ul class="gl dist">
+        <ul class="gl dist c3">
           {% if l.dist.get('beach') %}<li>{{ icon('wave') }}<span><b>{{ l.dist.get('beach') }}</b> {{ t.dBeach }}</span></li>{% endif %}
           {% if l.dist.get('center') %}<li>{{ icon('pin') }}<span><b>{{ l.dist.get('center') }}</b> {{ t.dCenter }}</span></li>{% endif %}
           {% if l.dist.get('airport') %}<li>{{ icon('car') }}<span><b>{{ l.dist.get('airport') }}</b> {{ t.dAirport }}</span></li>{% endif %}
@@ -102,7 +102,7 @@
 
       <section class="block">
         <h2>{{ t.dData }}</h2>
-        <dl class="table">
+        <dl class="table dtiles">
           <div><dt>{{ t.ref }}</dt><dd>{{ l.ref }}</dd></div>
           <div><dt>{{ t.dType }}</dt><dd>{{ t['t_' ~ l.type] }}</dd></div>
           {% if l.lot %}<div><dt>{{ t.lotCap }}</dt><dd>{{ nf(l.lot) }} m²</dd></div>{% endif %}

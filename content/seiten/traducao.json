@@ -52,7 +52,7 @@
     },
     {
      "pt": "Comprovantes de renda ou de origem do dinheiro, quando pedidos",
-     "en": "Proof of income or origin of funds, when requested",
+     "en": "Proof of income or source of funds, if requested",
      "es": "Comprobantes de ingresos o del origen del dinero, cuando los piden",
      "de": "Einkommensnachweise oder Nachweise über die Herkunft des Geldes, wenn verlangt"
     }
@@ -118,25 +118,25 @@
    "k": "info",
    "x": {
     "pt": "Preço fixo por documento. O valor final aparece na oferta on-line da Traduzme (traduzme.com.br). Pagamento só por Pix.",
-    "en": "Fixed price per document. The final price is shown in Traduzme’s online quote (traduzme.com.br). Payment by Pix only.",
-    "es": "Precio fijo por documento. El valor final aparece en la oferta en línea de Traduzme (traduzme.com.br). Pago solo por Pix.",
-    "de": "Festpreis pro Dokument. Der Endpreis steht im Online-Angebot von Traduzme (traduzme.com.br). Zahlung nur per Pix."
+    "en": "Fixed price per document. You will see the final price in Traduzme’s online quote (traduzme.com.br). Payment by Pix (Brazilian instant payment) only.",
+    "es": "Precio fijo por documento. El valor final aparece en la oferta en línea de Traduzme (traduzme.com.br). Pago solo por Pix (transferencia instantánea de Brasil).",
+    "de": "Festpreis pro Dokument. Der Endpreis steht im Online-Angebot von Traduzme (traduzme.com.br). Zahlung nur per Pix (brasilianisches Sofortzahlungssystem)."
    }
   },
   {
    "t": "h2",
    "x": {
     "pt": "Preço a partir de, por documento. O valor final aparece na oferta on-line da Traduzme (traduzme.com.br). Pagamento por Pix.",
-    "en": "Price from, per document. The final price is shown in Traduzme’s online quote (traduzme.com.br). Payment by Pix.",
+    "en": "Starting price per document. You will see the final price in Traduzme’s online quote (traduzme.com.br). Payment by Pix.",
     "es": "Precio desde, por documento. El valor final aparece en la oferta en línea de Traduzme (traduzme.com.br). Pago por Pix.",
-    "de": "Preis ab, pro Dokument. Der Endpreis steht im Online-Angebot von Traduzme (traduzme.com.br). Zahlung per Pix."
+    "de": "Preis ab, pro Dokument. Der Endpreis steht im Online-Angebot von Traduzme (traduzme.com.br). Zahlung per Pix (brasilianisches Sofortzahlungssystem)."
    }
   },
   {
    "t": "p",
    "x": {
     "pt": "A apostila é um carimbo do país de origem que confirma que o documento é autêntico. Depois, um tradutor juramentado faz a tradução.",
-    "en": "The apostille is a stamp from the issuing country confirming the document is authentic. Afterwards a sworn translator does the translation.",
+    "en": "An apostille is a stamp from the issuing country that confirms the document is authentic. A sworn translator then translates it.",
     "es": "La apostilla es un sello del país de origen que confirma que el documento es auténtico. Después, un traductor jurado hace la traducción.",
     "de": "Die Apostille ist ein Stempel des Herkunftslands, der die Echtheit des Dokuments bestätigt. Danach übersetzt ein beeidigter Übersetzer."
    }
@@ -145,7 +145,7 @@
    "t": "wa",
    "m": {
     "pt": "Olá! Preciso de tradução juramentada para a compra de um imóvel.",
-    "en": "Hello! I need a sworn translation for buying a property.",
+    "en": "Hello! I need a sworn translation for a property purchase.",
     "es": "¡Hola! Necesito traducción jurada para comprar una propiedad.",
     "de": "Hallo! Ich brauche eine beeidigte Übersetzung für den Kauf einer Immobilie."
    },
@@ -159,7 +159,7 @@
  ],
  "sources": [
   [
-   "Traduzme (traduzme.com.br), consulta em 16.11.2026",
+   "Traduzme (traduzme.com.br), consulta em 16/11/2026",
    "https://traduzme.com.br/"
   ]
  ],

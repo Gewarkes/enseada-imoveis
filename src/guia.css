@@ -224,7 +224,7 @@
 .gl .ico{width:22px;height:22px;flex:none;color:var(--brand)}
 .gl b{font-size:1.0625rem}
 .gl.dist{grid-template-columns:1fr;margin-top:0}
-.gl.dist li{display:flex;border:0;border-radius:0;padding:13px 14px}
+.gl.dist li{display:flex}
 .gl-h2{margin-top:22px}
 .glance .form-note{margin-top:8px}
 .readmore summary{cursor:pointer;color:var(--brand);font-weight:700;padding:8px 0;min-height:44px;display:flex;align-items:center;list-style:none}
@@ -274,3 +274,43 @@ h1,h2{overflow-wrap:break-word;hyphens:auto}
 @media (max-width:999px){body:has(.bar.on) .fav-pill{bottom:calc(84px + env(safe-area-inset-bottom))}}
 .bar-price span{display:inline-block}.bar-price small{display:inline}
 .map .pop img{max-height:110px;object-fit:cover}
+
+/* v7b: Kacheln als einzelne Karten, keine grauen Leerfelder */
+.gl,.keys.gl,.gl.dist{display:flex;flex-wrap:wrap;gap:10px;background:none;border:0;border-radius:0;overflow:visible;grid-template-columns:none!important}
+.gl li{flex:1 1 150px;min-width:0;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-s);padding:12px 14px}
+.keys.gl.k2 li{flex-basis:45%}
+@media (max-width:520px){.gl.dist li{flex-basis:100%}}
+
+/* v8: alle Kacheln gleichmäßig – Raster statt Flex */
+.gl,.keys.gl,.gl.dist,.dtiles{display:grid!important;gap:10px;background:none;border:0;border-radius:0;overflow:visible;grid-template-columns:repeat(2,minmax(0,1fr))!important}
+.gl li,.dtiles>div{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-s);padding:12px 14px;min-width:0;min-height:60px;display:flex;align-items:center;gap:12px;flex:none}
+.gl li:last-child:nth-child(odd){grid-column:1/-1}
+.dtiles>div{flex-direction:column;align-items:flex-start;justify-content:center;gap:2px;border-top:1px solid var(--line)!important;border-right:1px solid var(--line)!important}
+.dtiles dt{font-size:.8125rem;color:var(--muted)}.dtiles dd{font-size:1rem;text-align:left;overflow-wrap:anywhere}
+.dtiles>div:last-child:nth-child(odd){grid-column:1/-1}
+@media (min-width:640px){
+ .gl.c3,.gl.dist{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+ .gl.c4,.keys.gl.c4{grid-template-columns:repeat(4,minmax(0,1fr))!important}
+ .gl.c3 li:last-child:nth-child(odd),.gl.c4 li:last-child:nth-child(odd){grid-column:auto}
+ .dtiles{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+ .dtiles>div:last-child:nth-child(odd){grid-column:auto}
+}
+.keys.gl.c2{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+@media (max-width:520px){.gl.dist{grid-template-columns:1fr!important}.gl.dist li:last-child{grid-column:auto}}
+@media (max-width:340px){.gl,.keys.gl,.dtiles{grid-template-columns:1fr!important}}
+@media (min-width:900px){.gl.c5{grid-template-columns:repeat(5,minmax(0,1fr))!important}.gl.c5 li{flex-direction:column;align-items:flex-start;justify-content:center;gap:6px;min-height:84px}}
+@media (min-width:640px) and (max-width:899px){.gl.c5{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+
+/* v8b: PDF-Knopf dezent, CTA-Band ruhig, Maklerinnen-Zeile */
+.btn-pdf,.btn.btn-pdf{background:var(--surface);color:var(--brand);border:1px solid var(--line)}
+.btn-pdf:hover{background:var(--soft);color:var(--brand)}
+.pdf-tag{background:none;color:var(--brand);border:1.5px solid var(--brand);font-weight:800;font-size:.6875rem;padding:2px 5px;border-radius:4px}
+.cta{text-align:center;justify-items:center;padding:36px 22px}
+.cta h2{font-size:clamp(1.375rem,3vw,1.875rem)}
+.cta p{margin-inline:auto}
+.cta .btn-row{justify-content:center}
+@media (min-width:900px){.cta{grid-template-columns:1fr!important;padding:48px}}
+.agent-line{display:flex;gap:10px;align-items:flex-start;margin:16px 0;color:var(--ink);font-size:.9375rem}
+.agent-line .ico{width:20px;height:20px;color:var(--brand);flex:none;margin-top:2px}
+.cta .btn-row,.cta .ans{grid-column:1/-1!important;grid-row:auto!important}
+.map.map-s{height:clamp(300px,46vw,440px)}

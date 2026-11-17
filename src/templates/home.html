@@ -37,26 +37,9 @@
       <li>{{ icon('check') }}<span><b>{{ site.stats.sold }}</b> {{ t.trSold }}</span></li>
       <li>{{ icon('check') }}<span>{{ t.trSince }} <b>{{ year - site.stats.years }}</b></span></li>
       <li>{{ icon('check') }}<span><b>{{ nf(site.stats.rating, 1) }}</b> {{ t.trRating }}</span></li>
-      <li>{{ icon('check') }}<span><a href="{{ url('verificada') }}">{{ t.creciLabel }} · {{ site.agent.creci }}</a></span></li>
     </ul>
   </div></div>
 </section>
-
-<section class="sec">
-  <div class="wrap">
-    <div class="sec-head">
-      <div><h2>{{ t.featH }}</h2><p>{{ t.featP }}</p></div>
-      <a class="link" href="{{ url('imoveis') }}">{{ t.seeAll }} ({{ listings | length }}) {{ icon('arrow') }}</a>
-    </div>
-    <div class="rail">
-      {% for l in featured %}{{ m.card(l, false, loop.index, '(min-width:1000px) 380px, (min-width:640px) 46vw, 84vw') }}{% endfor %}
-    </div>
-    <div class="sec-more"><a class="btn btn-line btn-block" href="{{ url('imoveis') }}">{{ t.seeAll }} ({{ listings | length }})</a></div>
-  </div>
-</section>
-
-
-
 
 <section class="sec sec-soft">
   <div class="wrap">
@@ -78,11 +61,27 @@
   </div>
 </section>
 
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><h2>{{ t.featH }}</h2><p>{{ t.featP }}</p></div>
+      <a class="link" href="{{ url('imoveis') }}">{{ t.seeAll }} ({{ listings | length }}) {{ icon('arrow') }}</a>
+    </div>
+    <div class="rail">
+      {% for l in featured %}{{ m.card(l, false, loop.index, '(min-width:1000px) 380px, (min-width:640px) 46vw, 84vw') }}{% endfor %}
+    </div>
+    <div class="sec-more"><a class="btn btn-line btn-block" href="{{ url('imoveis') }}">{{ t.seeAll }} ({{ listings | length }})</a></div>
+  </div>
+</section>
+
+
+
+
 <section class="sec sec-trust" id="seguranca">
   <div class="wrap">
     <div class="sec-head"><div><span class="kick">{{ t.trK }}</span><h2>{{ t.trH }}</h2><p>{{ t.trP }}</p></div></div>
     <div class="tr-grid">
-      {% for i, ic, r in [(1,'shield','verificada'),(2,'doc','imoveis'),(3,'alert','golpes'),(4,'check','comprar')] %}
+      {% for i, ic, r in [(1,'shield','verificada'),(2,'doc','imoveis'),(3,'alert','golpes'),(4,'check','comprar' if lang == 'pt' else 'comprar-do-exterior')] %}
       <a class="tr-card" href="{{ url(r) }}"><span class="tr-ic">{{ icon(ic) }}</span><b>{{ t['trC' ~ i ~ 'h'] }}</b><span>{{ t['trC' ~ i ~ 'p'] }}</span></a>
       {% endfor %}
     </div>
@@ -103,6 +102,7 @@
           <div><b>{{ site.stats.countries }}</b><span>{{ t.stCountries }}</span></div>
           <div><b>{{ nf(site.stats.rating, 1) }}</b><span>{{ t.stRating }} ({{ site.stats.reviews }})</span></div>
         </div>
+        <p class="agent-line">{{ icon('shield') }}<span><b>{{ site.agent.name }}</b> · {{ t.creciLabel }} · {{ site.agent.creci }} · <a href="{{ url('verificada') }}">{{ t.slSealW }}</a></span></p>
         <div class="btn-row"><a class="btn btn-primary" href="{{ url('sobre') }}">{{ t.whyBtn }}</a></div>
       </div>
     </div>
@@ -140,8 +140,7 @@
 <section class="sec sec-soft" id="faq">
   <div class="wrap">
     <div class="sec-head"><div><h2>{{ t.fqH }}</h2></div></div>
-    {{ m.answers() }}
-    {{ m.faq(6) }}
+    {{ m.faq(4) }}
   </div>
 </section>
 

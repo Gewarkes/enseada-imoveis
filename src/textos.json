@@ -188,7 +188,7 @@
  "brokerArea": {
   "pt": "Área do corretor",
   "en": "Agent login",
-  "es": "Área del corredor",
+  "es": "Área de la corredora",
   "de": "Maklerbereich"
  },
  "waHello": {
@@ -247,7 +247,7 @@
  },
  "metaHome": {
   "pt": "Casas, apartamentos e terrenos para comprar ou alugar em Pipa e Tibau do Sul (RN), com documentação conferida. Atendimento em português, inglês e alemão.",
-  "en": "Houses, apartments and land to buy or rent in Pipa and Tibau do Sul, Brazil, with paperwork checked. Service in Portuguese, English and German.",
+  "en": "Houses, apartments and land to buy or rent in Pipa and Tibau do Sul, Brazil, with the paperwork checked. Service in Portuguese, English and German.",
   "es": "Casas, departamentos y terrenos para comprar o alquilar en Pipa y Tibau do Sul (RN), con la documentación revisada. Atención en portugués, inglés y alemán.",
   "de": "Häuser, Wohnungen und Grundstücke zum Kaufen oder Mieten in Pipa und Tibau do Sul (RN), mit geprüften Unterlagen. Beratung auf Portugiesisch, Englisch und Deutsch."
  },
@@ -259,7 +259,7 @@
  },
  "heroH": {
   "pt": "Imóveis em Pipa para comprar e alugar",
-  "en": "Property in Pipa to buy and rent",
+  "en": "Property for sale and rent in Pipa",
   "es": "Propiedades en Pipa para comprar y alquilar",
   "de": "Immobilien in Pipa zum Kaufen und Mieten"
  },
@@ -267,7 +267,7 @@
   "pt": "Imobiliária local em Pipa desde {since}. Em cada anúncio mostramos quais documentos já recebemos e quais faltam.",
   "en": "Local agency in Pipa since {since}. Every listing shows which documents we have received and which are still missing.",
   "es": "Inmobiliaria local en Pipa desde {since}. En cada anuncio mostramos qué documentos ya recibimos y cuáles faltan.",
-  "de": "Lokale Maklerin in Pipa seit {since}. Bei jeder Anzeige steht, welche Unterlagen vorliegen und welche noch fehlen."
+  "de": "Maklerin vor Ort in Pipa seit {since}. Bei jeder Anzeige steht, welche Unterlagen vorliegen und welche noch fehlen."
  },
  "sDeal": {
   "pt": "O que você procura",
@@ -445,7 +445,7 @@
  },
  "mapP": {
   "pt": "Veja onde fica cada imóvel e a que distância está da praia e do centro.",
-  "en": "See where each property is and how far it is from the beach and the centre.",
+  "en": "See where each property is and how far it is from the beach and the center.",
   "es": "Mira dónde está cada propiedad y a qué distancia queda de la playa y del centro.",
   "de": "Sieh, wo jede Immobilie liegt und wie weit sie vom Strand und vom Zentrum entfernt ist."
  },
@@ -501,12 +501,12 @@
   "pt": "Uma imobiliária que mora em Pipa",
   "en": "An agency based in Pipa",
   "es": "Una inmobiliaria que vive en Pipa",
-  "de": "Ein Maklerbüro, das in Pipa wohnt"
+  "de": "Ein Maklerbüro, das in Pipa zu Hause ist"
  },
  "whyP": {
   "pt": "Há {years} anos vendemos, alugamos e administramos casas e terrenos em Pipa e Tibau do Sul. Atendemos em português, inglês e alemão e acompanhamos a compra do primeiro contato até o registro.",
-  "en": "For {years} years we have sold, let and managed houses and land in Pipa and Tibau do Sul. We work in Portuguese, English and German and stay with you from the first contact to the registration.",
-  "es": "Hace {years} años vendemos, alquilamos y administramos casas y terrenos en Pipa y Tibau do Sul. Atendemos en portugués, inglés y alemán y te acompañamos en la compra, desde el primer contacto hasta el registro.",
+  "en": "For {years} years we have sold, rented out and managed houses and land in Pipa and Tibau do Sul. We work in Portuguese, English and German and stay with you from first contact to registration.",
+  "es": "Desde hace {years} años vendemos, alquilamos y administramos casas y terrenos en Pipa y Tibau do Sul. Atendemos en portugués, inglés y alemán y te acompañamos en la compra, desde el primer contacto hasta el registro.",
   "de": "Seit {years} Jahren verkaufen, vermieten und verwalten wir Häuser und Grundstücke in Pipa und Tibau do Sul. Wir beraten auf Portugiesisch, Englisch und Deutsch und begleiten dich beim Kauf vom ersten Kontakt bis zur Eintragung."
  },
  "whyBtn": {
@@ -553,8 +553,8 @@
  },
  "w1p": {
   "pt": "Matrícula, certidões e IPTU são conferidos antes do anúncio. A análise jurídica final cabe ao advogado do comprador.",
-  "en": "Title record, certificates and property tax are checked before we list. The final legal review is up to the buyer’s lawyer.",
-  "es": "Revisamos la matrícula (Matrícula), los certificados y el IPTU antes de publicar. El análisis legal final le corresponde al abogado del comprador.",
+  "en": "Title record, certificates and property tax are checked before we list. The final legal review is for the buyer’s lawyer.",
+  "es": "Revisamos la matrícula (el registro oficial del inmueble), los certificados y el IPTU antes de publicar. El análisis legal final le corresponde al abogado del comprador.",
   "de": "Grundbuchauszug (Matrícula), Bescheinigungen und Grundsteuer (IPTU) prüfen wir, bevor das Angebot online geht. Die abschließende rechtliche Prüfung macht der Anwalt des Käufers."
  },
  "w2": {
@@ -565,7 +565,7 @@
  },
  "w2p": {
   "pt": "Visita, contrato e cartório explicados em português, inglês ou alemão.",
-  "en": "Viewing, contract and notary explained in Portuguese, English or German.",
+  "en": "We explain the viewing, contract and notary steps in Portuguese, English or German.",
   "es": "Te explicamos la visita, el contrato y la notaría en portugués, inglés o alemán.",
   "de": "Besichtigung, Vertrag und Notartermin erklären wir dir auf Portugiesisch, Englisch oder Deutsch."
  },
@@ -577,8 +577,8 @@
  },
  "w3p": {
   "pt": "Visita por vídeo e assinatura por procuração, para quem não pode viajar.",
-  "en": "Video viewing and signing by power of attorney if you cannot travel.",
-  "es": "Visita por video y firma con poder (procuración), para quien no puede viajar.",
+  "en": "Video viewings, and signing by power of attorney if you cannot travel.",
+  "es": "Visita por video y firma con poder notarial (procuração), para quien no puede viajar.",
   "de": "Besichtigung per Video und Unterschrift per Vollmacht, für alle, die nicht anreisen können."
  },
  "w4": {
@@ -589,7 +589,7 @@
  },
  "w4p": {
   "pt": "Administração, caseiro e aluguel por temporada, se você quiser.",
-  "en": "Management, caretaker and holiday letting, if you want it.",
+  "en": "Management, a caretaker and vacation rentals, if you want them.",
   "es": "Administración, cuidador y alquiler por temporada, si lo quieres.",
   "de": "Verwaltung, Hausmeister und Ferienvermietung, wenn du möchtest."
  },
@@ -601,13 +601,13 @@
  },
  "kH": {
   "pt": "Quanto ficaria a parcela?",
-  "en": "What would the instalment be?",
+  "en": "What would the monthly payment be?",
   "es": "¿Cuánto sería la cuota?",
   "de": "Wie hoch wäre die Rate?"
  },
  "kP": {
   "pt": "Informe o valor do imóvel e mexa nos controles. O resultado aparece na hora, em real, dólar ou euro.",
-  "en": "Enter the property price and move the controls. The result appears at once, in reais, dollars or euros.",
+  "en": "Enter the property price and move the controls. The result updates instantly, in reais, dollars or euros.",
   "es": "Escribe el valor de la propiedad y mueve los controles. El resultado aparece al instante, en reales, dólares o euros.",
   "de": "Gib den Wert der Immobilie ein und verändere die Regler. Das Ergebnis erscheint sofort, in Real, Dollar oder Euro."
  },
@@ -649,25 +649,25 @@
  },
  "kSac": {
   "pt": "SAC: as parcelas começam mais altas e diminuem todo mês.",
-  "en": "SAC: instalments start higher and go down every month.",
+  "en": "SAC: payments start higher and fall every month.",
   "es": "SAC: las cuotas empiezan más altas y bajan cada mes.",
   "de": "SAC: Die Raten sind am Anfang höher und werden jeden Monat kleiner."
  },
  "kPriceSys": {
   "pt": "Price: todas as parcelas têm o mesmo valor.",
-  "en": "Price: every instalment is the same amount.",
+  "en": "Price: every payment is the same amount.",
   "es": "Price: todas las cuotas tienen el mismo valor.",
   "de": "Price: Alle Raten sind gleich hoch."
  },
  "kFirst": {
   "pt": "Primeira parcela",
-  "en": "First instalment",
+  "en": "First installment",
   "es": "Primera cuota",
   "de": "Erste Rate"
  },
  "kLast": {
   "pt": "Última parcela",
-  "en": "Last instalment",
+  "en": "Last installment",
   "es": "Última cuota",
   "de": "Letzte Rate"
  },
@@ -685,15 +685,15 @@
  },
  "kCosts": {
   "pt": "Custos de compra (aprox.)",
-  "en": "Purchase costs (approx.)",
+  "en": "Closing costs (approx.)",
   "es": "Costos de compra (aprox.)",
   "de": "Kaufnebenkosten (ca.)"
  },
  "kNote": {
   "pt": "Simulação sem TR, seguros e tarifas. Não é oferta de crédito. A taxa é um exemplo; o valor real você recebe do banco. Bancos brasileiros raramente financiam compradores não residentes.",
-  "en": "Simulation without TR index, insurance and fees. Not a credit offer. The rate is an example; your bank gives you the real one. Brazilian banks rarely lend to non-resident buyers.",
+  "en": "Estimate only. It excludes the TR index (a government reference rate), insurance and fees, and is not a loan offer. The rate is an example; your bank will give you the real one. Brazilian banks rarely lend to non-residents.",
   "es": "Simulación sin TR, seguros ni comisiones. No es una oferta de crédito. La tasa es un ejemplo; el valor real te lo da el banco. Los bancos brasileños rara vez financian a compradores no residentes.",
-  "de": "Berechnung ohne TR, Versicherungen und Gebühren. Das ist kein Kreditangebot. Der Zinssatz ist nur ein Beispiel; den echten Wert bekommst du von der Bank. Brasilianische Banken finanzieren Käufer ohne Wohnsitz in Brasilien nur selten."
+  "de": "Berechnung ohne TR (Referenzzins), Versicherungen und Gebühren. Das ist kein Kreditangebot. Der Zinssatz ist nur ein Beispiel; den echten Wert bekommst du von der Bank. Brasilianische Banken finanzieren Käufer ohne Wohnsitz in Brasilien nur selten."
  },
  "kAsk": {
   "pt": "Tirar dúvidas sobre financiamento",
@@ -763,7 +763,7 @@
  },
  "guideP": {
   "pt": "Respostas diretas sobre documentos, custos e aluguel por temporada.",
-  "en": "Straight answers on paperwork, costs and holiday letting.",
+  "en": "Straight answers on paperwork, costs and vacation rentals.",
   "es": "Respuestas directas sobre documentos, costos y alquiler por temporada.",
   "de": "Klare Antworten zu Unterlagen, Kosten und Ferienvermietung."
  },
@@ -786,56 +786,56 @@
   "de": "Häufige Fragen"
  },
  "fq1": {
-  "pt": "Estrangeiro pode comprar imóvel em Pipa?",
-  "en": "Can a foreigner buy property in Pipa?",
-  "es": "¿Un extranjero puede comprar una propiedad en Pipa?",
-  "de": "Dürfen Ausländer in Pipa eine Immobilie kaufen?"
+  "pt": "Posso comprar um imóvel em Pipa sendo estrangeiro?",
+  "en": "Can I buy in Pipa as a foreigner?",
+  "es": "¿Puedo comprar en Pipa siendo extranjero?",
+  "de": "Darf ich als Ausländer in Pipa kaufen?"
  },
  "fq1a": {
-  "pt": "Sim. É preciso ter CPF, que se pede pela Receita e se conclui no consulado, e trazer o dinheiro por remessa internacional com contrato de câmbio. Como corretora, acompanhamos você até o registro; a parte jurídica é do seu advogado.",
-  "en": "Yes. You need a CPF tax number (requested via the Receita, finished at the consulate), and the money must arrive by international transfer with an exchange contract. As your agent we stay with you up to registration; legal work is done by your own lawyer.",
-  "es": "Sí. Necesitas el CPF (se pide por la Receita y se concluye en el consulado) y traer el dinero por transferencia internacional con contrato de cambio. Como corredora te acompañamos hasta el registro; la parte legal la hace tu abogado.",
-  "de": "Ja. Du brauchst eine CPF (Steuernummer; über die Receita beantragen, im Konsulat abschließen) und musst das Geld per internationaler Überweisung mit Câmbio-Vertrag schicken. Wir begleiten dich als Maklerin bis zur Eintragung; die Rechtsarbeit macht dein eigener Anwalt."
+  "pt": "Sim. Você precisa de CPF (cadastro fiscal, pedido online à Receita Federal) e traz o dinheiro por transferência internacional com contrato de câmbio. Acompanhamos você até o registro; a parte jurídica fica com o seu advogado.",
+  "en": "Yes. You need a CPF (Brazilian tax number, requested online from the Receita Federal) and you send the money by international transfer with an exchange contract. We stay with you until registration; your own lawyer handles the legal side.",
+  "es": "Sí. Necesitas un CPF (número fiscal, se pide en línea a la Receita Federal) y envías el dinero por transferencia internacional con contrato de cambio. Te acompañamos hasta el registro; lo legal lo ve tu propio abogado.",
+  "de": "Ja. Du brauchst eine CPF (brasilianische Steuernummer, online bei der Receita Federal beantragt) und schickst das Geld per Auslandsüberweisung mit Câmbio-Vertrag (Währungstausch). Wir begleiten dich bis zur Eintragung; die rechtliche Prüfung macht dein eigener Anwalt."
  },
  "fq2": {
-  "pt": "Quais custos entram além do preço?",
-  "en": "Which costs come on top of the price?",
-  "es": "¿Qué costos hay además del precio?",
-  "de": "Welche Kosten kommen zum Preis dazu?"
+  "pt": "Was kommt zum Kaufpreis dazu?",
+  "en": "What do I pay on top of the price?",
+  "es": "¿Qué se paga además del precio?",
+  "de": "Was kommt zum Kaufpreis dazu?"
  },
  "fq2a": {
-  "pt": "Em geral, ITBI, escritura e registro somam cerca de 5 % a 7 % do valor (a simulação do site usa 6 %). O percentual exato depende do município e do cartório.",
-  "en": "As a rule, transfer tax, deed and registration add up to about 5% to 7% of the price (the site’s example uses 6%). The exact figure depends on the municipality and the notary office.",
-  "es": "En general suman cerca del 5% al 7% del valor (la simulación del sitio usa 6%). El porcentaje exacto depende del municipio y de la notaría.",
-  "de": "Meist machen ITBI, Urkunde und Eintragung zusammen etwa 5 % bis 7 % aus (der Rechner nutzt 6 %). Der genaue Satz hängt von Gemeinde und Notariat ab."
+  "pt": "Em geral 5% a 7% do valor: ITBI (imposto municipal), escritura e registro. O exemplo do site usa 6%. O valor exato depende da prefeitura e do cartório.",
+  "en": "Usually 5% to 7% of the price: ITBI (city transfer tax), deed and registration. Our example uses 6%. The exact amount depends on the city and the notary office.",
+  "es": "Por lo general del 5% al 7% del precio: ITBI (impuesto municipal), escritura y registro. Nuestro ejemplo usa el 6%. El monto exacto depende de la prefeitura y del cartório.",
+  "de": "Meist 5 % bis 7 % vom Preis: ITBI (städtische Steuer), Kaufurkunde und Eintragung. Unser Beispiel rechnet mit 6 %. Der genaue Betrag hängt von Stadt und Notariat ab."
  },
  "fq3": {
-  "pt": "Posso comprar sem viajar ao Brasil?",
-  "en": "Can I buy without travelling to Brazil?",
-  "es": "¿Puedo comprar sin viajar a Brasil?",
-  "de": "Kann ich kaufen, ohne nach Brasilien zu reisen?"
+  "pt": "Kann ich kaufen, ohne anzureisen?",
+  "en": "Can I buy without traveling?",
+  "es": "¿Puedo comprar sin viajar?",
+  "de": "Kann ich kaufen, ohne anzureisen?"
  },
  "fq3a": {
-  "pt": "Sim. Mostramos o imóvel por vídeo e a escritura pode ser assinada por procuração. Ainda assim, recomendamos uma visita antes da assinatura.",
-  "en": "Yes. We show the property by video and the deed can be signed by power of attorney. We still recommend a visit before signing.",
-  "es": "Sí. Te mostramos la propiedad por video y la escritura se puede firmar con poder (procuración). Aun así, te recomendamos visitarla antes de firmar.",
-  "de": "Ja. Wir zeigen dir die Immobilie per Video, und den Kaufvertrag kannst du per Vollmacht unterschreiben. Wir empfehlen trotzdem, vor der Unterschrift einmal vorbeizukommen."
+  "pt": "Sim. Mostramos o imóvel por vídeo e uma procuração permite que alguém assine a escritura por você. Mesmo assim, recomendamos uma visita antes de assinar.",
+  "en": "Yes. We show you the property by video, and a power of attorney lets someone sign the deed for you. We still recommend a visit before you sign.",
+  "es": "Sí. Te mostramos la propiedad por video y un poder notarial permite que alguien firme la escritura por ti. Aun así, recomendamos visitarla antes de firmar.",
+  "de": "Ja. Wir zeigen dir die Immobilie per Video, und mit einer Vollmacht kann jemand die Urkunde für dich unterschreiben. Wir raten trotzdem zu einem Besuch vor der Unterschrift."
  },
  "fq4": {
-  "pt": "Vocês administram o aluguel por temporada?",
-  "en": "Do you manage holiday lettings?",
-  "es": "¿Administran el alquiler por temporada?",
-  "de": "Verwaltet ihr auch die Ferienvermietung?"
+  "pt": "Vocês cuidam da locação por temporada?",
+  "en": "Do you manage vacation rentals?",
+  "es": "¿Gestionan el alquiler por temporada?",
+  "de": "Übernehmt ihr die Ferienvermietung?"
  },
  "fq4a": {
   "pt": "Sim. Cuidamos de anúncio, reservas, limpeza e manutenção e enviamos um relatório mensal ao proprietário.",
   "en": "Yes. We handle the listing, bookings, cleaning and maintenance and send the owner a monthly report.",
-  "es": "Sí. Nos encargamos del anuncio, las reservas, la limpieza y el mantenimiento, y le enviamos un informe mensual al propietario.",
+  "es": "Sí. Nos encargamos del anuncio, las reservas, la limpieza y el mantenimiento, y enviamos al propietario un informe mensual.",
   "de": "Ja. Wir kümmern uns um Anzeige, Buchungen, Reinigung und Instandhaltung und schicken dem Eigentümer jeden Monat einen Bericht."
  },
  "fq5": {
   "pt": "Como marco uma visita?",
-  "en": "How do I arrange a viewing?",
+  "en": "How do I book a viewing?",
   "es": "¿Cómo agendo una visita?",
   "de": "Wie vereinbare ich eine Besichtigung?"
  },
@@ -846,14 +846,14 @@
   "de": "Per WhatsApp oder über das Kontaktformular. Besichtigungen finden von Montag bis Samstag statt; wenn du nicht in Pipa bist, machen wir sie per Video."
  },
  "ctaH": {
-  "pt": "Vamos ver o imóvel juntos?",
-  "en": "Shall we look at the property together?",
-  "es": "¿Vemos la propiedad juntos?",
-  "de": "Sollen wir uns die Immobilie zusammen ansehen?"
+  "pt": "Quer ver o imóvel?",
+  "en": "Want to see the property?",
+  "es": "¿Quieres ver la propiedad?",
+  "de": "Möchtest du die Immobilie sehen?"
  },
  "ctaP": {
   "pt": "Marque uma visita ou escreva pelo WhatsApp. Respondemos no mesmo dia.",
-  "en": "Arrange a viewing or write on WhatsApp. We reply the same day.",
+  "en": "Book a viewing or write on WhatsApp. We reply the same day.",
   "es": "Agenda una visita o escribe por WhatsApp. Respondemos el mismo día.",
   "de": "Vereinbare eine Besichtigung oder schreib uns per WhatsApp. Wir antworten am selben Tag."
  },
@@ -896,7 +896,7 @@
  "listAluguelD": {
   "pt": "Casas mobiliadas para aluguel de longa duração em Pipa e arredores, com valor por mês.",
   "en": "Furnished houses for long-term rent in and around Pipa, priced per month.",
-  "es": "Casas amobladas para alquiler de larga duración en Pipa y alrededores, con precio por mes.",
+  "es": "Casas amuebladas para alquiler de larga duración en Pipa y alrededores, con precio por mes.",
   "de": "Möblierte Häuser zur langfristigen Miete in Pipa und Umgebung, mit Preis pro Monat."
  },
  "listTerrenosH": {
@@ -907,9 +907,9 @@
  },
  "listTerrenosD": {
   "pt": "Terrenos à venda em Pipa, Tibau do Sul e Sibaúma. A situação dos documentos está descrita em cada anúncio.",
-  "en": "Land for sale in Pipa, Tibau do Sul and Sibaúma. The status of the paperwork is described in each listing.",
+  "en": "Land for sale in Pipa, Tibau do Sul and Sibaúma. Each listing describes the status of the paperwork.",
   "es": "Terrenos en venta en Pipa, Tibau do Sul y Sibaúma. La situación de los documentos está descrita en cada anuncio.",
-  "de": "Grundstücke zum Verkauf in Pipa, Tibau do Sul und Sibaúma. Der Stand der Unterlagen steht in jeder Anzeige."
+  "de": "Grundstücke zum Verkauf in Pipa, Tibau do Sul und Sibaúma. Der Status der Unterlagen steht in jeder Anzeige."
  },
  "sort": {
   "pt": "Ordenar",
@@ -955,7 +955,7 @@
  },
  "emptyP": {
   "pt": "Remova um filtro ou conte o que procura. Muitos imóveis não chegam a ser anunciados.",
-  "en": "Remove a filter or tell us what you are looking for. Many properties never get listed.",
+  "en": "Remove a filter or tell us what you are looking for. Many properties are never listed publicly.",
   "es": "Quita un filtro o cuéntanos qué buscas. Muchas propiedades ni siquiera se publican.",
   "de": "Nimm einen Filter weg oder erzähl uns, was du suchst. Viele Immobilien werden gar nicht erst angeboten."
  },
@@ -969,17 +969,17 @@
   "pt": "Busca sob medida",
   "en": "Tailored search",
   "es": "Búsqueda a medida",
-  "de": "Suche nach Maß"
+  "de": "Suche nach Wunsch"
  },
  "offH": {
   "pt": "Nem todo imóvel é anunciado",
   "en": "Not every property is listed",
   "es": "No todas las propiedades se publican",
-  "de": "Nicht jede Immobilie wird angeboten"
+  "de": "Nicht jede Immobilie wird öffentlich angeboten"
  },
  "offP": {
   "pt": "Conte a região, o orçamento e o que não pode faltar. Avisamos pelo WhatsApp quando entrar um imóvel que combina.",
-  "en": "Tell us the area, your budget and what you cannot do without. We message you on WhatsApp when a matching property comes in.",
+  "en": "Tell us the area, your budget and what you must have. We message you on WhatsApp when a matching property comes in.",
   "es": "Cuéntanos la zona, el presupuesto y lo que no puede faltar. Te avisamos por WhatsApp cuando entre una propiedad que encaje.",
   "de": "Nenn uns die Gegend, dein Budget und was unbedingt dabei sein muss. Wir melden uns per WhatsApp, sobald eine passende Immobilie reinkommt."
  },
@@ -992,7 +992,7 @@
  "off1": {
   "pt": "Imóveis antes de irem para o site",
   "en": "Properties before they reach the website",
-  "es": "Propiedades antes de llegar al sitio",
+  "es": "Acceso a propiedades antes de que se publiquen",
   "de": "Immobilien, bevor sie auf die Website kommen"
  },
  "off2": {
@@ -1003,7 +1003,7 @@
  },
  "off3": {
   "pt": "Resposta no mesmo dia",
-  "en": "Reply the same day",
+  "en": "Same-day reply",
   "es": "Respuesta el mismo día",
   "de": "Antwort am selben Tag"
  },
@@ -1177,7 +1177,7 @@
  },
  "inquire": {
   "pt": "Pedir informações",
-  "en": "Enquire",
+  "en": "Inquire",
   "es": "Pedir información",
   "de": "Infos anfragen"
  },
@@ -1191,7 +1191,7 @@
   "pt": "Dados do imóvel",
   "en": "Property details",
   "es": "Datos de la propiedad",
-  "de": "Daten der Immobilie"
+  "de": "Eckdaten"
  },
  "dFeats": {
   "pt": "Características",
@@ -1213,8 +1213,8 @@
  },
  "dCondo": {
   "pt": "Condomínio",
-  "en": "Community fee",
-  "es": "Expensas (condomínio)",
+  "en": "Condo fee",
+  "es": "Cuota del condominio",
   "de": "Hausgeld (Condomínio)"
  },
  "dIptu": {
@@ -1227,7 +1227,7 @@
   "pt": "Situação",
   "en": "Status",
   "es": "Situación",
-  "de": "Stand"
+  "de": "Status"
  },
  "dVideo": {
   "pt": "Vídeo",
@@ -1261,7 +1261,7 @@
  },
  "dCenter": {
   "pt": "até o centro de Pipa",
-  "en": "to the centre of Pipa",
+  "en": "to the center of Pipa",
   "es": "hasta el centro de Pipa",
   "de": "ins Zentrum von Pipa"
  },
@@ -1273,7 +1273,7 @@
  },
  "dDistNote": {
   "pt": "A pé até a praia; de carro até o centro e o aeroporto, fora da alta temporada.",
-  "en": "On foot to the beach; by car to the centre and the airport, outside high season.",
+  "en": "Walking distance to the beach; driving distance to the center and the airport, outside high season.",
   "es": "A la playa, a pie; al centro y al aeropuerto, en auto, fuera de temporada alta.",
   "de": "Zum Strand zu Fuß; ins Zentrum und zum Flughafen mit dem Auto, außerhalb der Hochsaison."
  },
@@ -1310,7 +1310,7 @@
  "f_furnished": {
   "pt": "Mobiliado",
   "en": "Furnished",
-  "es": "Amoblada",
+  "es": "Amueblada",
   "de": "Möbliert"
  },
  "f_garage": {
@@ -1357,13 +1357,13 @@
  },
  "f_fiber": {
   "pt": "Internet por fibra",
-  "en": "Fibre internet",
+  "en": "Fiber internet",
   "es": "Internet por fibra",
   "de": "Glasfaser-Internet"
  },
  "f_staff": {
   "pt": "Casa de caseiro",
-  "en": "Caretaker house",
+  "en": "Caretaker’s house",
   "es": "Casa del cuidador",
   "de": "Haus für den Hausmeister"
  },
@@ -1375,9 +1375,9 @@
  },
  "f_deed": {
   "pt": "Escritura e matrícula",
-  "en": "Deed and registry entry",
-  "es": "Escritura y matrícula (Matrícula)",
-  "de": "Kaufvertrag und Grundbuchauszug"
+  "en": "Title deed and registry entry",
+  "es": "Escritura y matrícula",
+  "de": "Kaufurkunde und Grundbuchauszug"
  },
  "f_paved": {
   "pt": "Rua pavimentada",
@@ -1387,13 +1387,13 @@
  },
  "f_power": {
   "pt": "Energia na rua",
-  "en": "Power on the road",
+  "en": "Electricity on the road",
   "es": "Electricidad en la calle",
   "de": "Strom an der Straße"
  },
  "f_water": {
   "pt": "Água encanada",
-  "en": "Mains water",
+  "en": "Municipal water",
   "es": "Agua corriente",
   "de": "Wasseranschluss"
  },
@@ -1447,7 +1447,7 @@
  },
  "fNote": {
   "pt": "Usamos seus dados só para responder a este contato.",
-  "en": "We use your details only to answer this enquiry.",
+  "en": "We use your details only to answer this inquiry.",
   "es": "Usamos tus datos solo para responder a este contacto.",
   "de": "Wir nutzen deine Daten nur, um auf diese Anfrage zu antworten."
  },
@@ -1459,7 +1459,7 @@
  },
  "fErr": {
   "pt": "Não foi possível enviar. Tente pelo WhatsApp.",
-  "en": "Could not send. Please try WhatsApp.",
+  "en": "We could not send your message. Please try WhatsApp.",
   "es": "No se pudo enviar. Intenta por WhatsApp.",
   "de": "Das Senden hat nicht geklappt. Versuch es über WhatsApp."
  },
@@ -1507,7 +1507,7 @@
  },
  "aboutMeta": {
   "pt": "Imobiliária local em Pipa desde {since}: venda, aluguel e administração de casas e terrenos, em português, inglês e alemão.",
-  "en": "Local agency in Pipa since {since}: sales, lettings and management of houses and land, in Portuguese, English and German.",
+  "en": "Local agency in Pipa since {since}: sales, rentals and management of houses and land, in Portuguese, English and German.",
   "es": "Inmobiliaria local en Pipa desde {since}: venta, alquiler y administración de casas y terrenos, en portugués, inglés y alemán.",
   "de": "Lokales Maklerbüro in Pipa seit {since}: Verkauf, Vermietung und Verwaltung von Häusern und Grundstücken, auf Portugiesisch, Englisch und Deutsch."
  },
@@ -1519,7 +1519,7 @@
  },
  "aboutLead": {
   "pt": "Somos uma imobiliária pequena, com escritório na avenida principal de Pipa. Conhecemos as ruas, os vizinhos e o histórico de cada imóvel que anunciamos.",
-  "en": "We are a small agency with an office on the main avenue of Pipa. We know the streets, the neighbours and the history of every property we list.",
+  "en": "We are a small agency with an office on the main avenue of Pipa. We know the streets, the neighbors and the history of every property we list.",
   "es": "Somos una inmobiliaria pequeña, con oficina en la avenida principal de Pipa. Conocemos las calles, a los vecinos y la historia de cada propiedad que publicamos.",
   "de": "Wir sind ein kleines Maklerbüro mit Büro an der Hauptstraße von Pipa. Wir kennen die Straßen, die Nachbarn und die Geschichte jeder Immobilie, die wir anbieten."
  },
@@ -1531,9 +1531,9 @@
  },
  "story1": {
   "pt": "A Enseada começou com a venda de casas de amigos que voltavam para a Europa. Hoje atendemos compradores do Brasil e de mais de vinte países, e boa parte deles chega por indicação.",
-  "en": "Enseada began by selling the houses of friends who were moving back to Europe. Today we serve buyers from Brazil and more than twenty countries, and many of them come by recommendation.",
+  "en": "Enseada began by selling the homes of friends who were moving back to Europe. Today we serve buyers from Brazil and more than twenty countries, and many come by referral.",
   "es": "Enseada empezó vendiendo las casas de amigos que volvían a Europa. Hoy atendemos a compradores de Brasil y de más de veinte países, y muchos llegan por recomendación.",
-  "de": "Enseada hat damit angefangen, Häuser von Freunden zu verkaufen, die nach Europa zurückgingen. Heute betreuen wir Käufer aus Brasilien und aus mehr als zwanzig Ländern, und viele kommen auf Empfehlung zu uns."
+  "de": "Enseada hat angefangen, Häuser von Freunden zu verkaufen, die nach Europa zurückgingen. Heute betreuen wir Käufer aus Brasilien und aus mehr als zwanzig Ländern, und viele kommen auf Empfehlung zu uns."
  },
  "story2": {
   "pt": "Antes de anunciar, pedimos a matrícula atualizada, as certidões do vendedor e os comprovantes de IPTU. O que ainda falta aparece em cada anúncio como pendente.",
@@ -1549,7 +1549,7 @@
  },
  "agentLic": {
   "pt": "Registro profissional",
-  "en": "Professional licence",
+  "en": "Professional license",
   "es": "Registro profesional",
   "de": "Berufsregistrierung"
  },
@@ -1580,7 +1580,7 @@
  "step1p": {
   "pt": "Você conta o que procura, o orçamento e o prazo. Enviamos uma seleção em até dois dias.",
   "en": "You tell us what you are looking for, your budget and timing. We send a selection within two days.",
-  "es": "Nos cuentas qué buscas, tu presupuesto y tu plazo. Te enviamos una selección en hasta dos días.",
+  "es": "Nos cuentas qué buscas, tu presupuesto y tu plazo. Te enviamos una selección en un máximo de dos días.",
   "de": "Du sagst uns, was du suchst, wie hoch dein Budget ist und wie viel Zeit du hast. Innerhalb von zwei Tagen schicken wir dir eine Auswahl."
  },
  "step2": {
@@ -1597,13 +1597,13 @@
  },
  "step3": {
   "pt": "Proposta e conferência",
-  "en": "Offer and checks",
+  "en": "Offer and due diligence",
   "es": "Oferta y revisión",
   "de": "Angebot und Prüfung"
  },
  "step3p": {
   "pt": "Negociamos o preço e um advogado independente confere a documentação antes do sinal.",
-  "en": "We negotiate the price and an independent lawyer checks the paperwork before any deposit.",
+  "en": "We negotiate the price, and an independent lawyer checks the paperwork before you pay any deposit.",
   "es": "Negociamos el precio y un abogado independiente revisa la documentación antes de la seña.",
   "de": "Wir verhandeln den Preis, und ein unabhängiger Anwalt prüft die Unterlagen, bevor die Anzahlung fließt."
  },
@@ -1615,8 +1615,8 @@
  },
  "step4p": {
   "pt": "Assinatura no cartório, presencial ou por procuração, e registro em seu nome.",
-  "en": "Signing at the notary office, in person or by power of attorney, and registration in your name.",
-  "es": "Firma en la notaría, en persona o con poder (procuración), y registro a tu nombre.",
+  "en": "You sign at the notary office, in person or by power of attorney, and the property is registered in your name.",
+  "es": "Firma en la notaría, en persona o con poder notarial (procuração), y registro a tu nombre.",
   "de": "Unterschrift beim Notar, persönlich oder per Vollmacht, und Eintragung auf deinen Namen."
  },
  "servK": {
@@ -1657,13 +1657,13 @@
  },
  "sv3": {
   "pt": "Aluguel e temporada",
-  "en": "Lettings and holiday rental",
+  "en": "Rentals and vacation rentals",
   "es": "Alquiler y temporada",
   "de": "Vermietung und Ferienvermietung"
  },
  "sv3p": {
   "pt": "Aluguel mensal e administração de aluguel por temporada, com relatório mensal.",
-  "en": "Monthly lets and holiday rental management, with a monthly report.",
+  "en": "Long-term rentals and vacation-rental management, with a monthly report.",
   "es": "Alquiler mensual y administración de alquiler por temporada, con informe mensual.",
   "de": "Monatsmiete und Verwaltung der Ferienvermietung, mit monatlichem Bericht."
  },
@@ -1687,7 +1687,7 @@
  },
  "blogLead": {
   "pt": "Documentos, custos e aluguel por temporada, explicados por quem trabalha com isso todos os dias.",
-  "en": "Paperwork, costs and holiday letting, explained by people who deal with them every day.",
+  "en": "Paperwork, costs and vacation rentals, explained by people who deal with them every day.",
   "es": "Documentos, costos y alquiler por temporada, explicados por quienes trabajan con esto todos los días.",
   "de": "Unterlagen, Kosten und Ferienvermietung, erklärt von Leuten, die jeden Tag damit arbeiten."
  },
@@ -1783,7 +1783,7 @@
  },
  "footAbout": {
   "pt": "Imobiliária local em Pipa e Tibau do Sul. Venda, aluguel e administração de imóveis desde {since}.",
-  "en": "Local agency in Pipa and Tibau do Sul. Sales, lettings and property management since {since}.",
+  "en": "Local agency in Pipa and Tibau do Sul. Sales, rentals and property management since {since}.",
   "es": "Inmobiliaria local en Pipa y Tibau do Sul. Venta, alquiler y administración de propiedades desde {since}.",
   "de": "Lokales Maklerbüro in Pipa und Tibau do Sul. Verkauf, Vermietung und Verwaltung von Immobilien seit {since}."
  },
@@ -1813,7 +1813,7 @@
  },
  "newsP": {
   "pt": "Uma vez por mês, sem propaganda.",
-  "en": "Once a month, no advertising.",
+  "en": "Once a month. No ads.",
   "es": "Una vez al mes, sin publicidad.",
   "de": "Einmal im Monat, ohne Werbung."
  },
@@ -1849,7 +1849,7 @@
  },
  "privMeta": {
   "pt": "Como a Enseada Imóveis trata os dados de quem visita o site e entra em contato.",
-  "en": "How Enseada Imóveis handles the data of website visitors and enquirers.",
+  "en": "How Enseada Imóveis handles the data of website visitors and inquirers.",
   "es": "Cómo Enseada Imóveis trata los datos de quienes visitan el sitio y nos contactan.",
   "de": "Wie Enseada Imóveis mit den Daten von Besuchern der Website und von Menschen umgeht, die uns kontaktieren."
  },
@@ -1903,7 +1903,7 @@
  },
  "pv4p": {
   "pt": "Mensagens ficam guardadas enquanto durar o atendimento e pelo prazo exigido por lei. A inscrição na newsletter vale até você cancelar.",
-  "en": "Messages are kept for as long as we are handling your enquiry and for the period the law requires. The newsletter subscription lasts until you unsubscribe.",
+  "en": "Messages are kept for as long as we are handling your enquiry and for as long as the law requires. The newsletter subscription lasts until you unsubscribe.",
   "es": "Los mensajes se guardan mientras dure la atención y por el plazo que exige la ley. La suscripción al boletín vale hasta que la canceles.",
   "de": "Nachrichten bleiben gespeichert, solange die Betreuung läuft und so lange, wie das Gesetz es verlangt. Das Newsletter-Abo gilt, bis du es abbestellst."
  },
@@ -1916,7 +1916,7 @@
  "pv5p": {
   "pt": "Você pode pedir acesso, correção ou exclusão dos seus dados e retirar seu consentimento a qualquer momento, conforme a Lei Geral de Proteção de Dados (LGPD).",
   "en": "You can ask for access to, correction or deletion of your data and withdraw your consent at any time, under the Brazilian data protection law (LGPD).",
-  "es": "Puedes pedir acceso, corrección o eliminación de tus datos y retirar tu consentimiento en cualquier momento, conforme a la Ley General de Protección de Datos (LGPD).",
+  "es": "Puedes pedir acceso, corrección o eliminación de tus datos y retirar tu consentimiento en cualquier momento, conforme a la Ley General de Protección de Datos Personales (LGPD).",
   "de": "Du kannst jederzeit Auskunft, Berichtigung oder Löschung deiner Daten verlangen und deine Einwilligung widerrufen, gemäß dem brasilianischen Datenschutzgesetz (Lei Geral de Proteção de Dados, LGPD)."
  },
  "pv6": {
@@ -1964,8 +1964,8 @@
  "allSuites": {
   "pt": "todas suítes",
   "en": "all en suite",
-  "es": "todas con suite",
-  "de": "alle mit Bad en suite"
+  "es": "todas en suite",
+  "de": "alle mit eigenem Bad"
  },
  "waOpen": {
   "pt": "Abrimos o WhatsApp com a sua mensagem. Envie por lá.",

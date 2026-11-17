@@ -9,19 +9,19 @@
  "h1": {
   "pt": "Três caminhos para comprar: à vista, na planta e financiado",
   "en": "Three ways to buy: cash, off-plan and financed",
-  "es": "Tres caminos para comprar: al contado, en planos y con financiación",
+  "es": "Tres caminos para comprar: al contado, sobre planos y con financiamiento",
   "de": "Drei Wege zum Kauf: bar, vom Plan und mit Finanzierung"
  },
  "lead": {
   "pt": "Prazos e percentuais são de referência.",
-  "en": "Times and percentages are reference values.",
+  "en": "Timelines and percentages are typical values.",
   "es": "Plazos y porcentajes son de referencia.",
   "de": "Fristen und Prozentsätze sind Richtwerte."
  },
  "meta": {
   "pt": "Como comprar imóvel no Brasil: à vista, na planta ou com financiamento.",
   "en": "How to buy property in Brazil: cash, off-plan or financed.",
-  "es": "Cómo comprar una propiedad en Brasil: al contado, en planos o con financiación.",
+  "es": "Cómo comprar una propiedad en Brasil: al contado, sobre planos o con financiamiento.",
   "de": "Wie man eine Immobilie in Brasilien kauft: bar, vom Plan oder mit Finanzierung."
  },
  "stand": "17.11.2026",
@@ -30,7 +30,7 @@
    "t": "h2",
    "x": {
     "pt": "A. À vista (imóvel usado): cerca de 60 a 90 dias",
-    "en": "A. Cash (used property): about 60 to 90 days",
+    "en": "A. Cash purchase (resale property): about 60 to 90 days",
     "es": "A. Al contado (propiedad usada): unos 60 a 90 días",
     "de": "A. Barkauf (gebrauchte Immobilie): etwa 60 bis 90 Tage"
    }
@@ -47,7 +47,7 @@
      },
      "p": {
       "pt": "Preço, pagamento e prazos por escrito.",
-      "en": "Price, payment and deadlines in writing.",
+      "en": "Put the price, payment terms and deadlines in writing.",
       "es": "Precio, pago y plazos por escrito.",
       "de": "Preis, Zahlung und Fristen schriftlich."
      },
@@ -62,7 +62,7 @@
      },
      "p": {
       "pt": "Sinal, multa e condições. Pode ser anotado na matrícula.",
-      "en": "Deposit, penalty and conditions. It can be noted on the matrícula.",
+      "en": "Covers the deposit, penalty and conditions. It can be noted on the matrícula.",
       "es": "Seña, multa y condiciones. Puede anotarse en la matrícula.",
       "de": "Anzahlung, Vertragsstrafe und Bedingungen. Kann in der Matrícula vermerkt werden."
      },
@@ -77,9 +77,9 @@
      },
      "p": {
       "pt": "Matrícula atualizada (registro oficial do imóvel), dívidas, certidões do vendedor, IPTU, condomínio e Habite-se (licença de obra pronta).",
-      "en": "Up-to-date matrícula (the official property record), debts, the seller’s certificates, IPTU, condominium fees and Habite-se (certificate that the building is finished).",
+      "en": "Your lawyer checks the current matrícula (the official property record), debts, the seller’s certificates, IPTU (property tax), condominium fees and the habite-se (certificate of completion).",
       "es": "Matrícula actualizada (el registro oficial de la propiedad), deudas, certificados del vendedor, IPTU, condominio y Habite-se (certificado de obra terminada).",
-      "de": "Aktuelle Matrícula (das offizielle Register der Immobilie), Schulden, Bescheinigungen des Verkäufers, IPTU, Hausgeld und Habite-se (Bescheinigung, dass der Bau fertig ist)."
+      "de": "Aktueller Grundbuchauszug (Matrícula), Schulden, Bescheinigungen des Verkäufers, IPTU, Hausgeld und Habite-se (Bescheinigung, dass der Bau fertig ist)."
      },
      "n": null
     },
@@ -92,9 +92,9 @@
      },
      "p": {
       "pt": "ITBI na prefeitura, escritura no cartório e pagamento do saldo.",
-      "en": "ITBI at the town hall, escritura at the cartório and payment of the balance.",
+      "en": "You pay the ITBI (transfer tax) at the town hall, sign the escritura (deed) at the cartório (notary office) and pay the balance.",
       "es": "ITBI en la prefeitura, escritura en el cartório y pago del saldo.",
-      "de": "ITBI bei der Stadt, Escritura im Cartório und Zahlung des Restbetrags."
+      "de": "ITBI (Steuer der Stadt), Kaufurkunde (Escritura) im Notariat (Cartório) und Zahlung des Restbetrags."
      },
      "n": null
     },
@@ -107,9 +107,9 @@
      },
      "p": {
       "pt": "Só com o registro no Registro de Imóveis você é o proprietário.",
-      "en": "Only with registration at the Registro de Imóveis are you the owner.",
+      "en": "You become the legal owner only once the deed is registered at the Registro de Imóveis (land registry).",
       "es": "Solo con el registro en el Registro de la Propiedad eres propietario.",
-      "de": "Erst mit der Eintragung im Registro de Imóveis bist du Eigentümer."
+      "de": "Erst mit der Eintragung im Grundbuchamt (Registro de Imóveis) bist du Eigentümer."
      },
      "n": null
     }
@@ -119,8 +119,8 @@
    "t": "h2",
    "x": {
     "pt": "B. Imóvel na planta (lançamento)",
-    "en": "B. Off-plan (new development)",
-    "es": "B. Propiedad en planos (lanzamiento)",
+    "en": "B. Off-plan (new construction)",
+    "es": "B. Propiedad sobre planos (lanzamiento)",
     "de": "B. Immobilie vom Plan (Neubauprojekt)"
    }
   },
@@ -151,9 +151,9 @@
      },
      "p": {
       "pt": "Preço total, plano de pagamento, correção (INCC, índice que reajusta o preço durante a obra), prazo de obra e direito de desistência.",
-      "en": "Total price, payment plan, adjustment (INCC, the index that raises the price during construction), build deadline and right to withdraw.",
+      "en": "Total price, payment plan, price adjustments (INCC, the index that raises the price during construction), completion deadline and your right to withdraw.",
       "es": "Precio total, plan de pago, ajuste (INCC, índice que reajusta el precio durante la obra), plazo de obra y derecho de desistimiento.",
-      "de": "Gesamtpreis, Zahlungsplan, Anpassung (INCC, der Index, der den Preis während des Baus anhebt), Bauzeit und Rücktrittsrecht."
+      "de": "Gesamtpreis, Zahlungsplan, Anpassung (INCC, der Baukostenindex, der den Preis während des Baus anhebt), Bauzeit und Rücktrittsrecht."
      },
      "n": null
     },
@@ -166,7 +166,7 @@
      },
      "p": {
       "pt": "Registro de Incorporação, matrícula do terreno, patrimônio de afetação (proteção se a incorporadora falir) e licenças.",
-      "en": "Registro de Incorporação, land matrícula, patrimônio de afetação (protection if the developer goes bankrupt) and permits.",
+      "en": "Check the Registro de Incorporação (the project’s registration), the land matrícula, the patrimônio de afetação (protection if the developer goes bankrupt) and the permits.",
       "es": "Registro de Incorporação, matrícula del terreno, patrimônio de afetação (protección si la incorporadora quiebra) y licencias.",
       "de": "Registro de Incorporação, Matrícula des Grundstücks, Patrimônio de afetação (Schutz bei Insolvenz des Bauträgers) und Genehmigungen."
      },
@@ -181,7 +181,7 @@
      },
      "p": {
       "pt": "Habite-se, vistoria com engenheiro ou arquiteto, escritura e registro.",
-      "en": "Habite-se, inspection by an engineer or architect, escritura and registration.",
+      "en": "Habite-se (certificate of completion), inspection by an engineer or architect, escritura and registration.",
       "es": "Habite-se, inspección con ingeniero o arquitecto, escritura y registro.",
       "de": "Habite-se, Abnahme mit Ingenieur oder Architekt, Escritura und Eintragung."
      },
@@ -193,8 +193,8 @@
    "t": "note",
    "k": "warn",
    "x": {
-    "pt": "Riscos: atraso da obra, alta do INCC, falência da incorporadora e distrato (desistência). No distrato, a incorporadora pode ficar com até 25 % do valor pago, ou até 50 % com patrimônio de afetação, mais a corretagem (Lei 13.786/2018).",
-    "en": "Risks: construction delay, rising INCC, developer bankruptcy and distrato (cancelling the contract). On a distrato the developer may keep up to 25 % of what you paid, or up to 50 % with patrimônio de afetação, plus the agent’s fee (Lei 13.786/2018).",
+    "pt": "Riscos: atraso da obra, alta do INCC, falência da incorporadora e distrato (desistência). No distrato, a incorporadora pode ficar com até 25% do valor pago, ou até 50% com patrimônio de afetação, mais a corretagem (Lei 13.786/2018).",
+    "en": "Risks: construction delays, rising INCC, developer bankruptcy and distrato (contract cancellation). If you cancel, the developer may keep up to 25% of what you paid, or up to 50% with patrimônio de afetação, plus the broker’s fee (Law 13.786/2018).",
     "es": "Riesgos: retraso de obra, alza del INCC, quiebra de la incorporadora y distrato (cancelación del contrato). En el distrato la incorporadora puede quedarse hasta el 25 % de lo pagado, o hasta el 50 % con patrimônio de afetação, más la comisión de corretaje (Lei 13.786/2018).",
     "de": "Risiken: Bauverzug, steigender INCC, Insolvenz des Bauträgers und Distrato (Vertragsrücktritt). Beim Distrato darf der Bauträger bis zu 25 % des Gezahlten einbehalten, mit Patrimônio de afetação bis zu 50 %, plus die Maklerkosten (Lei 13.786/2018)."
    }
@@ -203,7 +203,7 @@
    "t": "h2",
    "x": {
     "pt": "C. Com financiamento (para quem mora no Brasil): 50 a 80 dias",
-    "en": "C. With financing (for people living in Brazil): 50 to 80 days",
+    "en": "C. Financed (for people living in Brazil): 50 to 80 days",
     "es": "C. Con financiamiento (para quien vive en Brasil): 50 a 80 días",
     "de": "C. Mit Finanzierung (für Menschen, die in Brasilien leben): 50 bis 80 Tage"
    }
@@ -211,17 +211,17 @@
   {
    "t": "p",
    "x": {
-    "pt": "O banco avalia renda e imóvel. A parcela costuma ficar em no máximo 30 a 35 % da renda, conforme o banco. O banco fica como proprietário (alienação fiduciária, registrada na matrícula) até a quitação.",
-    "en": "The bank assesses income and property. The instalment is usually capped at about 30 to 35 % of income, depending on the bank. The bank stays the owner (alienação fiduciária, registered on the matrícula) until the loan is paid off.",
-    "es": "El banco evalúa ingresos y propiedad. La cuota suele limitarse a un 30 a 35 % del ingreso como máximo, según el banco. El banco queda como propietario (alienación fiduciaria, registrada en la matrícula) hasta la cancelación.",
-    "de": "Die Bank prüft Einkommen und Immobilie. Die Rate liegt meist bei höchstens 30 bis 35 % des Einkommens, je nach Bank. Die Bank bleibt Eigentümerin (Alienação fiduciária, in der Matrícula eingetragen), bis alles bezahlt ist."
+    "pt": "O banco avalia renda e imóvel. A parcela costuma ficar em no máximo 30 a 35% da renda, conforme o banco. O banco fica como proprietário (alienação fiduciária, registrada na matrícula) até a quitação.",
+    "en": "The bank assesses your income and the property. The monthly payment is usually capped at about 30% to 35% of your income, depending on the bank. The bank keeps legal title (alienação fiduciária, registered on the matrícula) until the loan is paid off.",
+    "es": "El banco evalúa tus ingresos y la propiedad. La cuota suele limitarse a entre un 30 % y un 35 % del ingreso, según el banco. El banco queda como propietario en garantía (alienación fiduciaria, registrada en la matrícula) hasta la cancelación.",
+    "de": "Die Bank prüft Einkommen und Immobilie. Die Rate darf meist höchstens 30 bis 35 % des Einkommens betragen, je nach Bank. Die Bank bleibt Eigentümerin (Sicherungseigentum, Alienação fiduciária, in der Matrícula eingetragen), bis alles bezahlt ist."
    }
   },
   {
    "t": "wa",
    "m": {
     "pt": "Olá! Quero entender qual caminho de compra é melhor para mim.",
-    "en": "Hello! I want to understand which way of buying is best for me.",
+    "en": "Hello! I would like to understand which way of buying is best for me.",
     "es": "¡Hola! Quiero entender cuál camino de compra es mejor para mí.",
     "de": "Hallo! Ich möchte verstehen, welcher Kaufweg für mich am besten ist."
    },

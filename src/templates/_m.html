@@ -161,7 +161,7 @@
 {% macro faq(n=5) %}
 <div class="faq">
   {% for i in range(1, n + 1) %}
-  <details{% if i == 1 %} open{% endif %}><summary>{{ t['fq' ~ i] }}</summary><p>{{ t['fq' ~ i ~ 'a'] }}</p></details>
+  <details><summary>{{ t['fq' ~ i] }}</summary><p>{{ t['fq' ~ i ~ 'a'] }}</p></details>
   {% endfor %}
 </div>
 {% endmacro %}

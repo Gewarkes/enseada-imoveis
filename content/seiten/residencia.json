@@ -4,25 +4,25 @@
   "pt": "Residência",
   "en": "Residency",
   "es": "Residencia",
-  "de": "Aufenthaltserlaubnis"
+  "de": "Aufenthaltstitel"
  },
  "h1": {
   "pt": "Residência no Brasil por compra de imóvel",
   "en": "Residency in Brazil through a property purchase",
   "es": "Residencia en Brasil por compra de una propiedad",
-  "de": "Aufenthaltserlaubnis in Brasilien durch Immobilienkauf"
+  "de": "Aufenthaltstitel in Brasilien durch Immobilienkauf"
  },
  "lead": {
   "pt": "Comprar um imóvel pode permitir pedir autorização de residência, mas não a concede automaticamente.",
   "en": "Buying property can let you apply for a residence permit, but it does not grant one automatically.",
   "es": "Comprar una propiedad puede permitir pedir autorización de residencia, pero no la concede automáticamente.",
-  "de": "Ein Immobilienkauf kann einen Aufenthaltsantrag ermöglichen, garantiert ihn aber nicht automatisch."
+  "de": "Ein Immobilienkauf kann einen Antrag auf einen Aufenthaltstitel ermöglichen, garantiert ihn aber nicht automatisch."
  },
  "meta": {
   "pt": "Autorização de residência para investidores em imóveis no Brasil: valores mínimos e condições.",
   "en": "Residence permit for property investors in Brazil: minimum amounts and conditions.",
   "es": "Permiso de residencia para inversores en propiedades en Brasil: valores mínimos y condiciones.",
-  "de": "Aufenthaltserlaubnis für Immobilieninvestoren in Brasilien: Mindestwerte und Bedingungen."
+  "de": "Aufenthaltstitel für Immobilieninvestoren in Brasilien: Mindestwerte und Bedingungen."
  },
  "stand": "17.11.2026",
  "blocks": [
@@ -37,7 +37,7 @@
     },
     {
      "pt": "Valor mínimo (referência)",
-     "en": "Minimum amount (reference)",
+     "en": "Minimum amount (for reference)",
      "es": "Valor mínimo (referencia)",
      "de": "Mindestwert (Richtwert)"
     }
@@ -68,45 +68,45 @@
    "x": [
     {
      "pt": "Imóvel urbano, com dinheiro vindo do exterior.",
-     "en": "Urban property, funded from abroad.",
+     "en": "Urban property, paid for with funds from abroad.",
      "es": "Propiedad urbana, con dinero que viene del exterior.",
      "de": "Immobilie in der Stadt, mit Geld aus dem Ausland."
     },
     {
      "pt": "Vale para imóveis com construção; para terreno sem construção, esclareça antes com o advogado.",
-     "en": "Applies to buildings/properties; for undeveloped land, clarify with a lawyer first.",
+     "en": "Applies to built properties; for undeveloped land, check with a lawyer first.",
      "es": "Vale para edificios/inmuebles; para terrenos sin construcción, aclara antes con un abogado.",
-     "de": "Gilt für Gebäude/Immobilien; für unbebaute Grundstücke vorher beim Anwalt klären."
+     "de": "Gilt für Gebäude; bei unbebauten Grundstücken vorher mit dem Anwalt klären."
     },
     {
      "pt": "Financiamento só vale para a parte acima do valor mínimo da região (R$ 1 mi; R$ 700 mil no Norte/Nordeste). Confirme com advogado de imigração.",
-     "en": "Financing only counts for the part above the regional minimum (R$ 1m; R$ 700,000 in the North/Northeast). Confirm with an immigration lawyer.",
+     "en": "With financing, only the part above the regional minimum counts (R$ 1m; R$ 700,000 in the North/Northeast). Confirm with an immigration lawyer.",
      "es": "El financiamiento solo cuenta para la parte superior al mínimo de la región (R$ 1 millón; R$ 700.000 en Norte/Nordeste). Confírmalo con un abogado de inmigración.",
-     "de": "Eine Finanzierung zählt nur für den Teil über dem Mindestwert der Region (R$ 1 Mio.; R$ 700.000 im Norden/Nordosten). Lass dies von einem Einwanderungsanwalt bestätigen."
+     "de": "Eine Finanzierung zählt nur für den Teil über dem Mindestwert der Region (R$ 1 Mio.; R$ 700.000 im Norden/Nordosten). Lass dir das von einem Einwanderungsanwalt bestätigen."
     },
     {
      "pt": "Prove o investimento com o comprovante de câmbio (finalidade: investimento).",
-     "en": "Prove the investment with the exchange (câmbio) receipt (purpose: investment).",
+     "en": "Prove the investment with the currency-exchange receipt (câmbio), with the purpose stated as investment.",
      "es": "Comprueba la inversión con el comprobante de cambio (finalidad: inversión).",
-     "de": "Weise die Investition mit dem Câmbio-Beleg nach (Zweck: Investition)."
+     "de": "Belege die Investition mit dem Câmbio-Beleg (Zweck: Investition)."
     },
     {
-     "pt": "Duração: 4 anos no início; depois, sem prazo, se você mantiver o imóvel.",
-     "en": "Duration: 4 years at first; then open-ended if you keep the property.",
+     "pt": "Duração: 4 anos no início; depois, por prazo indeterminado, se você mantiver o imóvel.",
+     "en": "Duration: 4 years at first, then indefinite if you keep the property.",
      "es": "Duración: 4 años al inicio; después, sin plazo, si conservas la propiedad.",
      "de": "Dauer: zunächst 4 Jahre; danach unbefristet, wenn du die Immobilie behältst."
     },
     {
      "pt": "Estadia: ao menos 14 dias a cada 2 anos no Brasil.",
-     "en": "Stay: at least 14 days in Brazil every 2 years.",
+     "en": "Minimum stay: at least 14 days in Brazil every 2 years.",
      "es": "Estadía: al menos 14 días cada 2 años en Brasil.",
-     "de": "Aufenthalt: mindestens 14 Tage je 2 Jahre in Brasilien."
+     "de": "Anwesenheit: mindestens 14 Tage je 2 Jahre in Brasilien."
     },
     {
      "pt": "Do exterior, pede-se primeiro o visto no consulado; quem já está no Brasil legalmente pode pedir a autorização aqui.",
-     "en": "From abroad you first apply for the visa at the consulate; someone already legally in Brazil may apply there.",
+     "en": "If you are abroad, you first apply for the visa at a Brazilian consulate. Someone already legally in Brazil can apply for the permit in Brazil.",
      "es": "Desde el exterior primero se pide la visa en el consulado; quien ya está legalmente en Brasil puede pedirla allí.",
-     "de": "Aus dem Ausland beantragst du zuerst das Visum beim Konsulat; wer legal in Brasilien ist, kann dort beantragen."
+     "de": "Aus dem Ausland beantragst du zuerst das Visum beim Konsulat; wer legal in Brasilien ist, kann den Antrag dort stellen."
     },
     {
      "pt": "Pipa fica no Nordeste: vale o valor menor.",
@@ -121,7 +121,7 @@
    "k": "info",
    "x": {
     "pt": "Regra: RN CNIg 36/2018, alterada pelas RN 46/2021 e 49/2024.",
-    "en": "Rule: RN CNIg 36/2018, amended by RN 46/2021 and 49/2024.",
+    "en": "Rule: CNIg Resolution 36/2018, amended by Resolutions 46/2021 and 49/2024.",
     "es": "Regla: RN CNIg 36/2018, modificada por las RN 46/2021 y 49/2024.",
     "de": "Regel: RN CNIg 36/2018, geändert durch RN 46/2021 und 49/2024."
    }
@@ -131,9 +131,9 @@
    "k": "info",
    "x": {
     "pt": "Informação geral, sem garantia de aprovação. Abaixo desses valores não há direito a este pedido. Confirme com um advogado de imigração.",
-    "en": "General information, no guarantee of approval. Below these amounts there is no right to this application. Confirm with an immigration lawyer.",
+    "en": "General information; approval is not guaranteed. Below these amounts, you have no right to apply under this route. Confirm with an immigration lawyer.",
     "es": "Información general, sin garantía de aprobación. Por debajo de estos valores no hay derecho a esta solicitud. Confírmalo con un abogado de inmigración.",
-    "de": "Allgemeine Information, ohne Gewähr für eine Genehmigung. Unter diesen Werten besteht kein Anspruch auf diesen Antrag. Lass dich von einem Einwanderungsanwalt beraten."
+    "de": "Allgemeine Information, ohne Gewähr für eine Genehmigung. Unter diesen Werten gibt es keinen Anspruch auf diesen Antrag. Lass dich von einem Einwanderungsanwalt beraten."
    }
   },
   {
@@ -142,7 +142,7 @@
     "pt": "Olá! Tenho interesse em comprar um imóvel e gostaria de entender a residência.",
     "en": "Hello! I am interested in buying a property and would like to understand residency.",
     "es": "¡Hola! Me interesa comprar una propiedad y me gustaría entender lo de la residencia.",
-    "de": "Hallo! Ich interessiere mich für den Kauf einer Immobilie und möchte die Aufenthaltserlaubnis verstehen."
+    "de": "Hallo! Ich interessiere mich für den Kauf einer Immobilie und möchte die Aufenthaltstitel verstehen."
    },
    "b": {
     "pt": "Falar com a corretora",

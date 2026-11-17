@@ -10,7 +10,7 @@
   "langs": "PT · EN · DE",
   "role": {
    "pt": "Corretora e fundadora",
-   "en": "Estate agent and founder",
+   "en": "Real estate agent and founder",
    "es": "Corredora y fundadora",
    "de": "Maklerin und Gründerin"
   },
@@ -79,10 +79,10 @@
     "de": "Hat ein Haus in Praia do Madeiro gekauft"
    },
    "text": {
-    "pt": "A matrícula e as contas da casa já estavam conferidas antes da primeira visita. Fechamos a compra de Lisboa, por procuração, e não houve surpresa no cartório.",
-    "en": "The title record and the bills of the house had been checked before the first viewing. We completed the purchase from Lisbon by power of attorney, and there were no surprises at the notary.",
-    "es": "La Matrícula y las cuentas de la casa ya estaban verificadas antes de la primera visita. Cerramos la compra desde Lisboa, con poder notarial, y no hubo sorpresas en la notaría.",
-    "de": "Der Grundbuchauszug (Matrícula) und die Hausrechnungen waren schon vor dem ersten Besuch geprüft. Wir haben den Kauf von Lissabon aus per Vollmacht abgeschlossen, und es gab keine Überraschung im Notariat."
+    "pt": "A matrícula e as contas da casa já estavam conferidas antes da primeira visita. Fechamos a compra a partir de Lisboa, por procuração, e não houve surpresa no cartório.",
+    "en": "The title record and the utility bills had been checked before our first viewing. We completed the purchase from Lisbon by power of attorney, with no surprises at the notary.",
+    "es": "La matrícula y las cuentas de la casa ya estaban verificadas antes de la primera visita. Cerramos la compra desde Lisboa, con poder notarial, y no hubo sorpresas en la notaría.",
+    "de": "Der Grundbuchauszug (Matrícula) und die Nebenkostenabrechnungen waren schon vor dem ersten Besuch geprüft. Wir haben den Kauf von Lissabon aus per Vollmacht abgeschlossen, und im Notariat gab es keine Überraschungen."
    }
   },
   {
@@ -95,22 +95,22 @@
    },
    "text": {
     "pt": "Vimos o terreno primeiro por vídeo e depois no local. Tudo foi explicado em alemão, do CPF ao registro, e os prazos combinados foram cumpridos.",
-    "en": "We saw the plot first by video and then on site. Everything was explained in German, from the CPF to the registration, and the agreed dates were kept.",
+    "en": "We saw the plot first by video, then in person. Everything was explained in German, from the CPF to the registration, and every agreed date was kept.",
     "es": "Primero vimos el terreno por video y después en el lugar. Todo se explicó en alemán, desde el CPF hasta el registro, y se cumplieron los plazos acordados.",
-    "de": "Wir haben das Grundstück zuerst per Video und dann vor Ort gesehen. Alles wurde auf Deutsch erklärt, vom CPF bis zur Eintragung, und die vereinbarten Fristen wurden eingehalten."
+    "de": "Wir haben das Grundstück zuerst per Video und dann vor Ort gesehen. Alles wurde auf Deutsch erklärt, von der CPF bis zur Eintragung, und die vereinbarten Fristen wurden eingehalten."
    }
   },
   {
    "name": "Rafael M.",
    "from": {
     "pt": "Proprietário, aluga por temporada",
-    "en": "Owner, lets to holiday guests",
+    "en": "Owner, rents to vacation guests",
     "es": "Propietario, alquila por temporada",
-    "de": "Eigentümer, vermietet auf Zeit"
+    "de": "Eigentümer, Ferienvermietung"
    },
    "text": {
     "pt": "Moro em São Paulo e a Enseada cuida da casa o ano inteiro. Recebo o relatório no começo de cada mês, com reservas, gastos e fotos da manutenção.",
-    "en": "I live in São Paulo and Enseada looks after the house all year. I get the report at the start of each month, with bookings, costs and photos of the maintenance.",
+    "en": "I live in São Paulo and Enseada looks after the house all year. At the start of each month I get a report with bookings, costs and photos of the maintenance work.",
     "es": "Vivo en São Paulo y Enseada cuida la casa todo el año. Recibo el informe a principios de cada mes, con reservas, gastos y fotos del mantenimiento.",
     "de": "Ich wohne in São Paulo, und Enseada kümmert sich das ganze Jahr um das Haus. Den Bericht bekomme ich am Anfang jedes Monats, mit Buchungen, Ausgaben und Fotos der Instandhaltung."
    }

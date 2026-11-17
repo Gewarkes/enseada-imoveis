@@ -6,7 +6,7 @@
   "name": "Bangalô Sibaúma",
   "title": {
     "pt": "Bangalô de madeira com 2 quartos em Sibaúma",
-    "en": "Two-bedroom timber bungalow in Sibaúma",
+    "en": "Two-bedroom wooden bungalow in Sibaúma",
     "es": "Bungalow de madera con 2 habitaciones en Sibaúma",
     "de": "Holzbungalow mit 2 Schlafzimmern in Sibaúma"
   },
@@ -52,7 +52,7 @@
     ],
     "en": [
       "Covered veranda along the front",
-      "Timber revarnished in 2026"
+      "Wood refinished in 2026"
     ],
     "es": [
       "Galería techada en todo el frente",
@@ -65,9 +65,9 @@
   },
   "desc": {
     "pt": "Casa de madeira na vila tranquila de Sibaúma, ao sul de Pipa, numa rua de areia compactada. O lote é cercado, com coqueiros e um trecho gramado.\n\nAluguel com móveis e utensílios, contrato de doze meses e caução de um aluguel. Energia e água ficam com o inquilino, o IPTU com o proprietário.",
-    "en": "Timber house in the quiet village of Sibaúma, south of Pipa, on a compacted sand road. The plot is fenced, with coconut palms and a stretch of lawn.\n\nLet with furniture and kitchenware, on a twelve-month contract with a deposit of one month's rent. Electricity and water are paid by the tenant, property tax by the owner.",
+    "en": "Wooden house in the quiet village of Sibaúma, south of Pipa, on a compacted sand road. The plot is fenced, with coconut palms and a patch of lawn.\n\nRented furnished with kitchenware, on a twelve-month lease with a deposit of one month’s rent. The tenant pays electricity and water; the owner pays property tax.",
     "es": "Casa de madera en el tranquilo pueblo de Sibaúma, al sur de Pipa, sobre una calle de arena compactada. El lote está cercado, con cocoteros y un sector con césped.\n\nSe alquila con muebles y utensilios, con contrato de doce meses y un depósito equivalente a un alquiler. La energía y el agua las paga el inquilino, el IPTU el propietario.",
-    "de": "Holzhaus im ruhigen Dorf Sibaúma, südlich von Pipa, an einer festgefahrenen Sandstraße. Das Grundstück ist eingezäunt, mit Kokospalmen und einem Stück Rasen.\n\nVermietet mit Möbeln und Küchenausstattung, Vertrag über zwölf Monate mit einer Monatsmiete Kaution. Strom und Wasser zahlt der Mieter, die Grundsteuer (IPTU) der Eigentümer."
+    "de": "Holzhaus im ruhigen Dorf Sibaúma, südlich von Pipa, an einer ungepflasterten, aber festen Sandstraße. Das Grundstück ist eingezäunt, mit Kokospalmen und einem Stück Rasen.\n\nMöbliert und mit ausgestatteter Küche zu vermieten. Der Vertrag läuft zwölf Monate, die Kaution beträgt eine Monatsmiete. Strom und Wasser zahlt der Mieter, die Grundsteuer (IPTU) der Eigentümer."
   },
   "ordem": 7,
   "checks": {},

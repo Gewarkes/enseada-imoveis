@@ -138,14 +138,14 @@
       el._map = map;
       var BB = L.latLngBounds([-6.3371, -35.1343], [-6.1187, -34.9805]);
       var WB = L.latLngBounds([-6.4463, -35.332], [-6.0532, -34.8926]);
-      var live = /\.github\.io$/.test(location.hostname) || S.tiles;
+      var live = true;
       if (live) {
-        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 18, attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>' }).addTo(map);
+        L.tileLayer('https://mt{s}.google.com/vt/lyrs=m&hl=' + (document.documentElement.lang || 'pt').slice(0, 2) + '&x={x}&y={y}&z={z}', { subdomains: '0123', maxZoom: 19, attribution: 'Map data &copy; Google' }).addTo(map);
       } else {
         L.imageOverlay(S.base + 'assets/map-pipa-wide.jpg', WB).addTo(map);
         L.imageOverlay(S.base + 'assets/map-pipa.jpg', BB, { attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>' }).addTo(map);
       }
-      map.setMaxBounds(WB.pad(0.4)); map.options.maxZoom = live ? 18 : 15; el._fitMin = function () { map.invalidateSize(); map.setMinZoom(Math.max(9, map.getBoundsZoom(WB, true))); };
+      map.setMaxBounds(WB.pad(0.4)); map.options.maxZoom = live ? 19 : 15; el._fitMin = function () { map.invalidateSize(); map.setMinZoom(Math.max(9, map.getBoundsZoom(WB, true))); };
       map.on('click', function () { map.scrollWheelZoom.enable(); map.dragging.enable(); });
       var zc = function () { el.classList.toggle('zoomed', map.getZoom() >= 14); }; map.on('zoomend', zc);
       var kind = el.dataset.map;

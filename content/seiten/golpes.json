@@ -2,25 +2,25 @@
  "slug": "golpes",
  "nav": {
   "pt": "Compra segura: sinais de uma oferta séria",
-  "en": "Spot a serious offer",
+  "en": "Spot a legitimate offer",
   "es": "Compra segura: señales de una oferta seria",
   "de": "Seriöse Angebote erkennen"
  },
  "h1": {
   "pt": "Compra segura: como reconhecer uma oferta séria",
-  "en": "Safe buying: how to spot a serious offer",
+  "en": "Safe buying: how to spot a legitimate offer",
   "es": "Compra segura: cómo reconocer una oferta seria",
   "de": "Sicher kaufen: seriöse Angebote erkennen"
  },
  "lead": {
   "pt": "Veja como é uma compra séria e o que merece atenção. Assim você sabe o que esperar.",
-  "en": "See what a serious purchase looks like and what deserves attention. So you know what to expect.",
+  "en": "See what a legitimate purchase looks like and what to watch out for, so you know what to expect.",
   "es": "Mira cómo es una compra seria y qué merece atención. Así sabes qué esperar.",
   "de": "So sieht ein seriöser Kauf aus und worauf du achten solltest. Dann weißt du, was dich erwartet."
  },
  "meta": {
   "pt": "Compra segura de imóveis no Brasil: como reconhecer uma oferta séria e o que conferir.",
-  "en": "Safe property purchase in Brazil: how to spot a serious offer and what to check.",
+  "en": "Safe property buying in Brazil: how to spot a legitimate offer and what to check.",
   "es": "Compra segura de propiedades en Brasil: cómo reconocer una oferta seria y qué verificar.",
   "de": "Sicherer Immobilienkauf in Brasilien: So erkennst du ein seriöses Angebot und was du prüfen solltest."
  },
@@ -37,13 +37,13 @@
     },
     {
      "pt": "Merece atenção",
-     "en": "Needs attention",
+     "en": "Warning signs",
      "es": "Merece atención",
-     "de": "Braucht Aufmerksamkeit"
+     "de": "Vorsicht"
     },
     {
      "pt": "Compra séria",
-     "en": "Serious purchase",
+     "en": "Legitimate purchase",
      "es": "Compra seria",
      "de": "Seriöser Kauf"
     }
@@ -57,14 +57,14 @@
       "de": "Der Makler"
      },
      {
-      "pt": "Sem CRECI (registro oficial do corretor) ou número que não confere no CRECI do estado.",
-      "en": "No CRECI number (the agent’s official licence), or a number that does not match at the state CRECI.",
+      "pt": "Sem CRECI (registro profissional do corretor) ou número que não confere no CRECI do estado.",
+      "en": "No CRECI number (the agent’s official license), or a number that does not match the state CRECI register.",
       "es": "Sin CRECI (el registro oficial del agente) o un número que no coincide en el CRECI del estado.",
       "de": "Keine CRECI-Nummer (offizielle Registrierung des Maklers) oder eine Nummer, die beim CRECI des Bundesstaates nicht stimmt."
      },
      {
       "pt": "CRECI visível e ativo. Anúncios de corretores costumam trazer o número do CRECI.",
-      "en": "CRECI visible and active. Agents’ listings usually show the CRECI number.",
+      "en": "CRECI number visible and active. Agents’ listings normally show it.",
       "es": "CRECI visible y activo. Los anuncios de agentes suelen incluir el número de CRECI.",
       "de": "CRECI sichtbar und aktiv. Anzeigen von Maklern enthalten meist die CRECI-Nummer."
      }
@@ -78,13 +78,13 @@
      },
      {
       "pt": "Preço muito abaixo do mercado, sem visita, fotos de outros anúncios.",
-      "en": "Price far below market, no viewing, photos from other listings.",
+      "en": "Price far below market, no viewing, photos copied from other listings.",
       "es": "Precio muy por debajo del mercado, sin visita, fotos de otros anuncios.",
       "de": "Preis weit unter dem Markt, keine Besichtigung, Fotos aus anderen Anzeigen."
      },
      {
       "pt": "Visita presencial ou por vídeo ao vivo e endereço claro.",
-      "en": "Viewing in person or live video, clear address.",
+      "en": "Viewing in person or by live video, and a clear address.",
       "es": "Visita en persona o por video en vivo y dirección clara.",
       "de": "Besichtigung vor Ort oder per Live-Video, klare Adresse."
      }
@@ -98,13 +98,13 @@
      },
      {
       "pt": "Só “posse”, sem Matrícula e Escritura. Ocorre com frequência em algumas áreas litorâneas, mas não é propriedade e o risco é alto.",
-      "en": "Only “possession”, without Matrícula and Escritura. Occurs often in some coastal areas, but it is not ownership and the risk is high.",
-      "es": "Solo “posse”, sin Matrícula ni Escritura. Ocurre con frecuencia en algunas zonas costeras, pero no es propiedad y el riesgo es alto.",
-      "de": "Nur „Posse“ (Besitz), ohne Matrícula und Escritura. Kommt in manchen Küstengebieten häufig vor, ist aber kein Eigentum und hochriskant."
+      "en": "Only “possession” (posse), with no matrícula or escritura. This is common in some coastal areas, but it is not ownership and the risk is high.",
+      "es": "Solo “posse” (posesión), sin Matrícula ni Escritura. Ocurre con frecuencia en algunas zonas costeras, pero no es propiedad y el riesgo es alto.",
+      "de": "Nur „Posse“ (Besitz), ohne Grundbuchauszug (Matrícula) und Kaufurkunde (Escritura). Das ist in manchen Küstengebieten verbreitet, aber kein Eigentum und sehr riskant."
      },
      {
       "pt": "Matrícula atualizada, pedida por você ao cartório, e certidões do vendedor em dia.",
-      "en": "Up-to-date Matrícula, requested by you from the cartório, and the seller’s certificates in order.",
+      "en": "A current matrícula that you request yourself from the cartório, and the seller’s certificates in order.",
       "es": "Matrícula actualizada, pedida por ti al cartório, y certificados del vendedor al día.",
       "de": "Aktuelle Matrícula, von dir selbst beim Cartório angefordert, und Bescheinigungen des Verkäufers in Ordnung."
      }
@@ -118,13 +118,13 @@
      },
      {
       "pt": "Pressa para pagar o sinal, conta de terceiros, pagamento “por fora”.",
-      "en": "Pressure to pay a deposit, third-party account, payment “on the side”.",
+      "en": "Pressure to pay a deposit, payment to a third-party account, or payment “on the side”.",
       "es": "Prisa para pagar la seña, cuenta de terceros, pago “por fuera”.",
-      "de": "Eile bei der Anzahlung, Konto einer dritten Person, Zahlung „unter der Hand“."
+      "de": "Druck, schnell anzuzahlen, Konto einer dritten Person, Zahlung „unter der Hand“."
      },
      {
       "pt": "Pagamento só ao vendedor do contrato e da matrícula, depois de conferir tudo.",
-      "en": "Payment only to the seller named in the contract and Matrícula, after the checks.",
+      "en": "Payment only to the seller named in the contract and matrícula, after the checks.",
       "es": "Pago solo al vendedor del contrato y de la matrícula, después de verificar todo.",
       "de": "Zahlung nur an den Verkäufer aus Vertrag und Matrícula, nach den Prüfungen."
      }
@@ -132,19 +132,19 @@
     [
      {
       "pt": "Conferência",
-      "en": "Checking",
+      "en": "Verification",
       "es": "Verificación",
       "de": "Prüfung"
      },
      {
       "pt": "O vendedor não aceita conferência dos documentos nem o seu advogado.",
-      "en": "The seller refuses document checks or your lawyer.",
+      "en": "The seller refuses document checks or will not deal with your lawyer.",
       "es": "El vendedor no acepta la verificación de los documentos ni a tu abogado.",
       "de": "Der Verkäufer lässt weder Dokumentenprüfung noch deinen Anwalt zu."
      },
      {
       "pt": "Você tem advogado próprio, que lê o contrato.",
-      "en": "You have your own lawyer who reads the contract.",
+      "en": "You have your own lawyer, who reads the contract.",
       "es": "Tienes un abogado propio que lee el contrato.",
       "de": "Du hast einen eigenen Anwalt, der den Vertrag liest."
      }
@@ -155,9 +155,9 @@
    "t": "p",
    "x": {
     "pt": "Matrícula: o registro oficial do imóvel. Escritura: o documento da venda, feito no cartório.",
-    "en": "Matrícula: the official property record. Escritura: the sale deed, made at the cartório (notary office).",
+    "en": "Matrícula: the official property record. Escritura: the sale deed, signed at the cartório (notary office).",
     "es": "Matrícula: el registro oficial de la propiedad. Escritura: el documento de la venta, hecho en el cartório (notaría).",
-    "de": "Matrícula: das offizielle Register der Immobilie. Escritura: die Kaufurkunde, die im Cartório (Notariat) erstellt wird."
+    "de": "Matrícula: der Grundbuchauszug der Immobilie. Escritura: die Kaufurkunde, die im Cartório (Notariat) erstellt wird."
    }
   },
   {
@@ -174,7 +174,7 @@
    "x": [
     {
      "pt": "Sinal só depois de conferir os documentos.",
-     "en": "Deposit only after checking the documents.",
+     "en": "Pay a deposit only after the documents are checked.",
      "es": "Seña solo después de verificar los documentos.",
      "de": "Anzahlung erst nach Prüfung der Dokumente."
     },
@@ -186,7 +186,7 @@
     },
     {
      "pt": "Tenha seu próprio advogado, independente de corretor e vendedor.",
-     "en": "Have your own lawyer, independent of agent and seller.",
+     "en": "Hire your own lawyer, independent of the agent and the seller.",
      "es": "Ten tu propio abogado, independiente del agente y del vendedor.",
      "de": "Beauftrage einen eigenen Anwalt, unabhängig von Makler und Verkäufer."
     }
@@ -203,27 +203,27 @@
    "x": [
     {
      "pt": "CRECI do corretor ativo no conselho do estado",
-     "en": "The agent’s CRECI is active at the state council",
+     "en": "The agent’s CRECI is active with the state council",
      "es": "CRECI del agente activo en el consejo del estado",
-     "de": "CRECI des Maklers beim Rat des Bundesstaates aktiv"
+     "de": "CRECI-Nummer des Maklers bei der Berufskammer des Bundesstaates aktiv"
     },
     {
      "pt": "Matrícula atualizada, pedida por você ao cartório",
-     "en": "Up-to-date Matrícula, requested by you from the cartório",
+     "en": "A current matrícula, requested by you from the cartório",
      "es": "Matrícula actualizada, pedida por ti al cartório",
      "de": "Aktuelle Matrícula, von dir selbst beim Cartório angefordert"
     },
     {
      "pt": "Vendedor da matrícula = vendedor do contrato",
-     "en": "Seller on the Matrícula = seller in the contract",
+     "en": "The seller on the matrícula is the seller in the contract",
      "es": "Vendedor de la matrícula = vendedor del contrato",
      "de": "Verkäufer in der Matrícula = Vertragspartei"
     },
     {
      "pt": "Sem dívidas, penhora (bem bloqueado pela justiça) ou ação judicial",
-     "en": "No debts, seizure (asset frozen by a court) or lawsuit",
+     "en": "No debts, seizures (court-ordered freezes on the property) or lawsuits",
      "es": "Sin deudas, embargo (bien bloqueado por la justicia) ni juicio",
-     "de": "Keine Schulden, Pfändung (von der Justiz gesperrtes Gut) oder Gerichtsverfahren"
+     "de": "Keine Schulden, Pfändungen oder Gerichtsverfahren auf der Immobilie"
     },
     {
      "pt": "Seu advogado leu o contrato",
@@ -250,13 +250,13 @@
       "pt": "Procure o CRECI",
       "en": "Find the CRECI number",
       "es": "Busca el CRECI",
-      "de": "Suche die CRECI-Nummer"
+      "de": "Finde die CRECI-Nummer"
      },
      "p": {
       "pt": "Veja nome e número CRECI no anúncio ou no cartão. Anúncios de corretores costumam trazer o número do CRECI.",
-      "en": "Look for name and CRECI number in the listing or on the card. Agents’ listings usually show the CRECI number.",
+      "en": "Look for the agent’s name and CRECI number in the listing or on their card. Listings by agents normally show it.",
       "es": "Busca nombre y número de CRECI en el anuncio o en la tarjeta. Los anuncios de agentes suelen incluir el número de CRECI.",
-      "de": "Such Name und CRECI-Nummer in der Anzeige oder auf der Karte. Anzeigen von Maklern enthalten meist die CRECI-Nummer."
+      "de": "Suche Name und CRECI-Nummer in der Anzeige oder auf der Visitenkarte. Anzeigen von Maklern enthalten meist die CRECI-Nummer."
      },
      "n": null
     },
@@ -269,7 +269,7 @@
      },
      "p": {
       "pt": "No Rio Grande do Norte, use a consulta do CRECI-RN. Confira o nome e se a situação é ativa.",
-      "en": "In Rio Grande do Norte, use the CRECI-RN lookup. Check the name and that the status is active.",
+      "en": "In Rio Grande do Norte, use the CRECI-RN lookup. Check that the name matches and the status is active.",
       "es": "En Rio Grande do Norte, usa la consulta del CRECI-RN. Verifica el nombre y que la situación sea activa.",
       "de": "In Rio Grande do Norte nutze die Abfrage des CRECI-RN. Prüfe Name und ob der Status aktiv ist."
      },
@@ -284,7 +284,7 @@
      },
      "p": {
       "pt": "Nome e número devem ser iguais no anúncio e no contrato.",
-      "en": "Name and number must be the same in the listing and the contract.",
+      "en": "The name and number must be the same in the listing and the contract.",
       "es": "Nombre y número deben ser iguales en el anuncio y en el contrato.",
       "de": "Name und Nummer müssen in Anzeige und Vertrag gleich sein."
      },
@@ -319,7 +319,7 @@
    "https://www.cofeci.gov.br/"
   ],
   [
-   "Movimento Econômico (23.06.2026)",
+   "Movimento Econômico (23/06/2026)",
    "https://movimentoeconomico.com.br/"
   ],
   [

@@ -6,7 +6,7 @@
  "name": "Casa do Coqueiral",
  "title": {
   "pt": "Casa térrea de 3 suítes perto do centro de Pipa",
-  "en": "Single-storey three-bedroom house near Pipa centre",
+  "en": "Single-story three-bedroom house near the center of Pipa",
   "es": "Casa de un piso con 3 suites cerca del centro de Pipa",
   "de": "Einstöckiges Haus mit 3 Suiten nahe dem Zentrum von Pipa"
  },
@@ -55,14 +55,14 @@
    "Piscina de raia com 12 m"
   ],
   "en": [
-   "Single storey, no steps between rooms",
+   "Single story, no steps between rooms",
    "Mature coconut palms on the plot",
    "Lap pool, 12 m long"
   ],
   "es": [
    "De un solo piso, sin escalones entre ambientes",
    "Cocoteros adultos en el lote",
-   "Piscina de carril de 12 m"
+   "Piscina de 12 m para nadar largos"
   ],
   "de": [
    "Einstöckig, keine Stufen zwischen den Räumen",
@@ -72,9 +72,9 @@
  },
  "desc": {
   "pt": "Casa numa rua residencial do centro de Pipa. O lote é plano e murado; muro e vegetação protegem a vista da rua.\n\nMatrícula e certidões solicitadas; situação conforme os documentos. O telhado foi revisado em 2025 e a casa está pronta para morar. Os móveis não entram no preço, mas podem ser negociados à parte.",
-  "en": "House on a residential street in the centre of Pipa. The plot is level and walled; wall and planting screen it from the street.\n\nMatrícula and certificates requested; status as per the documents. The roof was overhauled in 2025 and the house is ready to move into. Furniture is not included in the price but can be negotiated separately.",
+  "en": "House on a residential street in the center of Pipa. The plot is level and walled, and the wall and plants screen it from the street.\n\nMatrícula and certificates requested; status as shown in the documents. The roof was redone in 2025 and the house is move-in ready. Furniture is not included in the price but can be negotiated separately.",
   "es": "Casa en una calle residencial del centro de Pipa. El lote es plano y cercado; el muro y la vegetación impiden ver hacia adentro desde la calle.\n\nMatrícula y certificados solicitados; situación según los documentos. El techo fue revisado en 2025 y la casa está lista para habitar. Los muebles no están incluidos en el precio, pero pueden negociarse aparte.",
-  "de": "Haus an einer Wohnstraße im Zentrum von Pipa. Das Grundstück ist eben und ummauert; Mauer und Bepflanzung nehmen die Sicht von der Straße.\n\nMatrícula und Bescheinigungen angefragt; Stand siehe Unterlagen. Das Dach wurde 2025 überprüft, das Haus ist bezugsfertig. Die Möbel sind nicht im Preis enthalten, können aber separat verhandelt werden."
+  "de": "Haus an einer Wohnstraße im Zentrum von Pipa. Das Grundstück ist eben und ummauert; Mauer und Bepflanzung schützen vor Blicken von der Straße.\n\nGrundbuchauszug (Matrícula) und Bescheinigungen sind angefragt; der Stand steht bei den Unterlagen. Das Dach wurde 2025 überprüft, das Haus ist bezugsfertig. Die Möbel sind nicht im Preis enthalten, können aber separat verhandelt werden."
  },
  "ordem": 2,
  "priceBefore": 2580000
