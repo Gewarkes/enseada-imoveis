@@ -533,3 +533,10 @@ h1,h2{overflow-wrap:break-word;hyphens:auto}
 .keys.gl li b{display:flex;align-items:baseline;justify-content:center;gap:4px;height:34px;line-height:34px;font-size:1.625rem;font-weight:800;font-variant-numeric:tabular-nums;white-space:nowrap;margin:0}
 .keys.gl li b small{font-size:.9rem;font-weight:700;color:var(--muted);line-height:1}
 .keys.gl.c2 li{flex-direction:column!important;gap:8px!important}
+/* v16b kleiner */
+.keys.gl{gap:8px!important}
+.keys.gl li{padding:12px 8px 11px!important;gap:5px!important;border-radius:14px}
+.keys.gl li .ico{width:34px;height:34px;padding:8px}
+.keys.gl li b{height:26px;line-height:26px;font-size:1.25rem}
+.keys.gl li b small{font-size:.78rem}
+.keys.gl li span{font-size:.8125rem}
