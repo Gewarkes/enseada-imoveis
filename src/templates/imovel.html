@@ -44,12 +44,12 @@
         {% if l.temporada in ('sim','nao') %}<p class="ichip">{{ icon('cal') }}{{ t.tempOk if l.temporada == 'sim' else t.tempNo }}</p>{% endif %}
         <ul class="keys gl {{ "c2" if land else "c4" }}">
           {% if land %}
-          <li>{{ icon('lot') }}<span><b>{{ nf(l.lot) }} m²</b> {{ t.lotWord }}</span></li>
-          <li>{{ icon('pin') }}<span><b>{{ nf(l.beach) }} m</b> {{ t.toBeach }}</span></li>
+          <li>{{ icon('lot') }}<span><b>{{ nf(l.lot) }}<small>m²</small></b> {{ t.lotWord }}</span></li>
+          <li>{{ icon('pin') }}<span><b>{{ nf(l.beach) }}<small>m</small></b> {{ t.toBeach }}</span></li>
           {% else %}
           <li>{{ icon('bed') }}<span><b>{{ l.beds }}</b> {{ t.bed1 if l.beds == 1 else t.beds }}</span></li>
           <li>{{ icon('bath') }}<span><b>{{ l.baths }}</b> {{ t.bath1 if l.baths == 1 else t.baths }}</span></li>
-          <li>{{ icon('area') }}<span><b>{{ nf(l.area) }} m²</b> {{ t.built }}</span></li>
+          <li>{{ icon('area') }}<span><b>{{ nf(l.area) }}<small>m²</small></b> {{ t.built }}</span></li>
           <li>{{ icon('car') }}<span><b>{{ l.parking }}</b> {{ t.park1 if l.parking == 1 else t.parks }}</span></li>
           {% endif %}
         </ul>
