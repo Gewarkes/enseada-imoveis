@@ -41,6 +41,22 @@
   </div></div>
 </section>
 
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><h2>{{ t.featH }}</h2><p>{{ t.featP }}</p></div>
+      <a class="link" href="{{ url('imoveis') }}">{{ t.seeAll }} ({{ listings | length }}) {{ icon('arrow') }}</a>
+    </div>
+    <div class="rail">
+      {% for l in featured %}{{ m.card(l, false, loop.index, '(min-width:1000px) 380px, (min-width:640px) 46vw, 84vw') }}{% endfor %}
+    </div>
+    <div class="sec-more"><a class="btn btn-line btn-block" href="{{ url('imoveis') }}">{{ t.seeAll }} ({{ listings | length }})</a></div>
+  </div>
+</section>
+
+
+
+
 <section class="sec sec-soft">
   <div class="wrap">
     <div class="sec-head">
@@ -61,22 +77,6 @@
   </div>
 </section>
 
-<section class="sec">
-  <div class="wrap">
-    <div class="sec-head">
-      <div><h2>{{ t.featH }}</h2><p>{{ t.featP }}</p></div>
-      <a class="link" href="{{ url('imoveis') }}">{{ t.seeAll }} ({{ listings | length }}) {{ icon('arrow') }}</a>
-    </div>
-    <div class="rail">
-      {% for l in featured %}{{ m.card(l, false, loop.index, '(min-width:1000px) 380px, (min-width:640px) 46vw, 84vw') }}{% endfor %}
-    </div>
-    <div class="sec-more"><a class="btn btn-line btn-block" href="{{ url('imoveis') }}">{{ t.seeAll }} ({{ listings | length }})</a></div>
-  </div>
-</section>
-
-
-
-
 <section class="sec sec-trust" id="seguranca">
   <div class="wrap">
     <div class="sec-head"><div><span class="kick">{{ t.trK }}</span><h2>{{ t.trH }}</h2><p>{{ t.trP }}</p></div></div>
@@ -85,7 +85,6 @@
       <a class="tr-card" href="{{ url(r) }}"><span class="tr-ic">{{ icon(ic) }}</span><b>{{ t['trC' ~ i ~ 'h'] }}</b><span>{{ t['trC' ~ i ~ 'p'] }}</span></a>
       {% endfor %}
     </div>
-    <p class="tr-rule">{{ icon('info') }}<span>{{ t.trRule }}</span></p>
   </div>
 </section>
 
@@ -117,7 +116,7 @@
         <h2>{{ t.sellH }}</h2>
         <p>{{ t.sellP }}</p>
         <ul class="hl" style="margin-top:18px">
-          {% for k in ['sell1', 'sell2', 'sell3', 'sell4'] %}<li>{{ icon('check') }}<span>{{ t[k] }}</span></li>{% endfor %}
+          {% for k in ['sell1', 'sell2', 'sell3'] %}<li>{{ icon('check') }}<span>{{ t[k] }}</span></li>{% endfor %}
         </ul>
         <div class="btn-row"><a class="btn btn-primary" href="{{ url('vender') }}">{{ t.sellBtn }}</a><a class="btn btn-line" href="{{ wa(t.waSell) }}" target="_blank" rel="noopener">{{ wa_icon() }} WhatsApp</a></div>
       </div>

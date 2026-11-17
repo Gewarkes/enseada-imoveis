@@ -97,21 +97,17 @@
       </div>
       {% elif b.x == 'sellupload' %}
       <form class="form sellup" data-sellup novalidate>
-        <p class="su-go">{{ t.suGo }}</p>
-        <h3 class="su-s">{{ t.suStep1 }}</h3>
         <label>{{ t.fName }}<input class="inp" name="name" autocomplete="name" required></label>
         <label>{{ t.fPhone }}<input class="inp" name="phone" type="tel" inputmode="tel" autocomplete="tel" required></label>
-        <h3 class="su-s">{{ t.suStep2 }}</h3>
-        <label class="up"><input type="file" name="photos" accept="image/*" multiple data-up><span class="up-b">{{ icon('camera') }}<b>{{ t.suPhotos }}</b></span><span class="up-n" data-up-n></span></label>
-        <h3 class="su-s">{{ t.suStep3 }}</h3>
-        <label class="up"><input type="file" name="docs" accept="image/*,application/pdf" multiple data-up><span class="up-b">{{ icon('doc') }}<b>{{ t.suDocs }}</b></span><span class="up-n" data-up-n></span></label>
-        <details class="su-opt"><summary>{{ t.suOpt }}</summary>
         <label>{{ t.suWhere }}<input class="inp" name="where"></label>
+        <details class="su-opt"><summary>{{ t.suOpt }}</summary>
+        <label class="up"><input type="file" name="photos" accept="image/*" multiple data-up><span class="up-b">{{ icon('camera') }}<b>{{ t.suPhotos }}</b></span><span class="up-n" data-up-n></span></label>
+        <label class="up"><input type="file" name="docs" accept="image/*,application/pdf" multiple data-up><span class="up-b">{{ icon('doc') }}<b>{{ t.suDocs }}</b></span><span class="up-n" data-up-n></span></label>
         <div class="su-2"><label>{{ t.suSize }}<input class="inp" name="size" inputmode="numeric"></label><label>{{ t.suPrice }}<input class="inp" name="price" inputmode="numeric"></label></div></details>
-        <p class="form-note">{{ t.suMax }} {{ t.suPriv }}</p>
         <button class="btn btn-primary btn-block" type="submit">{{ t.suSend }}</button>
         <p class="su-or">{{ t.suOr }}</p>
         <a class="btn btn-wa btn-block" href="{{ wa(t.suWaMsg) }}" target="_blank" rel="noopener">{{ wa_icon() }} {{ t.suWa }}</a>
+        <p class="form-note">{{ t.suPriv }}</p>
         <p class="form-msg" role="status"></p>
       </form>
       {% elif b.x == 'sellform' %}

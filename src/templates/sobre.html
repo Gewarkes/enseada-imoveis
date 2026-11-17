@@ -65,8 +65,8 @@
 
 <section class="sec">
   <div class="wrap">
-    <div class="sec-head"><div><h2>{{ t.areasH2 }}</h2><p>{{ t.areasP }}</p></div></div>
-    <div class="tiles{% if locs | length == 6 %} six{% endif %}">
+    <div class="sec-head"><div><h2>{{ t.areasH2 }}</h2></div></div>
+    <div class="tiles">
       {% for x in locs %}
       <a class="tile" href="{{ url('imoveis') }}?loc={{ x.slug }}">{{ pic(x.img, '(min-width:1100px) 200px, (min-width:800px) 33vw, 50vw', '') }}<div><b>{{ x.name }}</b><span>{{ plural(x.n, 'obj1', 'objN') }}</span></div></a>
       {% endfor %}

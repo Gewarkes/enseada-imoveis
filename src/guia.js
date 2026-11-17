@@ -74,6 +74,13 @@
         st[k] = b.dataset.v; if (k === 'deal') { st.price = ''; $$('[data-wg=price]', w).forEach(function (x) { x.setAttribute('aria-pressed', 'false'); }); } upd();
       });
     });
+    $$('select[data-wg]', w).forEach(function (sel) {
+      sel.addEventListener('change', function () {
+        var k = sel.dataset.wg; st[k] = sel.value;
+        if (k === 'deal') { st.price = ''; $$('select[data-wg=price]', w).forEach(function (x) { x.value = ''; }); }
+        upd();
+      });
+    });
     if (from) from.addEventListener('change', upd);
     upd();
   });

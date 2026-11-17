@@ -288,16 +288,16 @@
   "de": "Alle Regionen"
  },
  "sType": {
-  "pt": "Tipo de imóvel",
-  "en": "Property type",
-  "es": "Tipo de propiedad",
-  "de": "Art der Immobilie"
+  "pt": "Tipo",
+  "en": "Type",
+  "es": "Tipo",
+  "de": "Art"
  },
  "sAnyType": {
-  "pt": "Todos os tipos",
-  "en": "All types",
-  "es": "Todos los tipos",
-  "de": "Alle Arten"
+  "pt": "Todos",
+  "en": "All",
+  "es": "Todos",
+  "de": "Alle"
  },
  "sMax": {
   "pt": "Preço até",

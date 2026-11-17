@@ -578,7 +578,7 @@
  "suWhere": {
   "pt": "Onde fica o imóvel?",
   "en": "Where is the property?",
-  "es": "¿Dónde queda la propiedad?",
+  "es": "¿Dónde está la propiedad?",
   "de": "Wo liegt die Immobilie?"
  },
  "suSend": {
@@ -804,10 +804,10 @@
   "de": "Alle Kosten"
  },
  "ansL2": {
-  "pt": "Documentos necessários",
-  "en": "Required documents",
-  "es": "Documentos necesarios",
-  "de": "Benötigte Unterlagen"
+  "pt": "Documentos",
+  "en": "Documents",
+  "es": "Documentos",
+  "de": "Unterlagen"
  },
  "ansL3": {
   "pt": "Estrangeiro pode comprar?",
@@ -828,10 +828,10 @@
   "de": "Seriöse Angebote erkennen"
  },
  "ansL6": {
-  "pt": "Compra passo a passo",
-  "en": "Buying step by step",
-  "es": "Compra paso a paso",
-  "de": "Kauf Schritt für Schritt"
+  "pt": "Passo a passo",
+  "en": "Step by step",
+  "es": "Paso a paso",
+  "de": "Schritt für Schritt"
  },
  "ansL7": {
   "pt": "Perguntas frequentes",
@@ -864,10 +864,10 @@
   "de": "Größe und Lage"
  },
  "suOpt": {
-  "pt": "Opcional: quer contar mais? (pode pular)",
-  "en": "Optional: want to tell us more? (you can skip this)",
-  "es": "Opcional: ¿quieres contar más? (puedes saltarlo)",
-  "de": "Optional: noch mehr erzählen? (kannst du überspringen)"
+  "pt": "Fotos e documentos (opcional)",
+  "en": "Photos and documents (optional)",
+  "es": "Fotos y documentos (opcional)",
+  "de": "Fotos und Unterlagen (optional)"
  },
  "suGo": {
   "pt": "Tire fotos dos papéis ou escolha os arquivos. Pronto.",
@@ -918,10 +918,10 @@
   "de": "Maklerin mit CRECI-Nummer"
  },
  "trC1p": {
-  "pt": "O número do CRECI está no rodapé de cada página. Você pode conferi-lo no conselho.",
-  "en": "The CRECI number is in the footer of every page. You can check it with the council.",
-  "es": "El número de CRECI está al pie de cada página. Puedes verificarlo en el consejo.",
-  "de": "Die CRECI-Nummer steht im Fuß jeder Seite. Du kannst sie bei der Berufskammer prüfen."
+  "pt": "É a licença oficial de corretor. Fica no rodapé de cada página e você pode conferir no conselho.",
+  "en": "It is the official broker license. It is in the footer of every page and you can check it with the council.",
+  "es": "Es la licencia oficial de corredor. Está al pie de cada página y puedes verificarla en el consejo.",
+  "de": "Das ist die staatliche Maklerlizenz. Sie steht im Fuß jeder Seite und lässt sich bei der Berufskammer prüfen."
  },
  "trC2h": {
   "pt": "Documentos à vista",

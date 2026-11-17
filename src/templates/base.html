@@ -24,7 +24,7 @@
 <meta property="og:locale" content="{{ oglocale }}">
 <meta name="twitter:card" content="summary_large_image">
 {% endif %}
-<meta name="theme-color" content="#0F3B37">
+<meta name="theme-color" content="{{ '#172220' if site.theme == 'dark' else '#FFFFFF' }}">
 <link rel="preload" as="font" type="font/woff2" href="{{ base }}assets/open-sans-latin.woff2" crossorigin>
 {% block preload %}{% endblock %}
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%230F3B37'/%3E%3Cpath d='M7 20c3-4 6-4 9 0s6 4 9 0M9 14l7-5 7 5' fill='none' stroke='%23fff' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
@@ -65,8 +65,8 @@
   </div>
   <div class="sheet-body">
     <nav class="sheet-nav">
-      {% for r, k in [('imoveis-venda','navBuy'),('imoveis-aluguel','navRent'),('imoveis','navAll'),('comprar','navBuyGuide'),('vender','navSell'),('sobre','navAbout'),('blog','navGuide'),('contato','navContact')] %}
-      <a href="{{ url(r) }}">{{ t[k] }} {{ icon('arrow') }}</a>
+      {% for r, k in [('imoveis-venda','navBuy'),('imoveis-aluguel','navRent'),('imoveis','navAll'),('comprar','navBuyGuide'),('vender','navSellS'),('sobre','navAbout'),('blog','navGuide'),('contato','navContact')] %}
+      <a href="{{ url(r) }}">{{ t[k] }}</a>
       {% endfor %}
     </nav>
     <div class="sheet-row"><span>{{ t.language }}</span>
@@ -126,9 +126,9 @@
             <li><a href="{{ url('privacidade') }}">{{ t.privH }}</a></li>
           </ul>
         </div>
-        <div style="grid-column:1/-1">
+        <div class="foot-areas">
           <h3>{{ t.footAreas }}</h3>
-          <ul class="foot-links" style="grid-template-columns:1fr 1fr">
+          <ul class="foot-links">
             {% for x in locs %}<li><a href="{{ url('imoveis') }}?loc={{ x.slug }}">{{ x.name }}</a></li>{% endfor %}
           </ul>
         </div>
