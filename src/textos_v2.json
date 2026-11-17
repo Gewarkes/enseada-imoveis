@@ -654,10 +654,10 @@
   "de": "Richtwerte. Die Dauer ist je nach Notariat (Cartório) verschieden. Quelle: siehe unten."
  },
  "pdfBtn": {
-  "pt": "Baixar dossiê (PDF)",
-  "en": "Download brochure (PDF)",
-  "es": "Descargar dossier (PDF)",
-  "de": "Exposé herunterladen"
+  "pt": "Baixar ficha",
+  "en": "Download brochure",
+  "es": "Descargar ficha",
+  "de": "Exposé laden"
  },
  "pdfNote": {
   "pt": "PDF com todas as informações, para enviar ao banco ou a quem você quiser.",
@@ -1062,10 +1062,10 @@
   "de": "Sicher kaufen"
  },
  "inqMore": {
-  "pt": "Quer escrever uma mensagem? (opcional)",
-  "en": "Want to add a message? (optional)",
-  "es": "¿Quieres escribir un mensaje? (opcional)",
-  "de": "Nachricht schreiben? (optional)"
+  "pt": "Adicionar mensagem (opcional)",
+  "en": "Add a message (optional)",
+  "es": "Añadir mensaje (opcional)",
+  "de": "Nachricht hinzufügen (optional)"
  },
  "kCardH": {
   "pt": "Quanto custa no total?",

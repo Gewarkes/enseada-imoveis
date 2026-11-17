@@ -3,7 +3,7 @@
 {% block preload %}<link rel="preload" as="image" href="{{ img(l.imgs[0]) }}" imagesrcset="{{ img(l.imgs[0], '-xs') }} 480w, {{ img(l.imgs[0], '-s') }} 760w, {{ img(l.imgs[0]) }} 1400w" imagesizes="(min-width:800px) 66vw, 100vw" fetchpriority="high">{% endblock %}
 {% block main %}
 {% set land = l.type == 'terreno' %}
-{% set fi = {'pool':'wave','ac':'snow','furnished':'sofa','fiber':'wifi','garage':'car','gated':'gate','garden':'leaf','solar':'sun','water':'drop','well':'drop','power':'bolt','seaview':'eye','lagoon':'wave','alarm':'shield','staff':'user','deed':'doc','paved':'car'} %}
+{% set fi = {'pool':'wave','ac':'snow','furnished':'sofa','fiber':'wifi','garage':'car','gated':'gate','garden':'leaf','solar':'sun','water':'drop','well':'drop','power':'bolt','seaview':'eye','lagoon':'wave','alarm':'shield','staff':'user','deed':'doc','paved':'road','bbq':'flame','deck':'sun'} %}
 <div class="wrap">
   <ol class="crumbs">
     <li><a href="{{ url('home') }}">{{ t.navHome }}</a></li>
@@ -38,9 +38,9 @@
         <div class="det-price">
           <b>{{ price(l) }}</b>
           <span data-fxline data-brl="{{ l.price | int }}"></span>
-          {% if l.area and l.deal == 'venda' %}<span>· <span data-brl="{{ (l.price / l.area) | round | int }}">{{ money(l.price / l.area) }}</span>/m²</span>{% endif %}
+          {% set sqm = l.area or l.lot %}{% if sqm and l.deal == 'venda' %}<span>· <span data-brl="{{ (l.price / sqm) | round | int }}">{{ money(l.price / sqm) }}</span>/m²</span>{% endif %}
         </div>
-        {% if lang != 'pt' and l.deal == 'venda' and not land and l.price >= taxes.residence.northeast %}<p class="ichip">{{ icon('user') }}<span>{{ t.resChip }}</span> <a href="{{ url('residencia') }}">{{ t.resChipL }}</a></p>{% endif %}
+        {% if lang != 'pt' and l.deal == 'venda' and not land and l.price >= taxes.residence.northeast %}<p class="ichip">{{ icon('user') }}<span>{{ t.resChip }} <a href="{{ url('residencia') }}">{{ t.resChipL }}</a></span></p>{% endif %}
         {% if l.temporada in ('sim','nao') %}<p class="ichip">{{ icon('cal') }}{{ t.tempOk if l.temporada == 'sim' else t.tempNo }}</p>{% endif %}
         <ul class="keys gl {{ "c2" if land else "c4" }}">
           {% if land %}
@@ -55,21 +55,22 @@
         </ul>
         <div class="det-actions" data-actions>
           <a class="btn btn-primary" href="#contato">{{ icon('cal') }} {{ t.visit }}</a>
+          <a class="btn btn-wa" href="{{ wa(t.waHello ~ ' ' ~ l.name ~ ' (' ~ l.ref ~ ')') }}" target="_blank" rel="noopener">{{ wa_icon() }} WhatsApp</a>
           <button class="btn btn-line" type="button" data-share data-title="{{ l.name }}">{{ icon('share') }} {{ t.share }}</button>
-          <a class="btn btn-pdf" href="{{ base }}pdf/{{ lang }}/{{ l.slug }}.pdf" download><span class="pdf-tag">PDF</span> {{ t.pdfBtn }}</a>
           <button class="btn btn-line btn-fav" type="button" data-fav data-slug="{{ l.slug }}" data-name="{{ l.name }}" data-url="{{ url('imovel-' + l.slug) }}" data-price="{{ l.price | int }}" aria-pressed="false">{{ icon('heart') }} <span data-fav-t data-a="{{ t.mlAdd }}" data-b="{{ t.mlDel }}">{{ t.mlAdd }}</span></button>
+          <a class="btn btn-pdf" href="{{ base }}pdf/{{ lang }}/{{ l.slug }}.pdf" download><span class="pdf-tag">PDF</span> {{ t.pdfBtn }}</a>
         </div>
       </div>
 
       <section class="block glance">
         {% if l.feats %}<h2>{{ t.glH }}</h2>
-        {% set fn = l.feats|length %}<ul class="gl {{ "c5" if fn%5==0 else ("c4" if fn%4==0 else ("c3" if fn%3==0 else "c2")) }}">{% for f in l.feats %}<li>{{ icon(fi.get(f, 'check')) }}<span>{{ t['f_' ~ f] }}</span></li>{% endfor %}</ul>{% endif %}
+        {% set rank = ['pool','seaview','lagoon','ac','furnished','garage','garden','bbq','deck','solar','fiber','gated','alarm','staff','paved','power','water','well','deed'] %}{% set feats = [] %}{% for r in rank %}{% if r in l.feats and not (r == 'deed' and not l.checks.matricula) %}{% set _ = feats.append(r) %}{% endif %}{% endfor %}{% set fn = feats|length %}<ul class="gl {{ "c5" if fn%5==0 else ("c4" if fn%4==0 else ("c3" if fn%3==0 else "c2")) }}">{% for f in feats %}<li>{{ icon(fi.get(f, 'check')) }}<span>{{ t['f_' ~ f] }}</span></li>{% endfor %}</ul>{% endif %}
         {% if l.dist %}
         <h2 class="gl-h2">{{ t.distH }}</h2>
         <ul class="gl dist c3">
-          {% if l.dist.get('beach') %}<li>{{ icon('wave') }}<span><b>{{ l.dist.get('beach') }}</b> {{ t.dBeach }}</span></li>{% endif %}
+          {% if l.dist.get('beach') %}<li>{{ icon('umbrella') }}<span><b>{{ l.dist.get('beach') }}</b> {{ t.dBeach }}</span></li>{% endif %}
           {% if l.dist.get('center') %}<li>{{ icon('pin') }}<span><b>{{ l.dist.get('center') }}</b> {{ t.dCenter }}</span></li>{% endif %}
-          {% if l.dist.get('airport') %}<li>{{ icon('car') }}<span><b>{{ l.dist.get('airport') }}</b> {{ t.dAirport }}</span></li>{% endif %}
+          {% if l.dist.get('airport') %}<li>{{ icon('plane') }}<span><b>{{ l.dist.get('airport') }}</b> {{ t.dAirport }}</span></li>{% endif %}
         </ul>
         <p class="form-note">{{ t.dDistNote }}</p>
         {% endif %}
@@ -109,7 +110,6 @@
           {% if l.year %}<div><dt>{{ t.dYear }}</dt><dd>{{ l.year }}</dd></div>{% endif %}
           <div><dt>{{ t.dCondo }}</dt><dd>{% if l.condo %}<span data-brl="{{ l.condo | int }}">{{ money(l.condo) }}</span>{{ t.perMonth }}{% else %}{{ t.none }}{% endif %}</dd></div>
           {% if l.iptu %}<div><dt>{{ t.dIptu }}</dt><dd><span data-brl="{{ l.iptu | int }}">{{ money(l.iptu) }}</span>{{ t.perYear }}</dd></div>{% endif %}
-          <div><dt>{{ t.dStatus }}</dt><dd>{{ t['st_' ~ l.status] }}</dd></div>
         </dl>
       </section>
 

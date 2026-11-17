@@ -1010,7 +1010,7 @@
  "stNew": {
   "pt": "Novo",
   "en": "New",
-  "es": "Nueva",
+  "es": "Nuevo",
   "de": "Neu"
  },
  "stRes": {
@@ -1044,10 +1044,10 @@
   "de": "Zu verkaufen"
  },
  "dealRent": {
-  "pt": "Aluguel",
+  "pt": "Para alugar",
   "en": "For rent",
-  "es": "Alquiler",
-  "de": "Miete"
+  "es": "En alquiler",
+  "de": "Zu vermieten"
  },
  "bed1": {
   "pt": "quarto",
@@ -1984,5 +1984,11 @@
   "en": "Swipe to see more photos",
   "es": "Desliza para ver más fotos",
   "de": "Wische, um mehr Fotos zu sehen"
+ },
+ "pdfBtn": {
+  "pt": "Baixar ficha",
+  "en": "Download brochure",
+  "es": "Descargar ficha",
+  "de": "Exposé laden"
  }
 }
