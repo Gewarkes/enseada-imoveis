@@ -496,3 +496,12 @@ h1,h2{overflow-wrap:break-word;hyphens:auto}
 .fold>summary::after{content:"+";font-size:1.5rem;font-weight:400}
 .fold[open]>summary::after{content:"–"}
 .fold[open]{padding-bottom:12px}
+
+/* v13b seal badge */
+.seal-badge{display:flex;flex-direction:column;align-items:center;text-align:center;gap:4px;margin:22px 0;padding:22px 18px 18px;border:1.5px solid #D9B96A;border-radius:18px;background:linear-gradient(180deg,#FBF4E2,#fff)}
+.seal-badge .sb-ico{width:68px;height:68px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 30% 25%,#E9C874,#B8892B);color:#fff;box-shadow:0 0 0 4px #FBF4E2,0 0 0 6px #D9B96A;margin-bottom:12px}
+.seal-badge .sb-ico .ico,.seal-badge .sb-ico svg{width:34px;height:34px;color:#fff;margin:0}
+.seal-badge .sb-name{font-size:1.125rem;color:var(--ink)}
+.seal-badge .sb-role{color:var(--muted);font-size:.9375rem}
+.seal-badge .sb-num{display:inline-block;margin-top:4px;padding:4px 12px;border-radius:999px;background:#172220;color:#F3E3B5;font-weight:700;font-size:.875rem;letter-spacing:.03em}
+.seal-badge .sb-link{margin-top:8px;font-size:.9375rem;font-weight:600;text-decoration:underline;text-underline-offset:3px;min-height:32px;display:inline-flex;align-items:center}

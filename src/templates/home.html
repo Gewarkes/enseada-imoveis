@@ -101,7 +101,13 @@
           <div><b>{{ site.stats.countries }}</b><span>{{ t.stCountries }}</span></div>
           <div><b>{{ nf(site.stats.rating, 1) }}</b><span>{{ t.stRating }} ({{ site.stats.reviews }})</span></div>
         </div>
-        <p class="agent-line">{{ icon('shield') }}<span><b>{{ site.agent.name }}</b> · {{ t.creciLabel }} · {{ site.agent.creci }} · <a href="{{ url('verificada') }}">{{ t.slSealW }}</a></span></p>
+        <div class="seal-badge">
+          <span class="sb-ico">{{ icon('shield') }}</span>
+          <b class="sb-name">{{ site.agent.name }}</b>
+          <span class="sb-role">{{ t.creciLabel }}</span>
+          <span class="sb-num">{{ site.agent.creci }}</span>
+          <a class="sb-link" href="{{ url('verificada') }}">{{ t.slSealW }}</a>
+        </div>
         <div class="btn-row"><a class="btn btn-primary" href="{{ url('sobre') }}">{{ t.whyBtn }}</a></div>
       </div>
     </div>
