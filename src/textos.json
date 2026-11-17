@@ -624,31 +624,31 @@
   "de": "Wert der Immobilie (R$)"
  },
  "kDown": {
-  "pt": "Entrada",
+  "pt": "Entrada (o que você paga de uma vez)",
   "en": "Down payment",
   "es": "Entrada",
   "de": "Anzahlung"
  },
  "kYears": {
-  "pt": "Prazo",
+  "pt": "Em quantos anos paga",
   "en": "Term",
   "es": "Plazo",
   "de": "Laufzeit"
  },
  "kRate": {
-  "pt": "Juros ao ano (%)",
+  "pt": "Juros do banco por ano (%)",
   "en": "Interest per year (%)",
   "es": "Interés anual (%)",
   "de": "Zinsen pro Jahr (%)"
  },
  "kSys": {
-  "pt": "Sistema de amortização",
+  "pt": "Tipo de parcela",
   "en": "Repayment system",
   "es": "Sistema de amortización",
   "de": "Tilgungssystem"
  },
  "kSac": {
-  "pt": "SAC: as parcelas começam mais altas e diminuem todo mês.",
+  "pt": "SAC: a parcela começa mais alta e cai todo mês.",
   "en": "SAC: payments start higher and fall every month.",
   "es": "SAC: las cuotas empiezan más altas y bajan cada mes.",
   "de": "SAC: Die Raten sind am Anfang höher und werden jeden Monat kleiner."
@@ -690,7 +690,7 @@
   "de": "Kaufnebenkosten (ca.)"
  },
  "kNote": {
-  "pt": "Simulação sem TR, seguros e tarifas. Não é oferta de crédito. A taxa é um exemplo; o valor real você recebe do banco. Bancos brasileiros raramente financiam compradores não residentes.",
+  "pt": "É só um exemplo, sem seguro e taxas do banco. Não é oferta de crédito. O valor de verdade quem diz é o banco.",
   "en": "Estimate only. It excludes the TR index (a government reference rate), insurance and fees, and is not a loan offer. The rate is an example; your bank will give you the real one. Brazilian banks rarely lend to non-residents.",
   "es": "Simulación sin TR, seguros ni comisiones. No es una oferta de crédito. La tasa es un ejemplo; el valor real te lo da el banco. Los bancos brasileños rara vez financian a compradores no residentes.",
   "de": "Berechnung ohne TR (Referenzzins), Versicherungen und Gebühren. Das ist kein Kreditangebot. Der Zinssatz ist nur ein Beispiel; den echten Wert bekommst du von der Bank. Brasilianische Banken finanzieren Käufer ohne Wohnsitz in Brasilien nur selten."

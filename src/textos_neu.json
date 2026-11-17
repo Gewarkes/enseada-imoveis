@@ -300,13 +300,13 @@
   "de": "Angabe der Maklerin. Belege bitte anfordern."
  },
  "mkMat": {
-  "pt": "Matrícula em mãos",
+  "pt": "Papel que prova o dono (matrícula) em mãos",
   "en": "Title record (matrícula) received",
   "es": "Matrícula en mano",
   "de": "Grundbuchauszug (Matrícula) liegt vor"
  },
  "mkDebt": {
-  "pt": "Dívidas e ônus conferidos",
+  "pt": "Dívidas conferidas",
   "en": "Debts and encumbrances checked",
   "es": "Deudas y gravámenes verificados",
   "de": "Schulden und Belastungen geprüft"
@@ -336,13 +336,13 @@
   "de": "Bedingungen ansehen"
  },
  "tempOk": {
-  "pt": "Aluguel por temporada permitido",
+  "pt": "Pode alugar para turistas",
   "en": "Short-term rentals allowed",
   "es": "Alquiler por temporada permitido",
   "de": "Ferienvermietung erlaubt"
  },
  "tempNo": {
-  "pt": "Aluguel por temporada não permitido",
+  "pt": "Não pode alugar para turistas",
   "en": "Short-term rentals not allowed",
   "es": "Alquiler por temporada no permitido",
   "de": "Ferienvermietung nicht erlaubt"

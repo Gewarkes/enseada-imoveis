@@ -1068,13 +1068,13 @@
   "de": "Nachricht hinzufügen (optional)"
  },
  "kCardH": {
-  "pt": "Quanto custa no total?",
+  "pt": "Quanto vou pagar por mês, se financiar?",
   "en": "What is the total cost?",
   "es": "¿Cuánto cuesta en total?",
   "de": "Was kostet es insgesamt?"
  },
  "kCardP": {
-  "pt": "Mude o valor e a entrada: o cálculo atualiza na hora.",
+  "pt": "Só serve se você for pedir empréstimo no banco. Mude a entrada e veja a parcela.",
   "en": "Change the price and down payment: the result updates instantly.",
   "es": "Cambia el valor y la entrada: el cálculo se actualiza al instante.",
   "de": "Preis und Anzahlung ändern: Das Ergebnis aktualisiert sich sofort."
@@ -1120,5 +1120,17 @@
   "en": "Opening WhatsApp: just send the message.",
   "es": "Abriendo WhatsApp: solo envía el mensaje.",
   "de": "WhatsApp öffnet sich: Nachricht einfach abschicken."
+ },
+ "ctaHG": {
+  "pt": "Procurando algo em Pipa?",
+  "en": "Looking for something in Pipa?",
+  "es": "¿Buscas algo en Pipa?",
+  "de": "Du suchst etwas in Pipa?"
+ },
+ "ctaPG": {
+  "pt": "Escreva pelo WhatsApp ou marque uma conversa. Respondemos no mesmo dia.",
+  "en": "Write on WhatsApp or book a chat. We reply the same day.",
+  "es": "Escribe por WhatsApp o agenda una charla. Respondemos el mismo día.",
+  "de": "Schreib uns per WhatsApp oder vereinbare ein Gespräch. Wir antworten am selben Tag."
  }
 }

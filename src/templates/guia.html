@@ -101,8 +101,8 @@
       {% elif b.x == 'sellupload' %}
       <form class="form sellup" data-sellup novalidate>
         <label>{{ t.fName }}<input class="inp" name="name" autocomplete="name" required></label>
-        <label>{{ t.fPhone }}<input class="inp" name="phone" type="tel" inputmode="tel" autocomplete="tel" required></label>
-        <label>{{ t.suWhere }}<input class="inp" name="where"></label>
+        <label>{{ t.fPhone }}<input class="inp" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+55 84 9XXXX-XXXX" required></label>
+        <label>{{ t.suWhere }}<input class="inp" name="where" placeholder="Pipa, Tibau do Sul, Sibaúma …"></label>
         <details class="su-opt"><summary>{{ t.suOpt }}</summary>
         <label class="up"><input type="file" name="photos" accept="image/*" multiple data-up><span class="up-b">{{ icon('camera') }}<b>{{ t.suPhotos }}</b></span><span class="up-n" data-up-n></span></label>
         <label class="up"><input type="file" name="docs" accept="image/*,application/pdf" multiple data-up><span class="up-b">{{ icon('doc') }}<b>{{ t.suDocs }}</b></span><span class="up-n" data-up-n></span></label>

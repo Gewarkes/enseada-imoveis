@@ -400,8 +400,8 @@ for lang in LANGS:
         elif route.startswith('imovel-'):
             tpl = 'imovel.html'
             l = next(x for x in listings if x['slug'] == route[7:])
-            sim = [x for x in listings if x['slug'] != l['slug'] and (x['cat'] == l['cat'] or {x['cat'], l['cat']} == {'venda', 'terrenos'})]
-            sim = sorted(sim, key=lambda x: abs(x['price'] - l['price']))[:3]
+            sim = [x for x in listings if x['slug'] != l['slug'] and x['cat'] == l['cat'] and 0.4 <= x['price'] / l['price'] <= 2.5]
+            sim = sorted(sim, key=lambda x: (x.get('type') != l.get('type'), abs(x['price'] - l['price'])))[:3]
             catroute = 'imoveis-' + ('venda' if l['cat'] == 'terrenos' else l['cat'])
             catname = t[{'venda': 'navBuy', 'aluguel': 'navRent', 'terrenos': 'navBuy'}[l['cat']]]
             title = f"{l['name']}, {l['loc']} · {brand}"
