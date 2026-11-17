@@ -376,7 +376,7 @@ for lang in LANGS:
         elif route in CATS:
             tpl = 'lista.html'
             cat = CATS[route]
-            ls = [l for l in listings if (cat is None or l['cat'] == cat)]
+            ls = [l for l in listings if (cat is None or l['cat'] == cat or (cat == 'venda' and l['cat'] == 'terrenos'))]
             key = {'venda': 'Venda', 'aluguel': 'Aluguel', 'terrenos': 'Terrenos', None: 'All'}[cat]
             title, desc = f"{t['list' + key + 'H']} · {brand}", t['list' + key + 'D']
             c.update(cat=cat, items=ls, h1=t['list' + key + 'H'], lead=t['list' + key + 'D'], pins=pins(ls, c),
@@ -386,10 +386,10 @@ for lang in LANGS:
         elif route.startswith('imovel-'):
             tpl = 'imovel.html'
             l = next(x for x in listings if x['slug'] == route[7:])
-            sim = [x for x in listings if x['slug'] != l['slug'] and x['cat'] == l['cat']]
+            sim = [x for x in listings if x['slug'] != l['slug'] and (x['cat'] == l['cat'] or {x['cat'], l['cat']} == {'venda', 'terrenos'})]
             sim = sorted(sim, key=lambda x: abs(x['price'] - l['price']))[:3]
-            catroute = 'imoveis-' + l['cat']
-            catname = t[{'venda': 'navBuy', 'aluguel': 'navRent', 'terrenos': 'navLand'}[l['cat']]]
+            catroute = 'imoveis-' + ('venda' if l['cat'] == 'terrenos' else l['cat'])
+            catname = t[{'venda': 'navBuy', 'aluguel': 'navRent', 'terrenos': 'navBuy'}[l['cat']]]
             title = f"{l['name']}, {l['loc']} · {brand}"
             desc = clip(l['title'][lang] + '. ' + l['desc'][lang].split('\n')[0])
             c.update(msg=f"{t['waInterest']} {l['name']} ({l['ref']}).", l=l, similar=sim, catroute=catroute, catname=catname, pins=pins([l], c), calc_price=int(l['price']))

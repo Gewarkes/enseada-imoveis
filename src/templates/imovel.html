@@ -69,6 +69,12 @@
       </section>
 
       {% if l.deal == 'venda' %}
+      <section class="block" id="financiamento">
+        <h2>{{ t.kCardH }}</h2><p class="calc-sub">{{ t.kCardP }}</p>
+        {{ m.calc(calc_price) }}
+      </section>
+      {% endif %}
+      {% if l.deal == 'venda' %}
       <section class="block mk">
         <h3>{{ t.mkH }}</h3>
         {% if l.checks.matricula or l.checks.debts %}
@@ -134,12 +140,7 @@
         {% endif %}
       </section>
 
-      {% if l.deal == 'venda' %}
-      <section class="block" id="financiamento">
-        <h2>{{ t.kTitle }}</h2>
-        {{ m.calc(calc_price) }}
-      </section>
-      {% endif %}
+
     </div>
 
     <aside class="det-side" id="contato">

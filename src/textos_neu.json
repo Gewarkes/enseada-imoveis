@@ -288,10 +288,10 @@
   "de": "Senden"
  },
  "mkH": {
-  "pt": "Corretora confirma",
-  "en": "Confirmed by the agent",
-  "es": "El corredor confirma",
-  "de": "Maklerin bestätigt"
+  "pt": "Documentos deste imóvel",
+  "en": "Documents for this property",
+  "es": "Documentos de este inmueble",
+  "de": "Unterlagen zu dieser Immobilie"
  },
  "mkNote": {
   "pt": "Informações da corretora. Não há conferência pela plataforma.",

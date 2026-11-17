@@ -158,9 +158,9 @@
 .ans-l a:hover{background:var(--brand);color:#fff}
 .cta .ans{background:rgba(255,255,255,.96);margin:0}
 /* ---- PDF-Knopf ---- */
-.btn-pdf{background:#B3261E;color:#fff;border:0;display:inline-flex;gap:10px;align-items:center}
-.btn-pdf:hover{background:#8E1D17}
-.pdf-tag{background:#fff;color:#B3261E;font-weight:900;font-size:.75rem;letter-spacing:.04em;padding:3px 6px;border-radius:4px;line-height:1}
+.btn-pdf{background:#1F4E8C;color:#fff;border:0;display:inline-flex;gap:10px;align-items:center}
+.btn-pdf:hover{background:#173B6A}
+.pdf-tag{background:#fff;color:#1F4E8C;font-weight:900;font-size:.75rem;letter-spacing:.04em;padding:3px 6px;border-radius:4px;line-height:1}
 @media (min-width:900px){.cta{grid-template-columns:1fr auto}.cta .ans{grid-column:1/-1;grid-row:2}.cta .btn-row{grid-column:2;grid-row:1}}
 
 /* ---- Filter v5: klare Gruppen ---- */
@@ -212,3 +212,8 @@
 .tr-rule .ico{width:22px;height:22px;flex:none;fill:none;stroke:currentColor;stroke-width:2}
 .map.map-s{height:300px}@media (min-width:800px){.map.map-s{height:300px}}
 .sec-soft .tiles{gap:12px}
+/* v6 */
+.calc-sub{margin:-4px 0 14px;color:var(--muted,#55645f)}
+.inq-more{border:0;margin:2px 0 6px}.inq-more>summary{cursor:pointer;color:var(--brand);font-weight:600;font-size:.9rem;padding:6px 0;list-style:none}.inq-more>summary::before{content:"+ "}.inq-more[open]>summary::before{content:"– "}.inq-more label{display:block;margin-top:10px}
+.det-actions{display:flex;flex-wrap:wrap;gap:10px}.det-actions .btn{flex:1 1 auto}.det-actions .btn-fav{flex:0 0 auto}
+@media (max-width:700px){.sec-head{flex-direction:column;align-items:flex-start;gap:8px}.sec-head>p{margin:0}.det-actions .btn{flex:1 1 calc(50% - 10px)}}

@@ -19,14 +19,13 @@
       <div class="tabs" role="radiogroup" aria-label="{{ t.sDeal }}">
         <label><input type="radio" name="cat" value="venda" checked><span>{{ t.navBuy }}</span></label>
         <label><input type="radio" name="cat" value="aluguel"><span>{{ t.navRent }}</span></label>
-        <label><input type="radio" name="cat" value="terrenos"><span>{{ t.navLand }}</span></label>
-      </div>
+              </div>
       <div class="fields">
         <label class="field f-wide"><span>{{ t.sWhere }}</span>
           <select name="loc"><option value="">{{ t.sAnyLoc }}</option>{% for x in locs %}<option value="{{ x.slug }}">{{ x.name }}</option>{% endfor %}</select>
         </label>
         <label class="field" data-hide-for="terrenos"><span>{{ t.sType }}</span>
-          <select name="type"><option value="">{{ t.sAnyType }}</option><option value="casa">{{ t.tCasa }}</option><option value="apartamento">{{ t.tApto }}</option></select>
+          <select name="type"><option value="">{{ t.sAnyType }}</option><option value="casa">{{ t.tCasa }}</option><option value="apartamento">{{ t.tApto }}</option><option value="terreno">{{ t.tTerreno }}</option></select>
         </label>
         <label class="field"><span>{{ t.sMax }}</span>
           <select name="max" data-max data-sale="500000,1000000,2000000,3000000,5000000" data-rent="3000,5000,10000,20000"><option value="">{{ t.sNoMax }}</option>{% for v in [500000, 1000000, 2000000, 3000000, 5000000] %}<option value="{{ v }}">{{ money(v) }}</option>{% endfor %}</select>
@@ -59,27 +58,6 @@
 
 
 
-<section class="sec sec-trust" id="seguranca">
-  <div class="wrap">
-    <div class="sec-head"><div><span class="kick">{{ t.trK }}</span><h2>{{ t.trH }}</h2><p>{{ t.trP }}</p></div></div>
-    <div class="tr-grid">
-      {% for i, ic, r in [(1,'shield','verificada'),(2,'doc','imoveis'),(3,'alert','golpes'),(4,'check','comprar')] %}
-      <a class="tr-card" href="{{ url(r) }}"><span class="tr-ic">{{ icon(ic) }}</span><b>{{ t['trC' ~ i ~ 'h'] }}</b><span>{{ t['trC' ~ i ~ 'p'] }}</span></a>
-      {% endfor %}
-    </div>
-    <p class="tr-rule">{{ icon('info') }}<span>{{ t.trRule }}</span></p>
-  </div>
-</section>
-
-<section class="sec sec-soft" id="faq">
-  <div class="wrap">
-    <div class="sec-head"><div><h2>{{ t.fqH }}</h2></div></div>
-    {{ m.answers() }}
-    {{ m.faq(12) }}
-  </div>
-</section>
-
-
 <section class="sec sec-soft">
   <div class="wrap">
     <div class="sec-head">
@@ -97,6 +75,18 @@
       </a>
       {% endfor %}
     </div>
+  </div>
+</section>
+
+<section class="sec sec-trust" id="seguranca">
+  <div class="wrap">
+    <div class="sec-head"><div><span class="kick">{{ t.trK }}</span><h2>{{ t.trH }}</h2><p>{{ t.trP }}</p></div></div>
+    <div class="tr-grid">
+      {% for i, ic, r in [(1,'shield','verificada'),(2,'doc','imoveis'),(3,'alert','golpes'),(4,'check','comprar')] %}
+      <a class="tr-card" href="{{ url(r) }}"><span class="tr-ic">{{ icon(ic) }}</span><b>{{ t['trC' ~ i ~ 'h'] }}</b><span>{{ t['trC' ~ i ~ 'p'] }}</span></a>
+      {% endfor %}
+    </div>
+    <p class="tr-rule">{{ icon('info') }}<span>{{ t.trRule }}</span></p>
   </div>
 </section>
 
@@ -136,7 +126,7 @@
         <h2>{{ t.sellH }}</h2>
         <p>{{ t.sellP }}</p>
         <ul class="hl" style="margin-top:18px">
-          {% for k in ['sell1', 'sell2', 'sell3'] %}<li>{{ icon('check') }}<span>{{ t[k] }}</span></li>{% endfor %}
+          {% for k in ['sell1', 'sell2', 'sell3', 'sell4'] %}<li>{{ icon('check') }}<span>{{ t[k] }}</span></li>{% endfor %}
         </ul>
         <div class="btn-row"><a class="btn btn-primary" href="{{ url('vender') }}">{{ t.sellBtn }}</a><a class="btn btn-line" href="{{ wa(t.waSell) }}" target="_blank" rel="noopener">{{ wa_icon() }} WhatsApp</a></div>
       </div>
@@ -159,12 +149,21 @@
   <div class="wrap">
     <div class="sec-head"><h2>{{ t.hubH }}</h2><p>{{ t.hubP }}</p></div>
     <div class="gcards">
-      {% for r, ic in [('comprar-do-exterior','globe'),('golpes','shield'),('calculadoras','tag')] %}
+      {% for r, ic in ([('comprar','globe')] if lang == 'pt' else [('comprar-do-exterior','globe')]) + [('golpes','shield'),('calculadoras','tag')] %}
       <a class="gcard" href="{{ url(r) }}">{{ icon(ic) }}<b>{{ L(pages[r].nav) }}</b><span>{{ L(pages[r].lead) }}</span></a>{% endfor %}
     </div>
     <div class="btn-row" style="margin-top:22px"><a class="btn btn-primary" href="{{ url('comprar') }}">{{ t.hubBtn }}</a></div>
   </div>
 </section>
+
+<section class="sec sec-soft" id="faq">
+  <div class="wrap">
+    <div class="sec-head"><div><h2>{{ t.fqH }}</h2></div></div>
+    {{ m.answers() }}
+    {{ m.faq(6) }}
+  </div>
+</section>
+
 
 {{ m.ctaband(t.ctaH, t.ctaP, site.media.cta) }}
 {% endblock %}

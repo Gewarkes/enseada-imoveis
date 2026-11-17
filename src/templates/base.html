@@ -33,7 +33,6 @@
 </head>
 <body class="{% block bodyclass %}{% endblock %}">
 <a class="sr" href="#main">{{ t.skip }}</a>
-<div class="creci-bar"><div class="wrap"><a class="creci-seal" href="{{ url('verificada') }}">{{ icon('shield') }}<b>{{ t.slSeal }}</b><span class="cs-x"> · {{ site.agent.name }} · {{ t.creciLabel }}</span> · <b class="cs-n">{{ site.agent.creci }}</b></a><a class="creci-what" href="{{ url('verificada') }}">{{ t.slSealW }}</a></div></div>
 <header class="head">
   <div class="wrap head-in">
     <a class="logo" href="{{ url('home') }}" aria-label="{{ site.brandFull }}">
@@ -41,7 +40,7 @@
       <span>{{ site.brandFull }}</span>
     </a>
     <nav class="nav" aria-label="{{ t.menu }}">
-      {% for r, k in [('imoveis-venda','navBuy'),('imoveis-aluguel','navRent'),('imoveis-terrenos','navLand'),('comprar','navBuyGuideS'),('vender','navSellS'),('sobre','navAbout'),('contato','navContact')] %}
+      {% for r, k in [('imoveis-venda','navBuy'),('imoveis-aluguel','navRent'),('comprar','navBuyGuideS'),('vender','navSellS'),('sobre','navAbout'),('contato','navContact')] %}
       <a href="{{ url(r) }}"{% if route == r %} aria-current="page"{% endif %}>{{ t[k] }}</a>
       {% endfor %}
     </nav>
@@ -66,7 +65,7 @@
   </div>
   <div class="sheet-body">
     <nav class="sheet-nav">
-      {% for r, k in [('imoveis-venda','navBuy'),('imoveis-aluguel','navRent'),('imoveis-terrenos','navLand'),('imoveis','navAll'),('comprar','navBuyGuide'),('vender','navSell'),('sobre','navAbout'),('blog','navGuide'),('contato','navContact')] %}
+      {% for r, k in [('imoveis-venda','navBuy'),('imoveis-aluguel','navRent'),('imoveis','navAll'),('comprar','navBuyGuide'),('vender','navSell'),('sobre','navAbout'),('blog','navGuide'),('contato','navContact')] %}
       <a href="{{ url(r) }}">{{ t[k] }} {{ icon('arrow') }}</a>
       {% endfor %}
     </nav>
@@ -149,6 +148,7 @@
     <div class="foot-bottom">
       <span>© {{ year }} {{ site.brandFull }}</span>
       <span>{{ site.agent.creci }}</span>
+      <a href="{{ url('verificada') }}">{{ t.slSeal }}</a>
       <a href="{{ url('privacidade') }}">{{ t.privH }}</a>
       {% if site.brokerUrl %}<a class="sp" href="{{ site.brokerUrl }}" target="_blank" rel="noopener nofollow">{{ t.brokerArea }}</a>{% endif %}
     </div>

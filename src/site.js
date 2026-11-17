@@ -139,7 +139,7 @@
       var WB = L.latLngBounds([-6.4463, -35.332], [-6.0532, -34.8926]);
       L.imageOverlay(S.base + 'assets/map-pipa-wide.jpg', WB).addTo(map);
       L.imageOverlay(S.base + 'assets/map-pipa.jpg', BB, { attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>' }).addTo(map);
-      map.setMaxBounds(WB); map.options.maxZoom = 16; el._fitMin = function () { map.invalidateSize(); map.setMinZoom(Math.max(9, map.getBoundsZoom(WB, true))); };
+      map.setMaxBounds(WB); map.options.maxZoom = 15; el._fitMin = function () { map.invalidateSize(); map.setMinZoom(Math.max(9, map.getBoundsZoom(WB, true))); };
       map.on('click', function () { map.scrollWheelZoom.enable(); map.dragging.enable(); });
       var zc = function () { el.classList.toggle('zoomed', map.getZoom() >= 14); }; map.on('zoomend', zc);
       var kind = el.dataset.map;

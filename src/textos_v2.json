@@ -84,10 +84,10 @@
   "de": "Preis gesenkt"
  },
  "fDocs": {
-  "pt": "Documentos confirmados",
-  "en": "Documents confirmed",
-  "es": "Documentos confirmados",
-  "de": "Unterlagen bestätigt"
+  "pt": "Com documentos",
+  "en": "With documents",
+  "es": "Con documentos",
+  "de": "Mit Unterlagen"
  },
  "fRes": {
   "pt": "Permite residência",
@@ -930,22 +930,22 @@
   "de": "Unterlagen sichtbar"
  },
  "trC2p": {
-  "pt": "Cada imóvel mostra quais documentos a corretora confirmou e quais não. Também em PDF, para enviar a quem quiser.",
-  "en": "Every property shows which papers the agent confirmed and which not. Also as a PDF to forward.",
-  "es": "Cada propiedad muestra qué documentos confirmó la corredora y cuáles no. También en PDF para reenviar.",
-  "de": "Bei jeder Immobilie steht, welche Unterlagen die Maklerin bestätigt hat und welche nicht. Auch als PDF zum Weiterschicken."
+  "pt": "Em cada imóvel você vê quais documentos existem e quais ainda faltam. Também em PDF para enviar.",
+  "en": "Every property shows which documents exist and which are still missing. Also as a PDF to forward.",
+  "es": "Cada inmueble muestra qué documentos existen y cuáles faltan. También en PDF para reenviar.",
+  "de": "Bei jeder Immobilie steht, welche Unterlagen vorhanden sind und welche noch fehlen. Auch als PDF zum Weiterschicken."
  },
  "trC3h": {
-  "pt": "Reconhecer golpes",
-  "en": "Spot scams",
-  "es": "Reconocer estafas",
-  "de": "Betrug erkennen"
+  "pt": "Reconhecer ofertas sérias",
+  "en": "Spot a serious offer",
+  "es": "Reconocer ofertas serias",
+  "de": "Seriöse Angebote erkennen"
  },
  "trC3p": {
-  "pt": "Uma página mostra lado a lado: assim é um golpe, assim é uma compra séria.",
-  "en": "One page shows side by side: this is what fraud looks like, this is a serious purchase.",
-  "es": "Una página muestra lado a lado: así es una estafa, así es una compra seria.",
-  "de": "Eine Seite zeigt nebeneinander: So sieht Betrug aus, so läuft ein seriöser Kauf."
+  "pt": "Uma página mostra lado a lado como é uma compra séria e o que não é normal.",
+  "en": "One page shows side by side how a serious purchase works and what is not normal.",
+  "es": "Una página muestra lado a lado cómo es una compra seria y qué no es normal.",
+  "de": "Eine Seite zeigt nebeneinander, wie ein seriöser Kauf abläuft und was nicht normal ist."
  },
  "trC4h": {
   "pt": "Passo a passo",
@@ -1048,5 +1048,41 @@
   "en": "No. Brazilian banks rarely finance non-residents. The calculator shows only an example.",
   "es": "No. Los bancos brasileños rara vez financian a no residentes. El simulador muestra solo un ejemplo de cálculo.",
   "de": "Nein. Brasilianische Banken finanzieren Nicht-Ansässige selten. Der Rechner zeigt nur ein Rechenbeispiel."
+ },
+ "sell4": {
+  "pt": "Você vende com segurança: documentos conferidos antes e pagamento só depois da escritura",
+  "en": "You sell safely: documents checked first, payment only after the deed is signed",
+  "es": "Vendes con seguridad: documentos revisados antes y pago solo tras la escritura",
+  "de": "Du verkaufst sicher: Unterlagen vorab geprüft, Zahlung erst nach dem Notarvertrag"
+ },
+ "rqSafeH": {
+  "pt": "Compra segura",
+  "en": "Safe buying",
+  "es": "Compra segura",
+  "de": "Sicher kaufen"
+ },
+ "inqMore": {
+  "pt": "Quer escrever uma mensagem? (opcional)",
+  "en": "Want to add a message? (optional)",
+  "es": "¿Quieres escribir un mensaje? (opcional)",
+  "de": "Nachricht schreiben? (optional)"
+ },
+ "kCardH": {
+  "pt": "Quanto custa no total?",
+  "en": "What does it cost in total?",
+  "es": "¿Cuánto cuesta en total?",
+  "de": "Was kostet es insgesamt?"
+ },
+ "kCardP": {
+  "pt": "Mude o valor e a entrada: o cálculo atualiza na hora.",
+  "en": "Change the price and down payment: the result updates instantly.",
+  "es": "Cambia el valor y la entrada: el cálculo se actualiza al instante.",
+  "de": "Preis und Anzahlung ändern: Das Ergebnis aktualisiert sich sofort."
+ },
+ "sellSafeH": {
+  "pt": "Você vende com segurança",
+  "en": "You sell safely",
+  "es": "Vendes con seguridad",
+  "de": "Du verkaufst sicher"
  }
 }

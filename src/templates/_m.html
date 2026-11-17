@@ -107,10 +107,7 @@
 {% macro inquiry(subject='', msg='', id='f', subjects=false) %}
 <form class="form" data-form="contact" data-subject="{{ subject }}" novalidate>
   <label>{{ t.fName }}<input class="inp" name="name" autocomplete="name" required></label>
-  <div class="two">
-    <label>{{ t.fPhone }}<input class="inp" name="phone" type="tel" autocomplete="tel" inputmode="tel" required></label>
-    <label>{{ t.fEmail }}<input class="inp" name="email" type="email" autocomplete="email"></label>
-  </div>
+  <label>{{ t.fPhone }}<input class="inp" name="phone" type="tel" autocomplete="tel" inputmode="tel" required></label>
   {% if subjects %}
   <label>{{ t.fSubject }}
     <select class="inp" name="subject">
@@ -118,7 +115,10 @@
     </select>
   </label>
   {% endif %}
-  <label>{{ t.fMsg }}<textarea class="inp" name="message" rows="4">{{ msg }}</textarea></label>
+  <details class="inq-more"><summary>{{ t.inqMore }}</summary>
+    <label>{{ t.fEmail }}<input class="inp" name="email" type="email" autocomplete="email"></label>
+    <label>{{ t.fMsg }}<textarea class="inp" name="message" rows="3">{{ msg }}</textarea></label>
+  </details>
   <button class="btn btn-primary btn-block" type="submit">{{ t.fSend }}</button>
   <p class="form-msg" role="status"></p>
   <p class="form-note">{{ t.fNote }} <a href="{{ url('privacidade') }}">{{ t.privH }}</a>.</p>
@@ -136,7 +136,7 @@
 <aside class="ans" aria-labelledby="ans-h">
   <div class="ans-t"><b id="ans-h">{{ t.ansH }}</b><span>{{ t.ansP }}</span></div>
   <div class="ans-l">
-    {% for r, k in [('calculadoras','ansL1'),('comprar-do-exterior','ansL2'),('comprar-do-exterior','ansL3'),('residencia','ansL4'),('golpes','ansL5'),('comprar','ansL6')] %}<a href="{{ url(r) }}">{{ t[k] }}</a>{% endfor %}
+    {% for r, k in [('calculadoras','ansL1')] + ([] if lang == 'pt' else [('comprar-do-exterior','ansL2'),('comprar-do-exterior','ansL3'),('residencia','ansL4')]) + [('golpes','ansL5'),('comprar','ansL6')] %}<a href="{{ url(r) }}">{{ t[k] }}</a>{% endfor %}
     <a href="{{ url('home') }}#faq">{{ t.ansL7 }}</a>
   </div>
 </aside>
