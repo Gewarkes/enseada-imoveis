@@ -427,14 +427,14 @@ h1,h2{overflow-wrap:break-word;hyphens:auto}
 /* Hamburger-Menü auf einen Bildschirm */
 .sheet{overflow-y:auto}
 .sheet-body{gap:12px;padding:6px var(--pad) 16px}
-.sheet-nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
-.sheet-nav a{padding:0 14px;min-height:52px;font-size:1rem;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.sheet-nav{display:flex;flex-direction:column;gap:0}
+.sheet-nav a{padding:0 2px;min-height:54px;font-size:1.125rem;border:0;border-bottom:1px solid var(--line);border-radius:0;background:transparent}
 .sheet-nav a .ico{width:16px;height:16px}
 .sheet-cta{grid-template-columns:1fr 1fr}
 .sheet-cta .btn{padding-inline:10px;font-size:.9375rem}
 .sheet-cta .btn-line{white-space:nowrap}
-@media (max-height:700px){.sheet-nav a{min-height:46px}.sheet-body{gap:8px}}
-.sheet-nav a{font-size:.9375rem;line-height:1.2}
+@media (max-height:700px){.sheet-nav a{min-height:48px}.sheet-body{gap:8px}}
+.sheet-nav a{font-size:1.0625rem;line-height:1.2}
 .seg [aria-current=true],.seg [aria-pressed=true]{color:#fff!important}
 .seg [aria-current=true] span,.seg [aria-pressed=true] span{color:#fff!important}
 .stats div{justify-content:flex-start}.stats span{min-height:2.5em}
@@ -569,3 +569,4 @@ h1,h2{hyphens:manual!important;-webkit-hyphens:manual!important;text-wrap:balanc
 .foot small,.foot .form-note,.foot-bottom{font-size:.8125rem}
 .calc-res .calc-grid>div{align-content:start}
 .crumbs,.g-stand{color:#4F5C59}
+@media (max-width:380px){.sheet .seg a,.sheet .seg button{min-width:38px;padding-inline:6px}}
