@@ -599,3 +599,6 @@ h1,h2{hyphens:manual!important;-webkit-hyphens:manual!important;text-wrap:balanc
 .head{view-transition-name:hd}
 ::view-transition-old(root),::view-transition-new(root){animation-duration:.22s;animation-timing-function:ease}
 @media (prefers-reduced-motion:reduce){.seg.anim::before{transition:none}@view-transition{navigation:none}}
+/* up24: aktiver Menüpunkt = Balken im Hintergrund (nicht nur farbige Schrift) */
+.nav a[aria-current=page],.nav a[aria-current=true]{background:var(--ink)!important;color:#fff!important}
+.nav a[aria-current=page]:hover{background:var(--ink)!important}
