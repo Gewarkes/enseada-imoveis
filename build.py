@@ -324,7 +324,9 @@ def make_ctx(lang, route):
 css = rd('src/site.css') + '\n' + rd('src/guia.css')
 css = re.sub(r'/\*.*?\*/', '', css, flags=re.S)
 css = re.sub(r'\s*\n\s*', '\n', css).strip()
-js = rd('src/site.js') + '\n' + rd('src/guia.js')
+JSPRE = "(function(){var ac=window.__ac=new AbortController(),sig=ac.signal;window.__orig=window.__orig||{d:document.addEventListener,w:window.addEventListener};function wrap(o){return function(t,f,p){if(typeof p==='boolean')p={capture:p};p=Object.assign({},p||{});if(!p.signal)p.signal=sig;return o.call(this,t,f,p)}}document.addEventListener=wrap(window.__orig.d);window.addEventListener=wrap(window.__orig.w)})();\n"
+JSPOST = '\ndocument.addEventListener=window.__orig.d;window.addEventListener=window.__orig.w;'
+js = JSPRE + rd('src/site.js') + '\n' + rd('src/guia.js') + JSPOST
 hc = hashlib.md5(css.encode()).hexdigest()[:8]
 hj = hashlib.md5(js.encode()).hexdigest()[:8]
 wr(f'{D}/assets/site.{hc}.css', css)

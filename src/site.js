@@ -1,6 +1,6 @@
 /* Enseada – ein kleines Skript für: Menü, Währung, Suche, Filter, Fotos, Rechner, Karte, Formulare. Keine Bibliothek außer der Karte (Leaflet, erst bei Bedarf geladen). */
 (function () {
-  try { var nav0 = (performance.getEntriesByType('navigation')[0] || {}).type; if (nav0 !== 'back_forward' && !location.hash) scrollTo(0, 0); } catch (e) {}
+  try { var nav0 = (performance.getEntriesByType('navigation')[0] || {}).type; if (nav0 !== 'back_forward' && !location.hash && !window.__soft) scrollTo(0, 0); } catch (e) {}
   'use strict';
   var S = window.SITE || {}, T = S.t || {};
   var $ = function (s, r) { return (r || document).querySelector(s); };
@@ -363,7 +363,11 @@
     if (fab) fab.classList.toggle('on', scrollY > innerHeight * 0.6);
     if (bar && acts) bar.classList.toggle('on', acts.getBoundingClientRect().bottom < 0);
   };
-  addEventListener('scroll', onScroll, { passive: true }); onScroll();
+  if (fab) fab.style.transition = 'none';
+  if (bar) bar.style.transition = 'none';
+  onScroll();
+  setTimeout(function () { if (fab) fab.style.transition = ''; if (bar) bar.style.transition = ''; }, 120);
+  addEventListener('scroll', onScroll, { passive: true });
 
   applyCur();
   if (cur !== 'BRL' || $('[data-fxline]')) setTimeout(liveFx, 1200);

@@ -174,15 +174,50 @@
       if ('MutationObserver' in window) new MutationObserver(function () { place(s); }).observe(s, { attributes: true, subtree: true, attributeFilter: ['aria-pressed', 'aria-current'] });
     });
     if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { segs.forEach(function (s) { s.classList.remove('anim'); place(s); requestAnimationFrame(function () { requestAnimationFrame(function () { s.classList.add('anim'); }); }); }); });
+    /* Weicher Seitenwechsel ohne Neuladen: Seite holen, Inhalt tauschen, Scrollposition behalten */
+    var HEADSEL = 'link[rel=alternate],link[rel=canonical],meta[name=description],meta[property^="og:"],meta[name^="twitter:"],script[type="application/ld+json"]';
+    var swap = function (url, html) {
+      var doc = new DOMParser().parseFromString(html, 'text/html'), y = window.scrollY;
+      var run = function () {
+        history.pushState({ soft: 1 }, '', url);
+        document.title = doc.title; document.documentElement.lang = doc.documentElement.lang;
+        $$(HEADSEL, document.head).forEach(function (n) { n.remove(); });
+        $$(HEADSEL, doc.head).forEach(function (n) { document.head.appendChild(document.importNode(n, true)); });
+        if (window.__ac) window.__ac.abort();
+        window.__soft = true;
+        var bd = document.body; bd.className = doc.body.className; bd.removeAttribute('style'); document.documentElement.style.removeProperty('overflow');
+        bd.textContent = '';
+        Array.prototype.slice.call(doc.body.childNodes).forEach(function (n) { bd.appendChild(document.importNode(n, true)); });
+        var fb = bd.querySelector('.wa-fab'); if (fb && y > window.innerHeight * 0.6) { fb.style.transition = 'none'; fb.classList.add('on'); }
+        var loads = [];
+        $$('script', bd).forEach(function (o) {
+          if (o.type && !/javascript/.test(o.type)) return;
+          var s = document.createElement('script');
+          Array.prototype.slice.call(o.attributes).forEach(function (at) { if (at.name !== 'defer') s.setAttribute(at.name, at.value); });
+          s.async = false; s.text = o.text;
+          if (o.src) loads.push(new Promise(function (r) { s.onload = s.onerror = r; }));
+          o.parentNode.replaceChild(s, o);
+        });
+        window.scrollTo(0, y);
+        return Promise.all(loads).then(function () { window.scrollTo(0, y); window.dispatchEvent(new Event('scroll')); });
+      };
+      if (document.startViewTransition && !reduce) return document.startViewTransition(run).finished;
+      return Promise.resolve(run());
+    };
+    var softGo = function (url) {
+      var got = fetch(url, { credentials: 'same-origin' }).then(function (r) { if (!r.ok) throw new Error(r.status); return r.text(); });
+      var wait = new Promise(function (r) { setTimeout(r, DELAY); });
+      Promise.all([got, wait]).then(function (v) { return swap(url, v[0]); }).catch(function () { location.href = url; });
+    };
+    if (!window.__pop && window.__orig) { window.__pop = 1; window.__orig.w.call(window, 'popstate', function () { location.reload(); }); }
     /* Sprachlinks */
     $$('[data-lang]').forEach(function (a) {
       a.addEventListener('click', function (e) {
         if (e.metaKey || e.ctrlKey || e.shiftKey || e.button) return;
         e.preventDefault();
-        var seg = a.closest('.seg'), target = a.getAttribute('href') + location.search + location.hash;
+        var target = a.getAttribute('href') + location.search + location.hash;
         $$('[data-lang]').forEach(function (x) { if (x.dataset.lang === a.dataset.lang) x.setAttribute('aria-current', 'true'); else x.removeAttribute('aria-current'); });
-        try { sessionStorage.setItem(KEY, JSON.stringify({ p: rel(), y: window.scrollY })); } catch (er) {}
-        setTimeout(function () { location.href = target; }, DELAY);
+        softGo(target);
       });
     });
     /* Tabs Alle / Kaufen / Mieten */
@@ -195,8 +230,7 @@
           e.preventDefault();
           nav.style.setProperty('--i', i);
           links.forEach(function (x, n) { if (n === i) x.setAttribute('aria-current', 'true'); else x.removeAttribute('aria-current'); });
-          var href = a.getAttribute('href');
-          setTimeout(function () { location.href = href; }, DELAY);
+          softGo(a.getAttribute('href'));
         });
       });
     }

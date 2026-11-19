@@ -603,3 +603,30 @@ h1,h2{hyphens:manual!important;-webkit-hyphens:manual!important;text-wrap:balanc
 /* up24: aktiver Menüpunkt = Balken im Hintergrund (nicht nur farbige Schrift) */
 .nav a[aria-current=page],.nav a[aria-current=true]{background:var(--ink)!important;color:#fff!important}
 .nav a[aria-current=page]:hover{background:var(--ink)!important}
+
+/* up26: WhatsApp-Knopf bleibt beim Sprachwechsel an Ort und Stelle */
+.wa-fab{view-transition-name:wafab}
+[data-bar]{view-transition-name:cbar}
+::view-transition-group(wafab),::view-transition-group(cbar){animation-duration:0s}
+/* up26b: Logo einzeilig am Desktop (auch Spanisch); Platz unter dem Inhalt für den WhatsApp-Knopf am Handy */
+@media (min-width:1340px){.logo{max-width:none;flex:none;white-space:nowrap}.logo>span:not(.logo-mark){display:block;overflow:visible;white-space:nowrap}}
+@media (max-width:999px){main{padding-bottom:calc(72px + env(safe-area-inset-bottom))}}
+/* up26c: Footer-Spalten dürfen nicht über den Bildschirm hinauswachsen (ES/DE bei 1000–1280px) */
+@media (min-width:900px){.foot-grid{grid-template-columns:minmax(0,1.2fr) minmax(0,1.4fr) minmax(0,1.1fr)}}
+.news,.news form,.news .inp{min-width:0;max-width:100%}
+
+/* up26d: Kopfzeile in jeder Sprache sauber; Schalter einheitlich; Footer-Newsletter */
+@media (min-width:1000px){.logo{max-width:none;flex:none}.logo>span:not(.logo-mark){display:block;overflow:visible;white-space:nowrap;-webkit-line-clamp:none}}
+@media (min-width:1000px) and (max-width:1599px){
+  .head .btn-wa .wa-t{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+  .head .btn-wa{padding:0;width:40px;height:40px;min-height:0;border-radius:50%;justify-content:center}
+  .head .seg:not(.seg-m) a[data-lang]{padding:0 7px;min-width:40px}
+  .head .seg:not(.seg-m) a[data-lang] span:last-child{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+  .nav a{padding:8px 7px}
+}
+.seg button[data-cur]{min-width:48px;font-size:.8125rem;font-weight:800;letter-spacing:.01em;font-variant-numeric:tabular-nums;line-height:1}
+.seg a[data-lang] span:last-child{font-weight:800;letter-spacing:.04em}
+.seg [aria-pressed=false],.seg a:not([aria-current=true]){color:var(--ink);opacity:.72}
+.seg [aria-pressed=false]:hover,.seg a:not([aria-current=true]):hover{opacity:1}
+@media (min-width:900px){.foot-grid{grid-template-columns:minmax(0,1fr) minmax(0,1.7fr) minmax(250px,.85fr)}.foot-links a{white-space:normal}}
+.news .btn{white-space:nowrap}

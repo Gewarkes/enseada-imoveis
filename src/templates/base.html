@@ -55,7 +55,7 @@
       <div class="seg" role="group" aria-label="{{ t.language }}">
         {% for lg in langs %}<a href="{{ alt_url(lg) }}" hreflang="{{ lg }}" data-lang="{{ lg }}"{% if lg == lang %} aria-current="true"{% endif %}><span class="fl" aria-hidden="true">{{ FLG[lg] }}</span><span>{{ lg | upper }}</span></a>{% endfor %}
       </div>
-      <a class="btn btn-wa btn-s" href="{{ wa(t.waHello) }}" target="_blank" rel="noopener">{{ wa_icon() }} WhatsApp</a>
+      <a class="btn btn-wa btn-s" href="{{ wa(t.waHello) }}" target="_blank" rel="noopener">{{ wa_icon() }} <span class="wa-t">WhatsApp</span></a>
     </div>
     <div class="seg seg-m" role="group" aria-label="{{ t.language }}">{% for lg in langs %}<a href="{{ alt_url(lg) }}" hreflang="{{ lg }}" data-lang="{{ lg }}"{% if lg == lang %} aria-current="true"{% endif %}><span class="fl" aria-hidden="true">{{ FLG[lg] }}</span><span class="sr">{{ lg | upper }}</span></a>{% endfor %}</div>
     <button class="burger" type="button" data-open="menu" aria-label="{{ t.menu }}" aria-expanded="false">{{ icon('menu') }}</button>
