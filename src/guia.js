@@ -160,33 +160,51 @@
   renderF();
 
 
-  /* up20: Tab-Daumen gleitet auch beim Seitenwechsel (Alle/Kaufen/Mieten) */
+  /* up22: Daumen gleitet sofort, dann weicher Seitenwechsel; Sprache bleibt auf gleicher Seite */
   (function () {
-    var nav = $('[data-slide]'); if (!nav) return;
-    var idx = $$('a', nav).findIndex(function (a) { return a.getAttribute('aria-current') === 'true'; }); if (idx < 0) idx = 0;
-    var prev = null; try { prev = sessionStorage.getItem('tabIdx'); } catch (e) {}
-    if (prev !== null && +prev !== idx && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      nav.style.setProperty('--i', prev); void nav.offsetWidth;
-      requestAnimationFrame(function () { nav.style.setProperty('--i', idx); });
-    }
-    $$('a', nav).forEach(function (a, i) { a.addEventListener('click', function () { try { sessionStorage.setItem('tabIdx', i); } catch (e) {} }); });
-    try { sessionStorage.setItem('tabIdx', idx); } catch (e) {}
-  })();
-
-  /* up20: Sprachwechsel bleibt auf der gleichen Seite (inkl. Filter, Anker, Scrollposition) */
-  (function () {
-    var KEY = 'langScroll';
-    try { var sv = JSON.parse(sessionStorage.getItem(KEY) || 'null'); sessionStorage.removeItem(KEY);
-      if (sv && sv.p === location.pathname.replace(/^\/enseada-imoveis\/(?:(?:en|es|de)\/)?/, '') && !location.hash) window.scrollTo(0, sv.y); } catch (e) {}
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches, DELAY = reduce ? 0 : 230;
+    var BASE = S.base || '/', KEY = 'langScroll';
+    var rel = function () { var p = location.pathname; if (p.indexOf(BASE) === 0) p = p.slice(BASE.length); return p.replace(/^(en|es|de)\//, ''); };
+    /* Schalter (Sprache / Währung): Daumen unter der aktiven Taste */
+    var segs = $$('.seg');
+    var place = function (s) { var a = $('[aria-current=true],[aria-pressed=true]', s); if (!a || !a.offsetWidth) return; s.style.setProperty('--x', a.offsetLeft + 'px'); s.style.setProperty('--w', a.offsetWidth + 'px'); if (!s.classList.contains('rdy')) { s.classList.add('rdy'); requestAnimationFrame(function () { requestAnimationFrame(function () { s.classList.add('anim'); }); }); } };
+    segs.forEach(function (s) {
+      place(s);
+      if ('ResizeObserver' in window) new ResizeObserver(function () { s.classList.remove('anim'); place(s); requestAnimationFrame(function () { requestAnimationFrame(function () { if (s.classList.contains('rdy')) s.classList.add('anim'); }); }); }).observe(s);
+      if ('MutationObserver' in window) new MutationObserver(function () { place(s); }).observe(s, { attributes: true, subtree: true, attributeFilter: ['aria-pressed', 'aria-current'] });
+    });
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { segs.forEach(function (s) { s.classList.remove('anim'); place(s); requestAnimationFrame(function () { requestAnimationFrame(function () { s.classList.add('anim'); }); }); }); });
+    /* Sprachlinks */
     $$('[data-lang]').forEach(function (a) {
       a.addEventListener('click', function (e) {
         if (e.metaKey || e.ctrlKey || e.shiftKey || e.button) return;
         e.preventDefault();
-        var rel = location.pathname.replace(/^\/enseada-imoveis\/(?:(?:en|es|de)\/)?/, '');
-        try { sessionStorage.setItem(KEY, JSON.stringify({ p: rel, y: window.scrollY })); } catch (er) {}
-        location.href = a.getAttribute('href') + location.search + location.hash;
+        var seg = a.closest('.seg'), target = a.getAttribute('href') + location.search + location.hash;
+        $$('[data-lang]').forEach(function (x) { if (x.dataset.lang === a.dataset.lang) x.setAttribute('aria-current', 'true'); else x.removeAttribute('aria-current'); });
+        try { sessionStorage.setItem(KEY, JSON.stringify({ p: rel(), y: window.scrollY })); } catch (er) {}
+        setTimeout(function () { location.href = target; }, DELAY);
       });
     });
+    /* Tabs Alle / Kaufen / Mieten */
+    var nav = $('[data-slide]');
+    if (nav) {
+      var links = $$('a', nav), cur = links.findIndex(function (a) { return a.getAttribute('aria-current') === 'true'; }); if (cur < 0) cur = 0;
+      links.forEach(function (a, i) {
+        a.addEventListener('click', function (e) {
+          if (e.metaKey || e.ctrlKey || e.shiftKey || e.button || i === cur) return;
+          e.preventDefault();
+          nav.style.setProperty('--i', i);
+          links.forEach(function (x, n) { if (n === i) x.setAttribute('aria-current', 'true'); else x.removeAttribute('aria-current'); });
+          var href = a.getAttribute('href');
+          setTimeout(function () { location.href = href; }, DELAY);
+        });
+      });
+    }
   })();
 
+  /* Fallback ohne pagereveal (z. B. ältere Browser): Scrollposition nach Sprachwechsel */
+  if (!('onpagereveal' in window)) {
+    try { var sv = JSON.parse(sessionStorage.getItem('langScroll') || 'null'), pp = location.pathname; if (pp.indexOf(S.base || '/') === 0) pp = pp.slice((S.base || '/').length); pp = pp.replace(/^(en|es|de)\//, '');
+      if (sv) { sessionStorage.removeItem('langScroll'); if (sv.p === pp && !location.hash) window.scrollTo(0, sv.y); } } catch (e) {}
+  }
 })();

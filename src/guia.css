@@ -573,8 +573,9 @@ h1,h2{hyphens:manual!important;-webkit-hyphens:manual!important;text-wrap:balanc
 @media (max-width:380px){.sheet .seg a,.sheet .seg button{min-width:38px;padding-inline:6px}}
 /* up20: Filter-Gruppenüberschriften lesbar; Textlinks mit festem Strich */
 .more .mg h3{font-size:.9375rem!important;letter-spacing:.01em!important;text-transform:none!important;font-weight:700!important;color:var(--ink)!important;border-bottom-width:4px!important}
-.link{font-size:1rem!important;color:var(--ink)!important;border-bottom:2px solid var(--ink)!important;padding-bottom:3px!important}
-.link:hover{color:var(--brand)!important;border-color:var(--brand)!important}
+.link:not([data-reset]){display:inline-flex;align-items:center;gap:8px;padding:10px 18px!important;font-size:.9375rem!important;font-weight:700;color:var(--ink)!important;background:var(--surface);border:1.5px solid var(--ink)!important;border-radius:999px;text-decoration:none;transition:background .2s,color .2s,transform .2s}
+.link:not([data-reset]):hover{background:var(--ink);color:var(--surface)!important}
+.link:not([data-reset]):active{transform:scale(.97)}
 
 /* up20: Kaufen/Mieten wie iPhone-Schalter – Daumen gleitet */
 .tabs{position:relative;--i:0;--n:2}
@@ -586,3 +587,15 @@ h1,h2{hyphens:manual!important;-webkit-hyphens:manual!important;text-wrap:balanc
 .tabs input:checked+span,.tabs a[aria-current=true]{background:transparent!important;box-shadow:none!important;color:var(--ink)}
 .tabs span,.tabs a{transition:color .2s}
 @media (prefers-reduced-motion:reduce){.tabs::before{transition:none}}
+
+/* up22: Sprach-/Währungsschalter mit gleitendem Daumen; weiche Seitenübergänge */
+.seg{position:relative}
+.seg a,.seg button{position:relative;z-index:1}
+.seg::before{content:"";position:absolute;top:2px;bottom:2px;left:0;width:var(--w,0);transform:translateX(var(--x,0));background:var(--ink);border-radius:999px;opacity:0;pointer-events:none}
+.seg.rdy::before{opacity:1}
+.seg.anim::before{transition:transform .3s cubic-bezier(.3,.9,.3,1),width .3s cubic-bezier(.3,.9,.3,1)}
+.seg.rdy [aria-current=true],.seg.rdy [aria-pressed=true]{background:transparent!important}
+@view-transition{navigation:auto}
+.head{view-transition-name:hd}
+::view-transition-old(root),::view-transition-new(root){animation-duration:.22s;animation-timing-function:ease}
+@media (prefers-reduced-motion:reduce){.seg.anim::before{transition:none}@view-transition{navigation:none}}
