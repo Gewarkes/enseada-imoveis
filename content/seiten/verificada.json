@@ -17,11 +17,11 @@
   "pt": "Conferimos a pessoa, não o imóvel. Veja o que foi conferido.",
   "en": "We verify the agent, not the property. Here is what we check.",
   "es": "Verificamos a la persona, no la propiedad. Esto es lo que se verificó.",
-  "de": "Wir prüfen die Person, nicht die Immobilie. Das wurde geprüft."
+  "de": "Wir prüfen die Person, nicht die Immobilie. Hier siehst du, was geprüft wurde."
  },
  "meta": {
   "pt": "O que significa o selo de corretora com CRECI e como conferir o CRECI.",
-  "en": "What the agent with CRECI seal means and how to check the CRECI.",
+  "en": "What the “Agent with CRECI” seal means and how to check a CRECI number.",
   "es": "Qué significa el sello de corredora con CRECI y cómo verificar el CRECI.",
   "de": "Was das Siegel „Maklerin mit CRECI“ bedeutet und wie du die CRECI-Nummer prüfst."
  },
@@ -67,8 +67,8 @@
      "p": {
       "pt": "Está no registro. CRECI é o conselho que autoriza corretores a trabalhar.",
       "en": "It appears in the register. CRECI is the council that licenses real estate agents.",
-      "es": "Está en el registro. El CRECI es el consejo que autoriza a los agentes a trabajar.",
-      "de": "Steht im Register. Das CRECI ist die Berufskammer, die Makler zur Arbeit zulässt."
+      "es": "Está en el registro. El CRECI es el consejo que autoriza a los corredores a trabajar.",
+      "de": "Steht im Register. Das CRECI ist die Berufskammer, die Makler zur Berufsausübung zulässt."
      },
      "n": null
     },
@@ -137,15 +137,15 @@
    "x": {
     "pt": "Anúncios de corretores devem trazer o número do CRECI. Confira no site do CRECI do estado (no RN, CRECI-RN): digite nome ou número e veja se está ativo. O selo não é uma certificação oficial, é a nossa conferência.",
     "en": "Agents’ listings must show the CRECI number. Check it on the state CRECI website (in RN, CRECI-RN): enter the name or number and see whether the status is active. The seal is not an official certification; it is our own check.",
-    "es": "Los anuncios de agentes deben incluir el número de CRECI. Verifícalo en el sitio del CRECI del estado (en RN, CRECI-RN): escribe el nombre o número y mira si está activo. El sello no es una certificación oficial, es nuestra verificación.",
+    "es": "Los anuncios de corredores deben incluir el número de CRECI. Verifícalo en el sitio del CRECI del estado (en RN, CRECI-RN): escribe el nombre o número y mira si está activo. El sello no es una certificación oficial, es nuestra verificación.",
     "de": "Anzeigen von Maklern müssen die CRECI-Nummer enthalten. Prüfe sie auf der Website des CRECI deines Bundesstaates (in RN: CRECI-RN): Name oder Nummer eingeben und schauen, ob der Status aktiv ist. Das Siegel ist keine amtliche Auszeichnung, sondern unsere eigene Prüfung."
    }
   },
   {
    "t": "wa",
    "m": {
-    "pt": "Olá! Vi o selo de corretora com CRECI e quero conferir meus dados.",
-    "en": "Hello! I saw the agent with CRECI seal and would like to know the details.",
+    "pt": "Olá! Vi o selo de corretora com CRECI e quero conferir os dados da corretora.",
+    "en": "Hello! I saw the “Agent with CRECI” seal and would like to know the details.",
     "es": "¡Hola! Vi el sello de corredora con CRECI y quiero verificar los datos.",
     "de": "Hallo! Ich habe das Siegel „Maklerin mit CRECI“ gesehen und möchte meine Daten prüfen."
    },

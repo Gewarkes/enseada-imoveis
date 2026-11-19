@@ -10,7 +10,7 @@
   "pt": "Três caminhos para comprar: à vista, na planta e financiado",
   "en": "Three ways to buy: cash, off-plan and financed",
   "es": "Tres caminos para comprar: al contado, sobre planos y con financiamiento",
-  "de": "Drei Wege zum Kauf: bar, vom Plan und mit Finanzierung"
+  "de": "Drei Wege zum Kauf: bar, als Neubau vom Bauträger und mit Finanzierung"
  },
  "lead": {
   "pt": "Prazos e percentuais são de referência.",
@@ -22,7 +22,7 @@
   "pt": "Como comprar imóvel no Brasil: à vista, na planta ou com financiamento.",
   "en": "How to buy property in Brazil: cash, off-plan or financed.",
   "es": "Cómo comprar una propiedad en Brasil: al contado, sobre planos o con financiamiento.",
-  "de": "Wie man eine Immobilie in Brasilien kauft: bar, vom Plan oder mit Finanzierung."
+  "de": "Wie man eine Immobilie in Brasilien kauft: bar, als Neubau vom Bauträger oder mit Finanzierung."
  },
  "stand": "17.11.2026",
  "blocks": [
@@ -76,10 +76,10 @@
       "de": "Vorvertrag und Sinal"
      },
      "p": {
-      "pt": "Só depois da conferência: sinal, multa e condições. Pode ser anotado na matrícula. Se precisar assinar antes, ponha “pagamento só após conferência positiva”.",
+      "pt": "Só depois da conferência: sinal, multa e condições. Pode ser registrado na matrícula. Se precisar assinar antes, inclua “pagamento só após conferência positiva”.",
       "en": "Only after the check: deposit, penalty and conditions. It can be noted on the matrícula. If you must sign earlier, add “payment only after a positive document check”.",
       "es": "Solo después de la revisión: seña, multa y condiciones. Puede anotarse en la matrícula. Si debes firmar antes, añade “pago solo tras una revisión positiva”.",
-      "de": "Erst nach der Prüfung: Anzahlung, Vertragsstrafe und Bedingungen. Kann in der Matrícula vermerkt werden. Musst du früher unterschreiben, ergänze „Zahlung erst nach positiver Prüfung“."
+      "de": "Erst nach der Prüfung: Anzahlung, Vertragsstrafe und Bedingungen. Kann in der Matrícula vermerkt werden. Musst du früher unterschreiben, ergänze im Vertrag: „Zahlung erst nach positiver Prüfung“."
      },
      "n": null
     },
@@ -93,8 +93,8 @@
      "p": {
       "pt": "ITBI na prefeitura, escritura no cartório e pagamento do saldo.",
       "en": "You pay the ITBI (transfer tax) at the town hall, sign the escritura (deed) at the cartório (notary office) and pay the balance.",
-      "es": "ITBI en la prefeitura, escritura en el cartório y pago del saldo.",
-      "de": "ITBI (Steuer der Stadt), Kaufurkunde (Escritura) im Notariat (Cartório) und Zahlung des Restbetrags."
+      "es": "ITBI en la municipalidad, escritura en la notaría y pago del saldo.",
+      "de": "ITBI (städtische Grunderwerbsteuer), Kaufurkunde (Escritura) im Notariat (Cartório) und Zahlung des Restbetrags."
      },
      "n": null
     },
@@ -107,8 +107,8 @@
      },
      "p": {
       "pt": "Só com o registro no Registro de Imóveis você é o proprietário.",
-      "en": "You become the legal owner only once the deed is registered at the Registro de Imóveis (land registry).",
-      "es": "Solo con el registro en el Registro de la Propiedad eres propietario.",
+      "en": "You become the legal owner only once the deed is registered at the Registro de Imóveis (property registry).",
+      "es": "Solo con la inscripción en el Registro de la Propiedad pasas a ser propietario.",
       "de": "Erst mit der Eintragung im Grundbuchamt (Registro de Imóveis) bist du Eigentümer."
      },
      "n": null
@@ -121,7 +121,7 @@
     "pt": "B. Imóvel na planta (lançamento)",
     "en": "B. Off-plan (new construction)",
     "es": "B. Propiedad sobre planos (lanzamiento)",
-    "de": "B. Immobilie vom Plan (Neubauprojekt)"
+    "de": "B. Neubau vom Bauträger (Kauf vor Fertigstellung)"
    }
   },
   {
@@ -152,7 +152,7 @@
      "p": {
       "pt": "Registro de Incorporação, matrícula do terreno, patrimônio de afetação (proteção se a incorporadora falir) e licenças.",
       "en": "Check the Registro de Incorporação (the project’s registration), the land matrícula, the patrimônio de afetação (protection if the developer goes bankrupt) and the permits.",
-      "es": "Registro de Incorporação, matrícula del terreno, patrimônio de afetação (protección si la incorporadora quiebra) y licencias.",
+      "es": "Registro de Incorporação, matrícula del terreno, patrimônio de afetação (protección si la desarrolladora quiebra) y licencias.",
       "de": "Registro de Incorporação, Matrícula des Grundstücks, Patrimônio de afetação (Schutz bei Insolvenz des Bauträgers) und Genehmigungen."
      },
      "n": null
@@ -195,25 +195,25 @@
    "x": {
     "pt": "Riscos: atraso da obra, alta do INCC, falência da incorporadora e distrato (desistência). No distrato, a incorporadora pode ficar com até 25% do valor pago, ou até 50% com patrimônio de afetação, mais a corretagem (Lei 13.786/2018).",
     "en": "Risks: construction delays, rising INCC, developer bankruptcy and distrato (contract cancellation). If you cancel, the developer may keep up to 25% of what you paid, or up to 50% with patrimônio de afetação, plus the broker’s fee (Law 13.786/2018).",
-    "es": "Riesgos: retraso de obra, alza del INCC, quiebra de la incorporadora y distrato (cancelación del contrato). En el distrato la incorporadora puede quedarse hasta el 25 % de lo pagado, o hasta el 50 % con patrimônio de afetação, más la comisión de corretaje (Lei 13.786/2018).",
-    "de": "Risiken: Bauverzug, steigender INCC, Insolvenz des Bauträgers und Distrato (Vertragsrücktritt). Beim Distrato darf der Bauträger bis zu 25 % des Gezahlten einbehalten, mit Patrimônio de afetação bis zu 50 %, plus die Maklerkosten (Lei 13.786/2018)."
+    "es": "Riesgos: retraso de obra, alza del INCC, quiebra de la desarrolladora y distrato (cancelación del contrato). En el distrato la desarrolladora puede quedarse con hasta el 25 % de lo pagado, o hasta el 50 % con patrimônio de afetação, más la comisión de corretaje (Lei 13.786/2018).",
+    "de": "Risiken: Bauverzug, steigender INCC, Insolvenz des Bauträgers und Distrato (Vertragsrücktritt). Beim Distrato darf der Bauträger bis zu 25 % des gezahlten Betrags einbehalten, mit Patrimônio de afetação bis zu 50 %, zuzüglich der Maklerkosten (Lei 13.786/2018)."
    }
   },
   {
    "t": "h2",
    "x": {
-    "pt": "C. Com financiamento (para quem mora no Brasil): 50 a 80 dias Antes de pagar sinal, confira os documentos. Se pagar antes da aprovação do crédito, ponha no contrato que o sinal volta se o banco negar o financiamento.",
-    "en": "C. Financed (for people living in Brazil): 50 to 80 days Check the documents before paying any sinal. If you pay before the loan is approved, put in the contract that the sinal is refunded if the bank refuses the loan.",
-    "es": "C. Con financiamiento (para quien vive en Brasil): 50 a 80 días Revisa los documentos antes de pagar cualquier seña. Si pagas antes de la aprobación del crédito, pon en el contrato que la seña se devuelve si el banco niega el financiamiento.",
-    "de": "C. Mit Finanzierung (für Menschen, die in Brasilien leben): 50 bis 80 Tage Prüfe die Unterlagen, bevor du ein Sinal zahlst. Zahlst du vor der Kreditzusage, schreibe in den Vertrag, dass das Sinal zurückgezahlt wird, wenn die Bank die Finanzierung ablehnt."
+    "pt": "C. Com financiamento (para quem mora no Brasil): 50 a 80 dias. Antes de pagar sinal, confira os documentos. Se pagar antes da aprovação do crédito, inclua no contrato que o sinal volta se o banco negar o financiamento.",
+    "en": "C. Financed (for people living in Brazil): 50 to 80 days. Check the documents before paying any deposit (sinal). If you pay before the loan is approved, put in the contract that the deposit is refunded if the bank refuses the loan.",
+    "es": "C. Con financiamiento (para quien vive en Brasil): 50 a 80 días. Revisa los documentos antes de pagar cualquier seña. Si pagas antes de la aprobación del crédito, pon en el contrato que la seña se devuelve si el banco rechaza el financiamiento.",
+    "de": "C. Mit Finanzierung (für Menschen, die in Brasilien leben): 50 bis 80 Tage. Prüfe die Unterlagen, bevor du ein Sinal zahlst. Zahlst du vor der Kreditzusage, schreibe in den Vertrag, dass das Sinal zurückgezahlt wird, wenn die Bank die Finanzierung ablehnt."
    }
   },
   {
    "t": "p",
    "x": {
-    "pt": "O banco avalia renda e imóvel. A parcela costuma ficar em no máximo 30 a 35% da renda, conforme o banco. O banco fica como proprietário (alienação fiduciária, registrada na matrícula) até a quitação.",
+    "pt": "O banco avalia renda e imóvel. A parcela costuma ficar limitada a 30 a 35% da renda, conforme o banco. O banco fica como proprietário (alienação fiduciária, registrada na matrícula) até a quitação.",
     "en": "The bank assesses your income and the property. The monthly payment is usually capped at about 30% to 35% of your income, depending on the bank. The bank keeps legal title (alienação fiduciária, registered on the matrícula) until the loan is paid off.",
-    "es": "El banco evalúa tus ingresos y la propiedad. La cuota suele limitarse a entre un 30 % y un 35 % del ingreso, según el banco. El banco queda como propietario en garantía (alienación fiduciaria, registrada en la matrícula) hasta la cancelación.",
+    "es": "El banco evalúa tus ingresos y la propiedad. La cuota suele limitarse a entre un 30 % y un 35 % del ingreso, según el banco. El banco queda como propietario en garantía (alienación fiduciaria, registrada en la matrícula) hasta la cancelación del préstamo.",
     "de": "Die Bank prüft Einkommen und Immobilie. Die Rate darf meist höchstens 30 bis 35 % des Einkommens betragen, je nach Bank. Die Bank bleibt Eigentümerin (Sicherungseigentum, Alienação fiduciária, in der Matrícula eingetragen), bis alles bezahlt ist."
    }
   },

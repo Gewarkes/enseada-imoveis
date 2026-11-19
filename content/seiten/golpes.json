@@ -53,19 +53,19 @@
      {
       "pt": "O corretor",
       "en": "The agent",
-      "es": "El agente inmobiliario",
+      "es": "El corredor inmobiliario",
       "de": "Der Makler"
      },
      {
       "pt": "Sem CRECI (registro profissional do corretor) ou número que não confere no CRECI do estado.",
       "en": "No CRECI number (the agent’s official license), or a number that does not match the state CRECI register.",
-      "es": "Sin CRECI (el registro oficial del agente) o un número que no coincide en el CRECI del estado.",
+      "es": "Sin CRECI (el registro oficial del corredor) o un número que no coincide con el del CRECI del estado.",
       "de": "Keine CRECI-Nummer (offizielle Registrierung des Maklers) oder eine Nummer, die beim CRECI des Bundesstaates nicht stimmt."
      },
      {
       "pt": "CRECI visível e ativo. Anúncios de corretores costumam trazer o número do CRECI.",
       "en": "CRECI number visible and active. Agents’ listings normally show it.",
-      "es": "CRECI visible y activo. Los anuncios de agentes suelen incluir el número de CRECI.",
+      "es": "CRECI visible y activo. Los anuncios de corredores suelen incluir el número de CRECI.",
       "de": "CRECI sichtbar und aktiv. Anzeigen von Maklern enthalten meist die CRECI-Nummer."
      }
     ],
@@ -97,15 +97,15 @@
       "de": "Dokumente"
      },
      {
-      "pt": "Só “posse”, sem Matrícula e Escritura. Ocorre com frequência em algumas áreas litorâneas, mas não é propriedade e o risco é alto.",
+      "pt": "Só “posse”, sem matrícula e escritura. Ocorre com frequência em algumas áreas litorâneas, mas não é propriedade e o risco é alto.",
       "en": "Only “possession” (posse), with no matrícula or escritura. This is common in some coastal areas, but it is not ownership and the risk is high.",
-      "es": "Solo “posse” (posesión), sin Matrícula ni Escritura. Ocurre con frecuencia en algunas zonas costeras, pero no es propiedad y el riesgo es alto.",
+      "es": "Solo “posse” (posesión), sin matrícula ni escritura. Ocurre con frecuencia en algunas zonas costeras, pero no es propiedad y el riesgo es alto.",
       "de": "Nur „Posse“ (Besitz), ohne Grundbuchauszug (Matrícula) und Kaufurkunde (Escritura). Das ist in manchen Küstengebieten verbreitet, aber kein Eigentum und sehr riskant."
      },
      {
       "pt": "Matrícula atualizada, pedida por você ao cartório, e certidões do vendedor em dia.",
       "en": "A current matrícula that you request yourself from the cartório, and the seller’s certificates in order.",
-      "es": "Matrícula actualizada, pedida por ti al cartório, y certificados del vendedor al día.",
+      "es": "Matrícula actualizada, pedida por ti al Registro de la Propiedad, y certificados del vendedor al día.",
       "de": "Aktuelle Matrícula, von dir selbst beim Cartório angefordert, und Bescheinigungen des Verkäufers in Ordnung."
      }
     ],
@@ -126,7 +126,7 @@
       "pt": "Pagamento só ao vendedor do contrato e da matrícula, depois de conferir tudo.",
       "en": "Payment only to the seller named in the contract and matrícula, after the checks.",
       "es": "Pago solo al vendedor del contrato y de la matrícula, después de verificar todo.",
-      "de": "Zahlung nur an den Verkäufer aus Vertrag und Matrícula, nach den Prüfungen."
+      "de": "Zahlung nur an den Verkäufer, der im Vertrag und in der Matrícula steht, und erst nach den Prüfungen."
      }
     ],
     [
@@ -185,9 +185,9 @@
      "de": "Zahle nur an den Verkäufer aus dem Vertrag."
     },
     {
-     "pt": "Tenha seu próprio advogado, independente de corretor e vendedor.",
+     "pt": "Tenha seu próprio advogado, independente do corretor e do vendedor.",
      "en": "Hire your own lawyer, independent of the agent and the seller.",
-     "es": "Ten tu propio abogado, independiente del agente y del vendedor.",
+     "es": "Ten tu propio abogado, independiente del corredor y del vendedor.",
      "de": "Beauftrage einen eigenen Anwalt, unabhängig von Makler und Verkäufer."
     }
    ]
@@ -204,26 +204,26 @@
     {
      "pt": "CRECI do corretor ativo no conselho do estado",
      "en": "The agent’s CRECI is active with the state council",
-     "es": "CRECI del agente activo en el consejo del estado",
+     "es": "CRECI del corredor activo en el consejo del estado",
      "de": "CRECI-Nummer des Maklers bei der Berufskammer des Bundesstaates aktiv"
     },
     {
      "pt": "Matrícula atualizada, pedida por você ao cartório",
      "en": "A current matrícula, requested by you from the cartório",
-     "es": "Matrícula actualizada, pedida por ti al cartório",
+     "es": "Matrícula actualizada, pedida por ti al Registro de la Propiedad",
      "de": "Aktuelle Matrícula, von dir selbst beim Cartório angefordert"
     },
     {
      "pt": "Vendedor da matrícula = vendedor do contrato",
      "en": "The seller on the matrícula is the seller in the contract",
      "es": "Vendedor de la matrícula = vendedor del contrato",
-     "de": "Verkäufer in der Matrícula = Vertragspartei"
+     "de": "Eigentümer laut Matrícula = Verkäufer im Vertrag"
     },
     {
      "pt": "Sem dívidas, penhora (bem bloqueado pela justiça) ou ação judicial",
-     "en": "No debts, seizures (court-ordered freezes on the property) or lawsuits",
+     "en": "No debts, court attachments (penhora: the property is frozen by a court) or lawsuits",
      "es": "Sin deudas, embargo (bien bloqueado por la justicia) ni juicio",
-     "de": "Keine Schulden, Pfändungen oder Gerichtsverfahren auf der Immobilie"
+     "de": "Keine Schulden, Pfändungen oder Gerichtsverfahren, die die Immobilie betreffen"
     },
     {
      "pt": "Seu advogado leu o contrato",
@@ -238,7 +238,7 @@
    "x": {
     "pt": "Como conferir um corretor",
     "en": "How to check an agent",
-    "es": "Cómo verificar a un agente",
+    "es": "Cómo verificar a un corredor",
     "de": "So prüfst du einen Makler"
    }
   },
@@ -253,9 +253,9 @@
       "de": "Finde die CRECI-Nummer"
      },
      "p": {
-      "pt": "Veja nome e número CRECI no anúncio ou no cartão. Anúncios de corretores costumam trazer o número do CRECI.",
+      "pt": "Veja nome e número do CRECI no anúncio ou no cartão. Anúncios de corretores costumam trazer o número do CRECI.",
       "en": "Look for the agent’s name and CRECI number in the listing or on their card. Listings by agents normally show it.",
-      "es": "Busca nombre y número de CRECI en el anuncio o en la tarjeta. Los anuncios de agentes suelen incluir el número de CRECI.",
+      "es": "Busca nombre y número de CRECI en el anuncio o en la tarjeta. Los anuncios de corredores suelen incluir el número de CRECI.",
       "de": "Suche Name und CRECI-Nummer in der Anzeige oder auf der Visitenkarte. Anzeigen von Maklern enthalten meist die CRECI-Nummer."
      },
      "n": null
@@ -271,7 +271,7 @@
       "pt": "No Rio Grande do Norte, use a consulta do CRECI-RN. Confira o nome e se a situação é ativa.",
       "en": "In Rio Grande do Norte, use the CRECI-RN lookup. Check that the name matches and the status is active.",
       "es": "En Rio Grande do Norte, usa la consulta del CRECI-RN. Verifica el nombre y que la situación sea activa.",
-      "de": "In Rio Grande do Norte nutze die Abfrage des CRECI-RN. Prüfe Name und ob der Status aktiv ist."
+      "de": "In Rio Grande do Norte nutze die Abfrage des CRECI-RN. Prüfe den Namen und ob der Status „aktiv“ ist."
      },
      "n": null
     },
@@ -298,7 +298,7 @@
    "x": {
     "pt": "O “selo” de corretor verificado não é uma certificação oficial. A conferência vale quando feita no CRECI do estado.",
     "en": "A “verified agent” seal is not an official certification. What counts is the check at the state CRECI.",
-    "es": "El “sello” de agente verificado no es una certificación oficial. Lo que vale es la consulta en el CRECI del estado.",
+    "es": "El “sello” de corredor verificado no es una certificación oficial. Lo que vale es la consulta en el CRECI del estado.",
     "de": "Ein „Siegel“ für geprüfte Makler ist keine amtliche Auszeichnung. Entscheidend ist die Abfrage beim CRECI des Bundesstaates."
    }
   },

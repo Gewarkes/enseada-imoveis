@@ -58,8 +58,8 @@
    "x": {
     "pt": "Valores de exemplo. Confirme na prefeitura e no cartório.",
     "en": "Example values. Confirm with the town hall (prefeitura) and the notary office (cartório).",
-    "es": "Valores de ejemplo. Confírmalos en la prefeitura y en el cartório.",
-    "de": "Beispielwerte. Bei der Stadtverwaltung (Prefeitura) und im Notariat (Cartório) bestätigen."
+    "es": "Valores de ejemplo. Confírmalos en la municipalidad (prefeitura) y en la notaría (cartório).",
+    "de": "Beispielwerte. Bitte bei der Stadtverwaltung (Prefeitura) und im Notariat (Cartório) bestätigen lassen."
    }
   },
   {
@@ -67,9 +67,9 @@
    "k": "info",
    "x": {
     "pt": "Cartório: valor de 2023; a tabela do TJRN é ajustada todo ano. Confirme com o tabelião. Não residente: 15% sobre o ganho até R$ 5 mi (faixas progressivas até 22,5%); sem as isenções de residente. Pergunte a um contador.",
-    "en": "Notary fee: 2023 value; the TJRN table is adjusted every year, so confirm with the notary. Non-residents: 15% on gains up to R$ 5m (progressive brackets up to 22.5%), without the exemptions available to residents. Ask an accountant.",
+    "en": "Notary fee: 2023 value; the TJRN table is adjusted every year, so confirm with the notary. Non-residents: 15% on gains up to R$ 5 million (progressive brackets up to 22.5%), without the exemptions available to residents. Ask an accountant.",
     "es": "Cartório: valor de 2023; la tabla del TJRN se ajusta cada año. Confírmalo con el notario. No residente: 15 % sobre la ganancia hasta R$ 5 millones (tramos progresivos hasta 22,5 %); sin las exenciones de residente. Pregunta a un contador.",
-    "de": "Notarkosten (Cartório): Wert von 2023; die TJRN-Tabelle wird jährlich angepasst, beim Notar bestätigen. Ohne Wohnsitz in Brasilien: 15 % auf den Gewinn bis R$ 5 Mio. (Stufen bis 22,5 %), ohne die Befreiungen für Einwohner. Frag einen Steuerberater."
+    "de": "Notarkosten (Cartório): Wert von 2023; die TJRN-Tabelle wird jährlich angepasst, bitte beim Notar bestätigen lassen. Ohne Wohnsitz in Brasilien: 15 % auf den Gewinn bis R$ 5 Mio. (Stufen bis 22,5 %), ohne die Befreiungen für Personen mit Wohnsitz in Brasilien. Frag einen Steuerberater."
    }
   },
   {
@@ -79,7 +79,7 @@
     "pt": "Cálculo simplificado, sem considerar isenções (residentes podem ter).",
     "en": "Simplified calculation that ignores exemptions (residents may qualify for some).",
     "es": "Cálculo simplificado, sin considerar exenciones (los residentes pueden tenerlas).",
-    "de": "Vereinfachte Berechnung, ohne Befreiungen (Personen mit Wohnsitz in Brasilien können welche haben)."
+    "de": "Vereinfachte Berechnung, ohne Befreiungen (für Personen mit Wohnsitz in Brasilien kann es Befreiungen geben)."
    }
   }
  ],

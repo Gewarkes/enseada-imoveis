@@ -21,7 +21,7 @@
  "meta": {
   "pt": "Autorização de residência para investidores em imóveis no Brasil: valores mínimos e condições.",
   "en": "Residence permit for property investors in Brazil: minimum amounts and conditions.",
-  "es": "Permiso de residencia para inversores en propiedades en Brasil: valores mínimos y condiciones.",
+  "es": "Autorización de residencia para inversionistas en propiedades en Brasil: valores mínimos y condiciones.",
   "de": "Aufenthaltstitel für Immobilieninvestoren in Brasilien: Mindestwerte und Bedingungen."
  },
  "stand": "17.11.2026",
@@ -75,20 +75,20 @@
     {
      "pt": "Vale para imóveis com construção; para terreno sem construção, esclareça antes com o advogado.",
      "en": "Applies to built properties; for undeveloped land, check with a lawyer first.",
-     "es": "Vale para edificios/inmuebles; para terrenos sin construcción, aclara antes con un abogado.",
-     "de": "Gilt für Gebäude; bei unbebauten Grundstücken vorher mit dem Anwalt klären."
+     "es": "Vale para inmuebles con construcción; para terrenos sin construcción, aclara antes con un abogado.",
+     "de": "Gilt für bebaute Immobilien; bei unbebauten Grundstücken vorher mit dem Anwalt klären."
     },
     {
      "pt": "Financiamento só vale para a parte acima do valor mínimo da região (R$ 1 mi; R$ 700 mil no Norte/Nordeste). Confirme com advogado de imigração.",
-     "en": "With financing, only the part above the regional minimum counts (R$ 1m; R$ 700,000 in the North/Northeast). Confirm with an immigration lawyer.",
+     "en": "With financing, only the part above the regional minimum counts (R$ 1,000,000; R$ 700,000 in the North/Northeast). Confirm with an immigration lawyer.",
      "es": "El financiamiento solo cuenta para la parte superior al mínimo de la región (R$ 1 millón; R$ 700.000 en Norte/Nordeste). Confírmalo con un abogado de inmigración.",
      "de": "Eine Finanzierung zählt nur für den Teil über dem Mindestwert der Region (R$ 1 Mio.; R$ 700.000 im Norden/Nordosten). Lass dir das von einem Einwanderungsanwalt bestätigen."
     },
     {
      "pt": "Prove o investimento com o comprovante de câmbio (finalidade: investimento).",
      "en": "Prove the investment with the currency-exchange receipt (câmbio), with the purpose stated as investment.",
-     "es": "Comprueba la inversión con el comprobante de cambio (finalidad: inversión).",
-     "de": "Belege die Investition mit dem Câmbio-Beleg (Zweck: Investition)."
+     "es": "Demuestra la inversión con el comprobante de cambio (finalidad: inversión).",
+     "de": "Belege die Investition mit dem Beleg über den Devisentausch (Zweck: Investition)."
     },
     {
      "pt": "Duração: 4 anos no início; depois, por prazo indeterminado, se você mantiver o imóvel.",
@@ -100,13 +100,13 @@
      "pt": "Estadia: ao menos 14 dias a cada 2 anos no Brasil.",
      "en": "Minimum stay: at least 14 days in Brazil every 2 years.",
      "es": "Estadía: al menos 14 días cada 2 años en Brasil.",
-     "de": "Anwesenheit: mindestens 14 Tage je 2 Jahre in Brasilien."
+     "de": "Anwesenheit: mindestens 14 Tage alle 2 Jahre in Brasilien."
     },
     {
      "pt": "Do exterior, pede-se primeiro o visto no consulado; quem já está no Brasil legalmente pode pedir a autorização aqui.",
      "en": "If you are abroad, you first apply for the visa at a Brazilian consulate. Someone already legally in Brazil can apply for the permit in Brazil.",
-     "es": "Desde el exterior primero se pide la visa en el consulado; quien ya está legalmente en Brasil puede pedirla allí.",
-     "de": "Aus dem Ausland beantragst du zuerst das Visum beim Konsulat; wer legal in Brasilien ist, kann den Antrag dort stellen."
+     "es": "Desde el exterior primero se pide la visa en el consulado; quien ya está legalmente en Brasil puede pedir la autorización de residencia allí.",
+     "de": "Aus dem Ausland beantragst du zuerst das Visum beim Konsulat; wer sich bereits legal in Brasilien aufhält, kann den Antrag dort stellen."
     },
     {
      "pt": "Pipa fica no Nordeste: vale o valor menor.",
@@ -131,9 +131,9 @@
    "k": "info",
    "x": {
     "pt": "Informação geral, sem garantia de aprovação. Abaixo desses valores não há direito a este pedido. Confirme com um advogado de imigração.",
-    "en": "General information; approval is not guaranteed. Below these amounts, you have no right to apply under this route. Confirm with an immigration lawyer.",
+    "en": "General information; approval is not guaranteed. Below these amounts, you cannot apply under this route. Confirm with an immigration lawyer.",
     "es": "Información general, sin garantía de aprobación. Por debajo de estos valores no hay derecho a esta solicitud. Confírmalo con un abogado de inmigración.",
-    "de": "Allgemeine Information, ohne Gewähr für eine Genehmigung. Unter diesen Werten gibt es keinen Anspruch auf diesen Antrag. Lass dich von einem Einwanderungsanwalt beraten."
+    "de": "Allgemeine Information, ohne Gewähr für eine Genehmigung. Unterhalb dieser Werte ist dieser Antrag nicht möglich. Lass dich von einem Einwanderungsanwalt beraten."
    }
   },
   {
@@ -142,7 +142,7 @@
     "pt": "Olá! Tenho interesse em comprar um imóvel e gostaria de entender a residência.",
     "en": "Hello! I am interested in buying a property and would like to understand residency.",
     "es": "¡Hola! Me interesa comprar una propiedad y me gustaría entender lo de la residencia.",
-    "de": "Hallo! Ich interessiere mich für den Kauf einer Immobilie und möchte die Aufenthaltstitel verstehen."
+    "de": "Hallo! Ich interessiere mich für den Kauf einer Immobilie und möchte mehr über den Aufenthaltstitel erfahren."
    },
    "b": {
     "pt": "Falar com a corretora",
