@@ -159,4 +159,34 @@
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && sheet && !sheet.hidden) sheet.hidden = true; });
   renderF();
 
+
+  /* up20: Tab-Daumen gleitet auch beim Seitenwechsel (Alle/Kaufen/Mieten) */
+  (function () {
+    var nav = $('[data-slide]'); if (!nav) return;
+    var idx = $$('a', nav).findIndex(function (a) { return a.getAttribute('aria-current') === 'true'; }); if (idx < 0) idx = 0;
+    var prev = null; try { prev = sessionStorage.getItem('tabIdx'); } catch (e) {}
+    if (prev !== null && +prev !== idx && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      nav.style.setProperty('--i', prev); void nav.offsetWidth;
+      requestAnimationFrame(function () { nav.style.setProperty('--i', idx); });
+    }
+    $$('a', nav).forEach(function (a, i) { a.addEventListener('click', function () { try { sessionStorage.setItem('tabIdx', i); } catch (e) {} }); });
+    try { sessionStorage.setItem('tabIdx', idx); } catch (e) {}
+  })();
+
+  /* up20: Sprachwechsel bleibt auf der gleichen Seite (inkl. Filter, Anker, Scrollposition) */
+  (function () {
+    var KEY = 'langScroll';
+    try { var sv = JSON.parse(sessionStorage.getItem(KEY) || 'null'); sessionStorage.removeItem(KEY);
+      if (sv && sv.p === location.pathname.replace(/^\/enseada-imoveis\/(?:(?:en|es|de)\/)?/, '') && !location.hash) window.scrollTo(0, sv.y); } catch (e) {}
+    $$('[data-lang]').forEach(function (a) {
+      a.addEventListener('click', function (e) {
+        if (e.metaKey || e.ctrlKey || e.shiftKey || e.button) return;
+        e.preventDefault();
+        var rel = location.pathname.replace(/^\/enseada-imoveis\/(?:(?:en|es|de)\/)?/, '');
+        try { sessionStorage.setItem(KEY, JSON.stringify({ p: rel, y: window.scrollY })); } catch (er) {}
+        location.href = a.getAttribute('href') + location.search + location.hash;
+      });
+    });
+  })();
+
 })();
