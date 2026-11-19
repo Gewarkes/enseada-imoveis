@@ -448,6 +448,7 @@ h1,h2{overflow-wrap:break-word;hyphens:auto}
 .step::before{top:20px!important}
 .point{padding:18px}
 .steps,.points{grid-auto-rows:1fr}
+.steps.col{grid-auto-rows:auto}
 @media (min-width:900px){.wrap>.know .know-g{grid-template-columns:repeat(4,minmax(0,1fr))}}
 .wish{max-width:none}
 @media (min-width:900px){.wish-g{grid-template-columns:repeat(5,minmax(0,1fr))}.wish-g .wf{grid-column:auto}.wish .btn-lg{max-width:420px}}

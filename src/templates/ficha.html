@@ -2,7 +2,7 @@
 <html lang="{{ hl }}"><head><meta charset="utf-8"><meta name="robots" content="noindex"><title>{{ l.name }} · {{ t.pdfRef }} {{ l.ref }}</title>
 <style>@font-face{font-family:'Open Sans';font-weight:300 800;src:url({{ base }}assets/open-sans-latin.woff2) format('woff2')}{{ ficha_css }}</style></head>
 <body>
-<header class="fh"><div class="fb">{{ site.brandFull }}</div><div class="fs">{{ icon('shield') }} {{ t.slSeal }} · {{ site.agent.name }} · {{ site.agent.creci }}</div></header>
+<header class="fh"><div class="fb">{{ site.brandFull }}</div><div class="fs">{{ icon('shield') }} {{ t.slSeal }} · {{ site.agent.name }}{% if site.agent.creci %} · {{ site.agent.creci }}{% endif %}</div></header>
 <div class="hero"><img src="{{ base }}img/pdf/{{ l.imgs[0] }}.jpg" alt=""></div>
 <section class="top">
   <div><h1>{{ l.name }}</h1><p class="loc">{{ l.loc }}, {{ site.state }} · {{ t.pdfRef }} {{ l.ref }}</p><p class="sub">{{ L(l.title) }}</p></div>
@@ -30,7 +30,7 @@
 <p class="ds">{% if l.checks.matricula and l.checks.debts %}{{ t.pdfDocsOk }} {{ fdate(l.checks.date) if l.checks.date else '' }}.{% else %}{{ t.pdfDocsNo }}{% endif %}</p>
 {% if l.imgs | length > 1 %}<div class="ph">{% for k in l.imgs[1:5] %}<div><img src="{{ base }}img/pdf/{{ k }}.jpg" alt=""></div>{% endfor %}</div>{% endif %}
 <footer class="ff">
-  <div><b>{{ t.pdfAgent }}: {{ site.agent.name }}</b><br>{{ site.agent.creci }}<br>{{ site.phone }} · {{ site.email }}<br>{{ site.address }}</div>
+  <div><b>{{ t.pdfAgent }}: {{ site.agent.name }}</b><br>{% if site.agent.creci %}{{ site.agent.creci }}<br>{% endif %}{{ site.phone }} · {{ site.email }}<br>{{ site.address }}</div>
   <div class="fn">{{ t.pdfFoot }} {{ today_str }}.<br>{{ abs('imovel-' + l.slug) }}</div>
 </footer>
 </body></html>

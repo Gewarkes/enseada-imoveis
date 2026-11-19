@@ -35,7 +35,7 @@
           {{ m.agentbox() }}
           <ul class="info" style="margin-top:0">
             <li>{{ icon('globe') }}<span>{{ t.agentLangs }}: {{ site.agent.langs }}</span></li>
-            <li>{{ icon('shield') }}<span>{{ t.agentLic }}: {{ site.agent.creci }}</span></li>
+            {% if site.agent.creci %}<li>{{ icon('shield') }}<span>{{ t.agentLic }}: {{ site.agent.creci }}</span></li>{% endif %}
           </ul>
         </div>
       </div>

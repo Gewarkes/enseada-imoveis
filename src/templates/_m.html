@@ -127,7 +127,7 @@
 {% macro agentbox() %}
 <div class="agent-top">
   <span class="avatar">{% if site.agent.photo %}{{ pic(site.agent.photo, '56px', site.agent.name) }}{% else %}{{ site.agent.initials }}{% endif %}</span>
-  <div><b>{{ site.agent.name }}</b><span>{{ L(site.agent.role) }} · {{ site.agent.creci }}</span></div>
+  <div><b>{{ site.agent.name }}</b><span>{{ L(site.agent.role) }}{% if site.agent.creci %} · {{ site.agent.creci }}{% endif %}</span></div>
 </div>
 {% endmacro %}
 

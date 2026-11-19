@@ -37,7 +37,7 @@
       <div class="seal-big">{{ icon('shield') }}<b>{{ t.slSeal }}</b></div>
       <dl>
         <div><dt>{{ t.slName }}</dt><dd>{{ site.agent.name }}</dd></div>
-        <div><dt>{{ t.slNum }}</dt><dd>{{ site.agent.creci }}</dd></div>
+        {% if site.agent.creci %}<div><dt>{{ t.slNum }}</dt><dd>{{ site.agent.creci }}</dd></div>{% endif %}
         <div><dt>{{ t.slStatus }}</dt><dd>{{ t.slActive }}</dd></div>
         <div><dt>{{ t.slDate }}</dt><dd>{{ fdate(site.agent.verifiedAt) if site.agent.verifiedAt else '–' }}</dd></div>
       </dl>

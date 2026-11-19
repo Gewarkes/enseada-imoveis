@@ -156,7 +156,7 @@
         data.forEach(function (p) {
           var mk = L.marker([p.lat, p.lng], { icon: L.divIcon({ className: '', html: '<div class="pin" data-pin="' + p.slug + '"></div>', iconSize: [0, 0] }), keyboard: true, title: p.name });
           mk.bindPopup('<a class="pop" href="' + p.url + '"><img src="' + p.img + '" alt="" loading="lazy"><div><b>' + p.name + '</b><span>' + p.loc + '</span><strong data-pp></strong></div></a>', { closeButton: false, offset: [0, -10], autoPanPaddingTopLeft: [24, 70], autoPanPaddingBottomRight: [24, 24] });
-          mk.on('popupopen', function (e) { var s = $('[data-pp]', e.popup.getElement()); if (s) s.textContent = fmt(p.price) + (p.rent ? T.perMonth : ''); });
+          mk.on('popupopen', function (e) { var s = $('[data-pp]', e.popup.getElement()); if (s) s.textContent = p.por ? T.onReq : fmt(p.price) + (p.rent ? T.perMonth : ''); });
           mk._p = p; el._marks[p.slug] = mk;
         });
         el._show = function (slugs) {
@@ -169,7 +169,7 @@
           if (pts.length) map.fitBounds(L.latLngBounds(pts).pad(0.25), { maxZoom: 15 }); else map.setView([S.geo.lat, S.geo.lng], 12);
           zc();
         };
-        el._label = function () { $$('[data-pin]', el).forEach(function (d) { var p = el._marks[d.dataset.pin]._p; d.textContent = fmtShort(p.price) + (p.rent ? T.perMonth : ''); }); };
+        el._label = function () { $$('[data-pin]', el).forEach(function (d) { var p = el._marks[d.dataset.pin]._p; d.textContent = p.por ? '…' : fmtShort(p.price) + (p.rent ? T.perMonth : ''); }); };
         curHooks.push(el._label);
         el._show(el._want || null);
       } else {

@@ -29,6 +29,7 @@
 {% block preload %}{% endblock %}
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%230F3B37'/%3E%3Cpath d='M7 20c3-4 6-4 9 0s6 4 9 0M9 14l7-5 7 5' fill='none' stroke='%23fff' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="{{ css_file }}">
+{% if brandcss %}<style>{{ brandcss }}</style>{% endif %}
 <script type="application/ld+json">{{ ld }}</script>
 </head>
 <body class="{% block bodyclass %}{% endblock %}">
@@ -37,7 +38,7 @@
   <div class="wrap head-in">
     <a class="logo" href="{{ url('home') }}" aria-label="{{ site.brandFull }}">
       <span class="logo-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 16c3-4 6-4 9 0s6 4 9 0M5 10l7-5 7 5"/></svg></span>
-      <span>{{ site.brandFull }}</span>
+      <span>{{ site.brandShort or site.brandFull }}</span>
     </a>
     <nav class="nav" aria-label="{{ t.menu }}">
       {% for r, k in [('imoveis-venda','navBuy'),('imoveis-aluguel','navRent'),('comprar','navBuyGuideS'),('vender','navSellS'),('sobre','navAbout'),('contato','navContact')] %}
@@ -60,7 +61,7 @@
 
 <div class="sheet" id="menu" role="dialog" aria-modal="true" aria-label="{{ t.menu }}">
   <div class="sheet-top">
-    <a class="logo" href="{{ url('home') }}"><span class="logo-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 16c3-4 6-4 9 0s6 4 9 0M5 10l7-5 7 5"/></svg></span><span>{{ site.brandFull }}</span></a>
+    <a class="logo" href="{{ url('home') }}"><span class="logo-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 16c3-4 6-4 9 0s6 4 9 0M5 10l7-5 7 5"/></svg></span><span>{{ site.brandShort or site.brandFull }}</span></a>
     <button class="burger" type="button" data-close="menu" aria-label="{{ t.close }}">{{ icon('close') }}</button>
   </div>
   <div class="sheet-body">
@@ -90,7 +91,7 @@
   <div class="wrap">
     <div class="foot-grid">
       <div class="foot-about">
-        <a class="logo" href="{{ url('home') }}"><span class="logo-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 16c3-4 6-4 9 0s6 4 9 0M5 10l7-5 7 5"/></svg></span><span>{{ site.brandFull }}</span></a>
+        <a class="logo" href="{{ url('home') }}"><span class="logo-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 16c3-4 6-4 9 0s6 4 9 0M5 10l7-5 7 5"/></svg></span><span>{{ site.brandShort or site.brandFull }}</span></a>
         <p>{{ t.footAbout }}</p>
         <ul class="foot-contact" style="margin-top:18px">
           <li>{{ wa_icon() }}<a href="{{ wa(t.waHello) }}" target="_blank" rel="noopener">WhatsApp {{ site.phone }}</a></li>
@@ -143,7 +144,7 @@
     </div>
     <div class="foot-bottom">
       <span>© {{ year }} {{ site.brandFull }}</span>
-      <span>{{ site.agent.creci }}</span>
+      {% if site.agent.creci %}<span>{{ site.agent.creci }}</span>{% endif %}
       <a href="{{ url('verificada') }}">{{ t.slSeal }}</a>
       <a href="{{ url('privacidade') }}">{{ t.privH }}</a>
       {% if site.brokerUrl %}<a class="sp" href="{{ site.brokerUrl }}" target="_blank" rel="noopener nofollow">{{ t.brokerArea }}</a>{% endif %}
@@ -161,7 +162,7 @@
   <div class="btn-row"><button class="btn btn-primary btn-s" type="button" data-consent="yes">{{ t.consentYes }}</button><button class="btn btn-line btn-s" type="button" data-consent="no">{{ t.consentNo }}</button></div>
 </div>
 <script>window.SITE={{ {'base': base, 'lang': lang, 'wa': site.wa, 'fx': site.fx, 'contactUrl': site.contactUrl, 'newsletterUrl': site.newsletterUrl, 'gaId': site.gaId, 'rate': site.rate, 'buyCosts': site.buyCosts, 'geo': site.geo, 'taxes': taxes, 'ap': paises.apostille, 'cc': paises.all, 'uploadUrl': site.uploadUrl, 'v': v2,
- 't': {'perMonth': t.perMonth, 'sent': t.fSent, 'sendErr': t.fErr, 'newsOk': t.newsOk, 'newsDemo': t.newsDemo, 'copied': t.copied, 'years': t.years, 'mapLoad': t.mapLoad, 'office': t.office, 'waForm': t.waForm, 'fName': t.fName, 'fPhone': t.fPhone, 'fEmail': t.fEmail, 'fSubject': t.fSubject, 'mi': t.mi, 'mil': t.mil, 'required': t.fRequired, 'waOpen': t.waOpen, 'emailBad': t.fEmailBad, 'cbOpen': t.cbOpen, 'cbNotEx': t.cbExS, 'cbNotOpen': t.cbNotOpen, 'chkDone': t.chkDone}} | tojson_safe }}</script>
+ 't': {'onReq': t.priceOnReq, 'perMonth': t.perMonth, 'sent': t.fSent, 'sendErr': t.fErr, 'newsOk': t.newsOk, 'newsDemo': t.newsDemo, 'copied': t.copied, 'years': t.years, 'mapLoad': t.mapLoad, 'office': t.office, 'waForm': t.waForm, 'fName': t.fName, 'fPhone': t.fPhone, 'fEmail': t.fEmail, 'fSubject': t.fSubject, 'mi': t.mi, 'mil': t.mil, 'required': t.fRequired, 'waOpen': t.waOpen, 'emailBad': t.fEmailBad, 'cbOpen': t.cbOpen, 'cbNotEx': t.cbExS, 'cbNotOpen': t.cbNotOpen, 'chkDone': t.chkDone}} | tojson_safe }}</script>
 <script defer src="{{ js_file }}"></script>
 </body>
 </html>

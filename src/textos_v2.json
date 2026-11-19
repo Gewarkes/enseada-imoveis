@@ -1132,5 +1132,11 @@
   "en": "Write on WhatsApp or book a chat. We reply the same day.",
   "es": "Escribe por WhatsApp o agenda una charla. Respondemos el mismo día.",
   "de": "Schreib uns per WhatsApp oder vereinbare ein Gespräch. Wir antworten am selben Tag."
+ },
+ "priceOnReq": {
+  "pt": "Preço sob consulta",
+  "en": "Price on request",
+  "es": "Precio a consultar",
+  "de": "Preis auf Anfrage"
  }
 }

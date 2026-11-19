@@ -105,7 +105,7 @@
           <span class="sb-ico">{{ icon('shield') }}</span>
           <b class="sb-name">{{ site.agent.name }}</b>
           <span class="sb-role">{{ t.creciLabel }}</span>
-          <span class="sb-num">{{ site.agent.creci }}</span>
+          {% if site.agent.creci %}<span class="sb-num">{{ site.agent.creci }}</span>{% endif %}
           <a class="sb-link" href="{{ url('verificada') }}">{{ t.slSealW }}</a>
         </div>
         <div class="btn-row"><a class="btn btn-primary" href="{{ url('sobre') }}">{{ t.whyBtn }}</a></div>

@@ -67,6 +67,9 @@ HERO = (site.get('media') or {}).get('hero') or '02'
 listings = [json.loads(rd(f)) for f in sorted(glob.glob('content/imoveis/*.json'))]
 for l in listings:
     l['slug'] = slug(l.get('slug') or l['name'])
+    _p = l.get('price')
+    l['por'] = not (isinstance(_p, (int, float)) and _p > 0)   # Preis auf Anfrage / 0 / fehlt
+    l['price'] = 0 if l['por'] else _p
     for k in ('price', 'beds', 'baths', 'area', 'lot', 'year', 'beach', 'suites', 'parking', 'condo', 'iptu'):
         l[k] = l.get(k) or 0
     l['imgs'] = [ik(x) for x in (l.get('imgs') or [HERO])]
@@ -95,6 +98,13 @@ for f in sorted(glob.glob('content/seiten/*.json')):
     pages[pg['slug']] = pg
 site['partners'] = []
 site['agent'].setdefault('verifiedAt', '')
+site['agent'].setdefault('creci', '')
+site['agent'].setdefault('photo', '')
+site['agent'].setdefault('langs', '')
+if not site['agent'].get('initials'):
+    site['agent']['initials'] = ''.join(w[0] for w in site['agent']['name'].split()[:2]).upper()
+site.setdefault('brandShort', '')
+site.setdefault('brandColor', '')
 site['agent'].setdefault('creciUrl', 'https://www.cofeci.gov.br/')
 posts = [json.loads(rd(f)) for f in sorted(glob.glob('content/blog/*.json'))]
 for p in posts:
@@ -226,6 +236,30 @@ def nf(n, lang, d=0):
     return s if lang == 'en' else s.replace(',', '§').replace('.', ',').replace('§', '.')
 
 
+def _lum(h):
+    r, g, b = [int(h[i:i + 2], 16) / 255 for i in (1, 3, 5)]
+    f = lambda v: v / 12.92 if v <= 0.03928 else ((v + 0.055) / 1.055) ** 2.4
+    return 0.2126 * f(r) + 0.7152 * f(g) + 0.0722 * f(b)
+
+
+def brand_css(hexcol):
+    """Markenfarbe aus site.json: wird so abgedunkelt, dass weißer Text darauf mindestens Kontrast 4,5:1 hat."""
+    h = (hexcol or '').strip()
+    if not re.fullmatch(r'#[0-9a-fA-F]{6}', h):
+        return ''
+    r, g, b = [int(h[i:i + 2], 16) for i in (1, 3, 5)]
+    k = 1.0
+    while (1.05 / (_lum('#%02x%02x%02x' % (int(r * k), int(g * k), int(b * k))) + 0.05)) < 4.5 and k > 0.05:
+        k -= 0.03
+    main = '#%02x%02x%02x' % (int(r * k), int(g * k), int(b * k))
+    k2 = min(1.0, k + 0.12)
+    two = '#%02x%02x%02x' % (int(r * k2), int(g * k2), int(b * k2))
+    return f':root{{--brand:{main};--brand-2:{two};--on-brand:#FFFFFF}}'
+
+
+BRANDCSS = brand_css(site.get('brandColor'))
+
+
 def make_ctx(lang, route):
     yrs = int((site.get('stats') or {}).get('years') or 0)
     fill = lambda s: s.replace('{years}', str(yrs)).replace('{since}', str(datetime.date.today().year - yrs))
@@ -248,6 +282,8 @@ def make_ctx(lang, route):
         return 'R$ ' + nf(round(v), lang)
 
     def price(l, tag='span'):
+        if l['por']:
+            return Markup(f'<{tag}>{e(t["priceOnReq"])}</{tag}>')
         suf = t['perMonth'] if l['deal'] == 'aluguel' else ''
         return Markup(f'<{tag} data-brl="{int(l["price"])}">{money(l["price"])}</{tag}>' + (f'<small>{e(suf)}</small>' if suf else ''))
 
@@ -305,7 +341,7 @@ wr(f'{D}/assets/leaflet.css', lcss)
 shutil.copy('src/vendor/leaflet.js', f'{D}/assets/leaflet.js')
 
 env = Environment(loader=FileSystemLoader('src/templates'), autoescape=True, undefined=StrictUndefined, trim_blocks=True, lstrip_blocks=True)
-env.globals.update(FLG=FLG, css_file=f'{BASE}assets/site.{hc}.css', js_file=f'{BASE}assets/site.{hj}.js')
+env.globals.update(brandcss=BRANDCSS, FLG=FLG, css_file=f'{BASE}assets/site.{hc}.css', js_file=f'{BASE}assets/site.{hj}.js')
 env.filters['tojson_safe'] = lambda o: Markup(json.dumps(o, ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/'))
 
 
@@ -341,7 +377,7 @@ def listing_ld(l, lang, c):
     return {'@type': 'RealEstateListing', 'name': f"{l['name']} – {l['title'][lang]}", 'description': l['desc'][lang].split('\n')[0],
             'url': c['abs']('imovel-' + l['slug']), 'datePosted': l['date'], 'identifier': l['ref'], 'inLanguage': HL[lang],
             'image': [c['imgabs'](k) for k in l['imgs']],
-            'offers': {'@type': 'Offer', 'price': int(l['price']), 'priceCurrency': 'BRL',
+            'offers': {'@type': 'Offer', **({'price': int(l['price']), 'priceCurrency': 'BRL'} if not l['por'] else {}),
                        'availability': 'https://schema.org/' + ('LimitedAvailability' if l['status'] == 'reservado' else 'InStock'),
                        'businessFunction': 'http://purl.org/goodrelations/v1#' + ('LeaseOut' if l['deal'] == 'aluguel' else 'Sell'),
                        'seller': {'@id': ORIGIN + BASE + '#org'}},
@@ -369,7 +405,7 @@ urls = []
 
 
 def pins(ls, c):
-    return [{'slug': l['slug'], 'name': l['name'], 'loc': l.get('loc', ''), 'lat': l['lat'], 'lng': l['lng'], 'price': int(l['price']),
+    return [{'slug': l['slug'], 'name': l['name'], 'loc': l.get('loc', ''), 'lat': l['lat'], 'lng': l['lng'], 'price': int(l['price']), 'por': l['por'],
              'rent': l['deal'] == 'aluguel', 'img': c['img'](l['imgs'][0], '-xs'), 'url': c['url']('imovel-' + l['slug'])} for l in ls if l.get('lat')]
 
 
@@ -384,7 +420,7 @@ for lang in LANGS:
             tpl = 'home.html'
             title, desc = f"{brand} · {t['metaHomeTitle']}", t['metaHome']
             feat = [l for l in listings if l['cat'] != 'terrenos'][:6]
-            c.update(featured=feat, pins=pins(listings, c), calc_price=int(next((l['price'] for l in listings if l['deal'] == 'venda'), 1000000)))
+            c.update(featured=feat, pins=pins(listings, c), calc_price=int(next((l['price'] for l in listings if l['deal'] == 'venda' and l['price']), 1000000)))
             graph += [{'@type': 'WebSite', 'name': brand, 'url': c['abs']('home'), 'inLanguage': HL[lang]},
                       {'@type': 'FAQPage', 'mainEntity': [{'@type': 'Question', 'name': t[f'fq{i}'], 'acceptedAnswer': {'@type': 'Answer', 'text': t[f'fq{i}a']}} for i in range(1, 6)]}]
         elif route in CATS:
@@ -400,13 +436,13 @@ for lang in LANGS:
         elif route.startswith('imovel-'):
             tpl = 'imovel.html'
             l = next(x for x in listings if x['slug'] == route[7:])
-            sim = [x for x in listings if x['slug'] != l['slug'] and x['cat'] == l['cat'] and 0.4 <= x['price'] / l['price'] <= 2.5]
-            sim = sorted(sim, key=lambda x: (x.get('type') != l.get('type'), abs(x['price'] - l['price'])))[:3]
+            sim = [x for x in listings if x['slug'] != l['slug'] and x['cat'] == l['cat'] and (not l['price'] or not x['price'] or 0.4 <= x['price'] / l['price'] <= 2.5)]
+            sim = sorted(sim, key=lambda x: (x.get('type') != l.get('type'), abs(x['price'] - l['price']) if l['price'] and x['price'] else 0))[:3]
             catroute = 'imoveis-' + ('venda' if l['cat'] == 'terrenos' else l['cat'])
             catname = t[{'venda': 'navBuy', 'aluguel': 'navRent', 'terrenos': 'navBuy'}[l['cat']]]
             title = f"{l['name']}, {l['loc']} · {brand}"
             desc = clip(l['title'][lang] + '. ' + l['desc'][lang].split('\n')[0])
-            c.update(msg=f"{t['waInterest']} {l['name']} ({l['ref']}).", l=l, similar=sim, catroute=catroute, catname=catname, pins=pins([l], c), calc_price=int(l['price']))
+            c.update(msg=f"{t['waInterest']} {l['name']} ({l['ref']}).", l=l, similar=sim, catroute=catroute, catname=catname, pins=pins([l], c), calc_price=int(l['price'] or 1000000))
             graph += [crumbs_ld([home, (catname, c['abs'](catroute)), (l['name'], c['abs'](route))]), listing_ld(l, lang, c)]
         elif route in pages:
             tpl = 'guia.html'

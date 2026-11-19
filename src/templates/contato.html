@@ -19,7 +19,7 @@
         <li>{{ icon('pin') }}<span><b>{{ t.office }}</b><br>{{ site.address }}</span></li>
         <li>{{ icon('clock') }}<span><b>{{ t.hours }}</b><br>{{ L(site.hours) }}</span></li>
         <li>{{ icon('globe') }}<span><b>{{ t.agentLangs }}</b><br>{{ site.agent.langs }}</span></li>
-        <li>{{ icon('shield') }}<span><b>{{ t.agentLic }}</b><br>{{ site.agent.name }} · {{ site.agent.creci }}</span></li>
+        <li>{{ icon('shield') }}<span><b>{{ t.agentLic }}</b><br>{{ site.agent.name }}{% if site.agent.creci %} · {{ site.agent.creci }}{% endif %}</span></li>
       </ul>
       <div class="map map-s" style="margin-top:20px" data-map="office" data-lat="{{ site.geo.lat }}" data-lng="{{ site.geo.lng }}"><div class="map-ph">{{ t.mapLoad }}</div></div>
       <p class="map-note">{{ icon('info') }}<a href="https://www.google.com/maps/search/?api=1&query={{ site.geo.lat }},{{ site.geo.lng }}" target="_blank" rel="noopener" style="text-decoration:underline">{{ t.mapRoute }}</a></p>

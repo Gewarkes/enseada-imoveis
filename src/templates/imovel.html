@@ -37,8 +37,8 @@
         </ul>
         <div class="det-price">
           <b>{{ price(l) }}</b>
-          <span data-fxline data-brl="{{ l.price | int }}"></span>
-          {% set sqm = l.area or l.lot %}{% if sqm and l.deal == 'venda' %}<span>· <span data-brl="{{ (l.price / sqm) | round | int }}">{{ money(l.price / sqm) }}</span>/m²</span>{% endif %}
+          {% if not l.por %}<span data-fxline data-brl="{{ l.price | int }}"></span>{% endif %}
+          {% set sqm = l.area or l.lot %}{% if sqm and l.deal == 'venda' and not l.por %}<span>· <span data-brl="{{ (l.price / sqm) | round | int }}">{{ money(l.price / sqm) }}</span>/m²</span>{% endif %}
         </div>
         {% if lang != 'pt' and l.deal == 'venda' and not land and l.price >= taxes.residence.northeast %}<p class="ichip">{{ icon('user') }}<span>{{ t.resChip }} <a href="{{ url('residencia') }}">{{ t.resChipL }}</a></span></p>{% endif %}
         {% if l.temporada in ('sim','nao') %}<p class="ichip">{{ icon('cal') }}{{ t.tempOk if l.temporada == 'sim' else t.tempNo }}</p>{% endif %}
@@ -47,10 +47,10 @@
           <li>{{ icon('lot') }}<span><b>{{ nf(l.lot) }}<small>m²</small></b> {{ t.lotWord }}</span></li>
           <li>{{ icon('pin') }}<span><b>{{ nf(l.beach) }}<small>m</small></b> {{ t.toBeach }}</span></li>
           {% else %}
-          <li>{{ icon('bed') }}<span><b>{{ l.beds }}</b> {{ t.bed1 if l.beds == 1 else t.beds }}</span></li>
-          <li>{{ icon('bath') }}<span><b>{{ l.baths }}</b> {{ t.bath1 if l.baths == 1 else t.baths }}</span></li>
-          <li>{{ icon('area') }}<span><b>{{ nf(l.area) }}<small>m²</small></b> {{ t.built }}</span></li>
-          <li>{{ icon('car') }}<span><b>{{ l.parking }}</b> {{ t.park1 if l.parking == 1 else t.parks }}</span></li>
+          {% if l.beds %}<li>{{ icon('bed') }}<span><b>{{ l.beds }}</b> {{ t.bed1 if l.beds == 1 else t.beds }}</span></li>{% endif %}
+          {% if l.baths %}<li>{{ icon('bath') }}<span><b>{{ l.baths }}</b> {{ t.bath1 if l.baths == 1 else t.baths }}</span></li>{% endif %}
+          {% if l.area %}<li>{{ icon('area') }}<span><b>{{ nf(l.area) }}<small>m²</small></b> {{ t.built }}</span></li>{% endif %}
+          {% if l.parking %}<li>{{ icon('car') }}<span><b>{{ l.parking }}</b> {{ t.park1 if l.parking == 1 else t.parks }}</span></li>{% endif %}
           {% endif %}
         </ul>
         <div class="det-actions" data-actions>
