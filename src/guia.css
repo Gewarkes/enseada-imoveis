@@ -630,3 +630,9 @@ h1,h2{hyphens:manual!important;-webkit-hyphens:manual!important;text-wrap:balanc
 .seg [aria-pressed=false]:hover,.seg a:not([aria-current=true]):hover{opacity:1}
 @media (min-width:900px){.foot-grid{grid-template-columns:minmax(0,1fr) minmax(0,1.7fr) minmax(250px,.85fr)}.foot-links a{white-space:normal}}
 .news .btn{white-space:nowrap}
+
+/* up27: Karten gleich hoch, Preiszeile fest, Hinweiskästen volle Breite */
+.card-body .card-price{margin-top:auto}.card-sub{min-height:2.9em}
+.facts{flex-wrap:nowrap;gap:4px 10px}.facts li span{white-space:nowrap}
+@media (max-width:420px){.facts{font-size:.78rem;gap:4px 8px}}
+.note{width:100%}.note p{text-wrap:pretty}

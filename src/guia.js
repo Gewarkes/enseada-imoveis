@@ -176,8 +176,8 @@
     if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { segs.forEach(function (s) { s.classList.remove('anim'); place(s); requestAnimationFrame(function () { requestAnimationFrame(function () { s.classList.add('anim'); }); }); }); });
     /* Weicher Seitenwechsel ohne Neuladen: Seite holen, Inhalt tauschen, Scrollposition behalten */
     var HEADSEL = 'link[rel=alternate],link[rel=canonical],meta[name=description],meta[property^="og:"],meta[name^="twitter:"],script[type="application/ld+json"]';
-    var swap = function (url, html) {
-      var doc = new DOMParser().parseFromString(html, 'text/html'), y = window.scrollY;
+    var swap = function (url, html, top) {
+      var doc = new DOMParser().parseFromString(html, 'text/html'), y = top ? 0 : window.scrollY;
       var run = function () {
         history.pushState({ soft: 1 }, '', url);
         document.title = doc.title; document.documentElement.lang = doc.documentElement.lang;
@@ -198,16 +198,27 @@
           if (o.src) loads.push(new Promise(function (r) { s.onload = s.onerror = r; }));
           o.parentNode.replaceChild(s, o);
         });
-        window.scrollTo(0, y);
-        return Promise.all(loads).then(function () { window.scrollTo(0, y); window.dispatchEvent(new Event('scroll')); });
+        var hs = top && location.hash ? $(location.hash) : null, goY = function () { if (hs) hs.scrollIntoView(); else window.scrollTo(0, y); };
+        goY();
+        return Promise.all(loads).then(function () { goY(); window.dispatchEvent(new Event('scroll')); });
       };
       if (document.startViewTransition && !reduce) return document.startViewTransition(run).finished;
-      return Promise.resolve(run());
+      /* Safari ohne View Transitions: sanft ausblenden, tauschen, einblenden */
+      if (reduce) return Promise.resolve(run());
+      var b0 = document.body;
+      b0.style.transition = 'opacity .14s ease'; b0.style.opacity = '0';
+      return new Promise(function (r) { setTimeout(r, 150); }).then(function () {
+        var p = run(), b1 = document.body;
+        b1.style.transition = 'none'; b1.style.opacity = '0';
+        return Promise.resolve(p).then(function () {
+          requestAnimationFrame(function () { requestAnimationFrame(function () { b1.style.transition = 'opacity .2s ease'; b1.style.opacity = '1'; setTimeout(function () { b1.style.removeProperty('transition'); b1.style.removeProperty('opacity'); }, 260); }); });
+        });
+      });
     };
-    var softGo = function (url) {
+    var softGo = function (url, top, wait0) {
       var got = fetch(url, { credentials: 'same-origin' }).then(function (r) { if (!r.ok) throw new Error(r.status); return r.text(); });
-      var wait = new Promise(function (r) { setTimeout(r, DELAY); });
-      Promise.all([got, wait]).then(function (v) { return swap(url, v[0]); }).catch(function () { location.href = url; });
+      var wait = new Promise(function (r) { setTimeout(r, wait0 === 0 ? 0 : DELAY); });
+      Promise.all([got, wait]).then(function (v) { return swap(url, v[0], top); }).catch(function () { location.href = url; });
     };
     if (!window.__pop && window.__orig) { window.__pop = 1; window.__orig.w.call(window, 'popstate', function () { location.reload(); }); }
     /* Sprachlinks */
@@ -219,6 +230,18 @@
         $$('[data-lang]').forEach(function (x) { if (x.dataset.lang === a.dataset.lang) x.setAttribute('aria-current', 'true'); else x.removeAttribute('aria-current'); });
         softGo(target);
       });
+    });
+    /* Alle internen Seitenwechsel weich (Menü, Logo, Karten, Links) */
+    document.addEventListener('click', function (e) {
+      if (e.defaultPrevented || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button) return;
+      var a = e.target.closest && e.target.closest('a[href]');
+      if (!a || a.target || a.hasAttribute('download') || a.hasAttribute('data-lang') || a.closest('[data-slide]')) return;
+      var u; try { u = new URL(a.href, location.href); } catch (x) { return; }
+      if (u.origin !== location.origin || u.pathname.indexOf(BASE) !== 0) return;
+      if (/\/ficha\/|\.(pdf|xml|json|txt|jpe?g|png|webp|mp4|zip)$/i.test(u.pathname)) return;
+      if (u.pathname === location.pathname && u.search === location.search) return;
+      e.preventDefault();
+      softGo(u.pathname + u.search + u.hash, true, 0);
     });
     /* Tabs Alle / Kaufen / Mieten */
     var nav = $('[data-slide]');
