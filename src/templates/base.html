@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8">
 <script>addEventListener("pagereveal",function(){try{var s=JSON.parse(sessionStorage.getItem("langScroll")||"null");if(!s)return;var b="{{ base }}",p=location.pathname;if(p.indexOf(b)==0)p=p.slice(b.length);p=p.replace(/^(en|es|de)\//,"");if(s.p===p&&!location.hash){sessionStorage.removeItem("langScroll");scrollTo(0,s.y)}}catch(e){}})</script>
-<script type="speculationrules">{"prerender":[{"where":{"selector_matches":"[data-lang],[data-slide] a"},"eagerness":"moderate"}],"prefetch":[{"where":{"href_matches":"{{ base }}*"},"eagerness":"moderate"}]}</script>
+<script type="speculationrules">{"prerender":[{"where":{"selector_matches":"[data-lang],[data-slide] a"},"eagerness":"eager"}],"prefetch":[{"where":{"href_matches":"{{ base }}*"},"eagerness":"moderate"}]}</script>
 
 <script>try{var q=new URLSearchParams(location.search).get("theme");if(q==="dark"||q==="light")localStorage.setItem("theme",q);var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 {% block first %}{% endblock %}

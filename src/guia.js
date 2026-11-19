@@ -162,7 +162,7 @@
 
   /* up22: Daumen gleitet sofort, dann weicher Seitenwechsel; Sprache bleibt auf gleicher Seite */
   (function () {
-    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches, DELAY = reduce ? 0 : 230;
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches, DELAY = reduce ? 0 : 290;
     var BASE = S.base || '/', KEY = 'langScroll';
     var rel = function () { var p = location.pathname; if (p.indexOf(BASE) === 0) p = p.slice(BASE.length); return p.replace(/^(en|es|de)\//, ''); };
     /* Schalter (Sprache / Währung): Daumen unter der aktiven Taste */

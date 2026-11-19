@@ -51,7 +51,7 @@
     }).catch(function () {});
   }
   $$('[data-cur]').forEach(function (b) {
-    b.addEventListener('click', function () { cur = b.dataset.cur; LS.set('cur', cur); applyCur(); if (cur !== 'BRL') liveFx(); });
+    b.addEventListener('click', function () { cur = b.dataset.cur; LS.set('cur', cur); $$('[data-cur]').forEach(function (x) { x.setAttribute('aria-pressed', String(x.dataset.cur === cur)); }); setTimeout(function () { applyCur(); if (cur !== 'BRL') liveFx(); }, 280); });
   });
 
   /* ---------- Video im Einstieg: erst nach dem Laden der Seite, nicht bei Datensparen oder reduzierter Bewegung ---------- */
