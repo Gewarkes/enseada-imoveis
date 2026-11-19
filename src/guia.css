@@ -636,3 +636,9 @@ h1,h2{hyphens:manual!important;-webkit-hyphens:manual!important;text-wrap:balanc
 .facts{flex-wrap:nowrap;gap:4px 10px}.facts li span{white-space:nowrap}
 @media (max-width:420px){.facts{font-size:.78rem;gap:4px 8px}}
 .note{width:100%}.note p{text-wrap:pretty}
+
+/* up28: Antippen ohne sichtbaren Klick-Rahmen/Blitz, sofortige Reaktion */
+.tabs a,.tabs label,.seg a,.seg button,.nav a,.burger,.btn,.link,.card a,.chip-btn{-webkit-tap-highlight-color:transparent;touch-action:manipulation;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+.tabs a:focus:not(:focus-visible),.seg a:focus:not(:focus-visible),.seg button:focus:not(:focus-visible),.nav a:focus:not(:focus-visible),.tabs label:focus-within:not(:focus-visible){outline:none}
+.tabs a:active,.seg a:active,.seg button:active,.nav a:active{background-color:inherit;opacity:1;transform:none}
+.tabs input:focus-visible+label{outline:none}

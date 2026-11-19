@@ -162,7 +162,7 @@
 
   /* up22: Daumen gleitet sofort, dann weicher Seitenwechsel; Sprache bleibt auf gleicher Seite */
   (function () {
-    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches, DELAY = reduce ? 0 : 290;
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches, DELAY = reduce ? 0 : 230;
     var BASE = S.base || '/', KEY = 'langScroll';
     var rel = function () { var p = location.pathname; if (p.indexOf(BASE) === 0) p = p.slice(BASE.length); return p.replace(/^(en|es|de)\//, ''); };
     /* Schalter (Sprache / Währung): Daumen unter der aktiven Taste */
@@ -177,14 +177,16 @@
     /* Weicher Seitenwechsel ohne Neuladen: Seite holen, Inhalt tauschen, Scrollposition behalten */
     var HEADSEL = 'link[rel=alternate],link[rel=canonical],meta[name=description],meta[property^="og:"],meta[name^="twitter:"],script[type="application/ld+json"]';
     var swap = function (url, html, top) {
-      var doc = new DOMParser().parseFromString(html, 'text/html'), y = top ? 0 : window.scrollY;
+      var doc = new DOMParser().parseFromString(html, 'text/html'), y = top ? 0 : window.scrollY, anc = null;
+      /* Anker: das Element am oberen Bildschirmrand merken, damit die Seite trotz anderer Textlängen genau dort bleibt */
+      if (!top) { try { var all = $$('main *'); for (var k = 0; k < all.length; k++) { var rc = all[k].getBoundingClientRect(); if (rc.bottom > 48 && rc.height > 16 && rc.height < window.innerHeight * 0.6) { anc = { i: k, t: rc.top }; break; } } } catch (x) {} }
       var run = function () {
         history.pushState({ soft: 1 }, '', url);
         document.title = doc.title; document.documentElement.lang = doc.documentElement.lang;
         $$(HEADSEL, document.head).forEach(function (n) { n.remove(); });
         $$(HEADSEL, doc.head).forEach(function (n) { document.head.appendChild(document.importNode(n, true)); });
         if (window.__ac) window.__ac.abort();
-        window.__soft = true;
+        window.__soft = true; document.documentElement.style.overflow = '';
         var bd = document.body; bd.className = doc.body.className; bd.removeAttribute('style'); document.documentElement.style.removeProperty('overflow');
         bd.textContent = '';
         Array.prototype.slice.call(doc.body.childNodes).forEach(function (n) { bd.appendChild(document.importNode(n, true)); });
@@ -198,7 +200,11 @@
           if (o.src) loads.push(new Promise(function (r) { s.onload = s.onerror = r; }));
           o.parentNode.replaceChild(s, o);
         });
-        var hs = top && location.hash ? $(location.hash) : null, goY = function () { if (hs) hs.scrollIntoView(); else window.scrollTo(0, y); };
+        var hs = top && location.hash ? $(location.hash) : null, goY = function () {
+          if (hs) { hs.scrollIntoView({ behavior: 'instant' }); return; }
+          var el = anc && $$('main *')[anc.i];
+          if (el) window.scrollTo({ top: Math.max(0, el.getBoundingClientRect().top + window.scrollY - anc.t), behavior: 'instant' }); else window.scrollTo({ top: y, behavior: 'instant' });
+        };
         goY();
         return Promise.all(loads).then(function () { goY(); window.dispatchEvent(new Event('scroll')); });
       };
@@ -262,6 +268,6 @@
   /* Fallback ohne pagereveal (z. B. ältere Browser): Scrollposition nach Sprachwechsel */
   if (!('onpagereveal' in window)) {
     try { var sv = JSON.parse(sessionStorage.getItem('langScroll') || 'null'), pp = location.pathname; if (pp.indexOf(S.base || '/') === 0) pp = pp.slice((S.base || '/').length); pp = pp.replace(/^(en|es|de)\//, '');
-      if (sv) { sessionStorage.removeItem('langScroll'); if (sv.p === pp && !location.hash) window.scrollTo(0, sv.y); } } catch (e) {}
+      if (sv) { sessionStorage.removeItem('langScroll'); if (sv.p === pp && !location.hash) window.scrollTo({ top: sv.y, behavior: 'instant' }); } } catch (e) {}
   }
 })();
