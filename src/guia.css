@@ -571,3 +571,7 @@ h1,h2{hyphens:manual!important;-webkit-hyphens:manual!important;text-wrap:balanc
 .calc-res .calc-grid>div{align-content:start}
 .crumbs,.g-stand{color:#4F5C59}
 @media (max-width:380px){.sheet .seg a,.sheet .seg button{min-width:38px;padding-inline:6px}}
+/* up20: Filter-Gruppenüberschriften lesbar; Textlinks mit festem Strich */
+.more .mg h3{font-size:.9375rem!important;letter-spacing:.01em!important;text-transform:none!important;font-weight:700!important;color:var(--ink)!important;border-bottom-width:4px!important}
+.link{font-size:1rem!important;color:var(--ink)!important;border-bottom:2px solid var(--ink)!important;padding-bottom:3px!important}
+.link:hover{color:var(--brand)!important;border-color:var(--brand)!important}
