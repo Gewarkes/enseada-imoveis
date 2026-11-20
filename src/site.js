@@ -12,7 +12,7 @@
   $$('[data-lang]').forEach(function (a) { a.addEventListener('click', function () { LS.set('lang', a.dataset.lang); }); });
 
   /* ---------- Währung ---------- */
-  var SYM = { BRL: 'R$ ', USD: 'US$ ', EUR: '€ ' };
+  var NB = '\u00a0', SYM = { BRL: 'R$' + NB, USD: 'US$' + NB, EUR: '€' + NB };
   var fx = { USD: (S.fx || {}).USD || 0.178, EUR: (S.fx || {}).EUR || 0.16 };
   try { var fx0 = JSON.parse(sessionStorage.getItem('fx') || 'null'); if (fx0 && fx0.USD && fx0.EUR) fx = fx0; } catch (e) {}
   var cur = ['USD', 'EUR'].indexOf(LS.get('cur')) > -1 ? LS.get('cur') : 'BRL';
@@ -24,8 +24,8 @@
   }
   function fmtShort(v, c) {
     c = c || cur; v = conv(v, c);
-    if (v >= 1e6) return SYM[c] + nf(v / 1e6, v >= 1e7 ? 1 : 2).replace(/([.,]\d)0$/, '$1') + ' ' + T.mi;
-    if (v >= 1e3) return SYM[c] + nf(v / 1e3, v < 1e5 && v % 1000 ? 1 : 0) + ' ' + T.mil;
+    if (v >= 1e6) return SYM[c] + nf(v / 1e6, v >= 1e7 ? 1 : 2).replace(/([.,]\d)0$/, '$1') + NB + T.mi;
+    if (v >= 1e3) return SYM[c] + nf(v / 1e3, v < 1e5 && v % 1000 ? 1 : 0) + NB + T.mil;
     return SYM[c] + nf(v);
   }
   var curHooks = [];
@@ -144,12 +144,13 @@
       var WB = L.latLngBounds([-6.4463, -35.332], [-6.0532, -34.8926]);
       var live = true;
       if (live) {
-        L.tileLayer('https://mt{s}.google.com/vt/lyrs=m&hl=' + (document.documentElement.lang || 'pt').slice(0, 2) + '&x={x}&y={y}&z={z}', { subdomains: '0123', maxZoom: 19, attribution: 'Map data &copy; Google' }).addTo(map);
+        /* OpenStreetMap-Kacheln (Nutzungsrichtlinie erlaubt das mit Quellenangabe); detectRetina lädt auf Retina-Displays die doppelte Auflösung. Google-Kacheln direkt einzubinden ist laut Google nicht erlaubt. */
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19, detectRetina: true, attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors' }).addTo(map);
       } else {
         L.imageOverlay(S.base + 'assets/map-pipa-wide.jpg', WB).addTo(map);
         L.imageOverlay(S.base + 'assets/map-pipa.jpg', BB, { attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>' }).addTo(map);
       }
-      map.setMaxBounds(WB.pad(0.4)); map.options.maxZoom = live ? 19 : 15; el._fitMin = function () { map.invalidateSize(); map.setMinZoom(Math.max(9, map.getBoundsZoom(WB, true))); };
+      map.setMaxBounds(WB.pad(0.4)); map.options.maxZoom = live ? (window.devicePixelRatio > 1 ? 18 : 19) : 15; el._fitMin = function () { map.invalidateSize(); map.setMinZoom(Math.max(9, map.getBoundsZoom(WB, true))); };
       map.on('click', function () { map.scrollWheelZoom.enable(); map.dragging.enable(); });
       var zc = function () { el.classList.toggle('zoomed', map.getZoom() >= 14); }; map.on('zoomend', zc);
       var kind = el.dataset.map;
@@ -295,8 +296,8 @@
       var loan = price * (1 - down / 100), n = years * 12, i = Math.pow(1 + rate / 100, 1 / 12) - 1, first, last, interest;
       if (sys === 'sac') { var am = loan / n; first = am + loan * i; last = am + am * i; interest = i * loan * (n + 1) / 2; }
       else { first = last = i ? loan * i / (1 - Math.pow(1 + i, -n)) : loan / n; interest = first * n - loan; }
-      o('down').textContent = down + ' % · ' + fmt(price * down / 100);
-      o('years').textContent = years + ' ' + T.years;
+      o('down').textContent = down + NB + '% · ' + fmt(price * down / 100);
+      o('years').textContent = years + NB + T.years;
       o('first').textContent = fmt(first);
       o('firstfx').textContent = '≈ ' + (cur === 'BRL' ? fmt(first, 'USD') + ' · ' + fmt(first, 'EUR') : fmt(first, 'BRL'));
       o('last').textContent = fmt(last); o('loan').textContent = fmt(loan); o('interest').textContent = fmt(interest);

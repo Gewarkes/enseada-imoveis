@@ -26,6 +26,80 @@ def rd(f):
     return open(f, encoding='utf-8').read()
 
 
+# ---------- Feinschliff Umbrüche: Zusammengehöriges nie trennen, kein Einzelwort in der letzten Zeile ----------
+import re as _re
+_NB = ' '
+_CLOSE = _re.compile(r'^</(?:p|li|td|th|dd|dt|h1|h2|h3|h4|summary|label|small|blockquote|figcaption|a|b|strong|em|span|div|button|output|i|s)>', _re.I)
+_UNITS = (r'm²|m2|km²|km|ha|%|h|Uhr|min|kg|dias?|days?|Tage[n]?|d[ií]as?|semanas?|weeks?|Wochen?|meses|months?|Monate[n]?|anos?|years?|Jahre[n]?|años?|'
+          r'quartos?|bedrooms?|Schlafzimmer|dormitorios?|banheiros?|bathrooms?|Bäder|baños?|vagas?|suítes?|suites?|Zimmer|Bäder|Mi|Mio\.?|mil|Tsd\.?')
+_TOKEN = _re.compile(
+    r'(?P<mail>[\w.+-]+@[\w-]+(?:\.[\w-]+)+)'
+    r'|(?P<phone>\+\d{1,3}(?:[  ]\(?\d+\)?)+(?:-\d+)?)'
+    r'|(?P<creci>CRECI(?:/[A-Z]{2})?[  ]?\d[\d.]*(?:-[0-9A-Z])?)'
+    r'|(?P<ref>\b(?:Ref\.?|Nr\.?|Nº|No\.|Tel\.?)[  ]?[A-Z0-9][\w./-]*)'
+    r'|(?P<price>(?:R\$|US\$|€)[  ]?\d[\d.,]*(?:[  ](?:Mi|Mio\.?|mil|Tsd\.?))?)'
+    r'|(?P<price2>\d[\d.,]*[  ](?:€|R\$|US\$))'
+    r'|(?P<unit>\d[\d.,]*[  ]?(?:' + _UNITS + r')(?![\wÀ-ÿ]))'
+    r'|(?P<code>\b\d{3,}-[0-9A-Z]\b)')
+
+def _tail_join(piece):
+    """Letzte zwei Wörter zusammenhalten (kein Einzelwort in der letzten Zeile). Passt das Paar nicht in die Spalte, löst guia.js die Bindung wieder (.tj.off)."""
+    m = _re.match(r'^(.*?)(\s*)$', piece, _re.S)
+    core, trail = m.groups()
+    i = core.rfind(' ')
+    if i < 0: return piece
+    a, b = core[:i], core[i + 1:]
+    j = a.rfind(' ')
+    prev = a[j + 1:]
+    if not prev or not b: return piece
+    if '&' in prev + b and ';' not in prev + b: return piece
+    if len(prev) + len(b) + 1 > 26: return piece
+    if not _re.search(r'[\wÀ-ÿ]', b) or not _re.search(r'[\wÀ-ÿ]', prev): return piece
+    return a[:j + 1] + '<span class="tj">' + prev + ' ' + b + '</span>' + trail
+
+def _nb_tokens(txt, tail):
+    out = []; pos = 0
+    for m in _TOKEN.finditer(txt):
+        out.append(txt[pos:m.start()]); out.append('<span class="nb">' + m.group(0) + '</span>'); pos = m.end()
+    last = txt[pos:]
+    out.append(_tail_join(last) if tail and last.strip() else last)
+    return ''.join(out)
+
+_VOID = {'br', 'img', 'hr', 'input', 'meta', 'link', 'source', 'wbr', 'path', 'use', 'circle', 'rect', 'line', 'polyline', 'polygon', 'area', 'col'}
+_PLAIN = {'p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'td', 'th', 'dd', 'dt', 'blockquote', 'figcaption',
+          'b', 'strong', 'em', 'i', 'small', 'cite', 'u', 'mark', 'sub', 'sup', 'code', 'abbr', 'time'}
+
+
+def typo(html):
+    i = html.find('<body')
+    if i < 0: return html
+    head, body = html[:i], html[i:]
+    parts = _re.split(r'(<[^>]*>)', body)
+    out = []; skip = 0; stack = []
+    for k, p in enumerate(parts):
+        if k % 2 == 1:
+            low = p.lower()
+            if _re.match(r'<(script|style|textarea|title|svg|option|select)\b', low) and not low.endswith('/>'): skip += 1
+            elif _re.match(r'</(script|style|textarea|title|svg|option|select)>', low): skip = max(0, skip - 1)
+            m = _re.match(r'<(/?)([a-z0-9]+)', low)
+            if m and not skip:
+                if m.group(1):
+                    if m.group(2) in stack:
+                        while stack and stack.pop() != m.group(2): pass
+                elif m.group(2) not in _VOID and not low.endswith('/>'):
+                    stack.append(m.group(2))
+            out.append(p); continue
+        if skip or not p.strip():
+            out.append(p); continue
+        nxt = parts[k + 1] if k + 1 < len(parts) else ''
+        r = _nb_tokens(p, bool(_CLOSE.match(nxt)))
+        # Textlauf in Flex-/Grid-Eltern bleibt EIN Element (sonst zerfaellt er in Spalten)
+        if r != p and (stack[-1] if stack else '') not in _PLAIN:
+            r = '<span class="tx">' + r + '</span>'
+        out.append(r)
+    return head + ''.join(out)
+
+
 def wr(f, s):
     os.makedirs(os.path.dirname(f) or '.', exist_ok=True)
     open(f, 'w', encoding='utf-8').write(s)
@@ -480,7 +554,7 @@ for lang in LANGS:
         og = c['imgabs'](c['l']['imgs'][0] if 'l' in c else (c['p']['img'] if 'p' in c else HERO))
         c.update(oglocale={'pt': 'pt_BR', 'en': 'en_US', 'es': 'es_ES', 'de': 'de_DE'}[lang], title=title, desc=desc, canonical=c['abs'](route), ogimg=og, ld=Markup(ld(graph)), noindex=False,
                  alts=[(HL[x], ORIGIN + BASE + path(route, x)) for x in LANGS], xdef=ORIGIN + BASE + path(route, 'pt'))
-        out = env.get_template(tpl).render(**c)
+        out = typo(env.get_template(tpl).render(**c))
         wr(f'{D}/{path(route, lang)}index.html', out)
         urls.append((route, lang))
 
@@ -495,7 +569,7 @@ for lang in LANGS:
 
 c = make_ctx('pt', 'home')
 c.update(oglocale='pt_BR', title=site['brandFull'], desc='', canonical='', ogimg='', ld=Markup('{}'), noindex=True, alts=[], xdef='')
-wr(f'{D}/404.html', env.get_template('404.html').render(**c))
+wr(f'{D}/404.html', typo(env.get_template('404.html').render(**c)))
 
 # ---------- 7 sitemap, robots, llms.txt, IndexNow ----------
 today = datetime.date.today().isoformat()

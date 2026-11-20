@@ -375,3 +375,22 @@
   });
   sync();
 })();
+
+/* up33: fest verbundene Wortpaare (.tj) und Zusammengehöriges (.nb) wieder lösen, wenn sie nicht in die Spalte bzw. auf den Bildschirm passen (kein seitliches Überlaufen) */
+(function () {
+  var $$ = function (s) { return Array.prototype.slice.call(document.querySelectorAll(s)); };
+  var timer, fit = function () {
+    var els = $$('.tj, .nb'), vw = document.documentElement.clientWidth;
+    els.forEach(function (e) { e.classList.remove('off'); });
+    els.forEach(function (e) {
+      var r = e.getBoundingClientRect(); if (!r.width) return;
+      var b = e.parentElement;
+      while (b && /^inline/.test(getComputedStyle(b).display) && b.parentElement) b = b.parentElement;
+      var sc = e.closest('.rail,.card-photos,.chips,.filter-row,.lb-track');
+      if ((b && b.scrollWidth > b.clientWidth + 1) || (!sc && r.right > vw - 16)) e.classList.add('off');
+    });
+  };
+  fit();
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+  window.addEventListener('resize', function () { clearTimeout(timer); timer = setTimeout(fit, 150); }, { passive: true });
+})();

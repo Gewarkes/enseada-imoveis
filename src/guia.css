@@ -703,3 +703,36 @@ a,button,select,summary,label,input,[data-fav],.wa-fab{-webkit-tap-highlight-col
   .head,.head::before,.head::after,.head-in{transition:none}
   .btn:active,.burger:active,.card-fav:active,.fav-pill:active,.chip-btn:active,.wc:active,.wa-fab:active,.tgl:active span{scale:1}
 }
+
+/* ===== up33 Feinschliff Umbrüche + Zeilenabstand =====
+   Zusammengehöriges (Preis mit Währung, Zahl mit Einheit, Telefon, CRECI, E-Mail) steht in <span class="nb"> (Build) bzw. mit festem Leerzeichen (JS). */
+.nb,.tj{white-space:nowrap}
+.nb.off,.tj.off{white-space:normal}
+.nb.off{overflow-wrap:anywhere}
+h1,h2,h3,h4,summary,dt,th,.btn,.link,.card-title,.badge,.kicker,.tile div,label,.tl-d{text-wrap:balance}
+p,li,td,dd,blockquote,small,figcaption,.card-sub,.form-note,.map-note span,.demo-note,.crumbs,.sec-head p{text-wrap:pretty}
+/* Hinweistexte: kleiner Text bekommt den engeren Zeilenabstand der Seite (1,5), nicht den 1,6 des Fließtexts */
+.map-note,.demo-note,small,.crumbs,.g-stand,.mk small,.dist span{line-height:1.5}
+.map-note .ico{margin-top:2px}
+/* up33: schmale Bildschirme – Spalten dürfen schrumpfen, nichts läuft über */
+@media (max-width:799px){
+.foot-grid,.contact-grid,.channels,.det,.det-main,.det-side,.faq,.gal{grid-template-columns:minmax(0,1fr)}
+.foot-cols{grid-template-columns:repeat(2,minmax(0,1fr))}
+.det>*,.det-main>*,.det-side>*,.contact-grid>*,.foot-grid>*,.foot-cols>*,.channels>*{min-width:0}
+}
+.channel>*,.foot-contact li>*,.know-g a>*{min-width:0}
+@media (max-width:380px){
+.know-g{grid-template-columns:minmax(0,1fr)}
+.channel{flex-direction:column;align-items:flex-start;gap:8px}
+.btn-lg{padding-inline:16px}
+}
+@media (max-width:899px){.calc{grid-template-columns:minmax(0,1fr)}}
+.calc>*,.calc-box>*,.calc-res>*,.calc-grid>*,.tl-b,.tl-i>*{min-width:0}
+.tl-d{white-space:normal}
+.feats li,.feats li span{text-wrap:balance}
+@media (max-width:380px){
+.feats{grid-template-columns:minmax(0,1fr)}
+.calc-grid{grid-template-columns:minmax(0,1fr)}
+}
+.sec-head>*,.split>*,.cta>*,.page-head>*,.det-top>*{min-width:0}
+.tj.off{overflow-wrap:anywhere}
