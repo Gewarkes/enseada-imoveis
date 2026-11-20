@@ -202,10 +202,19 @@
   {
    "t": "h2",
    "x": {
-    "pt": "C. Com financiamento (para quem mora no Brasil): 50 a 80 dias. Antes de pagar sinal, confira os documentos. Se pagar antes da aprovação do crédito, inclua no contrato que o sinal volta se o banco negar o financiamento.",
-    "en": "C. Financed (for people living in Brazil): 50 to 80 days. Check the documents before paying any deposit (sinal). If you pay before the loan is approved, put in the contract that the deposit is refunded if the bank refuses the loan.",
-    "es": "C. Con financiamiento (para quien vive en Brasil): 50 a 80 días. Revisa los documentos antes de pagar cualquier seña. Si pagas antes de la aprobación del crédito, pon en el contrato que la seña se devuelve si el banco rechaza el financiamiento.",
-    "de": "C. Mit Finanzierung (für Menschen, die in Brasilien leben): 50 bis 80 Tage. Prüfe die Unterlagen, bevor du ein Sinal zahlst. Zahlst du vor der Kreditzusage, schreibe in den Vertrag, dass das Sinal zurückgezahlt wird, wenn die Bank die Finanzierung ablehnt."
+    "pt": "C. Com financiamento (para quem mora no Brasil): 50 a 80 dias.",
+    "en": "C. Financed (for people living in Brazil): 50 to 80 days.",
+    "es": "C. Con financiamiento (para quien vive en Brasil): 50 a 80 días.",
+    "de": "C. Mit Finanzierung (für Menschen, die in Brasilien leben): 50 bis 80 Tage."
+   }
+  },
+  {
+   "t": "p",
+   "x": {
+    "pt": "Antes de pagar sinal, confira os documentos. Se pagar antes da aprovação do crédito, inclua no contrato que o sinal volta se o banco negar o financiamento.",
+    "en": "Check the documents before paying any deposit (sinal). If you pay before the loan is approved, put in the contract that the deposit is refunded if the bank refuses the loan.",
+    "es": "Revisa los documentos antes de pagar cualquier seña. Si pagas antes de la aprobación del crédito, pon en el contrato que la seña se devuelve si el banco rechaza el financiamiento.",
+    "de": "Prüfe die Unterlagen, bevor du ein Sinal zahlst. Zahlst du vor der Kreditzusage, schreibe in den Vertrag, dass das Sinal zurückgezahlt wird, wenn die Bank die Finanzierung ablehnt."
    }
   },
   {

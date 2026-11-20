@@ -127,7 +127,7 @@
     {% endfor %}
     {% if pg.sources %}
     <h2 class="g-h2">{{ t.gSources }}</h2>
-    <ul class="g-ul g-src">{% for s in pg.sources %}<li>{{ s[0] }}</li>{% endfor %}</ul>
+    <ul class="g-ul g-src">{% for s in pg.sources %}<li>{% set _s = s[0] | replace(' (link exato da consulta: não confirmado)', '') %}{% if lang == 'en' %}{{ _s | replace('consulta em', 'accessed on') | replace('consulta pública de corretores', 'public broker register') | replace('Guias de cartório e portais', 'Registry guides and portals') | replace('terrenos de marinha', 'marinha land') }}{% elif lang == 'es' %}{{ _s | replace('consulta em', 'consultado el') | replace('consulta pública de corretores', 'consulta pública de corredores') | replace('Guias de cartório e portais', 'Guías de notaría y portales') | replace('terrenos de marinha', 'terrenos de marina') }}{% elif lang == 'de' %}{{ _s | replace('consulta em', 'abgerufen am') | replace('consulta pública de corretores', 'öffentliche Maklersuche') | replace('Guias de cartório e portais', 'Notariats-Leitfäden und Portale') | replace('terrenos de marinha', 'Küstengrundstücke der Union (terrenos de marinha)') }}{% else %}{{ _s }}{% endif %}</li>{% endfor %}</ul>
     {% endif %}
   </div>
 </section>

@@ -4,14 +4,14 @@
   var $ = function (q, r) { return (r || document).querySelector(q); }, $$ = function (q, r) { return Array.prototype.slice.call((r || document).querySelectorAll(q)); };
   var nf = function (n, d) { return Number(n).toLocaleString(S.lang === 'en' ? 'en-US' : (S.lang === 'es' ? 'es-AR' : (S.lang === 'de' ? 'de-DE' : 'pt-BR')), { minimumFractionDigits: d || 0, maximumFractionDigits: d || 0 }); };
   /* ---------- Rechner und Checklisten der Guide-Seiten ---------- */
-  var num = function (v) { v = String(v || '').replace(/[^\d,.-]/g, ''); if (/,\d{1,2}$/.test(v)) v = v.replace(/\./g, '').replace(',', '.'); else v = v.replace(/[.,]/g, ''); return parseFloat(v) || 0; };
-  var rs = function (v) { return 'R$ ' + nf(Math.round(v)); };
+  var num = function (v) { v = String(v || '').replace(/[^\d,.-]/g, ''); if (S.lang === 'en') return parseFloat(v.replace(/,/g, '')) || 0; if (/,\d{1,2}$/.test(v)) v = v.replace(/\./g, '').replace(',', '.'); else v = v.replace(/[.,]/g, ''); return parseFloat(v) || 0; };
+  var rs = function (v) { return 'R$\u00a0' + nf(Math.round(v)); };
   var TX = S.taxes || {};
   $$('[data-w=buycosts]').forEach(function (w) {
     var g = function (k) { return $('[data-i=' + k + ']', w); }, o = function (k, v) { $('[data-o=' + k + ']', w).textContent = v; };
     function run() {
       var p = num(g('price').value), itiv = p * num(g('itiv').value) / 100, lo = p * ((TX.iof || {}).min || 0) / 100, hi = p * ((TX.iof || {}).max || 0.38) / 100;
-      var tr = num(g('docs').value) * (TX.docPrice || 129), reg = num(g('reg').value), law = num(g('law').value);
+      var tr = Math.max(0, num(g('docs').value)) * (TX.docPrice || 129), reg = num(g('reg').value), law = num(g('law').value);
       var nt = TX.notar || {}, nok = p === nt.example_price;
       o('itiv', rs(itiv)); o('iof', rs(lo) + ' – ' + rs(hi)); o('tr', rs(tr));
       o('not', nok ? rs(nt.value) + ' (' + T.cbNotEx + ')' : T.cbNotOpen);
@@ -144,7 +144,7 @@
     if (pill) { pill.hidden = !favs.length; $('[data-fav-n]', pill).textContent = favs.length; }
     var list = $('[data-fav-list]', sheet || document);
     if (list) {
-      list.innerHTML = favs.length ? favs.map(function (x) { return '<div class="fav-r"><a href="' + x.url + '">' + x.name.replace(/</g, '&lt;') + '</a><span>R$ ' + nf(x.price) + '</span><button type="button" data-fav-rm="' + x.slug + '" aria-label="×">×</button></div>'; }).join('') : '<p>' + V.mlEmpty + '</p>';
+      list.innerHTML = favs.length ? favs.map(function (x) { return '<div class="fav-r"><a href="' + x.url + '">' + x.name.replace(/</g, '&lt;') + '</a><span data-brl="' + x.price + '">R$ ' + nf(x.price) + '</span><button type="button" data-fav-rm="' + x.slug + '" aria-label="×">×</button></div>'; }).join('') : '<p>' + V.mlEmpty + '</p>';
       if (window.__applyCur) window.__applyCur(); var wl = [V.mlMsg, ''].concat(favs.map(function (x) { return x.name + ' – R$ ' + nf(x.price) + '\n' + location.origin + favUrl(x.slug); }));
       var a = $('[data-fav-wa]', sheet); if (a) { a.href = waLink(wl.join('\n')); a.hidden = !favs.length; }
     }
@@ -162,7 +162,7 @@
 
   /* up22: Daumen gleitet sofort, dann weicher Seitenwechsel; Sprache bleibt auf gleicher Seite */
   (function () {
-    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches, DELAY = reduce ? 0 : 230;
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches, DELAY = reduce ? 0 : 190;
     var BASE = S.base || '/', KEY = 'langScroll';
     var rel = function () { var p = location.pathname; if (p.indexOf(BASE) === 0) p = p.slice(BASE.length); return p.replace(/^(en|es|de)\//, ''); };
     /* Schalter (Sprache / Währung): Daumen unter der aktiven Taste */
@@ -176,12 +176,26 @@
     if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { segs.forEach(function (s) { s.classList.remove('anim'); place(s); requestAnimationFrame(function () { requestAnimationFrame(function () { s.classList.add('anim'); }); }); }); });
     /* Weicher Seitenwechsel ohne Neuladen: Seite holen, Inhalt tauschen, Scrollposition behalten */
     var HEADSEL = 'link[rel=alternate],link[rel=canonical],meta[name=description],meta[property^="og:"],meta[name^="twitter:"],script[type="application/ld+json"]';
-    var swap = function (url, html, top) {
-      var doc = new DOMParser().parseFromString(html, 'text/html'), y = top ? 0 : window.scrollY, anc = null;
-      /* Anker: das Element am oberen Bildschirmrand merken, damit die Seite trotz anderer Textlängen genau dort bleibt */
-      if (!top) { try { var all = $$('main *'); for (var k = 0; k < all.length; k++) { var rc = all[k].getBoundingClientRect(); if (rc.bottom > 48 && rc.height > 16 && rc.height < window.innerHeight * 0.6) { anc = { i: k, t: rc.top }; break; } } } catch (x) {} }
+    var swap = function (url, html, top, pop) {
+      var doc = new DOMParser().parseFromString(html, 'text/html'), y = top ? 0 : (pop && pop.y != null ? pop.y : window.scrollY), anc = null;
+      /* Anker: Position über stabile Struktur halten (Tabs bzw. Abschnitt + Anteil), nicht über Textlänge */
+      if (!top && !pop) { try {
+        var tb = $('[data-slide]'), mk = $('main');
+        if (tb && doc.querySelector('[data-slide]')) anc = { k: 't', t: tb.getBoundingClientRect().top };
+        else if (mk) {
+          var path = [], el = mk, fin = null;
+          for (var dpt = 0; dpt < 6; dpt++) {
+            var ch = Array.prototype.slice.call(el.children), hit = -1;
+            for (var k = 0; k < ch.length; k++) { var rc = ch[k].getBoundingClientRect(); if (rc.bottom > 8 && rc.height > 0) { hit = k; break; } }
+            if (hit < 0) break;
+            path.push(hit); el = ch[hit]; fin = el;
+            if (el.getBoundingClientRect().height < window.innerHeight * 1.2 || !el.children.length) break;
+          }
+          if (fin) { var fr = fin.getBoundingClientRect(); anc = { k: 's', p: path, f: Math.max(0, -fr.top) / fr.height, t: fr.top }; }
+        }
+      } catch (x) {} }
       var run = function () {
-        history.pushState({ soft: 1 }, '', url);
+        try { history.replaceState({ soft: 1, y: window.scrollY }, ''); } catch (x) {} if (!pop) { history.pushState({ soft: 1, y: top ? 0 : y }, '', url); window.__lastP = location.pathname + location.search; }
         document.title = doc.title; document.documentElement.lang = doc.documentElement.lang;
         $$(HEADSEL, document.head).forEach(function (n) { n.remove(); });
         $$(HEADSEL, doc.head).forEach(function (n) { document.head.appendChild(document.importNode(n, true)); });
@@ -200,33 +214,51 @@
           if (o.src) loads.push(new Promise(function (r) { s.onload = s.onerror = r; }));
           o.parentNode.replaceChild(s, o);
         });
-        var hs = top && location.hash ? $(location.hash) : null, goY = function () {
+        var hs = top && !pop && location.hash ? $(location.hash) : null, goY = function () {
           if (hs) { hs.scrollIntoView({ behavior: 'instant' }); return; }
-          var el = anc && $$('main *')[anc.i];
-          if (el) window.scrollTo({ top: Math.max(0, el.getBoundingClientRect().top + window.scrollY - anc.t), behavior: 'instant' }); else window.scrollTo({ top: y, behavior: 'instant' });
+          var ny = null;
+          if (anc && anc.k === 't') { var t2 = $('[data-slide]'); if (t2) ny = t2.getBoundingClientRect().top + window.scrollY - anc.t; }
+          else if (anc && anc.k === 's') { var c2 = $('main'); for (var q = 0; c2 && q < anc.p.length; q++) c2 = c2.children[anc.p[q]]; if (c2) { var r2 = c2.getBoundingClientRect(); ny = r2.top + window.scrollY + (anc.t >= 0 ? -anc.t : anc.f * r2.height); } }
+          window.scrollTo({ top: Math.max(0, ny == null ? y : ny), behavior: 'instant' });
         };
         goY();
+        if (pop) { setTimeout(goY, 120); setTimeout(goY, 400); }
         return Promise.all(loads).then(function () { goY(); window.dispatchEvent(new Event('scroll')); });
       };
       if (document.startViewTransition && !reduce) return document.startViewTransition(run).finished;
       /* Safari ohne View Transitions: sanft ausblenden, tauschen, einblenden */
       if (reduce) return Promise.resolve(run());
-      var b0 = document.body;
-      b0.style.transition = 'opacity .14s ease'; b0.style.opacity = '0';
-      return new Promise(function (r) { setTimeout(r, 150); }).then(function () {
-        var p = run(), b1 = document.body;
-        b1.style.transition = 'none'; b1.style.opacity = '0';
-        return Promise.resolve(p).then(function () {
-          requestAnimationFrame(function () { requestAnimationFrame(function () { b1.style.transition = 'opacity .2s ease'; b1.style.opacity = '1'; setTimeout(function () { b1.style.removeProperty('transition'); b1.style.removeProperty('opacity'); }, 260); }); });
-        });
+      var p = run(), b1 = document.body; b1.style.transition = 'none'; b1.style.opacity = '0';
+      return Promise.resolve(p).then(function () {
+        requestAnimationFrame(function () { requestAnimationFrame(function () { b1.style.transition = 'opacity .16s ease'; b1.style.opacity = '1'; setTimeout(function () { b1.style.removeProperty('transition'); b1.style.removeProperty('opacity'); }, 260); }); });
       });
     };
-    var softGo = function (url, top, wait0) {
-      var got = fetch(url, { credentials: 'same-origin' }).then(function (r) { if (!r.ok) throw new Error(r.status); return r.text(); });
-      var wait = new Promise(function (r) { setTimeout(r, wait0 === 0 ? 0 : DELAY); });
-      Promise.all([got, wait]).then(function (v) { return swap(url, v[0], top); }).catch(function () { location.href = url; });
+    var cache = window.__cache = window.__cache || {}, fetchPage = function (url) {
+      if (!cache[url]) cache[url] = fetch(url, { credentials: 'same-origin' }).then(function (r) { if (!r.ok) throw new Error(r.status); return r.text(); });
+      cache[url].catch(function () { delete cache[url]; });
+      return cache[url];
     };
-    if (!window.__pop && window.__orig) { window.__pop = 1; window.__orig.w.call(window, 'popstate', function () { location.reload(); }); }
+    var softGo = function (url, top, wait0, pop) {
+      var got = fetchPage(url), fb = !(document.startViewTransition && !reduce) && !reduce;
+      if (fb) { var b0 = document.body; b0.style.transition = 'opacity .11s ease'; b0.style.opacity = '0'; }
+      var wait = new Promise(function (r) { setTimeout(r, fb ? Math.max(115, wait0 === 0 ? 0 : DELAY) : (wait0 === 0 ? 0 : DELAY)); });
+      return Promise.all([got, wait]).then(function (v) { return swap(url, v[0], top, pop); }).catch(function () { location.href = url; });
+    };
+    try { history.scrollRestoration = 'manual'; } catch (x) {}
+    if (!window.__pop && window.__orig) {
+      window.__pop = 1;
+      var st = 0; window.__orig.w.call(window, 'scroll', function () { if (st) return; st = setTimeout(function () { st = 0; try { history.replaceState({ soft: 1, y: window.scrollY }, ''); } catch (x) {} }, 140); }, { passive: true });
+      window.__lastP = location.pathname + location.search;
+      window.__orig.w.call(window, 'popstate', function (e) {
+        var np = location.pathname + location.search; if (np === window.__lastP) return; window.__lastP = np;
+        var y = e.state && e.state.y != null ? e.state.y : 0;
+        softGo(location.pathname + location.search, false, 0, { y: y });
+      });
+    }
+    /* beim Antippen schon vorladen (spart die Wartezeit), im Leerlauf die anderen Sprachen */
+    var warm = function (a) { try { var u = new URL(a.href, location.href); if (u.origin === location.origin) fetchPage(u.pathname + u.search); } catch (x) {} };
+    document.addEventListener('pointerdown', function (e) { var a = e.target.closest && e.target.closest('a[href]'); if (a && !a.target) warm(a); }, { passive: true, capture: true });
+    var cn = navigator.connection || {}; if (!cn.saveData && (!cn.effectiveType || cn.effectiveType === '4g')) setTimeout(function () { $$('[data-lang]').forEach(function (a) { if (!a.getAttribute('aria-current')) warm(a); }); }, 2500);
     /* Sprachlinks */
     $$('[data-lang]').forEach(function (a) {
       a.addEventListener('click', function (e) {
@@ -245,7 +277,10 @@
       var u; try { u = new URL(a.href, location.href); } catch (x) { return; }
       if (u.origin !== location.origin || u.pathname.indexOf(BASE) !== 0) return;
       if (/\/ficha\/|\.(pdf|xml|json|txt|jpe?g|png|webp|mp4|zip)$/i.test(u.pathname)) return;
-      if (u.pathname === location.pathname && u.search === location.search) return;
+      if (u.pathname === location.pathname && u.search === location.search) {
+        if (u.hash && u.hash.length > 1) { var tg = document.getElementById(decodeURIComponent(u.hash.slice(1))); if (tg) { e.preventDefault(); tg.scrollIntoView({ behavior: 'smooth' }); try { history.replaceState(history.state, '', u.pathname + u.search + u.hash); } catch (x) {} } }
+        return;
+      }
       e.preventDefault();
       softGo(u.pathname + u.search + u.hash, true, 0);
     });

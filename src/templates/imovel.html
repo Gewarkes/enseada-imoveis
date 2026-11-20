@@ -37,7 +37,7 @@
         </ul>
         <div class="det-price">
           <b>{{ price(l) }}</b>
-          {% if not l.por %}<span data-fxline data-brl="{{ l.price | int }}"></span>{% endif %}
+          {% if not l.por %}<span data-fxline data-brl="{{ l.price | int }}"></span> {% endif %}
           {% set sqm = l.area or l.lot %}{% if sqm and l.deal == 'venda' and not l.por %}<span>· <span data-brl="{{ (l.price / sqm) | round | int }}">{{ money(l.price / sqm) }}</span>/m²</span>{% endif %}
         </div>
         {% if lang != 'pt' and l.deal == 'venda' and not land and l.price >= taxes.residence.northeast %}<p class="ichip">{{ icon('user') }}<span>{{ t.resChip }} <a href="{{ url('residencia') }}">{{ t.resChipL }}</a></span></p>{% endif %}

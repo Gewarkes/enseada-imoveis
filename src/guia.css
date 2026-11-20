@@ -642,3 +642,18 @@ h1,h2{hyphens:manual!important;-webkit-hyphens:manual!important;text-wrap:balanc
 .tabs a:focus:not(:focus-visible),.seg a:focus:not(:focus-visible),.seg button:focus:not(:focus-visible),.nav a:focus:not(:focus-visible),.tabs label:focus-within:not(:focus-visible){outline:none}
 .tabs a:active,.seg a:active,.seg button:active,.nav a:active{background-color:inherit;opacity:1;transform:none}
 .tabs input:focus-visible+label{outline:none}
+/* up29: Ähnliche Objekte am Handy mittig (Karte zentriert, links/rechts gleich viel Rand) */
+@media (max-width:639px){.rail{grid-auto-columns:84%;padding-inline:8%;scroll-padding-inline:0}.rail>*{scroll-snap-align:center}}
+/* up29b: Rail mittig (Handy), Kennzahlen umbrechen, Footer, Preiszeile, Tap ohne Blitz */
+@media (max-width:639px){.rail{--cw:calc(100vw - 2*var(--pad) - 20px);grid-auto-columns:var(--cw);padding-inline:calc((100vw - var(--cw))/2);scroll-padding-inline:0}.rail>*{scroll-snap-align:center}}
+.facts{flex-wrap:wrap!important}
+.foot-areas .foot-links{column-gap:24px}
+@media (max-width:899px){.demo-note{padding-right:76px;padding-left:var(--pad)}}
+.det-price>span+span{margin-left:.35em}
+a,button,select,summary,label,input,[data-fav],.wa-fab{-webkit-tap-highlight-color:transparent}
+.wa-fab,[data-fav],.tabs a,.seg a,.seg button{touch-action:manipulation}
+/* up29c */
+@media (min-width:640px){.facts{min-height:60px}}
+.crumbs ol li,.crumbs li{white-space:nowrap}.crumbs li:last-child{white-space:normal}
+.leaflet-container a{-webkit-tap-highlight-color:transparent}
+.fav-pill{touch-action:manipulation}

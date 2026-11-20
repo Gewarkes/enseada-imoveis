@@ -14,6 +14,7 @@
   /* ---------- Währung ---------- */
   var SYM = { BRL: 'R$ ', USD: 'US$ ', EUR: '€ ' };
   var fx = { USD: (S.fx || {}).USD || 0.178, EUR: (S.fx || {}).EUR || 0.16 };
+  try { var fx0 = JSON.parse(sessionStorage.getItem('fx') || 'null'); if (fx0 && fx0.USD && fx0.EUR) fx = fx0; } catch (e) {}
   var cur = ['USD', 'EUR'].indexOf(LS.get('cur')) > -1 ? LS.get('cur') : 'BRL';
   function conv(v, c) { return c === 'BRL' ? v : v * fx[c]; }
   function fmt(v, c) {
