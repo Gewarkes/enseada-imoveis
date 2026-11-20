@@ -330,3 +330,46 @@
       if (sv) { sessionStorage.removeItem('langScroll'); if (sv.p === pp && !location.hash) window.scrollTo({ top: sv.y, behavior: 'instant' }); } } catch (e) {}
   }
 })();
+
+/* up31: Kopfzeile weich beim Scrollen + sanftes Einblenden (einmalig, gestaffelt) */
+(function () {
+  var $ = function (s, r) { return (r || document).querySelector(s); }, $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var head = $('.head'), ticking = false, pending = [];
+  var show = function (el) {
+    var i = pending.indexOf(el); if (i < 0) return; pending.splice(i, 1);
+    el.classList.add('rv-in');
+    setTimeout(function () { el.classList.remove('rv', 'rv-in'); el.style.removeProperty('--rv-i'); }, 1400);
+  };
+  var sync = function () {
+    ticking = false;
+    var y = window.scrollY || document.documentElement.scrollTop || 0;
+    if (head) { var on = head.classList.contains('sc'); if (!on && y > 12) head.classList.add('sc'); else if (on && y < 4) head.classList.remove('sc'); }
+    /* Ganz unten angekommen: alles Übrige zeigen (nichts bleibt versteckt) */
+    if (pending.length && y + window.innerHeight >= document.documentElement.scrollHeight - 4) pending.slice().forEach(show);
+  };
+  sync();
+  window.addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(sync); } }, { passive: true });
+  if (reduce || !('IntersectionObserver' in window)) return;
+  var main = $('main'); if (!main) return;
+  var H = window.innerHeight, GRID = '.grid,.tr-grid,.tiles,.faq,.points,.gcards,.stats,.steps,.tl', SKIP = '[data-map],[data-gallery],[data-lightbox],[data-slide],form,.det,.filters';
+  var items = [];
+  $$('.sec, .sec-tight', main).forEach(function (sec) {
+    var wr = $('.wrap', sec) || sec;
+    Array.prototype.slice.call(wr.children).forEach(function (u) {
+      if (u.matches(SKIP) || u.querySelector(SKIP)) return;
+      var group = u.matches(GRID) ? Array.prototype.slice.call(u.children, 0, 12) : [u];
+      group.forEach(function (el, i) { items.push([el, i]); });
+    });
+  });
+  var io = new IntersectionObserver(function (es) {
+    es.forEach(function (x) { if (x.isIntersecting) { io.unobserve(x.target); show(x.target); } });
+  }, { rootMargin: '0px 0px -48px 0px', threshold: 0 });
+  items.forEach(function (it) {
+    var el = it[0], r = el.getBoundingClientRect();
+    if (r.top < H * 0.92 || !r.height) return;
+    el.style.setProperty('--rv-i', Math.min(it[1], 5));
+    el.classList.add('rv'); pending.push(el); io.observe(el);
+  });
+  sync();
+})();
