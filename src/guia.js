@@ -164,6 +164,8 @@
   (function () {
     var VT = !!document.startViewTransition && window.innerWidth > 1180 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches, reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches, DELAY = reduce ? 0 : 190;
     var BASE = S.base || '/', KEY = 'langScroll';
+    /* Seitenwechsel ohne weißes Blitzen: kopfzeile bleibt stehen, nur Inhalt blendet kurz ab (nie ganz leer) */
+    var DIM = '.4', FZ = function () { return [$('main'), $('.foot')].filter(Boolean); };
     var rel = function () { var p = location.pathname; if (p.indexOf(BASE) === 0) p = p.slice(BASE.length); return p.replace(/^(en|es|de)\//, ''); };
     /* Schalter (Sprache / Währung): Daumen unter der aktiven Taste */
     var segs = $$('.seg');
@@ -222,9 +224,9 @@
       if (VT) { var vt = document.startViewTransition(run); vt.ready.catch(function () {}); return vt.finished.catch(function () {}); }
       /* Safari ohne View Transitions: sanft ausblenden, tauschen, einblenden */
       if (reduce) return Promise.resolve(run());
-      var p = run(), b1 = document.body; b1.style.transition = 'none'; b1.style.opacity = '0';
+      var p = run(), fz = FZ(); fz.forEach(function (e) { e.style.transition = 'none'; e.style.opacity = DIM; });
       return Promise.resolve(p).then(function () {
-        requestAnimationFrame(function () { requestAnimationFrame(function () { b1.style.transition = 'opacity .16s ease'; b1.style.opacity = '1'; setTimeout(function () { b1.style.removeProperty('transition'); b1.style.removeProperty('opacity'); }, 260); }); });
+        requestAnimationFrame(function () { requestAnimationFrame(function () { fz.forEach(function (e) { e.style.transition = 'opacity .2s ease'; e.style.opacity = '1'; }); setTimeout(function () { fz.forEach(function (e) { e.style.removeProperty('transition'); e.style.removeProperty('opacity'); }); }, 300); }); });
       });
     };
     var cache = window.__cache = window.__cache || {}, fetchPage = function (url) {
@@ -254,12 +256,12 @@
       return P[url];
     };
     var softGo = function (url, top, wait0, pop) {
-      var my = window.__navId = (window.__navId | 0) + 1, fb = !VT && !reduce, b0 = document.body;
+      var my = window.__navId = (window.__navId | 0) + 1, fb = !VT && !reduce;
       var got = prepPage(url).then(function (r) { delete window.__prep[url]; return r; });
       var wait = new Promise(function (r) { setTimeout(r, wait0 === 0 ? 0 : (wait0 || DELAY)); });
       /* Safari/Handy: erst ausblenden, wenn die Seite da ist (kein leerer Bildschirm bei langsamem Netz) */
-      var faded = fb ? got.then(function () { if (my !== window.__navId) return; b0.style.transition = 'opacity .1s ease'; b0.style.opacity = '0'; return new Promise(function (r) { setTimeout(r, 100); }); }, function () {}) : Promise.resolve();
-      return Promise.all([got, wait, faded]).then(function (v) { if (my !== window.__navId) return; return swap(url, v[0], top, pop); }).catch(function () { if (my !== window.__navId) return; b0.style.removeProperty('opacity'); b0.style.removeProperty('transition'); location.href = url; });
+      var faded = fb ? got.then(function () { if (my !== window.__navId) return; FZ().forEach(function (e) { e.style.transition = 'opacity .1s ease'; e.style.opacity = DIM; }); return new Promise(function (r) { setTimeout(r, 100); }); }, function () {}) : Promise.resolve();
+      return Promise.all([got, wait, faded]).then(function (v) { if (my !== window.__navId) return; return swap(url, v[0], top, pop); }).catch(function () { if (my !== window.__navId) return; FZ().forEach(function (e) { e.style.removeProperty('opacity'); e.style.removeProperty('transition'); }); location.href = url; });
     };
     try { history.scrollRestoration = 'manual'; } catch (x) {}
     if (!window.__pop && window.__orig) {
