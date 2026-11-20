@@ -124,7 +124,9 @@
   var leaflet;
   function loadLeaflet() {
     if (leaflet) return leaflet;
+    if (window.L && window.L.map) return (leaflet = Promise.resolve(window.L));
     leaflet = new Promise(function (ok, fail) {
+      if (document.querySelector('script[src$="leaflet.js"]')) { var t = setInterval(function () { if (window.L && window.L.map) { clearInterval(t); ok(window.L); } }, 30); return; }
       var l = document.createElement('link'); l.rel = 'stylesheet'; l.href = S.base + 'assets/leaflet.css'; document.head.appendChild(l);
       var s = document.createElement('script'); s.src = S.base + 'assets/leaflet.js'; s.onload = function () { ok(window.L); }; s.onerror = fail; document.head.appendChild(s);
     });
@@ -186,7 +188,7 @@
   }
   var maps = $$('[data-map]');
   if (maps.length && 'IntersectionObserver' in window) {
-    var io = new IntersectionObserver(function (es) { es.forEach(function (x) { if (x.isIntersecting) { io.unobserve(x.target); initMap(x.target); } }); }, { rootMargin: '300px' });
+    var io = new IntersectionObserver(function (es) { es.forEach(function (x) { if (x.isIntersecting) { io.unobserve(x.target); (function (tg) { (window.requestIdleCallback || function (f) { setTimeout(f, 200); })(function () { initMap(tg); }, { timeout: 1500 }); })(x.target); } }); }, { rootMargin: '300px' });
     maps.forEach(function (el) { if (!el.hasAttribute('data-lazy')) io.observe(el); });
   }
 

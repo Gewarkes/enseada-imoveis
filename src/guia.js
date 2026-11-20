@@ -162,7 +162,7 @@
 
   /* up22: Daumen gleitet sofort, dann weicher Seitenwechsel; Sprache bleibt auf gleicher Seite */
   (function () {
-    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches, DELAY = reduce ? 0 : 190;
+    var VT = !!document.startViewTransition && window.innerWidth > 1180 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches, reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches, DELAY = reduce ? 0 : 190;
     var BASE = S.base || '/', KEY = 'langScroll';
     var rel = function () { var p = location.pathname; if (p.indexOf(BASE) === 0) p = p.slice(BASE.length); return p.replace(/^(en|es|de)\//, ''); };
     /* Schalter (Sprache / Währung): Daumen unter der aktiven Taste */
@@ -176,24 +176,25 @@
     if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { segs.forEach(function (s) { s.classList.remove('anim'); place(s); requestAnimationFrame(function () { requestAnimationFrame(function () { s.classList.add('anim'); }); }); }); });
     /* Weicher Seitenwechsel ohne Neuladen: Seite holen, Inhalt tauschen, Scrollposition behalten */
     var HEADSEL = 'link[rel=alternate],link[rel=canonical],meta[name=description],meta[property^="og:"],meta[name^="twitter:"],script[type="application/ld+json"]';
-    var swap = function (url, html, top, pop) {
-      var doc = new DOMParser().parseFromString(html, 'text/html'), y = top ? 0 : (pop && pop.y != null ? pop.y : window.scrollY), anc = null;
+    var swap = function (url, pr, top, pop) {
+      var doc = pr.doc, y = top ? 0 : (pop && pop.y != null ? pop.y : window.scrollY), anc = null;
       /* Anker: Position über stabile Struktur halten (Tabs bzw. Abschnitt + Anteil), nicht über Textlänge */
       if (!top && !pop) { try {
         var tb = $('[data-slide]'), mk = $('main');
         if (tb && doc.querySelector('[data-slide]')) anc = { k: 't', t: tb.getBoundingClientRect().top };
         else if (mk) {
           var path = [], el = mk, fin = null;
-          for (var dpt = 0; dpt < 6; dpt++) {
+          for (var dpt = 0; dpt < 10; dpt++) {
             var ch = Array.prototype.slice.call(el.children), hit = -1;
             for (var k = 0; k < ch.length; k++) { var rc = ch[k].getBoundingClientRect(); if (rc.bottom > 8 && rc.height > 0) { hit = k; break; } }
             if (hit < 0) break;
             path.push(hit); el = ch[hit]; fin = el;
-            if (el.getBoundingClientRect().height < window.innerHeight * 1.2 || !el.children.length) break;
+            if (el.getBoundingClientRect().height < 220 || !el.children.length) break;
           }
           if (fin) { var fr = fin.getBoundingClientRect(); anc = { k: 's', p: path, f: Math.max(0, -fr.top) / fr.height, t: fr.top }; }
         }
       } catch (x) {} }
+      var barEl = $('[data-bar]'), barWas = !!(barEl && barEl.classList.contains('on'));
       var run = function () {
         try { history.replaceState({ soft: 1, y: window.scrollY }, ''); } catch (x) {} if (!pop) { history.pushState({ soft: 1, y: top ? 0 : y }, '', url); window.__lastP = location.pathname + location.search; }
         document.title = doc.title; document.documentElement.lang = doc.documentElement.lang;
@@ -203,17 +204,10 @@
         window.__soft = true; document.documentElement.style.overflow = '';
         var bd = document.body; bd.className = doc.body.className; bd.removeAttribute('style'); document.documentElement.style.removeProperty('overflow');
         bd.textContent = '';
-        Array.prototype.slice.call(doc.body.childNodes).forEach(function (n) { bd.appendChild(document.importNode(n, true)); });
+        bd.appendChild(pr.frag);
         var fb = bd.querySelector('.wa-fab'); if (fb && y > window.innerHeight * 0.6) { fb.style.transition = 'none'; fb.classList.add('on'); }
-        var loads = [];
-        $$('script', bd).forEach(function (o) {
-          if (o.type && !/javascript/.test(o.type)) return;
-          var s = document.createElement('script');
-          Array.prototype.slice.call(o.attributes).forEach(function (at) { if (at.name !== 'defer') s.setAttribute(at.name, at.value); });
-          s.async = false; s.text = o.text;
-          if (o.src) loads.push(new Promise(function (r) { s.onload = s.onerror = r; }));
-          o.parentNode.replaceChild(s, o);
-        });
+        var br = bd.querySelector('[data-bar]'); if (br && barWas && !top) { br.style.transition = 'none'; br.classList.add('on'); setTimeout(function () { br.style.removeProperty('transition'); }, 400); }
+        var loads = pr.loads;
         var hs = top && !pop && location.hash ? $(location.hash) : null, goY = function () {
           if (hs) { hs.scrollIntoView({ behavior: 'instant' }); return; }
           var ny = null;
@@ -223,9 +217,9 @@
         };
         goY();
         if (pop) { setTimeout(goY, 120); setTimeout(goY, 400); }
-        return Promise.all(loads).then(function () { goY(); window.dispatchEvent(new Event('scroll')); });
+        return Promise.all(loads).then(function () { if (loads.failed) { location.reload(); return; } goY(); window.dispatchEvent(new Event('scroll')); });
       };
-      if (document.startViewTransition && !reduce) return document.startViewTransition(run).finished;
+      if (VT) { var vt = document.startViewTransition(run); vt.ready.catch(function () {}); return vt.finished.catch(function () {}); }
       /* Safari ohne View Transitions: sanft ausblenden, tauschen, einblenden */
       if (reduce) return Promise.resolve(run());
       var p = run(), b1 = document.body; b1.style.transition = 'none'; b1.style.opacity = '0';
@@ -234,20 +228,43 @@
       });
     };
     var cache = window.__cache = window.__cache || {}, fetchPage = function (url) {
-      if (!cache[url]) cache[url] = fetch(url, { credentials: 'same-origin' }).then(function (r) { if (!r.ok) throw new Error(r.status); return r.text(); });
+      var tm = (window.__cacheT = window.__cacheT || {}), nw = Date.now();
+      if (cache[url] && nw - tm[url] > 300000) delete cache[url];
+      if (!cache[url]) { tm[url] = nw; cache[url] = fetch(url, { credentials: 'same-origin' }).then(function (r) { if (!r.ok) throw new Error(r.status); return r.text(); }); }
       cache[url].catch(function () { delete cache[url]; });
       return cache[url];
     };
+    /* Seite vorab zerlegen (Parsen, Knoten, Skripte), damit der Tausch selbst nur noch einhängt */
+    var prepPage = function (url) {
+      var P = window.__prep = window.__prep || {};
+      if (!P[url]) P[url] = fetchPage(url).then(function (html) {
+        var doc = new DOMParser().parseFromString(html, 'text/html'), frag = document.createDocumentFragment(), loads = [];
+        Array.prototype.slice.call(doc.body.childNodes).forEach(function (n) { frag.appendChild(document.importNode(n, true)); });
+        $$('script', frag).forEach(function (o) {
+          if (o.type && !/javascript/.test(o.type)) return;
+          var sc = document.createElement('script');
+          Array.prototype.slice.call(o.attributes).forEach(function (at) { if (at.name !== 'defer') sc.setAttribute(at.name, at.value); });
+          sc.async = false; sc.text = o.text;
+          if (o.src) loads.push(new Promise(function (r) { sc.onload = r; sc.onerror = function () { loads.failed = true; r(); }; }));
+          o.parentNode.replaceChild(sc, o);
+        });
+        return { doc: doc, frag: frag, loads: loads };
+      });
+      P[url].catch(function () { delete P[url]; });
+      return P[url];
+    };
     var softGo = function (url, top, wait0, pop) {
-      var got = fetchPage(url), fb = !(document.startViewTransition && !reduce) && !reduce;
-      if (fb) { var b0 = document.body; b0.style.transition = 'opacity .11s ease'; b0.style.opacity = '0'; }
-      var wait = new Promise(function (r) { setTimeout(r, fb ? Math.max(115, wait0 === 0 ? 0 : DELAY) : (wait0 === 0 ? 0 : DELAY)); });
-      return Promise.all([got, wait]).then(function (v) { return swap(url, v[0], top, pop); }).catch(function () { location.href = url; });
+      var my = window.__navId = (window.__navId | 0) + 1, fb = !VT && !reduce, b0 = document.body;
+      var got = prepPage(url).then(function (r) { delete window.__prep[url]; return r; });
+      var wait = new Promise(function (r) { setTimeout(r, wait0 === 0 ? 0 : (wait0 || DELAY)); });
+      /* Safari/Handy: erst ausblenden, wenn die Seite da ist (kein leerer Bildschirm bei langsamem Netz) */
+      var faded = fb ? got.then(function () { if (my !== window.__navId) return; b0.style.transition = 'opacity .1s ease'; b0.style.opacity = '0'; return new Promise(function (r) { setTimeout(r, 100); }); }, function () {}) : Promise.resolve();
+      return Promise.all([got, wait, faded]).then(function (v) { if (my !== window.__navId) return; return swap(url, v[0], top, pop); }).catch(function () { if (my !== window.__navId) return; b0.style.removeProperty('opacity'); b0.style.removeProperty('transition'); location.href = url; });
     };
     try { history.scrollRestoration = 'manual'; } catch (x) {}
     if (!window.__pop && window.__orig) {
       window.__pop = 1;
-      var st = 0; window.__orig.w.call(window, 'scroll', function () { if (st) return; st = setTimeout(function () { st = 0; try { history.replaceState({ soft: 1, y: window.scrollY }, ''); } catch (x) {} }, 140); }, { passive: true });
+      var st = 0; window.__orig.w.call(window, 'scroll', function () { if (st) return; st = setTimeout(function () { (window.requestIdleCallback || function (f) { f(); })(function () { st = 0; try { history.replaceState({ soft: 1, y: window.scrollY }, ''); } catch (x) {} }); }, 250); }, { passive: true });
       window.__lastP = location.pathname + location.search;
       window.__orig.w.call(window, 'popstate', function (e) {
         var np = location.pathname + location.search; if (np === window.__lastP) return; window.__lastP = np;
@@ -256,17 +273,24 @@
       });
     }
     /* beim Antippen schon vorladen (spart die Wartezeit), im Leerlauf die anderen Sprachen */
-    var warm = function (a) { try { var u = new URL(a.href, location.href); if (u.origin === location.origin) fetchPage(u.pathname + u.search); } catch (x) {} };
-    document.addEventListener('pointerdown', function (e) { var a = e.target.closest && e.target.closest('a[href]'); if (a && !a.target) warm(a); }, { passive: true, capture: true });
-    var cn = navigator.connection || {}; if (!cn.saveData && (!cn.effectiveType || cn.effectiveType === '4g')) setTimeout(function () { $$('[data-lang]').forEach(function (a) { if (!a.getAttribute('aria-current')) warm(a); }); }, 2500);
+    var warm = function (a, prep) { try { var u = new URL(a.href, location.href); if (u.origin === location.origin && !/\/ficha\/|\.(pdf|xml|json|txt|jpe?g|png|webp|mp4|zip)$/i.test(u.pathname)) (prep ? prepPage : fetchPage)(u.pathname + u.search); } catch (x) {} };
+    document.addEventListener('pointerdown', function (e) { var a = e.target.closest && e.target.closest('a[href]'); if (a && !a.target) warm(a, true); }, { passive: true, capture: true });
+    $$('[data-open=menu]').forEach(function (bt) { bt.addEventListener('pointerdown', function () { $$('[data-lang]').forEach(function (a) { if (!a.getAttribute('aria-current')) warm(a); }); }, { passive: true }); });
+    var cn = navigator.connection || {}; if (!cn.saveData && (!cn.effectiveType || cn.effectiveType === '4g')) setTimeout(function () { $$('[data-lang]').forEach(function (a) { if (!a.getAttribute('aria-current')) warm(a); }); }, 700);
     /* Sprachlinks */
     $$('[data-lang]').forEach(function (a) {
       a.addEventListener('click', function (e) {
         if (e.metaKey || e.ctrlKey || e.shiftKey || e.button) return;
         e.preventDefault();
         var target = a.getAttribute('href') + location.search + location.hash;
+        if (new URL(a.href, location.href).pathname === location.pathname) {
+          window.__navId = (window.__navId | 0) + 1; document.body.style.removeProperty('opacity'); document.body.style.removeProperty('transition');
+          $$('[data-lang]').forEach(function (x) { if (x.dataset.lang === a.dataset.lang) x.setAttribute('aria-current', 'true'); else x.removeAttribute('aria-current'); });
+          var cl = document.querySelector('#menu [data-close=menu]'); if (cl) cl.click();
+          return;
+        }
         $$('[data-lang]').forEach(function (x) { if (x.dataset.lang === a.dataset.lang) x.setAttribute('aria-current', 'true'); else x.removeAttribute('aria-current'); });
-        softGo(target);
+        softGo(target, undefined, a.closest('.sheet') ? 110 : undefined);
       });
     });
     /* Alle internen Seitenwechsel weich (Menü, Logo, Karten, Links) */
